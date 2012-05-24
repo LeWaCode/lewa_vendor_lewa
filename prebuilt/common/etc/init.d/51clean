@@ -1,0 +1,20 @@
+#!/system/bin/sh
+# execute any postinstall script then kill it
+
+# 2012-02-01
+#if [ -e /system/swap.img ];
+#then
+#   rm -fr /system/swap.img;
+#fi;
+
+# 2012-03-02
+# if [ -e /data/misc/prox_data.txt ];
+# then
+#   rm -fr /data/misc/prox_data.txt;
+# fi;
+
+# kill self
+mount -o remount,rw /system;
+rm -f /etc/init.d/51clean;
+mount -o remount,ro /system;
+

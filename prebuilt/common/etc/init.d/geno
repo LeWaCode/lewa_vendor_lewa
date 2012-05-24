@@ -1,0 +1,184 @@
+#!/system/bin/sh
+# By Genokolar 2011/02/07
+
+
+mount -o remount rw /system
+
+# log.txt auto delete
+logsize=`busybox du -k /system/log.txt |busybox cut -f1`
+if [ $logsize -gt 50 ]
+then
+busybox rm -f /system/log.txt
+fi
+
+
+# start log
+echo "============================================" >> /system/log.txt
+echo `busybox date +%F" "%T` Boot phone ... >> /system/log.txt
+
+
+# permission
+chmod 777 /system/misc/1-app2sd.sh
+chmod 777 /system/misc/2-data2ext.sh
+
+
+# read conf
+if [ -e /system/etc/enhanced.conf ]
+then
+SDEXT=`busybox grep SDEXT /system/etc/enhanced.conf |busybox cut -d= -f2 `
+SDSWAP=`busybox grep SDSWAP /system/etc/enhanced.conf |busybox cut -d= -f2 `
+else
+SDEXT="mmcblk0p2"
+SDSWAP="mmcblk0p3"
+fi
+
+#first mount app2sd
+if [ -e /dev/block/$SDEXT -a ! -e /system/etc/.nomount ]
+then
+mount -t ext4 /dev/block/$SDEXT /sd-ext
+  if [ -d /system/etc/app2sd-on -a -s /sd-ext ]
+  then
+  busybox rm -rf /data/app
+  busybox ln -s /sd-ext/app /data/app
+  echo Open APP2SD ext4 success... >> /system/log.txt
+  busybox mv /system/etc/app2sd-on /system/etc/app2sd-run
+  fi
+fi
+
+# compactible with ext3,by george,2011-11-01
+if [ -e /dev/block/$SDEXT -a ! -e /system/etc/.nomount ]
+then
+mount -t ext3 /dev/block/$SDEXT /sd-ext
+  if [ -d /system/etc/app2sd-on -a -s /sd-ext ]
+  then
+  busybox rm -rf /data/app
+  busybox ln -s /sd-ext/app /data/app
+  echo Open APP2SD ext3 success... >> /system/log.txt
+  busybox mv /system/etc/app2sd-on /system/etc/app2sd-run
+  fi
+fi
+
+
+# first mount data2ext
+if [ -d /system/etc/data2ext-on -a -s /sd-ext ]
+then
+  busybox rm -rf /data/data
+  busybox ln -s /sd-ext/data /data/data
+  busybox rm -rf /data/system
+  busybox ln -s /sd-ext/system /data/system
+  echo Open DATA2EXT success... >> /system/log.txt
+  busybox mv /system/etc/data2ext-on /system/etc/data2ext-run
+fi
+
+
+# app2sd run of false
+if [ -d /system/etc/app2sd-run ]
+then
+  if [ ! -s /sd-ext ]
+  then 
+  busybox rm /data/app
+  busybox mkdir /data/app
+    if [ ! -d /system/etc/data2ext-run ]
+    then
+    busybox rm -rf /data/databak
+    busybox mv /data/data /data/databak
+    busybox mkdir /data/data
+    busybox rm -rf /data/systembak
+    busybox mv /data/system /data/systembak
+    busybox mkdir /data/system
+    echo SDcard \mount flase... >> /system/log.txt
+    else
+    busybox mkdir /data/databak
+    busybox mkdir /data/systembak
+    fi
+  busybox mv /system/etc/app2sd-run /system/etc/app2sd-false
+  else
+  echo APP2SD is OK... >> /system/log.txt
+  fi
+fi
+
+
+# data2ext run of false
+if [ -d /system/etc/data2ext-run ]
+then
+  if [ ! -s /sd-ext ]
+  then
+  busybox rm -rf /data/data
+  busybox mkdir /data/data
+  busybox rm -rf /data/system
+  busybox mkdir /data/system
+  echo SDcard \mount flase... >> /system/log.txt
+  busybox mv /system/etc/data2ext-run /system/etc/data2ext-false
+  else
+  echo DATA2EXT is OK... >> /system/log.txt
+  fi
+fi
+
+
+# app2sd off
+if [ -d /system/etc/app2sd-off ]
+then
+  if [ -e /dev/block/$SDEXT ]
+  then
+  busybox rm /data/app
+  busybox mv /data/appbak /data/app
+  echo Close APP2SD success... >> /system/log.txt
+  busybox rm -rf /system/etc/app2sd-off
+  fi
+fi
+
+
+# data2ext off
+if [ -d /system/etc/data2ext-off ]
+then
+  if [ -e /dev/block/$SDEXT ]
+  then
+  busybox rm /data/data
+  busybox mv /data/databak /data/data
+  busybox rm /data/system
+  busybox mv /data/systembak /data/system
+  echo Close DATA2EXT success... >> /system/log.txt
+  busybox rm -rf /system/etc/data2ext-off
+  fi
+fi
+
+
+# app2sd retry
+if [ -d /system/etc/app2sd-retry ]
+then
+  if [  -s /sd-ext ]
+  then
+    if [ ! -d /system/etc/data2ext-run ]
+    then
+    busybox rm -rf /data/data
+    busybox mv /data/databak /data/data
+    busybox rm -rf /data/system
+    busybox mv /data/systembak /data/system
+    fi
+  busybox rm -rf /data/app
+  busybox ln -s /sd-ext/app /data/app
+  echo Retry APP2SD success... >> /system/log.txt
+  busybox mv /system/etc/app2sd-retry /system/etc/app2sd-run
+  fi
+fi
+
+
+# data2ext retry
+if [ -d /system/etc/data2ext-retry -a  -s /sd-ext ]
+then
+  if [ -e /dev/block/$SDEXT ]
+  then
+  busybox rm -rf /data/data
+  busybox ln -s /sd-ext/data /data/data
+  busybox rm -rf /data/system
+  busybox ln -s /sd-ext/system /data/system
+  echo Retry Data2EXT success... >> /system/log.txt
+  busybox mv /system/etc/data2ext-retry /system/etc/data2ext-run
+  fi
+fi
+
+
+echo "============================================" >> /system/log.txt
+
+mount -o remount,ro /system
+exit

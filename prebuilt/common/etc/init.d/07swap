@@ -1,0 +1,83 @@
+#!/system/bin/sh
+# By george 2011/10/26,from slax super boot script
+# 1. if you have mmcblkp03(swap partition on sdcard)
+# 2. default swapper will use the system parition (32M)
+
+#echo 设立swap策略为100%（内置的和运行内存是一样的，可以直接通用，所以设置高点好）
+echo "set swappiness"
+echo 99 > /proc/sys/vm/swappiness
+
+# read conf
+if [ -e /system/etc/swap.conf ]
+then
+SWAPON=`busybox grep SWAPON /system/etc/swap.conf |busybox cut -d= -f2 `
+SWAPPARTITION=`busybox grep SWAPPARTITION /system/etc/swap.conf |busybox cut -d= -f2 `
+SWAPSIZE=`busybox grep SWAPSIZE /system/etc/swap.conf |busybox cut -d= -f2 `
+
+SDEXT=`busybox grep SDEXT /system/etc/swap.conf |busybox cut -d= -f2 `
+SDSWAP=`busybox grep SDSWAP /system/etc/swap.conf |busybox cut -d= -f2 `
+SWAPPINESS=`busybox grep SWAPPINESS /system/etc/swap.conf |busybox cut -d= -f2 `
+
+else
+SWAPON="true"
+SWAPPARTITION="/system"
+SWAPSIZE="32"
+
+SDEXT=="mmcblk0p2"
+SDSWAP="mmcblk0p3"
+SWAPPINESS="35"
+
+fi
+
+SWAPFILE=$SWAPPARTITION"/swap.img"
+
+mount -o remount,rw $SWAPPARTITION
+
+# create swap image
+if [ ! -f $SWAPFILE ]
+then
+if [ ! -e "/dev/block/mmcblk0p3" ]
+then
+if [ "$SWAPON" = "true" ]
+then
+echo "swap.img no exist,create new one"
+busybox rm -rf $SWAPFILE
+#busybox mount -o rw /swap;
+busybox dd if=/dev/zero of=$SWAPFILE bs=1048576 count=$SWAPSIZE;
+echo "create image done"
+fi
+fi
+fi
+
+# swap on it
+if [ -f $SWAPFILE ]
+then
+if [ ! -e "/dev/block/mmcblk0p3" ]
+then
+if [ "$SWAPON" = "true" ]
+then
+echo "swap.img,swapon it"
+busybox swapoff /dev/block/loop7
+busybox losetup /dev/block/loop7 $SWAPFILE;
+busybox mkswap /dev/block/loop7;
+busybox swapon /dev/block/loop7;
+echo "swap done"
+fi
+fi
+fi
+
+if [ -e "/dev/block/mmcblk0p3" ]
+then
+busybox rm -rf $SWAPFILE
+busybox mkswap	/dev/block/mmcblk0p3;
+busybox swapon	/dev/block/mmcblk0p3;
+sysctl -w vm.swappiness=40;
+fi
+
+if [ ! "$SWAPON" = "true" ]
+then
+    echo "remove the swap file" $SWAPFILE
+    busybox rm -rf $SWAPFILE
+fi
+
+mount -o remount,ro /system
