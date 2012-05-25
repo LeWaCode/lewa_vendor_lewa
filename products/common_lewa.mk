@@ -52,7 +52,6 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/lewa/overlay/common
 # Lewa Perbuilt
 PRODUCT_COPY_FILES += \
     vendor/lewa/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/lewa/prebuilt/common/bin/sysd:system/bin/sysd \
     vendor/lewa/prebuilt/common/bin/modelid_cfg.sh:system/bin/modelid_cfg.sh \
     vendor/lewa/prebuilt/common/bin/verify_cache_partition_size.sh:system/bin/verify_cache_partition_size.sh \
     vendor/lewa/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf \

@@ -51,7 +51,6 @@ PRODUCT_COPY_FILES += \
 
 # lib
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/lib/liblame.so:system/lib/liblame.so \
     $(LOCAL_PATH)/lib/libmicrobes_jni.so:system/lib/libmicrobes_jni.so \
     $(LOCAL_PATH)/lib/libmobilesafe360-jni.so:system/lib/libmobilesafe360-jni.so \
     $(LOCAL_PATH)/lib/libphoneloc_jni.so:system/lib/libphoneloc_jni.so \

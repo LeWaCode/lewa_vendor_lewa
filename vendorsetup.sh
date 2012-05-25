@@ -65,20 +65,17 @@ add_lunch_combo lewa_zeppelin-eng
 add_lunch_combo lewa_zero-eng
 add_lunch_combo lewa_zeus-eng
 add_lunch_combo lewa_zeusc-eng
-#added by george,2011.09.27
+#added by lewa,ioz9
 add_lunch_combo lewa_u8500-eng
 add_lunch_combo lewa_c8650-eng
 add_lunch_combo lewa_u8800-eng
 add_lunch_combo lewa_u8800pro-eng
 add_lunch_combo lewa_u880-eng
-#added by ioz9,2012.02.10
+add_lunch_combo lewa_u8800x-eng
 add_lunch_combo lewa_roamer-eng
 add_lunch_combo lewa_c8500-eng
 add_lunch_combo lewa_marvel-eng
 add_lunch_combo lewa_olympus-eng
-#added by zarey,2012.02.17
-add_lunch_combo lewa_u8800x-eng
-#added by astinj.2012.02.23
 add_lunch_combo lewa_n880s-eng
 add_lunch_combo lewa_n880-eng
 add_lunch_combo lewa_mione_plus-eng
