@@ -17,6 +17,7 @@ endif
 # App
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/app/AccountAndSyncSettings.apk:system/app/AccountAndSyncSettings.apk \
+    $(LOCAL_PATH)/app/AMAP.apk:system/app/AMAP.apk \
     $(LOCAL_PATH)/app/Calendar365.apk:system/app/Calendar365.apk \
     $(LOCAL_PATH)/app/ContactsProvider.apk:system/app/ContactsProvider.apk \
     $(LOCAL_PATH)/app/Cstore.apk:system/app/Cstore.apk \
@@ -51,10 +52,16 @@ PRODUCT_COPY_FILES += \
 
 # lib
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/lib/libams.so:system/lib/libams.so \
+    $(LOCAL_PATH)/lib/libapkchecker.so:system/lib/libapkchecker.so \
+    $(LOCAL_PATH)/lib/libapollo.so:system/lib/libapollo.so \
+    $(LOCAL_PATH)/lib/libcryptor.so:system/lib/libcryptor.so \
+    $(LOCAL_PATH)/lib/liblocation.so:system/lib/liblocation.so \
     $(LOCAL_PATH)/lib/libmicrobes_jni.so:system/lib/libmicrobes_jni.so \
-    $(LOCAL_PATH)/lib/libmobilesafe360-jni.so:system/lib/libmobilesafe360-jni.so \
+    $(LOCAL_PATH)/lib/libminimapv315.so:system/lib/libminimapv315.so \
     $(LOCAL_PATH)/lib/libphoneloc_jni.so:system/lib/libphoneloc_jni.so \
-    $(LOCAL_PATH)/lib/libqpicjni86.so:system/lib/libqpicjni86.so
+    $(LOCAL_PATH)/lib/libqpicjni86.so:system/lib/libqpicjni86.so \
+    $(LOCAL_PATH)/lib/libsmschecker.so:system/lib/libsmschecker.so
 
 # framework
 PRODUCT_COPY_FILES += \
