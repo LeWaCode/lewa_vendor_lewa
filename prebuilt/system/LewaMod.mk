@@ -50,6 +50,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/app/SystemUI.apk:system/app/SystemUI.apk \
     $(LOCAL_PATH)/app/TelephonyProvider.apk:system/app/TelephonyProvider.apk
 
+# bin
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bin/sysd:system/bin/sysd \
+
 # lib
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/lib/libams.so:system/lib/libams.so \
