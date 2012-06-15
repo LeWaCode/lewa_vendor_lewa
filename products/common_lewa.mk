@@ -24,11 +24,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.lewa.swapper.flash_swappiness=99 \
     ro.lewa.swapper.sd_swappiness=60 \
+    ro.lewa.swapper.part_path=/dev/block/mmcblk0p3 \
     ro.error.receiver.system.apps=com.lewa.fc \
     ro.error.receiver.default=com.lewa.fc \
     persist.sys.notif-speaker=1 \
     persist.sys.ring-speaker=1 \
     persist.sys.alarm-speaker=1 \
+    
 
 # lewaMod specific product packages
 PRODUCT_PACKAGES += \
