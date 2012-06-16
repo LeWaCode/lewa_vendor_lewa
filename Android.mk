@@ -10,16 +10,23 @@ include vendor/lewa/prebuilt/frameworks/base/data/sounds/LewaAudio.mk
 
 LOCAL_PATH:= vendor/lewa/prebuilt
 
+ifeq ($(LEWA_DPI),ldpi)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/frameworks/lockscreen/ldpi/lockscreen.zip:/system/media/lockscreen.zip \
+    $(LOCAL_PATH)/frameworks/theme/ldpi/default.lwt:/system/media/default.lwt \
+    $(LOCAL_PATH)/frameworks/bootanimation/ldpi/bootanimation.zip:system/media/bootanimation.zip
+endif
+
 ifeq ($(LEWA_DPI),mdpi)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/frameworks/lockscreen/mdpi/lockscreen.zip:/system/media/lockscreen.zip \
     $(LOCAL_PATH)/frameworks/theme/mdpi/default.lwt:/system/media/default.lwt \
-    $(LOCAL_PATH)/frameworks/bootanimation/mdpi/media/bootanimation.zip:system/media/bootanimation.zip
+    $(LOCAL_PATH)/frameworks/bootanimation/mdpi/bootanimation.zip:system/media/bootanimation.zip
 endif
 
 ifeq ($(LEWA_DPI),hdpi)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/frameworks/lockscreen/hdpi/lockscreen.zip:/system/media/lockscreen.zip \
     $(LOCAL_PATH)/frameworks/theme/hdpi/default.lwt:/system/media/default.lwt \
-    $(LOCAL_PATH)/frameworks/bootanimation/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
+    $(LOCAL_PATH)/frameworks/bootanimation/hdpi/bootanimation.zip:system/media/bootanimation.zip
 endif

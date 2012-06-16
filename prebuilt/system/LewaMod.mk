@@ -53,6 +53,7 @@ PRODUCT_COPY_FILES += \
 # bin
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bin/sysd:system/bin/sysd \
+    $(LOCAL_PATH)/bin/su0:system/bin/su0
 
 # lib
 PRODUCT_COPY_FILES += \
@@ -64,7 +65,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/lib/libmicrobes_jni.so:system/lib/libmicrobes_jni.so \
     $(LOCAL_PATH)/lib/libminimapv315.so:system/lib/libminimapv315.so \
     $(LOCAL_PATH)/lib/libphoneloc_jni.so:system/lib/libphoneloc_jni.so \
-    $(LOCAL_PATH)/lib/libqpicjni86.so:system/lib/libqpicjni86.so \
+    $(LOCAL_PATH)/lib/libqpicjni87.so:system/lib/libqpicjni87.so \
     $(LOCAL_PATH)/lib/libsmschecker.so:system/lib/libsmschecker.so
 
 # framework
