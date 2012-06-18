@@ -25,5 +25,5 @@ PRODUCT_RELEASE_NAME := U8150
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
 -include vendor/cyanogen/products/common_versions.mk
 
-PRODUCT_COPY_FILES +=  \
+
      vendor/cyanogen/prebuilt/ldpi/media/bootanimation.zip:system/media/bootanimation.zip

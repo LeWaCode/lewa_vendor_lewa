@@ -26,7 +26,7 @@ PRODUCT_VERSION_DEVICE_SPECIFIC :=
 #
 # Copy prebuilt files
 #
-PRODUCT_COPY_FILES +=  \
+
     vendor/cyanogen/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
 
 ## TI FM radio

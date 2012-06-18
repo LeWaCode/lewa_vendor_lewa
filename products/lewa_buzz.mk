@@ -32,7 +32,7 @@ $(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
 PRODUCT_PACKAGES += Torch
 
 # Copy bootanimation
-PRODUCT_COPY_FILES +=  \
+
     vendor/cyanogen/prebuilt/ldpi/media/bootanimation.zip:system/media/bootanimation.zip
 
 # Release name and versioning
