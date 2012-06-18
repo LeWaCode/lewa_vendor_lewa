@@ -38,4 +38,4 @@ PRODUCT_VERSION_DEVICE_SPECIFIC :=
 # Copy MDPI specific prebuilt files
 #
 
-    vendor/cyanogen/prebuilt/ldpi/media/bootanimation.zip:system/media/bootanimation.zip
+

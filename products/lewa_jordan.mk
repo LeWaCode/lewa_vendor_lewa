@@ -45,6 +45,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 # Copy jordan specific prebuilt files
 #
 PRODUCT_COPY_FILES += \
-    vendor/cyanogen/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
+
 
 

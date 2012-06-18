@@ -42,4 +42,4 @@ PRODUCT_VERSION_DEVICE_SPECIFIC :=
 # Copy leo specific prebuilt files
 #
 
-    vendor/cyanogen/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
+

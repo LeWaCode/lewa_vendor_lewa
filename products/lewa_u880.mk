@@ -26,4 +26,4 @@ PRODUCT_VERSION_DEVICE_SPECIFIC :=
 # Copy  specific prebuilt files
 #
 
-    vendor/cyanogen/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
+

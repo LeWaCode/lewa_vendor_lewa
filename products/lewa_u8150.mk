@@ -26,4 +26,4 @@ PRODUCT_VERSION_DEVICE_SPECIFIC :=
 -include vendor/cyanogen/products/common_versions.mk
 
 
-     vendor/cyanogen/prebuilt/ldpi/media/bootanimation.zip:system/media/bootanimation.zip
+ 

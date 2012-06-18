@@ -43,4 +43,4 @@ PRODUCT_VERSION_DEVICE_SPECIFIC :=
 # Copy Droid2WE specific prebuilt files
 #
 
-    vendor/cyanogen/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
+

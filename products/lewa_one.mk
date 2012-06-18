@@ -34,4 +34,4 @@ PRODUCT_VERSION_DEVICE_SPECIFIC :=
 # Copy GPO specific prebuilt files
 #
 
-    vendor/cyanogen/prebuilt/ldpi/media/bootanimation.zip:system/media/bootanimation.zip
+

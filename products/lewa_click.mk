@@ -31,7 +31,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/ldpi
 
 # Boot animation
 
-    vendor/cyanogen/prebuilt/ldpi/media/bootanimation.zip:system/media/bootanimation.zip
+
 
 # Release name and versioning
 PRODUCT_RELEASE_NAME := click
