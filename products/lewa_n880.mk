@@ -1,16 +1,16 @@
 # Inherit AOSP device configuration for n880.
 $(call inherit-product, device/zte/n880/device_n880.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_n880
+PRODUCT_NAME := lewa_n880
 PRODUCT_BRAND := zte
 PRODUCT_DEVICE := n880
 PRODUCT_MODEL := ZTE-C N880
@@ -22,7 +22,7 @@ PRIVATE_BUILD_DESC="passion-user 2.3.7 GWK74 121341 release-keys"
 # Release name and versioning
 PRODUCT_RELEASE_NAME := N880
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 #
 # Copy legend specific prebuilt files
