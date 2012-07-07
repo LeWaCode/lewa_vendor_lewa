@@ -28,6 +28,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/app/$(LEWA_DPI)/LewaPlayer.apk:system/app/LewaPlayer.apk \
     $(LOCAL_PATH)/system/app/$(LEWA_DPI)/LewaPond.apk:system/app/LewaPond.apk \
     $(LOCAL_PATH)/system/app/$(LEWA_DPI)/LewaPush.apk:system/app/LewaPush.apk \
+    $(LOCAL_PATH)/system/app/$(LEWA_DPI)/LewaSearch.apk:system/app/LewaSearch.apk \
     $(LOCAL_PATH)/system/app/$(LEWA_DPI)/LewaUpdater.apk:system/app/LewaUpdater.apk \
     $(LOCAL_PATH)/system/app/$(LEWA_DPI)/LocationProvider.apk:system/app/LocationProvider.apk \
     $(LOCAL_PATH)/system/app/$(LEWA_DPI)/MediaProvider.apk:system/app/MediaProvider.apk \
