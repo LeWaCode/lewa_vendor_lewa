@@ -47,4 +47,5 @@ PRODUCT_VERSION_DEVICE_SPECIFIC :=
 # Copy passion specific prebuilt files
 #
 
-
+# only use two language for lewa branch
+PRODUCT_LOCALES := zh_CN en_US hdpi
