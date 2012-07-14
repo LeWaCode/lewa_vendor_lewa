@@ -37,7 +37,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/app/$(LEWA_DPI)/PicFolder.apk:system/app/PicFolder.apk \
     $(LOCAL_PATH)/system/app/$(LEWA_DPI)/PIM.apk:system/app/PIM.apk \
     $(LOCAL_PATH)/system/app/$(LEWA_DPI)/PlayPlusClient_Lewa.apk:system/app/PlayPlusClient_Lewa.apk \
-    $(LOCAL_PATH)/system/app/$(LEWA_DPI)/Power_Manager.apk:system/app/Power_Manager.apk \
+    $(LOCAL_PATH)/system/app/$(LEWA_DPI)/power+.apk:system/app/power+.apk \
     $(LOCAL_PATH)/system/app/$(LEWA_DPI)/Settings.apk:system/app/Settings.apk \
     $(LOCAL_PATH)/system/app/$(LEWA_DPI)/SettingsProvider.apk:system/app/SettingsProvider.apk \
     $(LOCAL_PATH)/system/app/$(LEWA_DPI)/Swapper.apk:system/app/Swapper.apk \
