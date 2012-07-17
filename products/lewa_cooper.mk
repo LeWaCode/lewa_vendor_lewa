@@ -1,16 +1,16 @@
 # Inherit AOSP device configuration for blade.
 $(call inherit-product, device/samsung/cooper/device_cooper.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_cooper
+PRODUCT_NAME := lewa_cooper
 PRODUCT_BRAND := samsung
 PRODUCT_DEVICE := cooper
 PRODUCT_MODEL := GT-S5830
@@ -20,7 +20,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=cooper BUILD_ID=GRWK74 BUILD_FINGER
 # Release name and versioning
 PRODUCT_RELEASE_NAME := GalaxyAce
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 #
 # Copy legend specific prebuilt files

@@ -1,14 +1,14 @@
 # Inherit AOSP device configuration for click.
 $(call inherit-product, device/htc/click/click.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full_no_themes.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa_no_themes.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 # Broadcom FM radio
-$(call inherit-product, vendor/cyanogen/products/ti_fm_radio.mk)
+$(call inherit-product, vendor/lewa/products/ti_fm_radio.mk)
 
 # Build kernel
 PRODUCT_SPECIFIC_DEFINES += TARGET_PREBUILT_KERNEL=device/htc/click/kernel
@@ -16,7 +16,7 @@ PRODUCT_SPECIFIC_DEFINES += TARGET_PREBUILT_KERNEL=device/htc/click/kernel
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_click
+PRODUCT_NAME := lewa_click
 PRODUCT_BRAND := htc_wwe
 PRODUCT_DEVICE := click
 PRODUCT_MODEL := HTC Tattoo
@@ -27,7 +27,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_click BUILD_ID=GRI40 BUILD_FING
 PRODUCT_LOCALES += ldpi mdpi
 
 # Extra Passion overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/ldpi
+PRODUCT_PACKAGE_OVERLAYS += vendor/lewa/overlay/ldpi
 
 # Boot animation
 
@@ -36,4 +36,4 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/ldpi
 # Release name and versioning
 PRODUCT_RELEASE_NAME := click
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk

@@ -1,16 +1,16 @@
 # Inherit AOSP device configuration for galaxys.
 $(call inherit-product, device/samsung/galaxysmtd/full_galaxysmtd.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_galaxysmtd
+PRODUCT_NAME := lewa_galaxysmtd
 PRODUCT_BRAND := samsung
 PRODUCT_DEVICE := galaxysmtd
 PRODUCT_MODEL := GT-I9000
@@ -20,10 +20,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=GT-I9000 TARGET_DEVICE=GT-I9000 BUI
 # Build kernel
 #PRODUCT_SPECIFIC_DEFINES += TARGET_PREBUILT_KERNEL=
 #PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_DIR=kernel-samsung
-#PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=cyanogen_galaxys_defconfig
+#PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=lewa_galaxys_defconfig
 
 # Extra galaxys overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/galaxysmtd
+PRODUCT_PACKAGE_OVERLAYS += vendor/lewa/overlay/galaxysmtd
 
 # Add the FM app
 PRODUCT_PACKAGES += FM
@@ -42,7 +42,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Release name and versioning
 PRODUCT_RELEASE_NAME := GalaxyS
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 #
 # Copy galaxys specific prebuilt files

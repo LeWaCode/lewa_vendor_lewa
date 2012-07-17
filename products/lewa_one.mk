@@ -1,16 +1,16 @@
 # Inherit AOSP device configuration for geeksphone one.
 $(call inherit-product, device/geeksphone/one/one.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_one
+PRODUCT_NAME := lewa_one
 PRODUCT_BRAND := geeksphone
 PRODUCT_DEVICE := one
 PRODUCT_MODEL := Geeksphone ONE
@@ -28,7 +28,7 @@ PRODUCT_PROPERTY_OVERRIDES += dalvik.vm.dexopt-data-only=1
 # Release name and versioning
 PRODUCT_RELEASE_NAME := ONE
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 #
 # Copy GPO specific prebuilt files

@@ -1,16 +1,16 @@
 # Inherit device configuration for coconut.
 $(call inherit-product, device/semc/coconut/device_coconut.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_coconut
+PRODUCT_NAME := lewa_coconut
 PRODUCT_BRAND := SEMC
 PRODUCT_DEVICE := coconut
 PRODUCT_MODEL := WT19i
@@ -20,21 +20,21 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=WT19i BUILD_ID=4.0.2.A.0.42 BUILD_F
 # Build kernel
 #PRODUCT_SPECIFIC_DEFINES += TARGET_PREBUILT_KERNEL=
 #PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_DIR=kernel-msm
-#PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=cyanogen_coconut_defconfig
+#PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=lewa_coconut_defconfig
 
 # Extra coconut overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/coconut
+PRODUCT_PACKAGE_OVERLAYS += vendor/lewa/overlay/coconut
 
 # Add the Torch app
 PRODUCT_PACKAGES += Torch
 
 # BCM FM radio
-#$(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
+#$(call inherit-product, vendor/lewa/products/bcm_fm_radio.mk)
 
 # Release name and versioning
 PRODUCT_RELEASE_NAME := LiveWithWalkman-WT19i
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 #
 # Copy passion specific prebuilt files

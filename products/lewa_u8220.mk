@@ -1,16 +1,16 @@
 # Inherit AOSP device configuration for dream_sapphire.
 $(call inherit-product, device/huawei/u8220/device_u8220.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common.mk)
 
 # Include GSM-only stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_u8220
+PRODUCT_NAME := lewa_u8220
 PRODUCT_BRAND := huawei
 PRODUCT_DEVICE := u8220
 PRODUCT_MODEL := U8220/U8230
@@ -20,7 +20,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=u8220 BUILD_ID=GRJ22 BUILD_FINGERPR
 # Release name and versioning
 PRODUCT_RELEASE_NAME := U8220
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 #
 # Copy DS specific prebuilt files

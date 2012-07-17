@@ -1,7 +1,7 @@
 # Inherit AOSP device configuration for c8650.
 $(call inherit-product, device/huawei/c8650/device_c8650.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common lewamod stuff.
 $(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 # Include GSM-only stuff

@@ -1,16 +1,16 @@
 # Inherit device configuration for olympus.
 $(call inherit-product, device/motorola/olympus/olympus.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_olympus
+PRODUCT_NAME := lewa_olympus
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := olympus
 PRODUCT_MODEL := MB860
@@ -19,12 +19,12 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_BRAND=MOTO PRODUCT_NAME=olyatt BUILD_ID=
 
 # Extra Olympus overlay
 PRODUCT_PACKAGE_OVERLAYS += \
-	vendor/cyanogen/overlay/olympus \
-#	vendor/cyanogen/overlay/qhd
+	vendor/lewa/overlay/olympus \
+#	vendor/lewa/overlay/qhd
 
 PRODUCT_RELEASE_NAME := Olympus
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 #
 # Copy hdpi specific prebuilt files

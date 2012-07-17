@@ -1,16 +1,16 @@
 # Inherit AOSP device configuration for zero.
 $(call inherit-product, device/geeksphone/zero/zero.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_zero
+PRODUCT_NAME := lewa_zero
 PRODUCT_BRAND := geeksphone
 PRODUCT_DEVICE := zero
 PRODUCT_MODEL := Geeksphone ZERO
@@ -20,12 +20,12 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=geeksphone_zero BUILD_ID=FRG83 BUIL
 
 
 # Broadcom FM radio
-$(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
+$(call inherit-product, vendor/lewa/products/bcm_fm_radio.mk)
 
 # Release name and versioning
 PRODUCT_RELEASE_NAME := ZERO
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 #
 # Copy specific prebuilt files

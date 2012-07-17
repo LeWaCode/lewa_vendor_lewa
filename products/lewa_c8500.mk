@@ -1,16 +1,16 @@
 # Inherit AOSP device configuration for dream_sapphire.
 $(call inherit-product, device/huawei/c8500/c8500.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 # Include GSM-only stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_c8500
+PRODUCT_NAME := lewa_c8500
 PRODUCT_BRAND := huawei
 PRODUCT_DEVICE := c8500
 PRODUCT_MODEL := C8500
@@ -20,7 +20,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=c8500 BUILD_ID=GRJ22 BUILD_DISPLAY_
 # Release name and versioning
 PRODUCT_RELEASE_NAME := C8500
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 #
 # Copy  specific prebuilt files

@@ -1,16 +1,16 @@
 # Inherit AOSP device configuration for galaxys2att.
 $(call inherit-product, device/samsung/galaxys2att/full_galaxys2att.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_galaxys2att
+PRODUCT_NAME := lewa_galaxys2att
 PRODUCT_BRAND := samsung
 PRODUCT_DEVICE := galaxys2att
 PRODUCT_MODEL := SGH-I777
@@ -18,7 +18,7 @@ PRODUCT_MANUFACTURER := samsung
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=SGH-I777 TARGET_DEVICE=SGH-I777 BUILD_ID=GWK74 BUILD_FINGERPRINT=samsung/SGH-I777/SGH-I777:2.3.6/GINGERBREAD/UCKK6:user/release-keys PRIVATE_BUILD_DESC="SGH-I777-user 2.3.6 GINGERBREAD UCKK6 release-keys"
 
 # Extra captivate overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/galaxys2att
+PRODUCT_PACKAGE_OVERLAYS += vendor/lewa/overlay/galaxys2att
 
 # Add FM and Torch Apps
 PRODUCT_PACKAGES += \
@@ -39,7 +39,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Release name and versioning
 PRODUCT_RELEASE_NAME := Galaxys2ATT
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 #
 # Copy captivate specific prebuilt files

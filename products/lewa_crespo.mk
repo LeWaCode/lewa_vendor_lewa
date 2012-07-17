@@ -1,16 +1,16 @@
 # Inherit AOSP device configuration for crespo.
 $(call inherit-product, device/samsung/crespo/full_crespo.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_crespo
+PRODUCT_NAME := lewa_crespo
 PRODUCT_BRAND := google
 PRODUCT_DEVICE := crespo
 PRODUCT_MODEL := Nexus S
@@ -18,7 +18,7 @@ PRODUCT_MANUFACTURER := samsung
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=soju BUILD_ID=GWK74 BUILD_FINGERPRINT=google/soju/crespo:2.3.7/GWK74/185293:user/release-keys PRIVATE_BUILD_DESC="soju-user 2.3.7 GWK74 185293 release-keys" BUILD_NUMBER=185293
 
 # Extra Crespo overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/crespo
+PRODUCT_PACKAGE_OVERLAYS += vendor/lewa/overlay/crespo
 
 # Add the Torch app
 PRODUCT_PACKAGES += Torch
@@ -32,7 +32,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Release name and versioning
 PRODUCT_RELEASE_NAME := NS
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 #
 # Copy crespo specific prebuilt files

@@ -1,16 +1,16 @@
 # Inherit device configuration for mimmi.
 $(call inherit-product, device/semc/mimmi/device_mimmi.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_mimmi
+PRODUCT_NAME := lewa_mimmi
 PRODUCT_BRAND := SEMC
 PRODUCT_DEVICE := mimmi
 PRODUCT_MODEL := U20i
@@ -24,15 +24,15 @@ PRODUCT_PACKAGES += Torch
 PRODUCT_LOCALES += ldpi mdpi
 
 # Extra overlay for LDPI
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/ldpi
+PRODUCT_PACKAGE_OVERLAYS += vendor/lewa/overlay/ldpi
 
 # Ti FM radio
-#$(call inherit-product, vendor/cyanogen/products/ti_fm_radio.mk)
+#$(call inherit-product, vendor/lewa/products/ti_fm_radio.mk)
 
 # Release name and versioning
 PRODUCT_RELEASE_NAME := X10MiniPro
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 #
 # Copy MDPI specific prebuilt files

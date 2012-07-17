@@ -1,12 +1,12 @@
 $(call inherit-product, device/advent/vega/vega.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_vega
+PRODUCT_NAME := lewa_vega
 PRODUCT_BRAND := advent
 PRODUCT_DEVICE := vega
 PRODUCT_MODEL := Vega
@@ -15,13 +15,13 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=Vega BUILD_ID=GRJ22 BUILD_FINGERPRI
 
 # Extra overlay
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/cyanogen/overlay/tablet \
-    vendor/cyanogen/overlay/vega
+    vendor/lewa/overlay/tablet \
+    vendor/lewa/overlay/vega
 
 # Release name and versioning
 PRODUCT_RELEASE_NAME := Vega
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 #
 # Copy Vega specific prebuilt files

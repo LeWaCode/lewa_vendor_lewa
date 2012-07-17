@@ -1,16 +1,16 @@
 # Inherit device configuration for vision.
 $(call inherit-product, device/htc/vision/vision.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_vision
+PRODUCT_NAME := lewa_vision
 PRODUCT_BRAND := htc_wwe
 PRODUCT_DEVICE := vision
 PRODUCT_MODEL := HTC Vision
@@ -22,10 +22,10 @@ PRODUCT_SPECIFIC_DEFINES = WEBCORE_ACCELERATED_SCROLLING=true
 # Build kernel
 #PRODUCT_SPECIFIC_DEFINES += TARGET_PREBUILT_KERNEL=
 #PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_DIR=kernel-msm
-#PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=cyanogen_vision_defconfig
+#PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=lewa_vision_defconfig
 
 # Extra Vision overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/vision
+PRODUCT_PACKAGE_OVERLAYS += vendor/lewa/overlay/vision
 
 # Add the Torch app
 PRODUCT_PACKAGES += Torch
@@ -34,12 +34,12 @@ PRODUCT_PACKAGES += Torch
 PRODUCT_PACKAGES += GanOptimizer
 
 # Broadcom FM radio
-$(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
+$(call inherit-product, vendor/lewa/products/bcm_fm_radio.mk)
 
 # Release name and versioning
 PRODUCT_RELEASE_NAME := vision
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 #
 # Copy passion specific prebuilt files

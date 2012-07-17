@@ -1,16 +1,16 @@
 # Inherit AOSP device configuration for tass
 $(call inherit-product, device/samsung/tass/device_tass.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_tass
+PRODUCT_NAME := lewa_tass
 PRODUCT_BRAND := samsung_tass
 PRODUCT_DEVICE := tass
 PRODUCT_MODEL := GT-S5570
@@ -21,7 +21,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=GT-S5570 BUILD_ID=GRI40 BUILD_DISPL
 PRODUCT_LOCALES += ldpi mdpi
 
 # Extra overlay for LDPI
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/ldpi
+PRODUCT_PACKAGE_OVERLAYS += vendor/lewa/overlay/ldpi
 
 # Copy bootanimation
 
@@ -30,4 +30,4 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/ldpi
 # Release name and versioning
 PRODUCT_RELEASE_NAME := GalaxyMini
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk

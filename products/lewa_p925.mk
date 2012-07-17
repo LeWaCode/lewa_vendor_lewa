@@ -1,16 +1,16 @@
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/lge/p925/p925.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_p925
+PRODUCT_NAME := lewa_p925
 PRODUCT_BRAND := lge
 PRODUCT_DEVICE := p925
 PRODUCT_MODEL := LG-P925
@@ -20,7 +20,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=cosmopolitan BUILD_ID=GRJ90 BUILD_F
 # Release name and versioning
 PRODUCT_RELEASE_NAME := Thrill
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 #
 #
@@ -30,7 +30,7 @@ PRODUCT_VERSION_DEVICE_SPECIFIC :=
 
 
 ## TI FM radio
-#$(call inherit-product, vendor/cyanogen/products/ti_fm_radio.mk)
+#$(call inherit-product, vendor/lewa/products/ti_fm_radio.mk)
 
 # Add the Torch app
 PRODUCT_PACKAGES += Torch

@@ -2,13 +2,13 @@
 $(call inherit-product, device/motorola/jordan/jordan.mk)
 
 # Inherit common GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 # Extra jordan overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/jordan
+PRODUCT_PACKAGE_OVERLAYS += vendor/lewa/overlay/jordan
 
 # Add the Torch app
 PRODUCT_PACKAGES += Torch
@@ -16,7 +16,7 @@ PRODUCT_PACKAGES += Torch
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_jordan
+PRODUCT_NAME := lewa_jordan
 PRODUCT_BRAND := MOTO
 PRODUCT_DEVICE := jordan
 PRODUCT_MODEL := MB525
@@ -26,7 +26,7 @@ PRODUCT_SFX := JOREM_U3
 # Release name and versioning
 PRODUCT_RELEASE_NAME := Defy
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 UTC_DATE := $(shell date +%s)
 DATE     := $(shell date +%Y%m%d)

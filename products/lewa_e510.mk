@@ -1,17 +1,17 @@
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 # Inherit device configuration for e510.
 $(call inherit-product, device/lge/e510/e510.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_e510
+PRODUCT_NAME := lewa_e510
 PRODUCT_BRAND := lge
 PRODUCT_DEVICE := e510
 PRODUCT_MODEL := LG-E510
@@ -21,7 +21,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=lge_univa BUILD_ID=GRJ22 BUILD_FING
 # Release name and versioning
 PRODUCT_RELEASE_NAME := OptimusHub
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 #
 # Copy specific prebuilt files

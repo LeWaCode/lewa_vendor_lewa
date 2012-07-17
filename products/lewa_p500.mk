@@ -1,16 +1,16 @@
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 # Inherit device configuration for p500.
 $(call inherit-product, device/lge/p500/p500.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 # Include FM-Radio stuff
-$(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
+$(call inherit-product, vendor/lewa/products/bcm_fm_radio.mk)
 
-PRODUCT_NAME := cyanogen_p500
+PRODUCT_NAME := lewa_p500
 PRODUCT_BRAND := lge
 PRODUCT_DEVICE := p500
 PRODUCT_MODEL := LG-P500
@@ -24,7 +24,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 # Release name and versioning
 PRODUCT_RELEASE_NAME := OptimusOne
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 
 

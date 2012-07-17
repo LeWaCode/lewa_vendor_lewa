@@ -1,16 +1,16 @@
 # Inherit AOSP device configuration for blade.
 $(call inherit-product, device/zte/blade/device_blade.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_blade
+PRODUCT_NAME := lewa_blade
 PRODUCT_BRAND := zte
 PRODUCT_DEVICE := blade
 PRODUCT_MODEL := Blade
@@ -20,7 +20,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=blade BUILD_ID=GRJ22 BUILD_FINGERPR
 # Release name and versioning
 PRODUCT_RELEASE_NAME := Blade
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 #
 # Copy legend specific prebuilt files

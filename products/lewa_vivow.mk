@@ -1,13 +1,13 @@
 # Inherit device configuration for vivow.
 $(call inherit-product, device/htc/vivow/vivow.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_vivow
+PRODUCT_NAME := lewa_vivow
 PRODUCT_BRAND := verizon_wwe
 PRODUCT_DEVICE := vivow
 PRODUCT_MODEL := Incredible 2
@@ -17,21 +17,21 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_vivow BUILD_ID=GRI40 BUILD_FING
 # Build kernel
 #PRODUCT_SPECIFIC_DEFINES += TARGET_PREBUILT_KERNEL=
 #PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_DIR=kernel-msm
-#PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=cyanogen_vivow_defconfig
+#PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=lewa_vivow_defconfig
 
 # Extra vivow overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/vivow
+PRODUCT_PACKAGE_OVERLAYS += vendor/lewa/overlay/vivow
 
 # Add the Torch app
 PRODUCT_PACKAGES += Torch
 
 # Broadcom FM radio
-$(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
+$(call inherit-product, vendor/lewa/products/bcm_fm_radio.mk)
 
 # Release name and versioning
 PRODUCT_RELEASE_NAME := Inc2
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 #
 # Copy passion specific prebuilt files

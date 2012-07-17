@@ -1,16 +1,16 @@
 # Inherit AOSP device configuration for captivate.
 $(call inherit-product, device/samsung/captivatemtd/full_captivatemtd.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_captivatemtd
+PRODUCT_NAME := lewa_captivatemtd
 PRODUCT_BRAND := samsung
 PRODUCT_DEVICE := captivatemtd
 PRODUCT_MODEL := SGH-I897
@@ -20,10 +20,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=SGH-I897 TARGET_DEVICE=SGH-I897 BUI
 # Build kernel
 #PRODUCT_SPECIFIC_DEFINES += TARGET_PREBUILT_KERNEL=
 #PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_DIR=kernel-samsung
-#PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=cyanogen_captivate_defconfig
+#PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=lewa_captivate_defconfig
 
 # Extra captivate overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/captivatemtd
+PRODUCT_PACKAGE_OVERLAYS += vendor/lewa/overlay/captivatemtd
 
 # Extra RIL settings
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -39,7 +39,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Release name and versioning
 PRODUCT_RELEASE_NAME := Captivate
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 #
 # Copy captivate specific prebuilt files

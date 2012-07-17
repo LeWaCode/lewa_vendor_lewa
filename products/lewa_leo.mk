@@ -1,17 +1,17 @@
 # Inherit AOSP device configuration for leo.
 $(call inherit-product, device/htc/leo/full_leo.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
 
-PRODUCT_NAME := cyanogen_leo
+PRODUCT_NAME := lewa_leo
 PRODUCT_BRAND := htc_wwe
 PRODUCT_DEVICE := leo
 PRODUCT_MODEL := HTC HD2
@@ -19,7 +19,7 @@ PRODUCT_MANUFACTURER := HTC
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=passion BUILD_ID=GRI40 BUILD_FINGERPRINT=google/passion/passion:2.3.3/GRI40/102588:user/release-keys PRIVATE_BUILD_DESC="passion-user 2.3.3 GRI40 102588 release-keys"
 
 # Extra leo overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/leo
+PRODUCT_PACKAGE_OVERLAYS += vendor/lewa/overlay/leo
 
 # Extra RIL settings
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -31,12 +31,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += Torch
 
 # Broadcom FM radio
-$(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
+$(call inherit-product, vendor/lewa/products/bcm_fm_radio.mk)
 
 # Release name and versioning
 PRODUCT_RELEASE_NAME := LEO
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 #
 # Copy leo specific prebuilt files

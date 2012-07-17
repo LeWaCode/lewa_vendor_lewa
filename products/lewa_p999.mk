@@ -1,16 +1,16 @@
 # Inherit device configuration for p999.
 $(call inherit-product, device/lge/p999/p999.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_p999
+PRODUCT_NAME := lewa_p999
 PRODUCT_BRAND := lge
 PRODUCT_DEVICE := p999
 PRODUCT_MODEL := LG-P999
@@ -20,10 +20,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=lge_lge_star BUILD_ID=GRI40 BUILD_F
 # Build kernel
 #PRODUCT_SPECIFIC_DEFINES += TARGET_PREBUILT_KERNEL=
 #PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_DIR=kernel-msm
-#PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=cyanogen_vision_defconfig
+#PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=lewa_vision_defconfig
 
 # Extra Star overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/star
+PRODUCT_PACKAGE_OVERLAYS += vendor/lewa/overlay/star
 
 # Add the Torch app
 PRODUCT_PACKAGES += Torch
@@ -32,12 +32,12 @@ PRODUCT_PACKAGES += Torch
 PRODUCT_PACKAGES += GanOptimizer
 
 # Broadcom FM radio
-#$(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
+#$(call inherit-product, vendor/lewa/products/bcm_fm_radio.mk)
 
 # Release name and versioning
 PRODUCT_RELEASE_NAME := G2x
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 #
 # Copy hdpi specific prebuilt files

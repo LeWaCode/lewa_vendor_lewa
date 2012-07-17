@@ -1,16 +1,16 @@
 # Inherit AOSP device configuration for dream_sapphire.
 $(call inherit-product, device/huawei/u8800pro/device_u8800pro.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 # Include GSM-only stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_u8800pro
+PRODUCT_NAME := lewa_u8800pro
 PRODUCT_BRAND := huawei
 PRODUCT_DEVICE := u8800pro
 PRODUCT_MODEL := U8800pro
@@ -20,7 +20,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=u8800pro BUILD_ID=GRJ22 BUILD_DISPL
 # Release name and versioning
 PRODUCT_RELEASE_NAME := U8800pro
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 
 #

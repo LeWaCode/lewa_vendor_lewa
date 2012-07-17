@@ -1,16 +1,16 @@
 # Inherit device configuration for glacier.
 $(call inherit-product, device/htc/glacier/glacier.mk)
 
-# Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+# Inherit some common lewamod stuff.
+$(call inherit-product, vendor/lewa/products/common_lewa.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/lewa/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_glacier
+PRODUCT_NAME := lewa_glacier
 PRODUCT_BRAND := tmobile
 PRODUCT_DEVICE := glacier
 PRODUCT_MODEL := HTC Glacier
@@ -20,10 +20,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_glacier BUILD_ID=GRJ22 BUILD_FI
 # Build kernel
 #PRODUCT_SPECIFIC_DEFINES += TARGET_PREBUILT_KERNEL=
 #PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_DIR=kernel-msm
-#PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=cyanogen_glacier_defconfig
+#PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=lewa_glacier_defconfig
 
 # Extra glacier overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/glacier
+PRODUCT_PACKAGE_OVERLAYS += vendor/lewa/overlay/glacier
 
 #Include Torch
 PRODUCT_PACKAGES += Torch
@@ -32,12 +32,12 @@ PRODUCT_PACKAGES += Torch
 PRODUCT_PACKAGES += GanOptimizer
 
 # Broadcom FM radio
-$(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
+$(call inherit-product, vendor/lewa/products/bcm_fm_radio.mk)
 
 # Release name and versioning
 PRODUCT_RELEASE_NAME := glacier
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
--include vendor/cyanogen/products/common_versions.mk
+-include vendor/lewa/products/common_versions.mk
 
 #
 # Copy passion specific prebuilt files
