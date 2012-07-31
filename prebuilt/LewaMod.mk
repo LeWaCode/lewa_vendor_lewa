@@ -46,7 +46,6 @@ PRODUCT_COPY_FILES += \
 
 # bin
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/bin/sysd:system/bin/sysd \
     $(LOCAL_PATH)/system/bin/su0:system/bin/su0
 
 # lib
