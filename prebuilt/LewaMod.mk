@@ -11,6 +11,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/app/$(LEWA_DPI)/AccountAndSyncSettings.apk:system/app/AccountAndSyncSettings.apk \
     $(LOCAL_PATH)/system/app/$(LEWA_DPI)/AMAP.apk:system/app/AMAP.apk \
     $(LOCAL_PATH)/system/app/$(LEWA_DPI)/Calendar365.apk:system/app/Calendar365.apk \
+    $(LOCAL_PATH)/system/app/$(LEWA_DPI)/Cit.apk:system/app/Cit.apk \
     $(LOCAL_PATH)/system/app/$(LEWA_DPI)/ContactsProvider.apk:system/app/ContactsProvider.apk \
     $(LOCAL_PATH)/system/app/$(LEWA_DPI)/Cstore.apk:system/app/Cstore.apk \
     $(LOCAL_PATH)/system/app/$(LEWA_DPI)/DeskClock.apk:system/app/DeskClock.apk \
