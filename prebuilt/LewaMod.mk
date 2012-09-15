@@ -59,7 +59,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/libmicrobes_jni.so:system/lib/libmicrobes_jni.so \
     $(LOCAL_PATH)/system/lib/libminimapv315.so:system/lib/libminimapv315.so \
     $(LOCAL_PATH)/system/lib/libphoneloc_jni.so:system/lib/libphoneloc_jni.so \
-    $(LOCAL_PATH)/system/lib/libqpicjni87.so:system/lib/libqpicjni87.so \
+    $(LOCAL_PATH)/system/lib/libqpicjni88.so:system/lib/libqpicjni88.so \
     $(LOCAL_PATH)/system/lib/libsmschecker.so:system/lib/libsmschecker.so
 
 # framework
