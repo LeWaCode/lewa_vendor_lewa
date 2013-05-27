@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#ebebeb">
+    <ImageView 
+        android:id="@+id/no_theme_image"
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent"
+        android:src="@drawable/theme_no_default"
+        android:visibility="gone"/>
+        
+        
+        
+   <TextView android:id="@+id/no_theme_remind"
+        android:textColor="#ffb1b1b1" 
+        android:gravity="center"  
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="10.0dip" 
+        android:layout_marginRight="10.0dip"
+        android:layout_centerInParent="true"
+        android:singleLine="false" 
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/theme_no_theme_messgae" 
+        android:paddingTop="80dip"
+        android:visibility="gone"/>
+    
+    
+    <LinearLayout
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent"
+	    android:clickable="true">
+    
+		<ListView
+		   android:id="@+id/theme_list"
+		   android:layout_width="fill_parent"
+		   android:layout_height="0dip"
+		   android:layout_weight="1"
+		   android:visibility="gone"
+		   android:cacheColorHint="#00000000"
+		   />
+	    
+	   <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        
+        
+        <Button android:id="@+id/import_theme"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+            android:background="@drawable/item_background_holo_dark_left"
+            android:shadowColor="#ffffffff"
+            android:shadowDx="1.0"
+            android:shadowDy="-1.2"
+            android:shadowRadius="1.0"
+            android:visibility="gone"/>
+            
+        <Button android:id="@+id/import_cancel"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+            android:background="@drawable/item_background_holo_dark_right"
+            android:shadowColor="#ffffffff"
+            android:shadowDx="1.0"
+            android:shadowDy="-1.2"
+            android:shadowRadius="1.0"
+            android:visibility="gone"
+            android:text="@string/theme_cancel"/>
+ 
+    </LinearLayout> 
+	    
+	       
+	       
+	 </LinearLayout>
+	 
+	<ProgressBar   
+       	android:id="@+id/search_theme_bar"    
+       	style="?android:attr/progressBarStyleSmall" 
+       	mce_style="?android:attr/progressBarStyleSmall"  
+       	android:layout_width="wrap_content"   
+       	android:layout_height="wrap_content"  
+       	android:visibility="visible" 
+       	android:layout_centerInParent="true"
+       	/> 
+    
+</RelativeLayout>

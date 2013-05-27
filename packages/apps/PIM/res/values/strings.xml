@@ -1,0 +1,2431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (C) 2007-2008 Esmertec AG.
+ * Copyright (C) 2007-2008 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Label for this app's shared user ID (and thus for all other
+         apps sharing the uid). -->
+    <string name="sharedUserLabel">Android Core Apps</string>
+
+    <!-- Title for the activity that shows contacts.  This is the name
+         used in the Launcher icon. -->
+    <string name="contactsList">Contacts</string>
+
+    <!-- Title for the activity that dials the phone.  This is the name
+         used in the Launcher icon. -->
+    <string name="launcherDialer">Phone</string>
+
+    <!-- Name of activity that allows users to create shortcuts on the home screen to a contact.
+         This shows up in a list of things like bookmark, folder, music playlist, etc -->
+    <string name="shortcutContact">Contact</string>
+
+    <!-- Name of activity that allows users to create shortcuts on the home screen to dial a contact.
+         This shows up in a list of things like bookmark, folder, music playlist, etc -->
+    <string name="shortcutDialContact">Direct dial</string>
+
+    <!-- Name of activity that allows users to create shortcuts on the home screen to message (SMS) a contact.
+         This shows up in a list of things like bookmark, folder, music playlist, etc -->
+    <string name="shortcutMessageContact">Direct message</string>
+
+    <!-- Activity title when the user is selecting a contact for a shortcut. -->
+    <string name="shortcutActivityTitle">Choose a contact shortcut</string>
+
+    <!-- Activity title when the user is selecting a contact for a direct dial shortcut. -->
+    <string name="callShortcutActivityTitle">Choose a number to call</string>
+
+    <!-- Activity title when the user is selecting a contact for a direct message shortcut. -->
+    <string name="messageShortcutActivityTitle">Choose a number to message</string>
+
+    <!-- Title for the activity that shows only starred contacts -->
+    <string name="starredList">Starred</string>
+
+    <!-- Title for the activity that shows only frequently contacted contacts -->
+    <string name="frequentList">Frequent</string>
+
+    <!-- Title for the activity that shows a mix of starred contacts and frequently contacted
+         contacts. -->
+    <string name="strequentList">Favorites</string>
+
+    <!-- The title bar when viewing the contact details activity -->
+    <string name="viewContactTitle">Contact details</string>
+
+    <!-- The description presented to the user in the Intent choose when there are multiple activities that allow
+         viewing a contact. This string represents the built in way to view the contact. -->
+    <string name="viewContactDesription">View contact</string>
+
+    <!-- The description presented to the user in the Intent choose when there are multiple activities that allow
+         editing a contact. This string represents the built in way to edit the contact. -->
+    <string name="editContactDescription">Edit contact</string>
+
+    <!-- The description presented to the user in the Intent choose when there are multiple activities that allow
+         creating a new contact. This string represents the built in way to create the contact. -->
+    <string name="insertContactDescription">Create contact</string>
+
+    <!-- Hint text in the search box when the user hits the Search key while in the contacts app -->
+    <string name="searchHint">Search contacts</string>
+    <string name="menu_mark_all">Mark All</string>
+    <string name="menu_unmark_all">UnMark All</string>
+
+    <!-- Menu item to search contacts -->
+    <string name="menu_search">Search</string>
+
+    <!-- Menu item to create a new contact -->
+    <string name="menu_newContact">New contact</string>
+
+    <string name="menu_blacklist">Blacklist</string>
+
+    <!-- Menu item used to view the details for a specific contact -->
+    <string name="menu_viewContact">View contact</string>
+
+    <!-- Menu item used to call a contact, containing the name of the contact to call -->
+    <string name="menu_callNumber">Call <xliff:g id="name">%s</xliff:g></string>
+
+    <!-- Menu item used to add a star to a contact, which makes that contact show up at the top of favorites -->
+    <string name="menu_addStar">Add to Favorites</string>
+
+    <!-- Menu item used to remove a star from a contact, making the contact no longer show up at the top of favorites -->
+    <string name="menu_removeStar">Remove from favorites</string>
+
+    <!-- Menu item used to edit a specific contact -->
+    <string name="menu_editContact">Edit contact</string>
+
+    <!-- Menu item used to delete a specific contact -->
+    <string name="menu_deleteContact">Delete contact</string>
+
+    <!-- Menu item used to call a specific contact when viewing the details of that contact. -->
+    <string name="menu_call">Call contact</string>
+
+    <!-- Menu item used to send an SMS or MMS message to a specific phone number or a contacts default phone number -->
+    <string name="menu_sendSMS">Text contact</string>
+
+    <!-- Menu item used to send an email message to a specific email address -->
+    <string name="menu_sendEmail">Send email</string>
+
+    <!-- Menu item used to view a contact's address on a map -->
+    <string name="menu_viewAddress">Map address</string>
+
+    <!-- Menu item that makes a phone the default for a contact. The default number used when you
+         try to call a contact without specifying a specific number. -->
+    <string name="menu_makeDefaultNumber">Make default number</string>
+
+    <string name="menu_cancelDefaultNumber">Cancel default number</string>
+
+    <!-- Menu item that makes an email address the default for a contact. The default email used
+         when you try to email a contact without specifying a specific address. -->
+    <string name="menu_makeDefaultEmail">Make default email</string>
+
+    <string name="menu_cancelDefaultEmail">Cancel default email</string>
+
+    <!-- Menu item used to share the plain-text representation of a specific phone number -->
+    <string name="menu_shareNumber">Share number</string>
+
+    <!-- Menu item used to share the plain-text representation of a specific email address -->
+    <string name="menu_shareEmail">Share email</string>
+
+    <!-- Menu item used to share the plain-text representation of a specific address -->
+    <string name="menu_shareAddress">Share address</string>
+
+    <!-- Menu item that splits an item from the contact detail into a separate aggregate -->
+    <string name="menu_splitAggregate">Separate</string>
+
+    <!-- Toast shown after a contact has been split from an aggregate by a user action -->
+    <string name="contactsSplitMessage">Contacts separated</string>
+
+    <!-- Title of the confirmation dialog for separating contacts into multiple instances  -->
+    <string name="splitConfirmation_title">Separate Contact</string>
+
+    <!-- Confirmation dialog for separating contacts into multiple instances  -->
+    <string name="splitConfirmation">Are you sure you want to separate this single contact
+        into multiple contacts: one for each set of contact information that was joined into it?
+    </string>
+
+    <!-- Menu item that joins an aggregate with another aggregate -->
+    <string name="menu_joinAggregate">Join</string>
+
+    <!-- Heading of the Join Contact screen -->
+    <string name="titleJoinContactDataWith">Join contacts</string>
+
+    <!-- Info blurb on the Join Contact screen -->
+    <string name="blurbJoinContactDataWith">Select the contact you want to join with <xliff:g id="name">%s</xliff:g>.</string>
+
+    <!-- An item in the Join Contact activity that opens up the full contact A-Z list -->
+    <string name="showAllContactsJoinItem">Show all contacts</string>
+
+    <!-- List separator for the Join Contact list: Suggestions -->
+    <string name="separatorJoinAggregateSuggestions">Suggested contacts</string>
+
+    <!-- List separator for the Join Contact list: A-Z -->
+    <string name="separatorJoinAggregateAll">All contacts</string>
+
+    <!-- Toast shown after two contacts have been joined by a user action -->
+    <string name="contactsJoinedMessage">Contacts joined</string>
+
+    <!-- Menu item that opens the Options activity for a given contact -->
+    <string name="menu_contactOptions">Options</string>
+
+    <!-- Title for the Options activity for a given contact -->
+    <string name="contactOptionsTitle">Options</string>
+
+    <!-- Confirmation dialog title after users selects to delete a contact. -->
+    <string name="deleteConfirmation_title">Delete</string>
+
+    <!-- Confirmation dialog title after users selects clear log. -->
+    <string name="clearConfirmation_title">Clear call log</string>
+
+    <!-- Warning dialog contents after users selects to delete a ReadOnly contact. -->
+    <string name="readOnlyContactWarning">You cannot delete contacts from read-only accounts, but you can hide them in your contacts lists.</string>
+
+    <!-- Warning dialog contents after users selects to delete a contact with ReadOnly and Writable sources. -->
+    <string name="readOnlyContactDeleteConfirmation">This contact contains information from multiple accounts. Information from read-only accounts will be hidden in your contacts lists, not deleted.</string>
+
+    <!-- Warning dialog contents after users selects to delete a contact with multiple Writable sources. -->
+    <string name="multipleContactDeleteConfirmation">Deleting this contact will delete information from multiple accounts.</string>
+
+    <!-- Confirmation dialog contents after users selects to delete a Writable contact. -->
+    <string name="deleteConfirmation">This contact will be deleted.</string>
+
+    <!-- Confirmation dialog contents after users selects to clear call log. -->
+    <string name="clearLogConfirmation">All call log entries will be removed.</string>
+
+    <!-- Menu item to indicate you are done editing a contact and want to save the changes you've made -->
+    <string name="menu_done">Done</string>
+
+    <!-- Menu item to indicate you want to stop editing a contact and NOT save the changes you've made -->
+    <string name="menu_doNotSave">Revert</string>
+
+    <!-- The title of the activity that edits and existing contact -->
+    <string name="editContact_title_edit">Edit contact</string>
+
+    <!-- The title of the activity that creates a new contact -->
+    <string name="editContact_title_insert">New contact</string>
+
+    <!-- The label describing the phonetic pronunciation/reading of a contact name -->
+    <string name="label_phonetic_name">Phonetic</string>
+
+    <!-- The label describing the Notes field of a contact. This field allows free form text entry about a contact -->
+    <string name="label_notes">Notes</string>
+
+    <!-- The label describing the SIP address field of a contact. [CHAR LIMIT=20] -->
+    <string name="label_sip_address">Internet call</string>
+
+    <!-- The label describing the custom ringtone for a contact -->
+    <string name="label_ringtone">Ringtone</string>
+
+    <!-- Hint text for the contact name when editing -->
+    <string name="ghostData_name">First and Last</string>
+
+    <!-- Hint text for the phonetic reading of the contact name when editing -->
+    <string name="ghostData_phonetic_name">Phonetic name</string>
+
+    <!-- Hint text for the organization name when editing -->
+    <string name="ghostData_company">Company</string>
+
+    <!-- Hint text for the organization title when editing -->
+    <string name="ghostData_title">Title</string>
+
+    <!-- Message displayed in a toast when you try to view the details of a contact that
+         for some reason doesn't exist anymore. -->
+    <string name="invalidContactMessage">The contact does not exist.</string>
+
+    <!-- When picking a contact from a list of all contacts there is an entry at the top of the
+         list that allows the user to create a new contact, which this string is used for -->
+    <string name="pickerNewContactHeader">Create new contact</string>
+
+    <!-- Dialog title when you select a label when creating or edit a contact -->
+    <string name="selectLabel">Select label</string>
+
+    <!-- Header that expands to list all of the types of phone numbers when editing or creating a phone number for a contact -->
+    <string name="phoneLabelsGroup">Phone</string>
+
+    <!-- Header that expands to list all of the types of email addresses when editing or creating an email address for a contact -->
+    <string name="emailLabelsGroup">Email</string>
+
+    <!-- Header that expands to list all of the types of IM account when editing or creating an IM account for a contact -->
+    <string name="imLabelsGroup">IM</string>
+
+    <!-- Header that expands to list all of the types of postal addresses when editing or creating an postal address for a contact -->
+    <string name="postalLabelsGroup">Postal address</string>
+
+    <!-- The order of the items below is important, don't reorder without changing EditContactActivity.java -->
+    <skip/>
+    <!-- The labels that are under the otherLabelsGroup when editing a contact. -->
+    <string-array name="otherLabels">
+        <!-- An organization associated with a contact -->
+        <item>Organization</item>
+        <!-- A note associated with a contact -->
+        <item>Note</item>
+    </string-array>
+
+    <!-- Description in the dialog that appears if there are no pictures from which to create an icon for a contact -->
+    <string name="photoPickerNotFoundText">No pictures are available on the phone.</string>
+
+    <!-- Description of the activity used to set a photo in the pictures application as the icon for a contact -->
+    <string name="attachToContact">Contact icon</string>
+
+    <!-- Title of the dialog used to set a custom label for a contact detail, like a phone number or email address.
+         For example, this may be used to set a phone number's label to "Vaction house" -->
+    <string name="customLabelPickerTitle">Custom label name</string>
+
+    <!-- The menu item to open the list of groups to display -->
+    <string name="menu_displayGroup">Display options</string>
+
+    <!-- Title of activity that lets user pick which contact groups to display -->
+    <string name="displayGroups">Display options</string>
+
+    <!-- Check box label that allows calls to the contact to be sent directly to voicemail -->
+    <string name="send_to_voicemail_checkbox">Send calls directly to voicemail</string>
+
+    <!-- String used to indicate that a contact doesn't have a custom ringtone -->
+    <string name="default_ringtone">Default</string>
+
+    <!-- The button/menu item that allows you to change an existing contact picture -->
+    <string name="changePicture">Change icon</string>
+
+    <!-- The menu item that allows you to remove a picture from a contact -->
+    <string name="removePicture">Remove icon</string>
+
+    <!-- The text displayed when the contacts list is empty while displaying all contacts -->
+    <string name="noContacts">No contacts.</string>
+
+    <!-- The text displayed when the contacts list is empty while displaying results after searching contacts -->
+    <string name="noMatchingContacts">No matching contacts found.</string>
+
+    <!-- The text displayed when the contacts list is empty while displaying only contacts that have phone numbers -->
+    <string name="noContactsWithPhoneNumbers">You do not have contacts, please create a new contact or import your contacts from the SD card / SIM card.</string>
+
+    <!-- The title of the filter to only show contacts with phone numbers -->
+    <string name="showFilterPhones">Only contacts with phones</string>
+
+    <!-- The description of the filter to only show contacts with phone numbers -->
+    <string name="showFilterPhonesDescrip">Only display contacts that have phone numbers</string>
+
+    <!-- The header over the list of all contacts groups -->
+    <string name="headerContactGroups">Choose contacts to display</string>
+
+    <!-- The description of a group with the total number of contacts -->
+    <plurals name="groupDescrip">
+        <item quantity="other"><xliff:g id="count">%0$d</xliff:g> contacts</item>
+    </plurals>
+
+    <!-- The description of a group with the total number of contacts, and the total number of contacts with phone numbers -->
+    <plurals name="groupDescripPhones">
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g> contacts, <xliff:g id="countWithPhones">%2$d</xliff:g> with phones</item>
+    </plurals>
+
+    <!-- Displayed in a spinner dialog after the user creates a contact and it's being saved to the database -->
+    <string name="savingContact">Saving contact\u2026</string>
+
+    <!-- Displayed in a spinner dialog as user changes to display options are saved -->
+    <string name="savingDisplayGroups">Saving display options\u2026</string>
+
+    <!-- Toast displayed when a contact is saved -->
+    <string name="contactSavedToast">Contact saved.</string>
+
+    <!-- Toast displayed when saving a contact failed -->
+    <string name="contactSavedErrorToast">Error, unable to save contact changes.</string>
+
+    <!-- Displayed at the top of the contacts showing the total number of contacts visible when "Only contacts with phones" is selected -->
+    <plurals name="listTotalPhoneContacts">
+        <item quantity="one">Displaying 1 contact with phone number</item>
+        <item quantity="other">Displaying <xliff:g id="count">%d</xliff:g> contacts with phone numbers</item>
+    </plurals>
+
+    <!-- Displayed at the top of the contacts showing the zero as total number of contacts visible when "Only contacts with phones" is selected -->
+    <string name="listTotalPhoneContactsZero">No visible contacts with phone numbers</string>
+
+    <!-- Displayed at the top of the contacts showing the total number of contacts visible when "Only contacts with phones" not selected -->
+    <plurals name="listTotalAllContacts">
+        <item quantity="one">Displaying 1 contact</item>
+        <item quantity="other">Displaying <xliff:g id="count">%d</xliff:g> contacts</item>
+    </plurals>
+
+    <!-- Displayed at the top of the contacts showing the zero total number of contacts visible when "Only contacts with phones" not selected -->
+    <string name="listTotalAllContactsZero">No visible contacts</string>
+
+    <!-- Displayed at the top of the contacts showing the total number of contacts found when "Only contacts with phones" not selected -->
+    <plurals name="listFoundAllContacts">
+        <item quantity="one">Found 1 contact</item>
+        <item quantity="other">Found <xliff:g id="count">%d</xliff:g> contacts</item>
+    </plurals>
+
+    <!-- Displayed at the top of the contacts showing the zero total number of contacts found when "Only contacts with phones" not selected -->
+    <string name="listFoundAllContactsZero">Contact not found</string>
+
+    <!-- Displayed at the top of the contacts showing the total number of contacts found when typing search query -->
+    <plurals name="searchFoundContacts">
+        <item quantity="one">1 contact</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> contacts</item>
+    </plurals>
+
+    <!-- The description text for the contacts tab. Space is limited for this string, so the shorter the better -->
+    <string name="contactsIconLabel">Contacts</string>
+
+    <!-- The description text for the favorites tab. Space is limited for this string, so the shorter the better -->
+    <string name="contactsFavoritesLabel">Favorites</string>
+
+    <!-- The description text for the dialer tab. Space is limited for this string, so the shorter the better -->
+    <string name="dialerIconLabel">Phone</string>
+
+    <!-- The description text for the call log tab. Space is limited for this string, so the shorter the better -->
+    <string name="recentCallsIconLabel">Call log</string>
+    <string name="liveFolderAll">All contacts</string>
+    <string name="liveFolderFavorites">Starred contacts</string>
+    <string name="liveFolderPhone">Contacts with phone numbers</string>
+
+    <!-- Menu item used to send an SMS or MMS message to a phone number  -->
+    <string name="menu_sendTextMessage">Send text message</string>
+
+    <!-- Menu item used to call a contact from the call log -->
+    <string name="recentCalls_callNumber">Call <xliff:g id="name">%s</xliff:g></string>
+
+    <!-- Menu item used to copy a number from the call log to the dialer so it can be edited before calling it -->
+    <string name="recentCalls_editNumberBeforeCall">Edit number before call</string>
+
+    <!--Menu item used to add a number from the call log to Blacklist  -->
+    <string name="recentCalls_addToBlacklist">Add to Blacklist</string>
+    
+    <!-- Menu item used to add a number from the call log to contacts -->
+    <string name="recentCalls_addToContact">Add to contacts</string>
+
+    <!-- Menu item used to remove a single call from the call log -->
+    <string name="recentCalls_removeFromRecentList">Remove from call log</string>
+
+    <!-- Menu item used to remove all calls from the call log -->
+    <string name="recentCalls_deleteAll">Clear call log</string>
+
+    <!-- Text displayed when the call log is empty -->
+    <string name="recentCalls_empty">Call log is empty.</string>
+
+    <!-- Title of the confirmation dialog for clearing the call log  -->
+    <string name="clearCallLogConfirmation_title">Clear call log</string>
+
+    <!-- Confirmation dialog for clearing the call log  -->
+    <string name="clearCallLogConfirmation">Are you sure you want to clear the call log?</string>
+
+    <!-- The title of a dialog that displays the IMEI of the phone -->
+    <string name="imei">IMEI</string>
+
+    <!-- The title of a dialog that displays the MEID of the CDMA phone -->
+    <string name="meid">MEID</string>
+
+    <!-- String used for displaying calls to the voicemail number in the call log -->
+    <string name="voicemail">Voicemail</string>
+
+    <!-- String used to display calls from unknown numbers in the call log -->
+    <string name="unknown">Unknown</string>
+
+    <!-- String used to display calls from private numbers in the call log -->
+    <string name="private_num">Private number</string>
+
+    <!-- String used to display calls from pay phone in the call log -->
+    <string name="payphone">Pay phone</string>
+
+    <!-- Displayed in the text entry box in the dialer when in landscape mode to guide the user
+         to dial using the physical keyboard -->
+    <string name="dialerKeyboardHintText">Use keyboard to dial</string>
+
+    <!-- Hint text displayed in the "digits" field above the dialer's
+         dialpad, if there's already a call in progress.  (This hint
+         reminds the user that the dialer will add a new call, as opposed
+         to sending DTMF tones over the current call.) -->
+    <string name="dialerDialpadHintText">Dial to add a call</string>
+
+    <!-- Dialog text displayed when loading a phone number from the SIM card for speed dial -->
+    <string name="simContacts_emptyLoading">Loading from SIM card\u2026</string>
+
+    <!-- Dialog title displayed when loading a phone number from the SIM card for speed dial -->
+    <string name="simContacts_title">SIM card contacts</string>
+
+    <!-- Displayed full screen when the user want to create a shortcut, but there is no contacts, and contact syncing is enabled -->
+    <string name="noContactsHelpTextWithSyncForCreateShortcut">"You don't have any contacts to display. (If you just added an account, it can take a few minutes to sync contacts.)"</string>
+
+    <!-- Displayed full screen when the user want to create a shortcut, but there is no contacts -->
+    <string name="noContactsHelpTextForCreateShortcut">"You don't have any contacts to display."</string>
+
+    <!-- Displayed full screen when the user has no contacts and they are displaying the My Contacts group, and contact syncing is disabled -->
+    <string name="noContactsHelpText">"You don't have any contacts to display.\n\nTo add contacts, press <font fgcolor="#ffffffff"><b>Menu</b></font> and touch:\n
+        \n<li><font fgcolor="#ffffffff"><b>    Accounts</b></font> to add or configure an account with contacts you can sync to the phone\n</li>
+        \n<li><font fgcolor="#ffffffff"><b>    New contact</b></font> to create a new contact from scratch\n</li>
+        \n<li><font fgcolor="#ffffffff"><b>    Import/Export</b></font>\n</li>"
+    </string>
+
+    <!-- Displayed full screen when the user has no contacts and they are displaying the My Contacts group, and contact syncing is enabled -->
+    <string name="noContactsHelpTextWithSync">"You don't have any contacts to display. (If you just added an account, it can take a few minutes to sync contacts.)\n\nTo add contacts, press <font fgcolor="#ffffffff"><b>Menu</b></font> and touch:\n
+        \n<li><font fgcolor="#ffffffff"><b>    Accounts</b></font> to add or configure an account with contacts you can sync to the phone\n</li>
+        \n<li><font fgcolor="#ffffffff"><b>    Display options</b></font> to change which contacts are visible\n</li>
+        \n<li><font fgcolor="#ffffffff"><b>    New contact</b></font> to create a new contact from scratch\n</li>
+        \n<li><font fgcolor="#ffffffff"><b>    Import/Export</b></font>\n</li>"
+    </string>
+
+    <!-- Displayed full screen when the user has no contacts and they are displaying the My Contacts group, and contact syncing is disabled, and there is no sim card (cdma)-->
+    <string name="noContactsNoSimHelpText">"You don't have any contacts to display.\n\nTo add contacts, press <font fgcolor="#ffffffff"><b>Menu</b></font> and touch:\n
+        \n<li><font fgcolor="#ffffffff"><b>    Accounts</b></font> to add or configure an account with contacts you can sync to the phone\n</li>
+        \n<li><font fgcolor="#ffffffff"><b>    New contact</b></font> to create a new contact from scratch\n</li>
+        \n<li><font fgcolor="#ffffffff"><b>    Import/Export</b></font>\n</li>"
+    </string>
+
+    <!-- Displayed full screen when the user has no contacts and they are displaying the My Contacts group, and contact syncing is enabled, and there is no sim card (cdma) -->
+    <string name="noContactsNoSimHelpTextWithSync">"You don't have any contacts to display. (If you just added an account, it can take a few minutes to sync contacts.)\n\nTo add contacts, press <font fgcolor="#ffffffff"><b>Menu</b></font> and touch:\n
+        \n<li><font fgcolor="#ffffffff"><b>    Accounts</b></font> to add or configure an account with contacts you can sync to the phone\n</li>
+        \n<li><font fgcolor="#ffffffff"><b>    Display options</b></font> to change which contacts are visible\n</li>
+        \n<li><font fgcolor="#ffffffff"><b>    New contact</b></font> to create a new contact from scratch\n</li>
+        \n<li><font fgcolor="#ffffffff"><b>    Import/Export</b></font>\n</li>"
+    </string>
+
+    <!-- Displayed full screen when the user has no favorites and they are displaying the favorites tab -->
+    <!--
+    <string name="noFavoritesHelpText">"You don't have any favorites.\n\nTo add a contact to your list of favorites:\n
+        <li>    Touch the <b>Contacts</b> tab\n</li>
+        \n<li>    Touch the contact you want to add to your favorites\n</li>
+        \n<li>    Touch the star next to the contact\'s name\n</li>"
+    </string>
+    -->
+    <string name="noFavoritesHelpText">"You don't have any favorites</string>
+
+    <!-- Activity title for the activity that lets the user choose which groups of contacts to sync from the server -->
+
+
+    <!-- Live folder label for all contacts -->
+    <string name="liveFolder_all_label">All contacts</string>
+
+    <!-- Live folder label for only starred contacts -->
+    <string name="liveFolder_favorites_label">Starred</string>
+
+    <!-- Live folder label for all contacts with phone numbers -->
+    <string name="liveFolder_phones_label">Phones</string>
+
+    <!-- Item label: jump to the in-call DTMF dialpad.
+         (Part of a list of options shown in the dialer when another call
+         is already in progress.) -->
+    <string name="dialer_useDtmfDialpad">Use touch tone keypad</string>
+
+    <!-- Item label: jump to the in-call UI.
+         (Part of a list of options shown in the dialer when another call
+         is already in progress.) -->
+    <string name="dialer_returnToInCallScreen">Return to call in progress</string>
+
+    <!-- Item label: use the Dialer's dialpad to add another call.
+         (Part of a list of options shown in the dialer when another call
+         is already in progress.) -->
+    <string name="dialer_addAnotherCall">Add call</string>
+
+    <!-- Title bar for call detail screen -->
+    <string name="callDetailTitle">Call details</string>
+
+    <!-- Toast for call detail screen when couldn't read the requested details -->
+    <string name="toast_call_detail_error">Couldn\'t read details for the requested call.</string>
+
+    <!-- Title for incoming call details screen -->
+    <string name="type_incoming">Incoming call</string>
+
+    <!-- Title for outgoing call details screen -->
+    <string name="type_outgoing">Outgoing call</string>
+
+    <!-- Title for missed call details screen -->
+    <string name="type_missed">Missed call</string>
+
+    <!-- Description for incoming calls going to voice mail vs. not -->
+    <string name="actionIncomingCall">Incoming calls</string>
+
+    <!-- Action string for calling back a number in the call log -->
+    <string name="callBack">Call back</string>
+
+    <!-- Action string for calling a number in the call log again -->
+    <string name="callAgain">Call again</string>
+
+    <!-- Action string for returning a missed call in the call log -->
+    <string name="returnCall">Return call</string>
+
+    <!-- A nicely formatted call duration displayed when viewing call details. For example "42 mins 28 secs" -->
+    <string name="callDetailsDurationFormat"><xliff:g id="minutes" example="42">%1$s</xliff:g> mins <xliff:g id="seconds" example="28">%2$s</xliff:g> secs</string>
+
+    <!-- A list separator for the Favorites tab indicating that items below it are frequently contacted contacts rather than starred contacts -->
+    <string name="favoritesFrquentSeparator">Frequently contacted</string>
+
+    <!-- Dialog title when prompting before creating a contact -->
+    <string name="add_contact_dlg_title">Add contact</string>
+    <!-- Dialog message when prompting before creating a contact. Includes
+         the email address, e.g. "Add xyz@foo.com to contacts?" -->
+    <string name="add_contact_dlg_message_fmt">Add \"<xliff:g id="email">%s</xliff:g>\" to contacts?</string>
+
+    <!-- Label for the all data tab in the view and edit card -->
+    <string name="all_tab_label">All</string>
+
+    <!-- String describing the image on ImageButton one
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name="description_image_button_one">one</string>
+
+    <!-- String describing the image on ImageButton two
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name="description_image_button_two">two</string>
+
+    <!-- String describing the image on ImageButton three
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name="description_image_button_three">three</string>
+
+    <!-- String describing the image on ImageButton four
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name="description_image_button_four">four</string>
+
+    <!-- String describing the image on ImageButton five
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name="description_image_button_five">five</string>
+
+    <!-- String describing the image on ImageButton six
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name="description_image_button_six">six</string>
+
+    <!-- String describing the image on ImageButton seven
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name="description_image_button_seven">seven</string>
+
+    <!-- String describing the image on ImageButton eight
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name="description_image_button_eight">eight</string>
+
+    <!-- String describing the image on ImageButton nine
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name="description_image_button_nine">nine</string>
+
+    <!-- String describing the image on ImageButton star
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name="description_image_button_star">star</string>
+
+    <!-- String describing the image on ImageButton zero
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name="description_image_button_zero">zero</string>
+
+    <!-- String describing the image on ImageButton pound
+
+        Note: AccessibilityServices use this attribute to announce what the view represents.
+              This is especially valuable for views without textual representation like ImageView.
+    -->
+    <string name="description_image_button_pound">pound</string>
+
+    <!-- String describing the Voicemail ImageButton
+
+         Used by AccessibilityService to announce the purpose of the button.
+    -->
+    <string name="description_voicemail_button">voicemail</string>
+
+    <!-- String describing the Dial ImageButton
+
+         Used by AccessibilityService to announce the purpose of the button.
+    -->
+    <string name="description_dial_button">dial</string>
+
+    <!-- String describing the Delete/Backspace ImageButton
+
+         Used by AccessibilityService to announce the purpose of the button.
+    -->
+    <string name="description_delete_button">backspace</string>
+
+    <!-- String describing the digits text box containing the number to dial.
+
+         Used by AccessibilityService to announce the purpose of the view.
+    -->
+    <string name="description_digits_edittext">number to dial</string>
+
+    <!-- String describing the Contact Photo Image
+
+         Used by AccessibilityService to announce the purpose of the view.
+    -->
+    <string name="description_contact_photo">contact photo</string>
+
+    <!-- String describing the Contact Editor Minus button
+
+         Used by AccessibilityService to announce the purpose of the button.
+    -->
+    <string name="description_minus_button">minus</string>
+
+    <!-- String describing the Contact Editor Plus button
+
+         Used by AccessibilityService to announce the purpose of the button.
+    -->
+    <string name="description_plus_button">plus</string>
+
+    <!-- Dialog title shown when USB storage does not exist [CHAR LIMIT=25] -->
+    <string name="no_sdcard_title" product="nosdcard">USB storage unavailable</string>
+    <!-- Dialog title shown when SD Card does not exist -->
+    <string name="no_sdcard_title" product="default">No SD card</string>
+
+    <!-- Dialog message shown when USB storage does not exist [CHAR LIMIT=30] -->
+    <string name="no_sdcard_message" product="nosdcard">No USB storage detected</string>
+    <!-- Dialog message shown when SDcard does not exist -->
+    <string name="no_sdcard_message" product="default">No SD card detected</string>
+
+    <!-- Dialog title shown when searching VCard data from SD Card -->
+    <string name="searching_vcard_title">Searching for vCard</string>
+
+    <!-- Action string for selecting SIM for importing contacts -->
+    <string name="import_from_sim">Import from SIM card</string>
+
+    <!-- Action string for selecting USB storage for importing contacts [CHAR LIMIT=25] -->
+    <string name="import_from_sdcard" product="nosdcard">Import from USB storage</string>
+    <!-- Action string for selecting SD Card for importing contacts -->
+    <string name="import_from_sdcard" product="default">Import from SD card</string>
+
+    <!-- Action that exports all contacts to USB storage [CHAR LIMIT=25] -->
+    <string name="export_to_sdcard" product="nosdcard">Export to USB storage</string>
+    <!-- Action that exports all contacts to SD Card -->
+    <string name="export_to_sdcard" product="default">Export to SD card</string>
+
+    <!-- Action that shares visible contacts -->
+    <string name="share_visible_contacts">Share visible contacts</string>
+
+    <!-- One of alternatives shown when the system allows a user to select how many vCard files
+         should be imported. This message shows only when the system is certain that there's more
+         than one vCard files available in the system. -->
+    <string name="import_one_vcard_string">Import one vCard file</string>
+
+    <!-- One of alternatives shown when the system allows a user to select how many vCard files
+         should be imported. This message shows only when the system is certain that there's more
+         than one vCard files available in the system. -->
+    <string name="import_multiple_vcard_string">Import multiple vCard files</string>
+
+    <!-- One of alternatives shown when the system allows a user to select how many vCard files
+         should be imported. This message shows only when the system is certain that there's more
+         than one vCard files available in the system. -->
+    <string name="import_all_vcard_string">Import all vCard files</string>
+
+    <!-- Dialog message shown when searching VCard data from SD Card [CHAR LIMIT=NONE] -->
+    <string name="searching_vcard_message" product="nosdcard">Searching for vCard data in USB storage</string>
+    <!-- Dialog message shown when searching VCard data from SD Card -->
+    <string name="searching_vcard_message" product="default">Searching for vCard data on SD card</string>
+
+    <!-- Dialog title shown when scanning VCard data failed. [CHAR LIMIT=NONE] -->
+    <string name="scanning_sdcard_failed_title" product="nosdcard">Scanning USB storage failed</string>
+    <!-- Dialog title shown when scanning VCard data failed. -->
+    <string name="scanning_sdcard_failed_title" product="default">Scanning SD card failed</string>
+
+    <!-- Dialog message shown when searching VCard data failed.
+         An exact reason for the failure should [CHAR LIMIT=NONE] -->
+    <string name="scanning_sdcard_failed_message" product="nosdcard">Scanning USB storage failed (Reason: \"<xliff:g id="fail_reason">%s</xliff:g>\")</string>
+    <!-- Dialog message shown when searching VCard data failed.
+         An exact reason for the failure should -->
+    <string name="scanning_sdcard_failed_message" product="default">Scanning SD card failed (Reason: \"<xliff:g id="fail_reason">%s</xliff:g>\")</string>
+
+    <!-- The failed reason shown when Contacts app (especially vCard importer/exporter)
+         emitted some I/O error. Exact reason will be appended by the system. -->
+    <string name="fail_reason_io_error">I/O Error</string>
+
+    <!-- The failed reason shown when vCard parser was not able to be parsed by the current vCard
+         implementation. This might happen even when the input vCard is completely valid, though
+         we believe it is rather rare in the actual world. -->
+    <string name="fail_reason_vcard_parse_error">Failed to parse vCard for unexpected reason</string>
+
+    <!-- The failed reason shown when the current vCard importer cannot parse the file since the
+         parser is incomplete (actually, there's missing part in the current vCard parser, though
+         our understanding is that the functionality missed by the current vCard parser
+         is rarely needed in the actual vCard...). -->
+    <string name="fail_reason_vcard_not_supported_error">Failed to parse vCard though it seems in valid format, since the current implementation does not support it</string>
+
+    <!-- The failed reason shown when the system could not find any vCard file
+         (with extension ".vcf" in SDCard.) [CHAR LIMIT=NONE] -->
+    <string name="fail_reason_no_vcard_file" product="nosdcard">No vCard file found in the USB storage</string>
+    <!-- The failed reason shown when the system could not find any vCard file
+         (with extension ".vcf" in SDCard.) -->
+    <string name="fail_reason_no_vcard_file" product="default">No vCard file found on the SD card</string>
+
+    <!-- The failed reason shown when the import of some of vCard files failed during multiple vCard
+         files import. It includes the case where all files were failed to be imported. -->
+    <string name="fail_reason_failed_to_read_files">One or more files failed to be imported (%s).</string>
+
+    <!-- The failed reason which should not be shown but it may in some buggy condition. -->
+    <string name="fail_reason_unknown">Unknown error</string>
+
+    <!-- Dialog title shown when a user is asked to select VCard file -->
+    <string name="select_vcard_title">Select vCard file</string>
+
+    <!-- The message shown while reading a vCard file/entry. The first argument is like
+    "Reading VCard" or "Reading VCard files" and the second is the display name of the current
+    data being parsed -->
+    <string name="progress_shower_message"><xliff:g id="action" example="Reading VCard">%1$s</xliff:g>\n<xliff:g id="filename" example="foo.vcf">%2$s</xliff:g></string>
+
+    <!-- Dialog title shown when reading VCard data -->
+    <string name="reading_vcard_title">Reading vCard</string>
+
+    <!-- Dialog message shown when reading a VCard file -->
+    <string name="reading_vcard_message">Reading vCard file(s)</string>
+
+    <!-- Dialog title shown when reading VCard data failed -->
+    <string name="reading_vcard_failed_title">Reading of vCard data has failed</string>
+
+    <!-- Message while reading one vCard file "(current number) of (total number) contacts" The order of "current number" and "total number" cannot be changed (like "total: (total number), current: (current number)")-->
+    <string name="reading_vcard_contacts"><xliff:g id="current_number">%1$s</xliff:g> of <xliff:g id="total_number">%2$s</xliff:g> contacts</string>
+
+    <!-- Message while reading multiple vCard files "(current number) of (total number) files" The order of "current number" and "total number" cannot be changed (like "total: (total number), current: (current number)")-->
+    <string name="reading_vcard_files"><xliff:g id="current_number">%1$s</xliff:g> of <xliff:g id="total_number">%2$s</xliff:g> files</string>
+
+    <!-- Dialog title shown when a user confirms whether he/she export Contact data -->
+    <string name="confirm_export_title">Confirm export</string>
+
+    <!-- Dialog message shown when a user confirms whether he/she export Contact data -->
+    <string name="confirm_export_message">Are you sure you want to export your contact list to \"<xliff:g id="vcard_filename">%s</xliff:g>\"?</string>
+
+    <!-- Dialog title shown when exporting Contact data failed -->
+    <string name="exporting_contact_failed_title">Failed to export contact data</string>
+
+    <!-- Dialog message shown when exporting Contact data failed -->
+    <string name="exporting_contact_failed_message">Failed to export contact data.\nReason for failure: \"<xliff:g id="fail_reason">%s</xliff:g>\"</string>
+
+    <!-- The failed reason shown when there's no contact which is allowed to be exported.
+         Note that user may have contacts data but all of them are probably not allowed to be
+         exported because of security/permission reasons. -->
+    <string name="fail_reason_no_exportable_contact">There is no exportable contact</string>
+
+    <!-- The failed reason shown when vCard exporter could not create a file for the vCard since
+         there are too many files relevant to vCard. [CHAR LIMIT=NONE] -->
+    <string name="fail_reason_too_many_vcard" product="nosdcard">Too many vCard files in the USB storage</string>
+    <!-- The failed reason shown when vCard exporter could not create a file for the vCard since
+         there are too many files relevant to vCard. -->
+    <string name="fail_reason_too_many_vcard" product="default">Too many vCard files on the SD card</string>
+
+    <!-- The failed reason shown when the given file name is too long for the system.
+         The length limit of each file is different in each Android device, so we don't need to
+         mention it here. -->
+    <string name="fail_reason_too_long_filename">Required filename is too long (\"<xliff:g id="filename">%s</xliff:g>\")</string>
+
+    <!-- Dialog title shown when the application is exporting contact data outside -->
+    <string name="exporting_contact_list_title">Exporting contact data</string>
+
+    <!-- Message shown when the application is exporting contact data outside -->
+    <string name="exporting_contact_list_message">Exporting contact data to \"<xliff:g id="file_name">%s</xliff:g>\"</string>
+
+    <!-- The failed reason shown when contacts exporter fails to be initialized.
+         Some exact reason must follow this. -->
+    <string name="fail_reason_could_not_initialize_exporter">Could not initialize the exporter: \"<xliff:g id="exact_reason">%s</xliff:g>\"</string>
+
+    <!-- The failed reason shown when some error happend during contacts export.
+         Some exact reason must follow this. -->
+    <string name="fail_reason_error_occurred_during_export">Error occured during export: \"<xliff:g id="exact_reason">%s</xliff:g>\"</string>
+
+    <!-- The error reason the vCard composer "may" emit when database is corrupted or
+         something is going wrong. Usually users should not see this text. -->
+    <string name="composer_failed_to_get_database_infomation">Failed to get database information</string>
+
+    <!-- This error message shown when the user actually have no contact
+         (e.g. just after data-wiping), or, data providers of the contact list prohibits their
+         contacts from being exported to outside world via vcard exporter, etc. -->
+    <string name="composer_has_no_exportable_contact">There is no exportable contact. If you have actualy have contacts on your phone, all the contacts may be prohibited from being exported to outside the phone by some data provider.</string>
+
+    <!-- The error reason the vCard composer may emit when vCard composer is not initialized
+         even when needed.
+         Users should not usually see this error message. -->
+    <string name="composer_not_initialized">The vCard composer is not correctly initialized</string>
+
+    <!-- The failed reason shown when vCard importer/exporter could not open the file
+         specified by a user. The file name should be in the message. -->
+    <string name="fail_reason_could_not_open_file">Could not open \"<xliff:g id="file_name">%1$s</xliff:g>\": <xliff:g id="exact_reason">%2$s</xliff:g></string>
+
+    <!-- Message in progress bar while exporting contact list to a file "(current number) of (total number) contacts" The order of "current number" and "total number" cannot be changed (like "total: (total number), current: (current number)")-->
+    <string name="exporting_contact_list_progress"><xliff:g id="current_number">%1$s</xliff:g> of <xliff:g id="total_number">%2$s</xliff:g> contacts</string>
+
+    <!-- The string used to describe Contacts as a searchable item within system search settings. -->
+    <string name="search_settings_description">Names of your contacts</string>
+
+    <!-- Menu items for dialpad options as part of Pause and Wait ftr -->
+    <string name="add_2sec_pause">Add 2-sec pause</string>
+    <string name="add_wait">Add wait</string>
+
+    <!-- Title for the call disambiguation dialog -->
+    <string name="call_disambig_title">Call using</string>
+
+    <!-- Title for the sms disambiguation dialog -->
+    <string name="sms_disambig_title">Text using</string>
+
+    <!-- Message next to disamgiguation dialog check box -->
+    <string name="make_primary">Remember this choice</string>
+
+    <!-- Shown as a toast when the user taps on a Fast-Track icon, and no application
+         was found that could perform the selected action -->
+    <string name="quickcontact_missing_app">No application found to handle this action</string>
+
+    <!-- Shown as the checkbox label that, when checked, will store remember the
+         selected choice and shortcut to it in the future.  For example, this would
+         make a selected phone number the default. -->
+    <string name="quickcontact_remember_choice">Remember this choice</string>
+
+    <!-- Shown as the header name for a person when the name is missing or unknown. -->
+    <string name="quickcontact_missing_name">Unknown</string>
+
+    <!-- Text that is shown in the Badge, when there is no data to display -->
+    <string name="quickcontact_no_data">No data</string>
+
+    <!-- The menu item to open the list of accounts -->
+    <string name="menu_accounts">Accounts</string>
+
+    <!-- The menu item to bulk import or bulk export contacts from SIM card or SD card. -->
+    <string name="menu_import_export">Import/Export</string>
+
+    <!-- Dialog title when selecting the bulk operation to perform from a list. -->
+    <string name="dialog_import_export">Import/Export contacts</string>
+
+    <!-- The menu item to share the currently viewed contact -->
+    <string name="menu_share">Share</string>
+
+    <!-- Dialog title when picking the application to share a contact with. -->
+    <string name="share_via">Share contact via</string>
+
+    <!-- Toast indicating that sharing a contact has failed. -->
+    <string name="share_error">This contact cannot be shared.</string>
+
+    <!-- Header that expands to list all name types when editing a structured name of a contact -->
+    <string name="nameLabelsGroup">Name</string>
+    <!-- Header that expands to list all nickname types when editing a nickname of a contact -->
+    <string name="nicknameLabelsGroup">Nickname</string>
+    <!-- Header that expands to list all organization types when editing an organization of a contact -->
+    <string name="organizationLabelsGroup">Organization</string>
+    <!-- Header that expands to list all website types when editing a website of a contact -->
+    <string name="websiteLabelsGroup">Website</string>
+    <!-- Header that expands to list all event types when editing an event of a contact -->
+    <string name="eventLabelsGroup">Event</string>
+
+    <!-- Single-character overlay for home phone numbers when creating desktop shortcuts -->
+    <string name="type_short_home">H</string>
+    <!-- Single-character overlay for mobile phone numbers when creating desktop shortcuts -->
+    <string name="type_short_mobile">M</string>
+    <!-- Single-character overlay for work phone numbers when creating desktop shortcuts -->
+    <string name="type_short_work">W</string>
+    <!-- Single-character overlay for pager phone numbers when creating desktop shortcuts -->
+    <string name="type_short_pager">P</string>
+    <!-- Single-character overlay for other phone numbers when creating desktop shortcuts -->
+    <string name="type_short_other">O</string>
+
+    <!-- In edit dialog, shown if the contact is marked as being read-only -->
+    <string name="edit_read_only">This contact is read-only</string>
+
+    <!-- Shown as the header title over a collapsible section that, by default, hides
+         secondary contact detail edit fields, such as birthday. -->
+    <string name="edit_secondary_collapse">More</string>
+
+    <string name="dialog_primary_name">Primary name</string>
+    <string name="dialog_new_contact_account">Create contact under account</string>
+
+    <string name="menu_sync_remove">Remove sync group</string>
+    <string name="dialog_sync_add">Add sync group</string>
+    <string name="display_more_groups">More groups\u2026</string>
+
+    <!-- List title for a special contacts group that covers all contacts.-->
+    <string name="display_ungrouped">All Other Contacts</string>
+
+    <!-- List title for a special contacts group that covers all contacts that
+         aren't members of any other group. -->
+    <string name="display_all_contacts">All Contacts</string>
+
+    <!-- Warning message given to users just before they remove a currently syncing
+         group that would also cause all ungrouped contacts to stop syncing. -->
+    <string name="display_warn_remove_ungrouped">Removing \'<xliff:g id="group" example="Starred">%s</xliff:g>\' from sync will also remove any ungrouped contacts from sync.</string>
+
+    <!-- Title for data source when creating or editing a contact that doesn't
+         belong to a specific account.  This contact will only exist on the phone
+         and will not be synced. -->
+    <string name="account_phone">Phone-only, unsynced</string>
+
+    <!-- Action string for calling a custom phone number -->
+    <string name="call_custom">Call <xliff:g id="custom">%s</xliff:g></string>
+    <!-- Action string for calling a home phone number -->
+    <string name="call_home">Call home</string>
+    <!-- Action string for calling a mobile phone number -->
+    <string name="call_mobile">Call mobile</string>
+    <!-- Action string for calling a work phone number -->
+    <string name="call_work">Call work</string>
+    <!-- Action string for calling a work fax phone number -->
+    <string name="call_fax_work">Call work fax</string>
+    <!-- Action string for calling a home fax phone number -->
+    <string name="call_fax_home">Call home fax</string>
+    <!-- Action string for calling a pager phone number -->
+    <string name="call_pager">Call pager</string>
+    <!-- Action string for calling an other phone number -->
+    <string name="call_other">Call</string>
+    <!-- Action string for calling a callback number -->
+    <string name="call_callback">Call callback</string>
+    <!-- Action string for calling a car phone number -->
+    <string name="call_car">Call car</string>
+    <!-- Action string for calling a company main phone number -->
+    <string name="call_company_main">Call company main</string>
+    <!-- Action string for calling a ISDN phone number -->
+    <string name="call_isdn">Call ISDN</string>
+    <!-- Action string for calling a main phone number -->
+    <string name="call_main">Call main</string>
+    <!-- Action string for calling an other fax phone number -->
+    <string name="call_other_fax">Call fax</string>
+    <!-- Action string for calling a radio phone number -->
+    <string name="call_radio">Call radio</string>
+    <!-- Action string for calling a Telex phone number -->
+    <string name="call_telex">Call telex</string>
+    <!-- Action string for calling a TTY/TDD phone number -->
+    <string name="call_tty_tdd">Call TTY/TDD</string>
+    <!-- Action string for calling a work mobile phone number -->
+    <string name="call_work_mobile">Call work mobile</string>
+    <!-- Action string for calling a work pager phone number -->
+    <string name="call_work_pager">Call work pager</string>
+    <!-- Action string for calling an assistant phone number -->
+    <string name="call_assistant">Call <xliff:g id="assistant">%s</xliff:g></string>
+    <!-- Action string for calling a MMS phone number -->
+    <string name="call_mms">Call MMS</string>
+
+    <!-- Action string for sending an SMS to a custom phone number -->
+    <string name="sms_custom">Text <xliff:g id="custom">%s</xliff:g></string>
+    <!-- Action string for sending an SMS to a home phone number -->
+    <string name="sms_home">Text home</string>
+    <!-- Action string for sending an SMS to a mobile phone number -->
+    <string name="sms_mobile">Text mobile</string>
+    <!-- Action string for sending an SMS to a work phone number -->
+    <string name="sms_work">Text work</string>
+    <!-- Action string for sending an SMS to a work fax phone number -->
+    <string name="sms_fax_work">Text work fax</string>
+    <!-- Action string for sending an SMS to a home fax phone number -->
+    <string name="sms_fax_home">Text home fax</string>
+    <!-- Action string for sending an SMS to a pager phone number -->
+    <string name="sms_pager">Text pager</string>
+    <!-- Action string for sending an SMS to an other phone number -->
+    <string name="sms_other">Text</string>
+    <!-- Action string for sending an SMS to a callback number -->
+    <string name="sms_callback">Text callback</string>
+    <!-- Action string for sending an SMS to a car phone number -->
+    <string name="sms_car">Text car</string>
+    <!-- Action string for sending an SMS to a company main phone number -->
+    <string name="sms_company_main">Text company main</string>
+    <!-- Action string for sending an SMS to a ISDN phone number -->
+    <string name="sms_isdn">Text ISDN</string>
+    <!-- Action string for sending an SMS to a main phone number -->
+    <string name="sms_main">Text main</string>
+    <!-- Action string for sending an SMS to an other fax phone number -->
+    <string name="sms_other_fax">Text fax</string>
+    <!-- Action string for sending an SMS to a radio phone number -->
+    <string name="sms_radio">Text radio</string>
+    <!-- Action string for sending an SMS to a Telex phone number -->
+    <string name="sms_telex">Text telex</string>
+    <!-- Action string for sending an SMS to a TTY/TDD phone number -->
+    <string name="sms_tty_tdd">Text TTY/TDD</string>
+    <!-- Action string for sending an SMS to a work mobile phone number -->
+    <string name="sms_work_mobile">Text work mobile</string>
+    <!-- Action string for sending an SMS to a work pager phone number -->
+    <string name="sms_work_pager">Text work pager</string>
+    <!-- Action string for sending an SMS to an assistant phone number -->
+    <string name="sms_assistant">Text <xliff:g id="assistant">%s</xliff:g></string>
+    <!-- Action string for sending an SMS to a MMS phone number -->
+    <string name="sms_mms">Text MMS</string>
+
+    <!-- Action string for sending an email to a home email address -->
+    <string name="email_home">Email home</string>
+    <!-- Action string for sending an email to a mobile email address -->
+    <string name="email_mobile">Email mobile</string>
+    <!-- Action string for sending an email to a work email address -->
+    <string name="email_work">Email work</string>
+    <!-- Action string for sending an email to an other email address -->
+    <string name="email_other">Email</string>
+    <!-- Action string for sending an email to a custom email address -->
+    <string name="email_custom">Email <xliff:g id="custom">%s</xliff:g></string>
+
+    <!-- Generic action string for sending an email -->
+    <string name="email">Email</string>
+    <string name="app_label">Communication</string>
+    <!-- Action string for viewing a home postal address -->
+    <string name="map_home">View home address</string>
+    <!-- Action string for viewing a work postal address -->
+    <string name="map_work">View work address</string>
+    <!-- Action string for viewing an other postal address -->
+    <string name="map_other">View address</string>
+    <!-- Action string for viewing a custom postal address -->
+    <string name="map_custom">View <xliff:g id="custom">%s</xliff:g> address</string>
+
+    <!-- Action string for starting an IM chat with the AIM protocol -->
+    <string name="chat_aim">AIM number</string>
+    <!-- Action string for starting an IM chat with the MSN or Windows Live protocol -->
+    <string name="chat_msn">Windows Live number</string>
+    <!-- Action string for starting an IM chat with the Yahoo protocol -->
+    <string name="chat_yahoo">Yahoo number</string>
+    <!-- Action string for starting an IM chat with the Skype protocol -->
+    <string name="chat_skype">Skype number</string>
+    <!-- Action string for starting an IM chat with the QQ protocol -->
+    <string name="chat_qq">QQ number</string>
+    <!-- Action string for starting an IM chat with the Google Talk protocol -->
+    <string name="chat_gtalk">Google Talk number</string>
+    <!-- Action string for starting an IM chat with the ICQ protocol -->
+    <string name="chat_icq">ICQ number</string>
+    <!-- Action string for starting an IM chat with the Jabber protocol -->
+    <string name="chat_jabber">Jabber number</string>
+
+    <!-- Generic action string for starting an IM chat -->
+    <string name="chat">Chat</string>
+
+    <!-- Field title for the street of a structured postal address of a contact -->
+    <string name="postal_street">Street</string>
+    <!-- Field title for the PO box of a structured postal address of a contact -->
+    <string name="postal_pobox">PO box</string>
+    <!-- Field title for the neighborhood of a structured postal address of a contact -->
+    <string name="postal_neighborhood">Neighborhood</string>
+    <!-- Field title for the city of a structured postal address of a contact -->
+    <string name="postal_city">City</string>
+    <!-- Field title for the region, or state, of a structured postal address of a contact -->
+    <string name="postal_region">State</string>
+    <!-- Field title for the postal code of a structured postal address of a contact -->
+    <string name="postal_postcode">ZIP code</string>
+    <!-- Field title for the country of a structured postal address of a contact -->
+    <string name="postal_country">Country</string>
+
+    <!-- Field title for the given name of a contact -->
+    <string name="name_given">Given name</string>
+    <!-- Field title for the family name of a contact -->
+    <string name="name_family">Family name</string>
+    <!-- Field title for the prefix name of a contact -->
+    <string name="name_prefix">Name prefix</string>
+    <!-- Field title for the middle name of a contact -->
+    <string name="name_middle">Middle name</string>
+    <!-- Field title for the suffix name of a contact -->
+    <string name="name_suffix">Name suffix</string>
+    <!-- Field title for the phonetic given name of a contact -->
+    <string name="name_phonetic_given">Phonetic given name</string>
+    <!-- Field title for the phonetic middle name of a contact -->
+    <string name="name_phonetic_middle">Phonetic middle name</string>
+    <!-- Field title for the phonetic family name of a contact -->
+    <string name="name_phonetic_family">Phonetic family name</string>
+
+    <!-- Field title for the date for an event -->
+    <string name="label_date">Date</string>
+
+    <!-- Title of clear button in date picker -->
+    <string name="button_clear_date">Clear</string>
+
+    <!-- String describing which account type a contact came from when editing it -->
+    <string name="account_type_format"><xliff:g id="source" example="Gmail">%1$s</xliff:g> contact</string>
+
+    <!-- String describing which account a contact came from when editing it -->
+    <string name="from_account_format">from <xliff:g id="source" example="user@gmail.com">%1$s</xliff:g></string>
+
+    <!-- Checkbox asking the user if they want to display a particular photo for a contact -->
+    <string name="use_photo_as_primary">Use this photo</string>
+
+    <!-- Text used to explain that a contact cannot be edited since the data is read only -->
+    <string name="contact_read_only"><xliff:g id="source" example="Gmail">%1$s</xliff:g> contact information is not editable on this device.</string>
+
+    <!-- Text describing that a contact has no information available other than name and photo -->
+    <string name="no_contact_details">No additional information for this contact</string>
+
+    <!-- Label of the "sort list by" display option -->
+    <string name="display_options_sort_list_by">Sort list by</string>
+
+    <!-- An allowable value for the "sort list by" contact display option  -->
+    <string name="display_options_sort_by_given_name">Given name</string>
+
+    <!-- An allowable value for the "sort list by" contact display option  -->
+    <string name="display_options_sort_by_family_name">Family name</string>
+
+    <!-- Label of the "view names as" display option -->
+    <string name="display_options_view_names_as">View contact names as</string>
+
+    <!-- An allowable value for the "view names as" contact display option  -->
+    <string name="display_options_view_given_name_first">Given name first</string>
+
+    <!-- An allowable value for the "view names as" contact display option  -->
+    <string name="display_options_view_family_name_first">Family name first</string>
+
+    <!-- Gray hint displayed in the search field in Contacts when empty -->
+    <string name="search_bar_hint">Search contacts</string>
+
+    <!-- Button displayed underneath the list of filtered visible contacts -->
+    <string name="search_for_all_contacts">Search for all contacts</string>
+
+    <!-- An option in the 'change photo' or 'pick photo' dialog -->
+    <string name="take_photo">Take photo</string>
+
+    <!-- An option in the 'change photo' or 'pick photo' dialog -->
+    <string name="pick_photo">Select photo from Gallery</string>
+
+    <!-- Text shown in the contacts app while the background process updates contacts after a locale change -->
+    <string name="locale_change_in_progress">Contact list is being updated to reflect the change of language.\n\nPlease wait...</string>
+
+    <!-- Text shown in the contacts app while the background process updates contacts after a system upgrade -->
+    <string name="upgrade_in_progress">Contact list is being updated.\n\nPlease wait...</string>
+
+    <!-- Text shown in the contacts app if the background process updating contacts fails because of memory shortage -->
+    <string name="upgrade_out_of_memory">Contacts are in the process of being upgraded.
+    \n\nThe upgrade process requires approximately <xliff:g id="size_in_megabytes">%d</xliff:g>
+    Mb of internal phone storage.\n\nChoose one of the following options:</string>
+
+    <!-- Button shown in the contacts app if the background process updating contacts fails because of memory shortage -->
+    <string name="upgrade_out_of_memory_uninstall">Uninstall some applications</string>
+
+    <!-- Button shown in the contacts app if the background process updating contacts fails because of memory shortage -->
+    <string name="upgrade_out_of_memory_retry">Retry upgrade</string>
+
+    <!-- Title shown in the search result activity of contacts app -->
+    <string name="search_results_for">Search results for: <xliff:g id="query">%s</xliff:g></string>
+
+    <!-- Title shown in the search result activity of contacts app while searching -->
+    <string name="search_results_searching">Searching...</string>
+      
+    <!-- Wysie: Dialer strings -->
+    <string name="dialer_menu_sms">SMS/MMS</string>
+    
+    <!-- Wysie: Call log strings -->
+    <string name="recent_calls_clear_call_log">Clear call log</string>
+    <string name="recent_calls_clear_what">Clear what?</string>
+    <string name="recent_calls_clear_all">All</string>
+    <string name="recent_calls_clear_incoming">Incoming</string>
+    <string name="recent_calls_clear_outgoing">Outgoing</string>
+    <string name="recent_calls_clear_missed">Missed</string>
+    <string name="alert_clear_call_log_title">Clear call log</string>
+    <string name="alert_clear_call_log_message">Are you sure you want to clear all call records?</string>
+    <string name="alert_clear_cl_all_incoming">Are you sure you want to clear all incoming call records?</string>
+    <string name="alert_clear_cl_all_outgoing">Are you sure you want to clear all outgoing call records?</string>
+    <string name="alert_clear_cl_all_missed">Are you sure you want to clear all missed call records?</string>
+    
+    <!-- Wysie: Favourites strings -->
+    <string name="fav_clear_freq">clear frequent contacts</string>
+    <string name="alert_clear_freq_called_msg">Are you sure you want to clear all frequently called entries?</string>
+    
+    <!-- Wysie: Preferences strings -->
+    
+    <!-- Preferences: Dialer -->
+    <string name="title_last_dialled">Call button retrieves last dialed number</string>
+    <string name="summary_last_dialled">Last dialed number will be retrieved if digits are empty</string>
+    <string name="title_return_to_dialer">Return to dialer after call</string>
+    <string name="title_vm_button">Left action button (LAB)</string>
+    <string name="title_vm_handler">Voicemail handler</string>
+    <string name="title_use_1_for_reg_vm">Use 1 for regular voicemail</string>
+    <string name="summaryon_use_1_for_reg_vm">Key 1 will be used for regular voicemail</string>
+    <string name="summaryoff_use_1_for_reg_vm">Key 1 will follow voicemail handler</string>
+    <string name="title_disable_num_check">Disable number checks</string>
+    <string name="summaryon_disable_num_check">Left action button (LAB) and menu will always be enabled</string>
+    <string name="summaryoff_disable_num_check">LAB and menu will be enabled only if at least one number is entered (except voicemail)</string>
+    <string name="title_enable_haptic_feedback">Enable haptic feedback</string>
+    <string name="summary_enable_haptic_feedback">Uses keypad tap pattern - see CyanogenMod settings to adjust</string>
+    <string name="title_change_digits_color">Change digits color</string>
+    <string name="title_digits_color_pressed">Digits color (pressed)</string>
+    <string name="title_digits_color_focused">Digits color (focused)</string>
+    <string name="title_digits_color_unselected">Digits color (not selected)</string>
+    <string name="title_choose_color">Choose a color</string>
+    <string name="instructions_choose_color">Tap on center color to confirm.\nPress back to cancel.</string>
+    <string name="entry_no_vm_handler">None (Dial Voicemail Number)</string>
+    
+    <!-- Preferences: Call log -->
+    <string name="title_cl_exact_time">Exact times</string>
+    <string name="summaryon_cl_exact_time">Use exact times in call log</string>
+    <string name="summaryoff_cl_exact_time">Use relative times in call log</string>
+    <string name="title_cl_show_seconds">Show seconds</string>
+    <string name="summary_cl_show_seconds">Show seconds when using exact times</string>          
+    <string name="title_cl_ask_before_clear">Ask before clearing</string>
+    <string name="summaryon_cl_ask_before_clear">Ask before clearing call log</string>
+    <string name="summaryoff_cl_ask_before_clear">Call logs will be cleared without asking</string>
+    
+    <!-- Preferences: Contacts -->
+    <string name="title_contacts_show_pic">Show contact pictures</string>
+    <string name="title_contacts_show_dial_button">Show dial button</string>
+    <string name="summary_contacts_show_dial_button">Show a dial button for contacts with numbers</string>
+    <string name="title_contacts_show_count">Show contacts count</string>
+    <string name="summary_contacts_show_count">Contacts count will be shown at the top of the contacts list</string>
+    <string name="title_contacts_show_separators">Show alphabetical separators</string>
+    <string name="summaryon_contacts_show_separators">Alphabetical separators will be shown in the contacts list</string>
+    <string name="summaryoff_contacts_show_separators">Alphabetical separators will be hidden in the contacts list</string>
+    
+    <!-- Preferences: Contacts - View Contact -->
+    <string name="title_view_contact">View contact</string>
+    <string name="summary_view_contact">Set preferences when viewing an individual contact</string>
+    <string name="title_show_text_mobile_only">Text action for mobile only</string>
+    <string name="summaryon_show_text_mobile_only">Only mobile numbers will have a text/sms action</string>
+    <string name="summaryoff_show_text_mobile_only">All numbers will have a text/sms action</string>
+    
+    <!-- Preferences: Favourites -->
+    <string name="title_favourites_hide_freq_call">Hide frequently called</string>
+    <string name="summary_favourites_hide_freq_call">The actual data is not cleared, but hidden.</string>
+    <string name="title_favs_ask_before_clear">Ask before clearing</string>
+    <string name="summaryon_favs_ask_before_clear">Ask before clearing frequently called</string>
+    <string name="summaryoff_favs_ask_before_clear">Frequently called entries will be cleared without asking</string>
+    
+    <!-- Preferences: Misc -->
+    <string name="title_misc_category">Miscellaneous</string>
+    <string name="title_sensor_rotation">Enable sensor rotation</string>
+    <string name="summary_sensor_rotation">If enabled, it will rotate based on system\'s settings</string>
+    <string name="title_data_font_size">Contact info font size</string>
+    <string name="summary_data_font_size">Allows you to choose the size of the font used to display detailed contact information (phone number, email, address, etc.)</string>
+    <string name="title_default_phone_tab">Default tab</string>
+    <string name="summary_default_phone_tab">Default tab to open when launching the Phone app</string>
+
+    <!-- Default Phone Tab strings -->
+    <string name="default_phone_tab_last_used">Last used to make a call (Default)</string>
+    <string name="default_phone_tab_last_viewed">Last viewed</string>
+    <string name="default_phone_tab_phone">Phone</string>
+    <string name="default_phone_tab_call_log">Call log</string>
+    <string name="default_phone_tab_contacts">Contacts</string>
+    <string name="default_phone_tab_favorites">Favorites</string>
+    
+    <!-- Wysie: About strings -->    
+    <string name="title_about">About</string>
+    <string name="title_about_name">Mod Name</string>
+    <string name="summary_about_name">WyContacts Froyo</string>
+    <string name="title_about_version">Version</string>
+    <string name="summary_about_version">1.2</string>
+    <string name="title_about_credits">Credits</string>
+    <string name="summary_about_credits">Wysie, ChainsDD, geesun, niuchl, rac2030, sileht and the rest of XDA! :)</string>
+
+    <string name="message">Messaging</string>
+    <string name="call_entry">Call</string>
+    <string name="call_log">Call Log</string>
+    <string name="view_calllog_detail">View call log details</string>
+    <string name="contact">Contacts</string>
+    <string name="dialpad">Dialpad</string>
+    <string name="details">Details</string>
+    <string name="emergency_number">Emergency Number</string>
+    <string name="search_call_log">Search call log</string>
+    <string name="call_contact">Call contact</string>
+    <string name="add_to_contact">Add to contacts</string>
+    <string name="view_contact">View contact</string>
+    <string name="send_message">Send message</string>
+    <string name="delete_call_log">Delete call log entry</string>
+    <string name="clear_call_log">Clear call log</string>
+    <string name="add_to_blacklist">Add to Blacklist</string>
+    <string name="clear_from_blacklist">Clear from Blacklist</string>
+    <string name="has_not_been_set">Has not been set</string>
+    <string name="input_error">Input error</string>
+
+    <string name="alert_dialog_title">Reminder</string>
+    <string name="delete_call_log_confirm">Are you sure you want to delete this log?</string>
+    <string name="clear_call_log_confirm">Are you sure you want to clear these call logs?</string>
+    <string name="clear_all_call_log_confirm">Are you sure you want to clear all call logs?</string>
+    <string name="clear_call_log_by_number_confirm">Are you sure you want to clear call logs of this number?</string>
+    <string name="delete_selected_contacts_confirm">Are you sure you want to delete the selected contacts?</string>
+
+    <string name="ip_call_settings">IP call settings</string>
+    <string name="ip_prefix_hint">Such as 17951,12593,17911</string>
+    <string name="ip_prefix_description">IP prefix</string>
+    <string name="ip_prefix_sim1_description">IP prefix</string>
+    <string name="ip_prefix_sim2_description">IP prefix for SIM 2</string>
+    <string name="auto_ip_call_headline">IP call</string>
+    <string name="auto_ip_call_description">Automatically add IP number when dialing phone numbers.</string>
+    <string name="my_number_location_description">My number location</string>
+    <string name="other_ip_prefix">Other IP prefix</string>
+
+    <string name="twelve_hour_time_format">h:mma</string>
+
+    <!-- Text displayed when the call log is empty -->
+    <string name="call_logs_empty">Call log is empty.</string>
+    <string name="outgoing_logs_empty">Outgoing call log is empty.</string>
+    <string name="incoming_logs_empty">Incoming call log is empty.</string>
+    <string name="missed_logs_empty">Missed call log is empty.</string>
+    
+    <!-- Mms String list -->
+    <!-- Command name to open a Compose screen; displays in conversation list -->
+    <string name="new_message">New message</string>
+    <!-- Summary text under "New Message" command; displays in conversation list -->
+    <string name="create_new_message">Compose new message</string>
+    <!-- Context menu item on an individual message for dialing the sender's phone number -->
+    <string name="menu_call_back">Call <xliff:g id="name">%s</xliff:g></string>
+    <!-- Context menu item on an individual message for emailing the sender -->
+    <string name="menu_send_email">Send email to <xliff:g id="name">%s</xliff:g></string>
+
+    <!-- Menu item for starting a new conversation -->
+    <string name="menu_compose_new">Compose</string>
+    <!-- Menu item for accessing application settings -->
+    <string name="menu_preferences">Settings</string>
+    <string name="menu_add_address_to_contacts">Add <xliff:g id="name">%s</xliff:g> to Contacts</string>
+    <!-- Menu item for deleting all conversations -->
+    <string name="menu_delete_all">Delete threads</string>
+    <string name="menu_mark">Mark</string>    
+    <!-- Context menu item on an individual conversation for deleting that conversation -->
+    <string name="menu_delete">Delete threads</string>
+    <!-- This string is no longer used. It used to be the menu item for viewing all messages that
+         were unable to be delivered, i.e. send failed -->
+    <string name="menu_undelivered_messages">Undelivered messages</string>
+    <!-- Context menu item on an individual conversation for viewing that conversation -->
+    <string name="menu_view">View threads</string>
+    <!-- Message that appears on screen while SIM card messages are retrieved -->
+    <string name="refreshing">Refreshing\u2026</string>
+
+    <!-- Tag appearing on conversations in the conversation list that contain a draft message -->
+    <string name="has_draft">Draft</string>
+
+    <!-- Appearance of message sender in multi-recipient messages, e.g. "me to Megan" -->
+    <string name="broadcast_from_to"><xliff:g id="sender" example="me">%1$s</xliff:g> to <xliff:g id="recipient" example="Megan">%2$s</xliff:g></string>
+    <!-- Name to use when we have an unspecified sender -->
+    <string name="anonymous_recipient">Anonymous</string>
+    <!-- Subject to display in the conversation list if there is no subject -->
+    <string name="no_subject_view">(No subject)</string>
+
+    <!-- Name of the local user when displaying sender of an outgoing message (personal pronoun) -->
+    <string name="messagelist_sender_self">Me</string>
+    <!-- Context menu item on an individual message for viewing an attached picture -->
+    <string name="view_picture">View picture</string>
+    <!-- Context menu item on an individual message for viewing an attached slideshow -->
+    <string name="view_slideshow">View slideshow</string>
+    <!-- Context menu item on an individual message for viewing message details such as time and date -->
+    <string name="view_message_details">View message details</string>
+    <!-- Context menu item on an individual message for viewing a delivery report -->
+    <string name="view_delivery_report">View report</string>
+    <!-- Context menu item on an individual message for deleting only that message -->
+    <string name="delete_message">Delete message</string>
+    <!-- Time and date a message was sent -->
+    <string name="sent_on">"Send: <xliff:g id="date">%s</xliff:g>"</string>
+    <!-- Time and date a message is due to expire -->
+    <string name="expire_on">"Expires: <xliff:g id="date">%s</xliff:g>"</string>
+    <!-- Abbreviation for "kilobyte" -->
+    <string name="kilobyte">KB</string>
+
+    <!-- Dialog box title brought up when warning the user that a message could not be delivered -->
+    <string name="undelivered_msg_dialog_title">Undelivered message</string>
+    <!-- Dialog box message indicating that a message could not be delivered, including the time of last attempt -->
+    <string name="undelivered_msg_dialog_body">Unable to send this message.\nAttempt made: <xliff:g id="message">%s</xliff:g>.</string>
+    <!-- Dialog box message indicating that a message could not be delivered -->
+    <string name="undelivered_sms_dialog_body">Unable to send this message.</string>
+    <!-- Menu item for deleting the entire conversation currently being viewed -->
+    <string name="delete_thread">Delete thread</string>
+    <!-- Context menu item on an individual message for forwarding it to another recipient -->
+    <string name="menu_forward">Forward</string>
+    <!-- Text of a button appearing for MMS messages that have not yet been downloaded, causing the message
+         to be downloaded (imperative verb) -->
+    <string name="download">Download</string>
+    <!-- Message displayed in place of the "download message" button once it has been pressed,
+         indicating that the download is in progress -->
+    <string name="downloading">Downloading</string>
+    <!-- Formatting for prepending MMS message text with sender's name. -->
+    <string name="name_colon"><b><xliff:g id="name" example="Me">%s</xliff:g></b>": "</string>
+    <!-- Formatting for subject displayed inline, prepended to MMS message text -->
+    <string name="inline_subject">"&lt;Subject: <xliff:g id="subject">%s</xliff:g>&gt;"</string>
+    <!-- Text to display when the actual text is inaccessible due to DRM protection -->
+    <string name="drm_protected_text">"* DRM protected text *"</string>
+    <!-- Error message to display when DRM rights are insufficient to access some data -->
+    <string name="insufficient_drm_rights">Insufficient DRM rights detected.</string>
+    <!-- Individual message context menu item -->
+    <string name="copy_message_text">Copy message text</string>
+    <!-- Header for context menu on an individual message -->
+    <string name="message_options">Message options</string>
+
+    <!-- Button text on edit slide screen indicating the user wants to finish editing that slide -->
+    <string name="done">Done</string>
+
+    <!-- Menu item in slideshow edit screen for moving the selected slide up in the order -->
+    <string name="move_up">Move up</string>
+    <!-- Menu item in slideshow edit screen for moving the selected slide down in the order -->
+    <string name="move_down">Move down</string>
+    <!-- Menu item in slideshow edit screen for removing the selected slide from the slideshow -->
+    <string name="remove_slide">Remove slide</string>
+    <!-- Menu item in slideshow edit screen for adding a new slide to the slideshow -->
+    <string name="add_slide">Add slide</string>
+    <!-- Text displayed below "Add slide" item in slideshow edit screen -->
+    <string name="add_slide_hint">Select to create new slide.</string>
+    <!-- Menu item in slideshow edit screen for discarding the entire slideshow -->
+    <string name="discard_slideshow">Discard slideshow</string>
+    <!-- Header of slideshow showing which slide is being displayed -->
+    <string name="slide_show_part">Part <xliff:g id="part">%1$s</xliff:g>/<xliff:g id="total">%2$s</xliff:g></string>
+
+
+    <!-- Menu item in slide edit screen for removing the text from the slide being edited -->
+    <string name="remove_text">Remove text</string>
+    <!-- Menu item in slide edit screen for adding a picture to the slide being edited -->
+    <string name="add_picture">Add picture</string>
+    <!-- Menu item in slide edit screen for removing the picture from the slide being edited -->
+    <string name="remove_picture">Remove picture</string>
+    <!-- Menu item in slide edit screen for adding music to the slide being edited -->
+    <string name="add_music">Add music</string>
+    <!-- Menu item in slide edit screen for removing the music from the slide being edited -->
+    <string name="remove_music">Remove music</string>
+    <!-- Menu item in slide edit screen for adding a video to the slide being edited -->
+    <string name="add_video">Add video</string>
+    <!-- Menu item in slide edit screen for removing the video from the slide being edited -->
+    <string name="remove_video">Remove video</string>
+
+    <!-- Title bar displayed in compose message activity before a recipient has been selected -->
+    <string name="compose_title">Compose</string>
+    <!-- Hint displayed in message recipient text box when starting a new conversation -->
+    <string name="to_hint">To</string>
+    <!-- Hint displayed in subject edit text box when adding a subject -->
+    <string name="subject_hint">Subject</string>
+
+    <!-- Menu item in conversation screen for attaching something to the message being composed -->
+    <string name="add_attachment">Attach</string>
+    <!-- Menu item in conversation screen for adding a subject to the message being composed -->
+    <string name="add_subject">Add subject</string>
+    <!-- Menu item in conversation screen for discarding the message currently being composed -->
+    <string name="discard">Discard</string>
+
+    <!-- Button next to an attachment during message composition to view the attachment (imperative verb) -->
+    <string name="view">View</string>
+    <!-- Button next to an attachment during message composition to replace the attachment (imperative verb) -->
+    <string name="replace">Replace</string>
+    <!-- Button next to an attachment during message composition to remove the attachment (imperative verb) -->
+    <string name="remove">Remove</string>
+
+    <!-- Button in conversation screen for sending the SMS message currently being composed (imperative verb) -->
+    <string name="send">Send</string>
+    <!-- Text to appear directly below the "Send" text on the SMS/MMS send button. The "MMS" text is on a second line in a smaller font. This is similar to saying "Send (mms)". -->
+    <string name="mms">MMS</string>
+
+    <!-- Menu item in conversation screen for returning to the conversation list -->
+    <string name="all_threads">All threads</string>
+
+    <!-- Hint text in message body field when keyboard is exposed -->
+    <string name="type_to_compose_text_enter_to_send">Type to compose</string>
+    <!-- Hint text in message body field when keyboard is hidden -->
+    <string name="open_keyboard_to_compose_message">Open keyboard to compose message</string>
+
+    <!-- Dialog title for warning the user that the picture they are trying to attach is too large -->
+    <string name="image_too_large">Picture too large</string>
+    <!-- Dialog message text asking the user if he wants to resize the picture being attached -->
+    <string name="ask_for_automatically_resize">Automatically resize picture before sending?</string>
+
+    <!-- Toast message while an image is being resized -->
+    <string name="compressing">Picture too large. Compressing\u2026</string>
+
+    <!-- Error message indicating the format for the specified media type (e.g. "picture") is unsupported -->
+    <string name="unsupported_media_format">Unsupported <xliff:g id="name">%1$s</xliff:g> format</string>
+    <!-- Message prompting the user to select a different item; item string as type-appropriate (e.g. "picture") -->
+    <string name="select_different_media">Please select a different <xliff:g id="name">%1$s</xliff:g>.</string>
+    <!-- Message indicating that the message size limit has been reached -->
+    <string name="exceed_message_size_limitation">Message size limit reached.</string>
+    <!-- Message indicating that the message is too big and there is no space to attach a video -->
+    <string name="message_too_big_for_video">The message is too big to attach a video.</string>
+    <!-- Error message indicating that the item trying to be attached could not be added -->
+    <string name="failed_to_add_media">Sorry, you cannot add this <xliff:g id="name">%1$s</xliff:g> to your message.</string>
+    <!-- Error message indicating that the picture being attached and resized could not be resized -->
+    <string name="failed_to_resize_image">Picture not resized.</string>
+    <!-- Error message indicating that an image being attached is still too large to send even after resize -->
+    <string name="resize_image_error_information">Sorry, even when resized this picture is too large to send.</string>
+    <!-- String prepended to forwarded messages to indicate they were forwarded -->
+    <string name="forward_prefix">Fwd:\u0020</string>
+    <!-- Dialog box title that appears when a draft message will not be saved due to invalid recipients -->
+    <string name="discard_message">Discard</string>
+    <!-- Dialog message text explaining that a draft message will not be saved due to invalid recipients -->
+    <string name="discard_message_reason">Your message will be discarded because it has no valid recipients.</string>
+    <!-- Dialog box title indicating which recipients are invalid when the user tries to send a message with invalid recipients -->
+    <string name="has_invalid_recipient">Invalid recipient(s): &lt;<xliff:g id="name">%1$s</xliff:g>&gt;</string>
+    <!-- While sending a message, if it has invalid recipient, display this message. -->
+    <string name="invalid_destination">You have entered an invalid address.</string>
+    <!-- Dialog message text when the user tries to send a message with invalid recipients -->
+    <string name="invalid_recipient_message">Please correct the recipient(s) or they will not receive the message.</string>
+    <!-- Dialog box title indicating the message cannot be sent because there are no valid recipients -->
+    <string name="cannot_send_message">Cannot send this message</string>
+    <!-- Dialog message text indicating the message cannot be sent because there are no valid recipients -->
+    <string name="cannot_send_message_reason">Your message has no valid recipients.</string>
+    <!-- Error message displayed when the user attempts to forward a message with DRM-locked contents -->
+    <string name="cannot_forward_drm_obj">The DRM object included in the message cannot be forwarded.</string>
+    <!-- Error message displayed when the user attempts to attach a contact whose ID could not be resolved -->
+    <string name="cannot_find_contact">The contact you selected could not be attached.</string>
+
+    <!-- Brief message that appears when converting a message from SMS to MMS. -->
+    <string name="converting_to_picture_message">Converting to multimedia message\u2026</string>
+    <!-- Brief message that appears when converting a message from MMS to SMS. -->
+    <string name="converting_to_text_message">Converting to text message\u2026</string>
+    <!-- Brief message that appears when the maximum number of slides has been reached -->
+    <string name="cannot_add_slide_anymore">Cannot add more slides.</string>
+    <!-- Brief message that appears when user tries to add picture to a slide which already has a video. -->
+    <string name="cannot_add_picture_and_video">Cannot add video and picture to one slide.</string>
+    <!-- Brief message that appears when the message cannot be saved -->
+    <string name="cannot_save_message">Cannot save message.</string>
+    <string name="cannot_load_message">Cannot load message.</string>
+    <!-- Brief message that appears when a message has automatically been saved as a draft -->
+    <string name="message_saved_as_draft">Message saved as draft.</string>
+    <!-- Brief message that appears when an attempt is made to delete a locked message -->
+    <string name="locked_message_cannot_be_deleted">Locked message cannot be deleted.</string>
+    <!-- Brief message that appears when too many recipients have been added -->
+    <string name="too_many_recipients">This message has too many recipients (<xliff:g id="currentCount">%1$s</xliff:g>). There is a limit of <xliff:g id="maxLimit">%2$s</xliff:g> recipients.</string>
+    <!-- Brief message that appears when too many videos/pictures are imported -->
+    <string name="too_many_attachments">There is a limit of <xliff:g id="maxLimit">%1$s</xliff:g> attachments. Only the first <xliff:g id="currentCount">%2$s</xliff:g> will be added.</string>
+    <!-- Alert dialog title when adding attachments is taking a while -->
+    <string name="adding_attachments_title">Adding attachments</string>
+    <!-- Alert dialog when adding attachments is taking a while -->
+    <string name="adding_attachments">Please wait while the items are added to the slideshow.</string>
+
+    <!-- Titlebar string when there are more than one recipients -->
+    <string name="multiple_recipients"><xliff:g id="recipientCount">%1$s</xliff:g> recipients</string>
+
+    <!-- Error message indicating that an audio attachment cannot be played -->
+    <string name="cannot_play_audio">Cannot play audio.</string>
+
+    <!-- Button in the slide editor screen used to preview the slide (imperative verb) -->
+    <string name="preview">Preview</string>
+    <!-- Menu item in the slide editor screen used to preview the entire slideshow (imperative verb) -->
+    <string name="preview_slideshow">Preview</string>
+    <!-- Button in the slide editor screen used to replace the attached picture -->
+    <string name="replace_image">Replace picture</string>
+    <!-- String for slide duration in seconds -->
+    <string name="duration_sec">Duration (<xliff:g id="duration">%s</xliff:g> sec)</string>
+    <!-- Dialog box title for duration selector -->
+    <string name="duration_selector_title">"Duration for slide "</string>
+    <!-- Dialog box title for slide layout selector -->
+    <string name="layout_selector_title">"Slideshow layout "</string>
+    <!-- Slide layout option for layout at the top -->
+    <string name="layout_top">Layout (top)</string>
+    <!-- Slide layout option for layout at the bottom -->
+    <string name="layout_bottom">Layout (bottom)</string>
+    <!-- Hint in slide text field before text is typed -->
+    <string name="type_to_compose_text_or_leave_blank">Type to compose text, or leave blank</string>
+    <!-- Toast when the user enters a non-numeric value for the duration of a slide -->
+    <string name="duration_not_a_number">Duration must be a number</string>
+    <!-- Toast when the user enters a zero value for the duration of a slide -->
+    <string name="duration_zero">Duration must be greater than zero seconds</string>
+
+    <!-- In duration selection dialog box, short version of "seconds" -->
+    <string name="secs">secs</string>
+    <!-- Options for slide duration in duration selection dialog box -->
+    <string-array name="select_dialog_items">
+         <item>1 second</item>
+         <item>2 seconds</item>
+         <item>3 seconds</item>
+         <item>4 seconds</item>
+         <item>5 seconds</item>
+         <item>6 seconds</item>
+         <item>7 seconds</item>
+         <item>8 seconds</item>
+         <item>9 seconds</item>
+         <item>10 seconds</item>
+         <item>Other\u2026</item>
+    </string-array>
+
+    <!-- Context menu item on a message recipient for viewing their contact info -->
+    <string name="menu_view_contact">View contact</string>
+    <!-- Context menu item on a message recipient for adding them to the user's
+         contacts (used if the recipient is not already in the address book) -->
+    <string name="menu_add_to_contacts">Add to Contacts</string>
+
+    <!-- Sender to be used if the sender address has been hidden -->
+    <string name="hidden_sender_address">Hidden sender address</string>
+
+    <!-- Text to be used for affirmative response button in dialog boxes -->
+    <string name="yes">OK</string>
+    <!-- Text to be used for negative response button in dialog boxes -->
+    <string name="no">Cancel</string>
+    <!-- Text to be used for affirmative response button in setting SMS limits dialog box -->
+    <string name="set">Set</string>
+
+    <!-- Button text used for playing an attachment or slideshow (imperative verb) -->
+    <string name="play">Play</string>
+    <!-- Button text used for editing a slideshow (imperative verb) -->
+    <string name="edit">Edit</string>
+    <!-- Button for resizing an image used in "image too large" dialog box (imperative verb) -->
+    <string name="resize">Resize</string>
+    <!-- Button used for trying to send a message that has some valid recipients and some
+         invalid recipients, in spite of the warning presented to the user -->
+    <string name="try_to_send">Try to send</string>
+
+    <!-- Title of Settings screen -->
+    <!-- Begin, added by zhumeiquan, 20111116 -->
+    <string name="preferences_title">Message Settings</string>
+    <!-- End -->
+    <!-- Settings screen menu item for restoring all settings to default -->
+    <string name="restore_default">"Restore default settings"</string>
+
+    <!-- Settings screen, section heading for notifications -->
+    <string name="pref_notification_settings_title">Notification settings</string>
+    <!-- Settings screen, section heading for MMS-specific settings -->
+    <string name="pref_mms_settings_title">"Multimedia message (MMS) settings"</string>
+    <!-- Settings screen, section heading for SMS-specific settings -->
+    <string name="pref_sms_settings_title">"Text message (SMS) settings"</string>
+    <!-- Settings screen, section heading for storage-specific settings -->
+    <string name="pref_sms_storage_title">Storage settings</string>
+
+    <!-- Settings item description for entering SIM card message screen -->
+    <string name="pref_summary_manage_sim_messages">Manage messages stored on your SIM card</string>
+    <!-- Settings item description for boolean MMS delivery report setting -->
+    <string name="pref_summary_mms_delivery_reports">Request a delivery report for each message you send</string>
+    <!-- Settings item description for boolean MMS read report setting -->
+    <string name="pref_summary_mms_read_reports">Request a read report for each message you send</string>
+    <!-- Settings item description for boolean SMS delivery report setting -->
+    <string name="pref_summary_sms_delivery_reports">Request a delivery report for each message you send</string>
+    <!-- Settings item for SMS Split 160 characters setting -->
+    <string name="pref_title_sms_split_160">SMS split</string>
+    <!-- Settings item description for boolean SMS Split 160 characters setting -->
+    <string name="pref_summary_sms_split_160">Split messages every 160 characters</string>
+    <!-- Settings item for boolean option for SMS Split Counter -->
+    <string name="pref_title_sms_split_counter">Split counter</string>
+    <!-- Settings item description for boolean SMS Split 160 characters setting -->
+    <string name="pref_summary_sms_split_counter">Adds counter to message ex. (1/2)</string>
+    <!-- Settings item for sms realtime dialog -->
+    <string name="pref_key_sms_realtime_dialog">SMS realtime note</string>
+    <string name="pref_key_sms_realtime_summary_dialog">Automatically receive a new message pop-up window prompts.</string>
+    <!-- Settings item description for boolean auto-delete messages setting -->
+    <string name="pref_summary_auto_delete">Delete old messages as limits are reached</string>
+    <!-- Settings item description for integer auto-delete sms message limit -->
+    <string name="pref_summary_delete_limit"><xliff:g id="count">%1$s</xliff:g> messages per conversation</string>
+    <!-- Settings item for entering SIM card message screen -->
+    <string name="pref_title_manage_sim_messages">Manage SIM card messages</string>
+    <!-- Settings item for boolean option to enable/disable MMS delivery reports -->
+    <string name="pref_title_mms_delivery_reports">Delivery reports</string>
+    <!-- Settings item for boolean option to enable/disable MMS read reports -->
+    <string name="pref_title_mms_read_reports">Read reports</string>
+    <!-- Settings item for boolean option to enable/disable SMS delivery reports -->
+    <string name="pref_title_sms_delivery_reports">Delivery reports</string>
+    <!-- Settings item for boolean option to enable/disable auto-deletion of messages -->
+    <string name="pref_title_auto_delete">Delete old messages</string>
+    <!-- Settings item for integer option to set SMS delete limit -->
+    <string name="pref_title_sms_delete">Text message limit</string>
+    <!-- Settings item for integer option to set MMS delete limit -->
+    <string name="pref_title_mms_delete">Multimedia message limit</string>
+    <!-- Settings item for boolean option to display message notifications -->
+    <string name="pref_title_notification_enabled">Notifications</string>
+    <!-- Settings item description for boolean message notification option -->
+    <string name="pref_summary_notification_enabled">Display message notifications in status bar</string>
+    <!-- Settings item for boolean option to vibrate during message notification -->
+    <string name="pref_title_notification_vibrateWhen">Notification Vibrate</string>
+    <!-- Settings item description for boolean vibrate option -->
+    <string name="pref_summary_notification_vibrateWhen">Also vibrate when notified</string>
+    <!-- Settings item for entering ringtone selection screen -->
+    <string name="pref_title_notification_ringtone">Select ringtone</string>
+    <!-- Settings item for setting the number of message to save for each conversation -->
+    <string name="pref_messages_to_save">Set number of messages to save</string>
+
+    <!-- The vibrate notification modes -->
+    <string-array name="prefEntries_vibrateWhen">
+        <!-- Always -->
+        <item>Always</item>
+        <!-- Only when the phone is in Silent mode -->
+        <item>Only when silent</item>
+        <!-- Never -->
+        <item>Never</item>
+    </string-array>
+
+    <!-- The default vibrateWhen value, when none is set -->
+    <string translatable="false" name="prefDefault_vibrateWhen">never</string>
+    <!-- The value to use when migrating from old versions for a true vibrate setting -->
+    <string translatable="false" name="prefDefault_vibrate_true">always</string>
+    <!-- The value to use when migrating from old versions for a false vibrate setting -->
+    <string translatable="false" name="prefDefault_vibrate_false">never</string>
+
+
+       <!-- The vibrateWhen Entry -->
+    <string-array translatable="false" name="prefEntry_vibrateWhen">
+        <item>always</item>
+        <item>silent</item>
+        <item>never</item>
+    </string-array>
+
+    <!-- The vibrateWhen values -->
+    <string-array translatable="false" name="prefValues_vibrateWhen">
+        <item>always</item>
+        <item>silent</item>
+        <item>never</item>
+    </string-array>
+
+
+    <!-- Dialog title for the Vibrate dialog -->
+    <string name="prefDialogTitle_vibrateWhen">Vibrate</string>
+
+    <!-- Settings item for boolean option to auto-retrieve incoming MMS messages -->
+    <string name="pref_title_mms_auto_retrieval">Auto-retrieve</string>
+    <!-- Settings item description for boolean MMS auto-retrieve option -->
+    <string name="pref_summary_mms_auto_retrieval">Automatically retrieve messages</string>
+    <!-- Settings item for boolean option to auto-retrieve incoming MMS messages while roaming -->
+    <string name="pref_title_mms_retrieval_during_roaming">Roaming auto-retrieve</string>
+    <!-- Settings item description for boolean MMS auto-retrieve while roaming option -->
+    <string name="pref_summary_mms_retrieval_during_roaming">Automatically retrieve messages while roaming</string>
+
+    <!-- Setting item for folder to save MMS Attachments to -->
+    <string name="pref_title_save_location">Attachment save folder</string>
+    <string name="pref_summary_save_location">Folder where to save message attachments</string>
+
+    <!-- Label prepended to recipient's name in Undelivered Messages screen -->
+    <string name="to_label">"To "</string>
+
+    <!-- Confirm Delete -->
+    <!-- Delete confirmation dialog title -->
+    <string name="confirm_dialog_title">Delete</string>
+    <!-- Delete confirmation dialog title for locked messages -->
+    <string name="confirm_dialog_locked_title">Delete locked message?</string>
+    <!-- Delete entire thread confirmation dialog message -->
+    <string name="confirm_delete_conversation">The entire thread will be deleted.</string>
+    <!-- Delete all threads confirmation dialog message -->
+    <string name="confirm_delete_all_conversations">All threads will be deleted.</string>
+    <!-- Delete message confirmation dialog message -->
+    <string name="confirm_delete_message">The message will be deleted.</string>
+    <!-- Delete message confirmation dialog message for a locked message -->
+    <string name="confirm_delete_locked_message">Are you sure you want to delete this locked message?</string>
+    <!-- Delete entire thread confirmation dialog message -->
+    <string name="confirm_delete_all_messages">The entire thread will be deleted.</string>
+    <!-- Delete all the messages on the SIM dialog message -->
+    <string name="confirm_delete_all_SIM_messages">All messages on the SIM will be deleted.</string>
+    <!-- Delete the selected message on the SIM dialog message -->
+    <string name="confirm_delete_SIM_message">This message on the SIM will be deleted.</string>
+    <!-- Delete unlocked checkbox title -->
+    <string name="delete_unlocked">Delete locked messages</string>
+    <!-- Delete button title -->
+    <string name="delete">Delete</string>
+
+    <!-- When the user tries to view message details and some error occurs while
+         retrieving those details, this message will be shown. -->
+    <string name="cannot_get_details">Cannot get details</string>
+    <!-- Title of "Message details" dialog -->
+    <string name="message_details_title">Message details</string>
+    <!-- Label in "Message details" dialog -->
+    <string name="message_type_label">Type:\u0020</string>
+    <!-- "Type" value in "Message details" dialog -->
+    <string name="text_message">Text message</string>
+    <!-- "Type" value in "Message details" dialog -->
+    <string name="multimedia_message">Multimedia message</string>
+    <!-- "Type" value in "Message details" dialog -->
+    <string name="multimedia_notification">Multimedia message notification</string>
+    <!-- Label in "Message details" dialog showing who sent the message. -->
+    <string name="from_label">From:\u0020</string>
+    <!-- Label in "Message details" dialog -->
+    <string name="to_address_label">To:\u0020</string>
+    <!-- Label in "Message details" dialog -->
+    <string name="bcc_label">Bcc:\u0020</string>
+    <!-- Label in "Message details" dialog -->
+    <string name="sent_label">Sent:\u0020</string>
+    <!-- Label in "Message details" dialog -->
+    <string name="received_label">Received:\u0020</string>
+    <!-- Label in "Message details" dialog -->
+    <string name="saved_label">Saved:\u0020</string>
+    <!-- Label in "Message details" dialog -->
+    <string name="subject_label">Subject:\u0020</string>
+    <!-- Label in "Message details" dialog -->
+    <string name="message_size_label">Message size:\u0020</string>
+    <!-- Label in "Message details" dialog -->
+    <string name="priority_label">Priority:\u0020</string>
+    <!-- "Priority" value in "Message details" dialog -->
+    <string name="priority_high">High</string>
+    <!-- "Priority" value in "Message details" dialog -->
+    <string name="priority_normal">Normal</string>
+    <!-- "Priority" value in "Message details" dialog -->
+    <string name="priority_low">Low</string>
+    <!-- Label in "Message details" dialog -->
+    <string name="message_class_label">Message class:\u0020</string>
+    <!-- Label in "Message details" dialog -->
+    <string name="error_code_label">Error code:\u0020</string>
+
+   <!-- Menu title for editing a message -->
+   <string name="menu_edit">Edit</string>
+   <!-- Menu title the user can use for trying to resend a message. -->
+   <string name="menu_retry_sending">Retry sending</string>
+   <!-- Menu title the user can use for trying to resend all the messages. -->
+   <string name="menu_retry_sending_all">Retry sending all</string>
+   <!-- Menu title for deleting undelivered messages or messages on
+        the SIM card. -->
+   <string name="menu_delete_messages">Delete messages</string>
+   <!-- Dialog text displayed when trying to resend an unsent message. -->
+   <string name="retrying_dialog_body">This message <xliff:g id="message">%s</xliff:g> was not sent due to a connection problem.\r\nRetrying to send\u2026</string>
+   <!-- Menu title for locking a message -->
+   <string name="menu_lock">Lock message</string>
+   <!-- Menu title for unlocking a message -->
+   <string name="menu_unlock">Unlock message</string>
+
+    <!-- Manage SIM Messages -->
+    <!-- Menu title to copy a selected message from the SIM card to the phone. -->
+    <string name="sim_copy_to_phone_memory">Copy to phone memory</string>
+    <!-- Menu title to delete a selected messaged from the SIM card. -->
+    <string name="sim_delete">Delete</string>
+    <!-- Title of screen displaying messages on SIM card -->
+    <string name="sim_manage_messages_title">Text messages on SIM card</string>
+    <!-- Context menu item but currently commented out in 1.0. -->
+    <string name="sim_view">View</string>
+    <!-- Message that appears on the "SMS messges on SIM card" screen when there are no messages on the SIM card -->
+    <string name="sim_empty">No messages on the SIM card.</string>
+
+    <!-- Delivery Header View -->
+    <!-- Title of "Report" window -->
+    <string name="delivery_header_title">Report</string>
+
+    <!-- Delivery Report Activity -->
+    <!-- Status in "Report" window -->
+    <string name="status_none">(None)</string>
+    <!-- Status in "Report" window -->
+    <string name="status_pending">Pending</string>
+    <!-- Status in "Report" window -->
+    <string name="status_read">Read</string>
+    <!-- Status in "Report" window -->
+    <string name="status_received">Received</string>
+    <!-- Status in "Report" window -->
+    <string name="status_failed">Unsuccessful</string>
+    <!-- Status in "Report" window -->
+    <string name="status_unread">Unread</string>
+    <!-- Status in "Report" window -->
+    <string name="status_rejected">Rejected</string>
+    <!-- Label in "Report" window -->
+    <string name="recipient_label">Recipient:\u0020</string>
+    <!-- Label in "Report" window -->
+    <string name="status_label">Status:\u0020</string>
+
+
+    <!-- Attachment Type Selector Adapter. This string is an option in the "Attach" dialog, "Add music" dialog -->
+    <string name="attach_image">Pictures</string>
+    <!-- Attachment Type Selector Adapter. This string is an option in the "Attach" dialog, "Add music" dialog -->
+    <string name="attach_take_photo">Capture picture</string>
+    <!-- Attachment Type Selector Adapter. This string is an option in the "Attach" dialog, "Add music" dialog -->
+    <string name="attach_video">Videos</string>
+    <!-- Attachment Type Selector Adapter. This string is an option in the "Attach" dialog, "Add music" dialog -->
+    <string name="attach_record_video">Capture video</string>
+    <!-- Attachment Type Selector Adapter. This string is an option in the "Attach" dialog, "Add music" dialog -->
+    <string name="attach_sound">Audio</string>
+    <!-- Attachment Type Selector Adapter. This string is an option in the "Attach" dialog, "Add music" dialog -->
+    <string name="attach_record_sound">Record audio</string>
+    <!-- Attachment Type Selector Adapter. This string is an option in the "Attach" dialog, "Add music" dialog -->
+    <string name="attach_slideshow">Slideshow</string>
+    <!-- Attachment Type Selector Adapter. This string is an option in the "Attach" dialog, "Add music" dialog -->
+    <string name="attach_contact_info">Contact Information</string>
+
+    <!-- Layout Selector Adapter. Slideshow layout dialog option for aligning an icon. -->
+    <string name="select_bottom_text">Text on bottom</string>
+    <!-- Layout Selector Adapter. Slideshow layout dialog option for aligning an icon. -->
+    <string name="select_top_text">Text on top</string>
+
+    <!-- Delivery Report Toast dialog content -->
+    <string name="delivery_toast_body">Message received by %s</string>
+
+    <!-- Delivery Report Notification dialog title. -->
+    <string name="notification_multiple"><xliff:g id="count">%s</xliff:g> unread messages.</string>
+    <!-- Delivery Report Notification dialog title. -->
+    <string name="notification_multiple_title">New messages</string>
+
+    <!-- Failed to send/download Notification dialog title. -->
+    <string name="notification_failed_multiple"><xliff:g id="count">%s</xliff:g> messages could not be sent.</string>
+    <!-- Failed to send/download Notification dialog title. -->
+    <string name="notification_failed_multiple_title">Messages not sent: </string>
+
+    <!-- Sim Full Notification dialog title. -->
+    <string name="sim_full_title">SIM card full</string>
+    <!-- Sim Full Notification dialog text. -->
+    <string name="sim_full_body">Delete some messages to make room for more.</string>
+
+    <!-- Device Full Notification dialog title. -->
+    <string name="sms_full_title">Text message memory full</string>
+    <!-- Device Full Notification dialog text. -->
+    <string name="sms_full_body">Incoming message rejected due to full memory. Please delete old messages.</string>
+
+    <!-- Sms's Being Rejected Notification dialog title. -->
+    <string name="sms_rejected_title">Text message rejected</string>
+    <!-- Sms's Being Rejected Notification dialog text. -->
+    <string name="sms_rejected_body">Incoming message rejected due to unknown reason.</string>
+
+    <!-- Multimedia type used in building other messages.
+         For instance: Sorry, you cannot add this audio to your message. -->
+    <string name="type_audio">audio</string>
+    <!-- Multimedia type used in building other messages.
+         For instance: Sorry, you cannot add this picture to your message. -->
+    <string name="type_picture">Picture</string>
+    <!-- Multimedia type used in building other messages.
+         For instance: Sorry, you cannot add this video to your message. -->
+    <string name="type_video">Video</string>
+
+    <!-- Dialog title for the Read Report dialog. -->
+    <string name="confirm">Confirm</string>
+    <!-- Dialog text for the Read Report dialog. -->
+    <string name="message_send_read_report">A read report will be sent.</string>
+
+    <!-- This is the text of a toast message briefly displayed when a problem occurs
+         while sending. -->
+    <string name="message_queued">Currently unable to send your message. It will be sent when the service becomes available.</string>
+
+    <!-- dialog error message when only is FDN is allowed. -->
+    <string name="fdn_check_failure">You can only send messages to your fixed dialing numbers.</string>
+
+    <!-- Download Manager -->
+    <!-- When an error occurs downloading a new message and a subject isn't available, substitute
+         this default subject. -->
+    <string name="no_subject">(No subject)</string>
+    <!-- When an error occurs downloading a new message and the sender is unknown, substitute
+         this default text. -->
+    <string name="unknown_sender">Unknown sender</string>
+    <!-- When an error occurs downloading a new message, display this message.
+         An example: Download of message Wanna get pizza from dorkman was unsuccessful. -->
+    <string name="dl_failure_notification">Download of message <xliff:g id="subject">%1$s</xliff:g> from <xliff:g id="from">%2$s</xliff:g> was unsuccessful.</string>
+
+    <!-- While downloading a message, if that message has expired, display this message. -->
+    <string name="dl_expired_notification">This message has expired and will be deleted.</string>
+
+    <!-- This is the confirm rate limit alert dialog title. -->
+    <string name="rate_limit_surpassed">Confirm</string>
+    <!-- This is the confirm rate limit alert dialog text. -->
+    <string name="confirm_rate_limit">A large number of multimedia messages are being sent. Is this OK?</string>
+
+    <!-- Message Failed Notification -->
+    <!-- Dialog box title when receiving a message failed. -->
+    <string name="message_download_failed_title">Message not downloaded</string>
+    <!-- Dialog box title when sending a message failed. -->
+    <string name="message_send_failed_title">Message not sent</string>
+    <!-- Dialog box message text when failure occurs sending a message. -->
+    <string name="message_failed_body">Select to review the message and try again.</string>
+    <!-- Dialog box message when there's a problem retrieving messages. -->
+    <string name="download_later">Currently unable to download. Please try again later.</string>
+
+    <!-- Title for audio file picker -->
+    <string name="select_audio">Select audio</string>
+    <!-- Menu title to copy an attachment to the shared storage [CHAR LIMIT=25] -->
+    <string name="copy_to_sdcard">Save attachment</string>
+    <!-- Toast message on successful copy to shared storage [CHAR LIMIT=30] -->
+    <string name="copy_to_sdcard_success">Attachment saved</string>
+    <!-- Toast message on failed copy to shared storage [CHAR LIMIT=30] -->
+    <string name="copy_to_sdcard_fail">Unable to save attachment</string>
+    <!-- Menu title to save a sound as a ringtone -->
+    <string name="save_ringtone">Save as ringtone</string>
+    <!-- Toast message on successful copying ringtone to drm provider -->
+    <string name="saved_ringtone">Ringtone saved</string>
+    <!-- Toast message on failed copying ringtone to drm provider -->
+    <string name="saved_ringtone_fail">Saving ringtone failed</string>
+    <!-- Menu item -->
+    <string name="menu_insert_smiley">Smiley</string>
+
+    <!-- This is the dialog title for the "Select link" dialog, shown when the user clicks on a
+    chat in the chat history view if there are links in the chat message. The dialog displays the
+    links if there are any -->
+    <string name="select_link_title">Select action</string>
+
+    <!-- Name of the Nth slide, shown in the list in the slideshow editor. -->
+    <string name="slide_number">Slide <xliff:g id="number" example="5">%s</xliff:g></string>
+    <!-- Duration of the slide, shown in the list in the slideshow editor -->
+    <plurals name="slide_duration">
+        <!-- Case of 1-second duration. -->
+        <item quantity="one"><xliff:g id="number" example="1">%s</xliff:g> sec</item>
+        <!-- Case of "few" (small number of) seconds of duration. -->
+        <item quantity="few"><xliff:g id="number" example="2">%s</xliff:g> secs</item>
+        <!-- Case of multiple-second duration. -->
+        <item quantity="other"><xliff:g id="number" example="15">%s</xliff:g> secs</item>
+    </plurals>
+
+    <!-- Title of the delivery report activity. -->
+    <string name="delivery_report_activity">Delivery report</string>
+
+    <!-- Title of the activity that tells the user about storage limits. -->
+    <string name="storage_limits_activity">Storage limits</string>
+
+    <!-- Title of the add-attachment activity. -->
+    <string name="add_attachment_activity">Add attachment:</string>
+
+    <!-- Title of the layout-selector activity. -->
+    <string name="select_layout_activity">Select layout</string>
+
+    <!-- Title of the slide duration editor activity. -->
+    <string name="change_duration_activity">Change duration</string>
+
+    <!-- Title of the slide text editor activity. -->
+    <string name="edit_text_activity">Edit text</string>
+
+    <!-- Title of the slideshow editor activity. -->
+    <string name="edit_slideshow_activity">Edit slideshow</string>
+
+    <!-- Title of the slide editor activity. -->
+    <string name="edit_slide_activity">Edit slide</string>
+
+    <!-- Title of the number picker activity. -->
+    <string name="pick_numbers_activity">Pick Numbers</string>
+
+    <!-- Title of the slideshow activity. -->
+    <string name="slideshow_activity">Slideshow</string>
+
+    <!-- Title of the class-0 message activity. -->
+    <string name="class_0_message_activity">Class 0 Message</string>
+
+    <!-- Title of the send-using-MMS activity. -->
+    <string name="send_using_mms_activity">Send as multimedia message\u2026</string>
+
+    <!-- Title of the select-contact-method activity. -->
+    <string name="select_contact_method_activity">Select Contact Method</string>
+
+    <!-- Application name shown when searching -->
+    <string name="search_label">Messaging</string>
+
+    <!-- Search hint -->
+    <string name="search_hint">Search Messaging</string>
+	<string name="search_contacts">Search Contacts</string>  
+    <!-- Search activity name -->
+    <string name="search">Messaging</string>
+    <!-- Search setting description -->
+    <string name="search_setting_description">Text in your messages</string>
+
+    <!--  Search empty results -->
+    <string name="search_empty">No matches</string>
+
+    <!--  Search results title -->
+    <plurals name="search_results_title">
+        <!-- Case of 1 result. -->
+        <item quantity="one"><xliff:g id="number" example="1">%1$s</xliff:g> result for \"<xliff:g id="search" example="???">%2$s</xliff:g>\"</item>
+        <!-- Case of 0 or 2 or more results. -->
+        <item quantity="other"><xliff:g id="number" example="15">%1$s</xliff:g> results for \"<xliff:g id="search" example="???">%2$s</xliff:g>\"</item>
+    </plurals>
+
+    <!--- String saved in history searches. -->
+    <string name="search_history"><xliff:g id="count">%1$s</xliff:g> results for \"<xliff:g id="search">%2$s</xliff:g>\"</string>
+
+    <!-- Button title in Messaging preferences. -->
+    <string name="confirm_clear_search_title">Clear</string>
+    <!-- Text for the preferences button. -->
+    <string name="confirm_clear_search_text">Search history will be cleared.</string>
+    <!--- Button title in preferences to clear the search history. It's a verb action that takes place
+          immediately when clicked. -->
+    <string name="pref_mms_clear_search_history_title">Clear search history</string>
+    <!--- Button description in preferences to clear the search history. -->
+    <string name="pref_mms_clear_search_history_summary">Clear previous Messaging searches from showing up in the Search box</string>
+
+    <!-- Dialog text for display mode save dialog. -->
+    <string name="save">Save</string>
+
+    <!-- Dialog title for dialog that informs user about new storage settings. -->
+    <string name="storage_limits_title">Limit messages</string>
+
+    <!-- Dialog message for dialog that informs user about new storage settings. -->
+    <string name="storage_limits_message">Do you want to limit the number of messages you save per conversation?</string>
+
+    <!-- Button title for dialog that informs user about new storage settings. -->
+    <string name="storage_limits_setting">Set limits</string>
+
+    <!-- Button title to dismiss dialog that informs user about new storage settings. -->
+    <string name="storage_limits_setting_dismiss">No limits</string>
+
+    <!-- Toast message when a user tries to send a Mms message when there are already too many
+         outstanding unsent message. -->
+    <string name="too_many_unsent_mms">Can\'t send message right now. There are too many unsent multimedia messages.</string>
+
+    <!-- Label for the "Me" number of this phone. -->
+    <string name="me">Me</string>
+
+    <!-- Brief small label shown to right of message when it is being sent. -->
+    <string name="sending_message">Sending\u2026</string>
+
+    <!-- For debugging: Dialog box title indicating there's a situation where data has unexpectedly
+         changed -->
+    <string name="error_state">Inconsistent state</string>
+    <!-- For debugging: Dialog box text indicating there's a situation where data has unexpectedly
+         changed -->
+    <string name="error_state_text">The state of threads and recipients is inconsistent. Please capture a bug report and send it to android-sms-bugs@google.com</string>
+
+    <!-- Extra Settings: -->
+    <string name="pref_extra_settings">Extra settings</string>
+
+    <!-- Back to all threads -->
+    <string name="pref_title_mms_back_to_all_threads">Back to all threads</string>
+    <string name="pref_summary_mms_back_to_all_threads">Always go to all-threads when back button is pressed</string>
+
+    <!-- Toggle setting for enable/disable Black Background -->
+    <string name="pref_title_mms_black_background">Black Background</string>
+    <string name="pref_summary_mms_black_background">Enable/disable black background\n(Restart Mms)</string>
+
+    <!-- Toggle setting for always show character counter -->
+    <string name="pref_title_show_counter_always">Always show chars counter</string>
+    <string name="pref_summary_show_counter_always">Always show the character counter when composing messages</string>
+
+    <!-- Custom user-agent -->
+    <string name="pref_mms_custom_option">Custom..</string>
+    <string name="pref_title_mms_user_agent">Custom User-Agent</string>
+    <string name="pref_summary_mms_user_agent">Spoof phone as a different model for MMS</string>
+    <string name="pref_mms_user_agent_custom_set">Custom User Agent set to:\n</string>
+
+    <!-- Full timestamps -->
+    <string name="pref_title_mms_full_timestamp">Full timestamps</string>
+    <string name="pref_summary_mms_full_timestamp">Enable to show both date and time in message timestamps</string>
+
+    <!-- Which timestamps -->
+    <string name="pref_title_mms_use_sent_timestamp">Use sent timestamps</string>
+    <string name="pref_summary_mms_use_sent_timestamp">Show operator\'s sent date instead of received date for received messages</string>
+
+    <!-- Timestamp GMT Corection -->
+    <string name="pref_title_mms_use_sent_timestamp_gmt_correction">Sent timestamp GMT</string>
+    <string name="pref_summary_mms_use_sent_timestamp_gmt_correction">Enable if operator\'s sent timestamp is not already GMT offset</string>
+
+    <!-- Only mobile numbers -->
+    <string name="pref_title_only_mobile_numbers">Only mobile numbers</string>
+    <string name="pref_summary_only_mobile_numbers">Enable to only show mobile numbers in recipient field</string>
+
+    <!-- Email address completion -->
+    <string name="pref_title_mms_email_addr_completion">Email address completion</string>
+    <string name="pref_summary_mms_email_addr_completion">Enable/disable email address auto-completion into recipient field</string>
+
+    <!-- Message Font size -->
+    <string name="pref_title_mms_message_font_size">Message font size</string>
+    <string name="pref_summary_mms_message_font_size">Change font size of message view</string>
+    <string name="pref_dialogtitle_mms_message_font_size">Select font size</string>
+
+    <!-- Change Vibrate pattern/method for message notification -->
+    <string name="pref_title_mms_notification_vibrate_settings">Vibrate settings</string>
+    <string name="pref_title_mms_notification_vibrate_pattern">Vibrate pattern</string>
+    <string name="pref_summary_mms_notification_vibrate_pattern">Change vibrate pattern</string>
+    <string name="pref_title_mms_notification_vibrate_call">Vibrate on Call</string>
+    <string name="pref_summary_mms_notification_vibrate_call">Allow vibrate while on a call</string>
+    <string name="pref_title_mms_notification_vibrate_custom">Custom vibrate pattern</string>
+    <string name="pref_text_mms_notification_vibrate_custom">Format off/on in milliseconds: off, on, off, on\u2026</string>
+
+    <!-- Send on enter -->
+    <string name="pref_title_mms_send_on_enter">Send on Enter</string>
+    <string name="pref_summary_mms_send_on_enter">Send by pressing Enter - Enable/disable send message by pressing Enter key</string>
+
+    <!-- Sms templates -->
+    <string name="prefs_templates_settings">Sms templates</string>
+    <string name="pref_title_templates_manage">Templates</string>
+    <string name="pref_summary_templates_manage">Manage your sms templates</string>
+    <string name="pref_title_templates_show_gesture">Gesture</string>
+    <string name="pref_summary_templates_show_gesture">Show gesture trace</string>
+    <string name="pref_title_template_gestures_sensitivity">Gesture sensitivity</string>
+    <string name="template_save">Save</string>
+    <string name="template_insert_hint">Insert here the template text</string>
+    <string name="template_empty_text">Text field cannot be empty</string>
+    <string name="template_explanation">Insert or modify the template text and optionally draw a gesture to associate it</string>
+    <string name="template_edit">Edit</string>
+    <string name="template_delete">Delete</string>
+    <string name="template_ctx_menu_title">Actions</string>
+    <string name="template_list_title">Templates</string>
+    <string name="template_edit_title">Edit template</string>
+    <string name="template_new_title">New template</string>
+    <string name="template_insert">General message</string>
+    <string name="template_insert_ctx_menu_title">Edit text</string>
+    <string name="template_gesture_draw">Draw the gesture in the space below</string>
+    <string name="template_not_present_error">You have not defined any template</string>
+    <string name="template_not_present_error_title">Error</string>
+    <string name="template_select">Select a template</string>
+    <string name="template_cancel_confirm_title">Warning</string>
+    <string name="template_cancel_confirm_text">Would you like to cancel?</string>
+    <string name="gestures_already_present">Warning: A similar gesture is associated to another template!</string>
+
+    <!-- Phone goggles -->
+    <string name="toast_phone_goggles">You are not allowed to send SMS at this time. Please try again later.</string>
+    <string name="dialog_phone_goggles_title">SMS blocked</string>
+    <string name="dialog_phone_goggles_title_unlocked">SMS authorized</string>
+    <string name="dialog_phone_goggles_content">Sending a SMS may not be wise at this time. Are you sure you want to continue?</string>
+    <string name="dialog_phone_goggles_unauthorized">Sending a SMS may not be wise at this time.</string>
+    <string name="dialog_phone_goggles_ok">Send</string>
+    <string name="dialog_phone_goggles_cancel">Save draft</string>
+    <string name="message_send_to">Send to: </string>   
+    <!-- Text displayed when the message is empty -->
+    <string name="recentMms_empty">Message is empty.</string> 
+    <string name="recentContacts_empty">Contacts is empty.</string> 
+    <string name="message_item_received_label">received: </string>
+    <string name="message_item_expiry_label">expiry: </string> 
+    <string name="message_compose_menu_resend_label">Re-send</string>
+    <!-- Mms String list -->
+    
+     <!-- Sms realtime -->
+    <string name="hint">Enter your reply...</string>
+    <string name="reply">Reply</string>
+    <string name="choosesms">choose a common message</string>
+    <string name="alter_title">Warm tips</string>
+    <string name="alter_message">Are you sure want to delete this message?</string>
+    <string name="alter_positive">Sure</string>
+    <string name="alter_successed_toast">Successfully deleted</string>
+    <string name="alter_negtive">Cancle</string>
+    <string name="replycontent">Content can not be empty</string> 
+    <string name="contentlengthcn"><xliff:g id="contentlengthcn">70</xliff:g></string>
+    <string name="contentlengtheg"><xliff:g id="contentlengtheg">160</xliff:g></string>
+    <string name="fix_line_number">landphone</string>
+    <string name="unread_message">new message</string>
+    <string name="miss_call">missed call</string>
+    <string name="no_gps_for_address">Please install GPS application!</string>
+    <string name="no_data">No Data</string>
+    <string name="menu_del_contacts">Delete contacts</string>
+    
+    <!-- Begin, added by zhumeiquan for Labi, 20111212 -->
+    <string name="menu_labi_sync">Sync contacts</string>
+    <string name="menu_merge_duplicated">Merge duplicated contacts</string>
+    
+    <string name="merge_linkman_info">Merge Contact Info</string> 
+    <string name="display_name">DisplayName:</string>
+    <string name="phone_number">Phone:</string>
+    <string name="email_address">Email:</string>
+    <string name="im_address">IM:</string>
+    <string name="postal_address">Postal:</string>
+    <string name="orgnization_address">Orgnization:</string>  
+    <string name="nickname_info">Nickname:</string>
+    <string name="website_url">Website:</string>
+    <string name="sip_address">Sip Address:</string>
+    <string name="note_info">Note:</string>
+    
+    <string name="merge">Merge</string>
+    <string name="previous">Pre</string>
+    <string name="next">Next</string>
+    <string name="merge_sure">The unselected contact info will be deleted, are you sure to merge?</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="please_wait">Please wait</string>
+    <string name="merge_doing">Merging contacts...</string>
+    <string name="merge_failed">Merge failed!</string>
+    <string name="merge_success">Merge success!</string>
+    <string name="invalid_merge">No item checked, invalid merge!</string>
+    <string name="no_duplicated_contact">No duplicated contact!</string>    
+    <string name="saveconfirm_title">Reminder</string>
+    <string name="saveconfirm_message">The contact was modified.Save changes?</string>    
+    <string name="send_contact">Share contact</string>    
+    <!-- End -->
+    <string name="search_content_count">Find <xliff:g id="search_count">%d</xliff:g> contact</string>
+    <string name="search_content_counts">Find <xliff:g id="search_count">%d</xliff:g> contacts</string>
+    <string name="search_calllog_count">Find <xliff:g id="search_count">%d</xliff:g> calllog</string>
+	<string name="search_calllog_counts">Find <xliff:g id="search_count">%d</xliff:g> calllogs</string>
+	<string name="search_message_count">Find <xliff:g id="search_count">%d</xliff:g> message</string>
+	<string name="search_message_counts">Find <xliff:g id="search_count">%d</xliff:g> messages</string>
+	    	<string name="dialpad_call">Call</string>
+    <!-- Begin, added by jxli-->
+    <string name="show_phone_number">Show all contacts</string>
+    <string name="show_yiliao_number">Phone number</string>
+    <string name="title_edit_account">Edit personal card</string>
+    <string name="yiliao_remark_label">Remark</string>
+    <string name="yiliao_email_label">Email</string>
+    <string name="yiliao_phone_label">Phone number</string>
+    <string name="yiliao_remark_prompt">Talk about today\'s mood, share with friends</string>
+    <string name="menu_switch_account">Switch account</string>
+    <string name="menu_change_passwd">Change passwd</string>
+    <string name="yiliao_account_myself">I</string>
+    <string name="yiliao_progress_match_yiliao_number">Matching LMessage contact\u2026</string>
+    <string name="yiliao_progress_match_yiliao_number_done">Contact status refresh is complete</string>
+	<string name="yiliao_progress_match_yiliao_number_fail">Contact status refresh is fail</string>
+    <string name="title_yiliao_match_number_hint">Prompt</string>
+    <string name="message_yiliao_match_number_hint">Whether to allow the matching contacts? \n automatic matching to help you find more friends, your contacts are kept strictly confidential</string>
+    <string name="positive_yiliao_match_number_hint">Allow</string>
+    <string name="negative_yiliao_match_number_hint">Forbid</string>
+    <string name="yiliao_add_to_local">add to the local</string>
+    <string name="yiliao_add_to_local_contacts">add to the local contacts</string>
+    <string name="remind_yiliao_match_number_hint">Not remind</string>
+    <string name="menu_settings">Contacts settings</string>
+    <string name="menu_yiliao_sync">Yiliao sync</string>
+    <string name="menu_share_contacts">Share contacts</string>
+    <string name="contacts_show_option_label">Display options</string>
+    <string name="contacts_account_settings_label">Account settings</string>
+    <string name="match_contacts_number_auto_label">Automatic matching of local contacts</string>
+    <string name="privacy_settings_label">Privacy settings</string>
+    <string name="switch_accounts_label">Switching accounts</string>
+    <string name="change_passwd_label">Change password</string>
+    <string name="whether_find_me_label">Whether to allow others to find me</string>
+    <string name="friend_recommend_label">Recommend to a friend</string>
+    <string name="auto_recommend_mututal_friends">Automatically recommend a mutual friend</string>
+    <string name="title_contacts_settings">Contacts setting</string>
+	<string name="pref_contacts_option_title">Option settings</string>
+	<string name="menu_manually_refresh">Manually refresh</string>
+	<string name="menu_close_lw_msg">Close data message</string>	
+	<string name="menu_open_lw_msg">Open data message</string>
+	<string name="prefs_contact_management_title">Contact management</string>
+	<string name="prompt_no_account_info">You do not have fill in personal information</string>
+	<string name="btn_add_account_info">Add a personal message immediately</string>
+	<string name="prompt_nerwork_offline">Refresh Failed, please check your network</string>
+	<string name="btn_add_sticker_photo">Modify the caller sticker photo</string>
+    <!-- End -->
+	<!-- Mms Begin  -->
+	<string name="compose_voice_button">Hold to Talk</string>
+	<string name="compose_through_text">through</string>
+	<string name="compose_recorder_to_short">Your recording is too short and will not be sent</string>
+	<string name="prefs_ims_settings">FMS settings</string>
+	<string name="prefs_ims_mode">Intelligent mode (recommended)</string>
+	<string name="prefs_ims_summary_mode">The available according to the network, intelligent judge to send wing chat messages (free) or SMS.</string>
+	<string name="prefs_ims_aout_to_sms_mode">Resend via SMS</string>	
+	<string name="prefs_ims_aout_to_sms_summary_mode">Automatically resend FMS via SMS when network issues occur.</string>	
+	<string name="compose_recorder_invalid_network">Available networks, open wifi or 3G networks.</string>	
+	<string name="compose_stop_audio_text">stop</string>
+	<string name="compose_recorder_no_press">Unsent attachments!</string>
+	<string name="compose_through_from_ims">Free Messages</string>
+	<string name="compose_search_contacts_number">Wa Xin Contacts</string>
+	<string name="mms_audio_message_text">Audio</string>
+	<string name="mms_image_message_text">Image</string>
+	<string name="mms_video_message_text">Video</string>
+	<string name="ims_resend_message">Resend FMS</string>	
+	<string name="ims_resend_message_to_sms">Resend as SMS</string>
+	<string name="sms_storage_to_sim">Save SMS to the SIM card.</string>
+	<string name="sms_storage_to_setting">SMS storage setting</string>	
+	<string name="prefs_ims_close_title">Free Messages Service</string>	
+	<string name="prefs_ims_close_title_summary">Turn on to send free text, voice, photo, and video messages.</string>	
+	<string name="mms_nomal_message">Ordinary Message</string>		
+	<string name="mms_ims_message">Free Messages</string>	
+	<string name="mms_input_voice_no_sdcard">SD card not detected, unable to send voice message.</string>	
+	<string name="mms_input_play_no_sdcard">SD card not detected, unable to play voice message.</string>		
+	<string name="message_sending_string">sending message...</string>
+	<string name="message_ims_sending_file_maxsize">Unable to send files greater than 2MB.</string>
+	<string name="message_ims_user_state_refresh">Update recipient status</string>
+	<string name="message_ims_user_service_open">Join now</string>			
+	<string name="message_ims_user_service_to_later">Remind later</string>		
+	<string name="message_ims_user_service_message_info">Free information service is more powerful than ordinary information, voice intercom chat network easily with online contacts, text chat, save money to send pictures and other multimedia information and communication experience unlimited fun.</string>
+	<string name="message_ims_user_service_check_protocol">Read User Agreement</string>
+	<string name="message_ims_user_service">Free Messages Service (FMS)</string>
+	<string name="message_ims_user_protocol">user protocol</string>
+	<string name="message_ims_user_service_info">Free information service user agreement"\n\n"One, the" agreement" to grant you the following rights:"\n\n"Installation and use:"\n\n"You can copy, distribute and disseminate an unlimited number of software products, but you must ensure that each reproduction, distribution and dissemination must be true and complete, including all software products on this software, electronic documents, copyright and trademark notices, also including this agreement."\n\n"Two, costs:"\n\n"You must pay personal Internet or third party ( including but not limited to, telecommunications or mobile communication provider ) communication charge fee, fee information and other related costs. As related to value-added telecom services, we recommend you and value-added service provider to confirm the related costs. Any of the software update, update and other change will be the subject of this agreement."\n\n"Three, privacy protection"\n\n"To protect user privacy is a free information service is a basic policy, ensure not open to the public or to the third party to provide a single user registration information and users in the use of network services non-public content, except in the following situations:"\n\n"Prior to obtaining the clear authorization of user;"\n\n"According to the relevant laws and regulations;"\n\n"In accordance with the relevant government departments in charge of the requirements;"\n\n"In order to safeguard the public interest;"\n\n"To safeguard the legitimate rights and interests of a letter."\n\n"In the disclosed single user privacy under the premise, has the right to the user database are analyzed and the user database for commercial use."\n\n"In four, the opening of free information service needs to send a message to the server to complete the registration fee, with ordinary SMS messages, by charge carriers, Le frog does not charge any fees.</string>
+	<string name="message_ims_sending_string">send Wassage.......</string>
+	<string name="message_add_multiple_file">Can also add multiple files</string>				
+	<string name="message_add_multiple_file_error_type">Does not support the file type</string>
+	<string name="message_sd_card_min_size">SD card memory is not enough.</string>
+	<string name="message_select_contacts">Select Contacts</string>
+	<string name="message_selected_contacts_count">Selected contacts %s </string>	
+	<string name="mms_lewa_easter_eggs">Happy birthday</string>
+	
+	<!-- Mms End  -->		
+	
+	<string name="addblack_dec">Remark(Optional)</string>
+	<string name="importsms_black">Import all sms of the number</string>
+	
+  <!-- add by shenqi -->
+  <string name="call_log_settings">Call Log Settings</string>
+  <string name="call_log_click_option_title">Call Log Click Option</string>
+  <string name="call_log_click_option_summary">Call Log Click Summary</string>
+      <!-- call_log_click entries.  -->
+  <string-array name="call_log_click_entries">      
+        <item>Display Detail</item>
+        <item>Have a Call</item>
+  </string-array>
+      <!-- Do not translate. -->
+  <string-array name="call_log_click_values" translatable="false">
+        <!-- Do not translate. -->
+        <item>0</item>
+        <!-- Do not translate. -->
+        <item>1</item>
+   </string-array>
+   <string name="set_display_photo_successed_toast">Setting success</string>
+       <!-- Added by shenqi  for call log setting, 20120518 -->
+   <string name="calllog_settings">Call Settings</string>
+   <string name="removeStickerPicture">Remove Sticker Picture</string>
+   <string name="replaceConcatctIcon_title">Replace Contact Icon</string>
+   <string name="replaceConcatctIcon">Are you sure to replace contact icon also ?</string>
+  <!-- end     -->
+
+    <!-- Woody Guo @ 2012/05/24 -->
+    <string name="toast_log_generated">Successfully exported log %s.</string>
+    <!-- add for IpCallSettingActivity -->
+    <string name="ip_call_prefix">Operator IP dialing prefix:</string>
+    <string name="ims_ip_call_description">Smart IP call</string>
+    <string name="not_use_ip_call_description">Not use IP numbers</string>
+    <string name="phoneNumber_empty">No number added</string>
+    <string name="add_number">Add number</string>
+     <string name="ip_menu_modify">Modify</string>
+    <string name="ip_menu_delete">Delete</string>
+    <string name="contact_name_hint">Contact name</string>
+    <string name="modify_description">Modify contact name</string>
+    <string name="delete_description">Are you sure to delete?</string>
+    <string name="contact_item_delete_error">Delete error</string>
+    <string name="has_been_set">Already set</string>
+    <string name="long_distance_call">make long distance call</string>
+    <string name="have_sticker_photo">Had set sticker photo</string>
+    <string name="show_sticker_photo">Show sticker photo</string>
+    <!-- END -->
+    <string name="contactDeletedToast">Contact deleted.</string>
+    <string name="otherOrganization">Other Organization</string>
+    <string name="msg_deleting">deleteing...</string>
+</resources>
+

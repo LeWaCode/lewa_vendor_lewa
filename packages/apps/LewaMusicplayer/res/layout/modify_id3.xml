@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="274dip"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    <View 
+    	android:layout_height="1dip" 
+    	android:layout_width="match_parent"
+		android:background="#FFb9b9b9">
+	</View>    
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="wrap_content"
+	    android:layout_height="160dip"
+	    android:layout_margin="15dip">
+        
+        <RelativeLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+            
+ 			<TextView
+ 				android:id="@+id/textView1"       
+                android:layout_width="46dip"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editText1"
+                android:text="@string/id3_track" />
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"                
+                android:layout_toRightOf="@+id/textView1"
+                android:singleLine="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            
+ 			<TextView
+ 				android:id="@+id/textView2"       
+                android:layout_width="46dip"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editText2"
+                android:text="@string/id3_artist" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"                
+                android:layout_toRightOf="@+id/textView2"
+                android:singleLine="true" />
+
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" >
+            
+ 			<TextView
+ 				android:id="@+id/textView3"       
+                android:layout_width="46dip"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editText3"
+                android:text="@string/id3_album" />
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"                
+                android:layout_toRightOf="@+id/textView3"
+                android:singleLine="true" />
+
+        </RelativeLayout>
+        
+	</RelativeLayout>
+        
+	<View 
+		android:layout_height="1dip"
+        android:layout_width="match_parent"
+        android:background="#FFb9b9b9">
+    </View>
+        
+    <LinearLayout
+       	android:id="@+id/linearLayout5"
+     	android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:orientation="horizontal"
+        android:gravity="center">
+	
+		<Button
+	        android:id="@+id/button1"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:background="@drawable/bg_highlight_s"	        
+	        android:text="@string/save"/>
+    
+        <View 
+            android:layout_height="match_parent"
+	        android:layout_width="1dip"
+	        android:background="#FFb9b9b9">
+	    </View>
+
+    	<Button
+		    android:id="@+id/button2"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1"
+		    android:background="@drawable/bg_highlight_s"		    
+		    android:text="@string/menu_doNotSave" />
+    
+    </LinearLayout>
+    
+</LinearLayout>

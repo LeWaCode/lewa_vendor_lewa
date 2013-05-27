@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dip"
+    android:layout_height="match_parent"
+    android:id="@+id/linear_page"
+    android:orientation="vertical" >
+    
+	<LinearLayout 		
+		android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_weight="100"
+	    android:orientation="vertical">
+	    
+		<com.lewa.os.ui.ViewPagerIndicator
+		    android:id="@+id/indicator_outer"
+		    android:layout_width="match_parent"
+		    android:layout_height="30dip"
+		    android:gravity="center_vertical"
+		    android:background="@drawable/activity_title_bar">
+		</com.lewa.os.ui.ViewPagerIndicator>
+		
+		<android.support.lewa.view.LewaPagerView
+		    android:id="@+id/pager_outer"
+		    android:layout_width="320dip"
+		    android:layout_height="match_parent">
+		</android.support.lewa.view.LewaPagerView>
+		
+	</LinearLayout>
+	
+	<com.lewa.player.ui.NowPlayingController
+        android:id="@+id/actionbar"
+        android:layout_height="54dip"
+        android:layout_weight="1"
+        android:layout_width="match_parent">
+    </com.lewa.player.ui.NowPlayingController>
+	
+</LinearLayout>

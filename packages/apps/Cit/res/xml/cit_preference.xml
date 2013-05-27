@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/cit"
+    android:key="cit_tools">
+    <Preference
+        android:key="logcat"
+        android:title="@string/logcat"
+        android:summary="@string/out_to_spec_localtion">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.lewa.cit"
+            android:targetClass="com.lewa.cit.GenerateInfo" />
+    </Preference>
+    <Preference
+        android:title="@string/phonetest_title"
+        android:summary="@string/phonetest_summary">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.lewa.cit"
+            android:targetClass="com.lewa.cit.PhoneTestActivity" />
+
+    </Preference>
+    <Preference
+        android:key="dev_tools"
+        android:title="@string/development_tools"
+        android:summary="@string/sum_dev_tools">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.development"
+            android:targetClass="com.android.development.Development" />
+    </Preference>
+    <Preference
+        android:key="spare_parts"
+        android:title="@string/spare_parts"
+        android:summary="@string/sum_spare_parts">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.spare_parts"
+            android:targetClass="com.android.spare_parts.SpareParts"/>
+    </Preference>
+    <Preference
+        android:key="light_sensor"
+        android:title="@string/config_info_view"
+        android:summary="@string/sum_config_info_view">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.lewa.cit"
+            android:targetClass="com.lewa.cit.ConfigurationView"/>
+    </Preference>
+    <PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:title="@string/about_app"
+        android:summary="@string/sum_about_app">
+        <Preference
+            android:title="@string/version"
+            android:summary="1.0">
+        </Preference>
+        <Preference
+            android:title="@string/date"
+            android:summary="2012-7-19">
+        </Preference>
+    </PreferenceScreen>
+</PreferenceScreen>

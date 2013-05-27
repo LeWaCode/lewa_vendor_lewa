@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_white"
+    android:orientation="vertical" >
+
+<!--
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/two_cols_title_bar" />-->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:id="@+id/detail_app_logo"
+            android:layout_width="72dip"
+            android:layout_height="72dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="10dip"
+            />
+
+        <TextView
+            android:id="@+id/detail_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/detail_app_logo"
+            android:layout_marginLeft="6dip"
+            android:layout_marginRight="10dip"
+            android:layout_toRightOf="@id/detail_app_logo"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#515151" />
+
+        <TextView
+            android:id="@+id/detail_app_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_app_name"
+            android:layout_marginLeft="6dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="2dip"
+            android:layout_toRightOf="@id/detail_app_logo"
+            android:text="@string/label_no_author"
+            android:textColor="@drawable/detail_version" />
+
+        <TextView
+            android:id="@+id/detail_app_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_app_author"
+            android:layout_marginLeft="6dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="2dip"
+            android:layout_toRightOf="@id/detail_app_logo"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#808080" />
+
+        <Button
+            android:id="@+id/detail_download_btn"
+            android:layout_width="58dip"
+            android:layout_height="32dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dip"
+            android:layout_marginTop="25dip"
+            android:layout_weight="1"
+            android:background="@drawable/btn_download_bg"
+            android:focusable="true"
+            android:onClick="startDownload"
+            android:text="@string/label_downloading"
+            android:textColor="@drawable/btn_download_textcolor" />
+        
+        <Button
+            android:id="@+id/detail_btn_downloading"
+            android:layout_width="58dip"
+            android:layout_height="32dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dip"
+            android:layout_marginTop="25dip"
+            android:layout_weight="1"
+            android:background="@drawable/btn_have_installed_bg"
+            android:focusable="true"
+            android:text="@string/btn_status_downloading"
+            android:textColor="@drawable/btn_have_installed_textcolor" />
+
+        <Button
+            android:id="@+id/detail_app_isinstalled"
+            style="@style/buttonStyle"
+            android:layout_marginTop="25dip"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:background="@drawable/btn_have_installed_bg"
+            android:focusable="true"
+            android:text="@string/label_btn_installed"
+            android:textColor="@drawable/btn_have_installed_textcolor"
+            android:visibility="gone" >
+        </Button>
+        
+        <Button
+            android:id="@+id/detail_btn_update"
+            style="@style/buttonStyle"
+            android:layout_marginTop="25dip"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:background="@drawable/btn_update_bg"
+            android:focusable="true"
+            android:text="@string/label_update"
+            android:textColor="@drawable/btn_download_textcolor"
+            android:visibility="gone" >
+        </Button>
+
+        <TextView
+            android:id="@+id/detail_app_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_app_version"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:layout_marginTop="30dip"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@drawable/detail_description" >
+        </TextView>
+    </RelativeLayout>
+
+</LinearLayout>

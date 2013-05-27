@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/auto_search"
+        android:icon="@drawable/ic_menu_auto_search"
+        android:title="@string/menu_auto_search"/>
+    <item
+        android:id="@+id/manual_search"
+        android:icon="@drawable/ic_menu_manual_search"
+        android:title="@string/menu_manual_fm"/>
+    <item
+        android:id="@+id/search_list"
+        android:icon="@drawable/ic_menu_list"
+        android:title="@string/menu_auto_search_list"/>
+    <item
+        android:id="@+id/speaker_onoff"
+        android:icon="@drawable/ic_speaker"
+        android:title="@string/speaker_on"/>
+
+</menu>

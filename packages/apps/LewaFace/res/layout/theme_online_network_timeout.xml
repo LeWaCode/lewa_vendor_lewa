@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/network_timeout" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    >
+  
+    <ImageView android:id="@+id/theme_err_img" 
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent"
+        android:src="@drawable/theme_no_default"/>
+        
+    <TextView android:id="@+id/network_timeout"
+        android:textSize="14.0sp" 
+        android:textColor="#ffb1b1b1" 
+        android:gravity="center"  
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="10.0dip" 
+        android:layout_marginRight="10.0dip"
+        android:layout_centerInParent="true"
+        android:singleLine="false" 
+        android:text="@string/theme_connect_timeout" 
+        android:paddingTop="80dip"/>
+        
+    <LinearLayout android:id="@+id/theme_linearLayout1" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="28.0dip" 
+        android:layout_marginTop="9.0dip" 
+        android:layout_marginRight="28.0dip"
+        android:layout_below="@+id/network_timeout" 
+        android:weightSum="2.0">
+        
+        <Button android:id="@+id/theme_network_set_timeout"
+            android:textSize="14.0sp"  
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="@string/theme_network_setting" 
+            android:layout_weight="1.0" />
+            
+        <View android:layout_width="16.0dip" 
+            android:layout_height="0.0dip" />
+            
+        <Button android:id="@+id/network_retry"
+            android:textSize="14.0sp"   
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="@string/theme_network_retry" 
+            android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

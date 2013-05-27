@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : no_file_layout.xml
+    Created on : 2011年12月30日, 上午12:59
+    Author     : chenliang
+    Description:
+        Purpose of the document follows.
+-->
+
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/nofile_linearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="120"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+    <ImageView
+                android:id="@+id/nofile_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/no_file_icon" />
+
+    <TextView
+                android:id="@+id/nofile_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                android:gravity="center"
+                android:textColor="@color/default_text_color"
+                android:textSize="16.0dip" />
+</LinearLayout>

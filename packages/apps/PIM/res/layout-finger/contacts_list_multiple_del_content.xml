@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2010 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:orientation="vertical"
+        android:background="@null">
+    <FrameLayout
+            android:layout_width="match_parent" 
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        <LinearLayout        
+            android:id="@+id/pinned_header_list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/activity_background"
+            >
+            
+            <include android:id="@+id/searchView"
+                layout="@layout/search_bar"/>
+
+            <ListView
+                android:id="@android:id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fastScrollEnabled="true"
+                android:cacheColorHint="@null"
+                android:background="@drawable/settings_background"
+                android:listSelector="@drawable/list_selector_background"
+                />
+
+            <!-- Transparent filler -->
+            <View android:id="@android:id/empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+            />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <!--android:background="@drawable/bg_softkey_bar"-->
+        <!-- <include layout="@layout/softkey_bar_top_separator"/> -->
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="0dip"
+                android:paddingRight="0dip"
+                android:paddingTop="0dip">
+
+            <Button android:id="@+id/contacts_delete_done"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                    android:background="@android:drawable/item_background_holo_dark_left"
+                    android:shadowColor="#ffffffff"
+                    android:shadowDx="1.0"
+                    android:shadowDy="-1.2"
+                    android:shadowRadius="1.0"
+                    android:text="@string/delete" />
+
+            <Button android:id="@+id/btn_contacts_mark"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                    android:background="@android:drawable/item_background_holo_dark_right"
+                    android:shadowColor="#ffffffff"
+                    android:shadowDx="1.0"
+                    android:shadowDy="-1.2"
+                    android:shadowRadius="1.0"
+                    android:text="@string/menu_mark_all" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

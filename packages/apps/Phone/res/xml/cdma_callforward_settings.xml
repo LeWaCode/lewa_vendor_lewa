@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/call_forwarding_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:phone="http://schemas.android.com/apk/res/com.android.phone">
+    <Preference android:persistent="false" android:title="@string/labelCFU" android:key="button_cdma_cfu_key" />
+    <Preference android:persistent="false" android:title="@string/labelCFB" android:key="button_cdma_cfb_key" />
+    <Preference android:persistent="false" android:title="@string/labelCFNRy" android:key="button_cdma_cfnry_key" />
+    <Preference android:persistent="false" android:title="@string/labelCFNRc" android:key="button_cdma_cfnrc_key" />
+    <Preference android:persistent="false" android:title="@string/labelCFCa" android:key="button_cdma_cfca_key" />
+</PreferenceScreen>

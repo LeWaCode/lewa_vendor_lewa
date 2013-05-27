@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Enabled views -->
+    <item android:state_pressed="true" android:state_enabled="true"
+        android:drawable="@drawable/wallpaper_btn_hi" />
+    <item android:state_focused="true"  android:state_enabled="true"    
+        android:drawable="@drawable/wallpaper_btn_hi" />
+    <item android:state_enabled="true"
+        android:drawable="@drawable/wallpaper_btn" />
+</selector>

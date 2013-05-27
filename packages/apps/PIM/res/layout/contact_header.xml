@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingRight="@dimen/list_item_padding_right"
+        android:background="@drawable/bg_tittle_blue">
+
+    <ImageView
+            android:id="@+id/photo"
+            android:layout_width="@dimen/contact_header_photo_width"
+            android:layout_height="@dimen/contact_header_photo_height"
+            android:layout_marginRight="12dip"
+            android:scaleType="centerInside"
+      		/> <!-- style="@*android:style/Widget.QuickContactBadge.WindowLarge" /> -->
+    <ImageView 
+        android:id="@+id/imessage_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/list_item_padding_right"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/icon_contact_header_online"
+        android:visibility="gone"
+        />
+    <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dip"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold"
+            style="@style/Title_shadow_style"
+            android:layout_weight="1.0"/>
+
+    <View
+            android:layout_width="2dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dip"
+            android:layout_marginRight="8dip"
+            android:layout_marginTop="0dip"
+            android:layout_marginBottom="0dip"
+            android:background="@drawable/ic_line_separator" />
+
+    <ImageView
+            android:id="@+id/add_to_contacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_to_contacts_normal"
+            android:background="@drawable/bg_highlight_s"
+            android:visibility="gone" />
+
+    <ImageView
+            android:id="@+id/edit_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit_contact"
+            android:background="@drawable/bg_highlight_s"
+            android:visibility="gone" />
+            
+    <ImageView
+		    android:id="@+id/invite_friend"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:src="@drawable/conect_icon_invite"
+		    android:background="@drawable/bg_highlight_s"
+		    android:visibility="gone" />
+		    
+    <ImageView
+            android:id="@+id/group_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/conect_icon_chat"
+            android:background="@drawable/bg_highlight_s"
+            android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        style="?android:attr/starStyle" />
+
+</LinearLayout>

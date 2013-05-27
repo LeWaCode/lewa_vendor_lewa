@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fmradio"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fm_bg_background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right" >
+
+        <ImageButton
+            android:id="@+id/btn_onoff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dip"
+            android:layout_marginTop="4dip"
+            android:background="@drawable/fm_power_normal" />
+    </LinearLayout>
+
+    <!-- This LinearLayout contains Station Information display and the function buttons -->
+
+
+    <!--
+             <ImageButton android:id="@+id/btn_speaker"
+            android:src="@drawable/button_loudspeaker_off"
+            android:background="@null"
+            android:layout_marginLeft="3dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    -->
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <com.android.fm.radio.LeWaChannelNumGallery
+            android:id="@+id/fm_channle_num_gallery"
+            android:layout_width="fill_parent"
+            android:layout_height="270dip" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/fm_channel_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#2C85C6"
+                android:textSize="100dip" />
+
+            <ImageView
+                android:id="@+id/fm_channel_num_image"
+                android:layout_width="fill_parent"
+                android:layout_height="16dip"
+                android:background="@drawable/line" />
+        </LinearLayout>
+    </FrameLayout>
+    <!--
+        <ProgressBar
+        android:id="@+id/scanning_progress"
+        android:text="@string/progress_scanning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="?android:attr/scrollbarSize"
+        style="?android:attr/progressBarStyleSmallTitle"
+        />
+    -->
+
+    <RelativeLayout
+        android:layout_width="40dip"
+        android:layout_height="30dip"
+        android:layout_gravity="center" >
+
+        <ProgressBar
+            android:id="@+id/auto_search_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="?android:attr/scrollbarSize" />
+
+        <TextView
+            android:id="@+id/auto_search_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dip"
+            android:layout_toRightOf="@id/auto_search_bar" />
+    </RelativeLayout>
+    <!-- This LinearLayout contains favorite Station Information display and the function buttons -->
+
+    <HorizontalScrollView
+        android:id="@+id/fm_channel_collect_hsv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/presets_button_1"
+                style="@style/favoriteButtonStyle" />
+
+            <Button
+                android:id="@+id/presets_button_2"
+                style="@style/favoriteButtonStyle" />
+
+            <Button
+                android:id="@+id/presets_button_3"
+                style="@style/favoriteButtonStyle" />
+
+            <Button
+                android:id="@+id/presets_button_4"
+                style="@style/favoriteButtonStyle" />
+
+            <Button
+                android:id="@+id/presets_button_5"
+                style="@style/favoriteButtonStyle" />
+
+            <Button
+                android:id="@+id/presets_button_6"
+                style="@style/favoriteButtonStyle" />
+
+            <Button
+                android:id="@+id/presets_button_7"
+                style="@style/favoriteButtonStyle" />
+
+            <Button
+                android:id="@+id/presets_button_8"
+                style="@style/favoriteButtonStyle" />
+
+            <Button
+                android:id="@+id/presets_button_9"
+                style="@style/favoriteButtonStyle"
+                android:paddingRight="8dip" />
+
+            <Button
+                android:id="@+id/presets_button_10"
+                style="@style/favoriteButtonStyle" />
+
+            <Button
+                android:id="@+id/presets_button_11"
+                style="@style/favoriteButtonStyle" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <!-- This is frequency indicator: a red needle -->
+
+</LinearLayout>

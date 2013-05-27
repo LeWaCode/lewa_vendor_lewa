@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">省电管理</string>
+    <string name="life_time_text">续航时间：</string>
+    <string name="next_time_text">次日：</string>
+    <string name="normal_save_power">普通省电</string>
+    <string name="intelligent_save_power">智能省电</string>
+    <string name="call">通话可用</string>
+    <string name="network">上网可用</string>
+    <string name="music">音乐可用</string>
+    <string name="video">视频可用</string>
+    <string name="stand_by">待机可用</string>
+    <string name="batt_title">电量信息</string>
+    <string name="mode_title">省电设置</string>
+    <string name="btn_on">开</string>
+    <string name="btn_off">关</string>
+    
+    <string name="spm_string_empty"></string>
+    
+    <string name="spm_current_state">当前状态</string>
+    <string name="spm_normal_mode">普通模式</string>
+    <string name="spm_alarm_mode">闹钟模式</string>
+    
+    <string name="spm_network_show">数据流量</string>
+    <string name="spm_wifi_show">WLAN</string>
+    <string name="spm_bluetooth_show">蓝牙</string>
+    <string name="spm_screen_timeout_show">锁屏时间</string>
+    <string name="spm_screen_light_show">屏幕亮度</string>
+    <string name="spm_gps_show">GPS</string>
+    <string name="spm_touch_feel_show">触感反馈</string>
+    
+    <string name="spm_auto">自动</string>
+    <string name="spm_second">30秒</string>
+
+    <string name="spm_change_mode_by_time_title">按时间省电</string>
+    <string name="spm_change_mode_by_time_summary">根据时间自动省电优化</string>
+
+    <string name="spm_change_mode_by_time_from_title">设置开始时间</string>
+    <string name="spm_change_mode_by_time_from_summary">23:00</string>
+
+    <string name="spm_change_mode_by_time_to_title">设置结束时间</string>
+    <string name="spm_change_mode_by_time_to_summary">7:00</string>
+
+    <string name="spm_change_mode_by_power_title">低电量省电</string>
+    <string name="spm_change_mode_by_power_summary">低电量时自动省电优化</string>
+
+    <string name="spm_change_mode_by_power_value_title">设置低电量值</string>
+    <string name="spm_change_mode_by_power_value_summary">电量到达</string>
+    <string name="spm_change_mode_by_power_value_append">%</string>
+
+    <string name="spm_power_optimization">省电优化</string>
+    <string name="spm_power_normal_save_mode">普通省电</string>
+    <string name="spm_power_super_save_mode">超长待机</string>
+    <string name="spm_power_normal_save_mode_title">切换至 普通省电 模式</string>
+    <string name="spm_power_super_save_mode_title">切换至 超长待机 模式</string>
+
+    <string name="spm_hour">小时</string>
+    <string name="spm_minute">分</string>
+    <string name="spm_seconds">秒</string>
+
+    <string name="spm_next_hour">2</string>
+    <string name="spm_next_minute">15</string>
+    <string name="spm_power_air_def">10%</string>
+    <string name="spm_power_eve_def">20%</string>
+    <string name="spm_power_nor_def">30%</string>
+    
+    <string name="automatic_brightness">"自动调整亮度"</string>
+    <string name="btn_yes">确定</string>
+    <string name="btn_cancel">取消</string>
+    
+    <string name="spm_energy_prefix">电量到达</string>
+    <string name="spm_energy_postfix">%启动低电量模式</string>    
+    <string name="spm_disable_nexttime">下次不再提醒</string>
+    
+    <string name="spm_alert_time_title">按时间切换模式</string>
+    <string name="spm_alert_time_prefix">夜深了,每天</string>
+    <string name="spm_alert_time_postfix">省电管理将自动为手机省电,您也可以进一步查看省电信息与设置时间</string>        
+    
+    <string name="spm_alert_power_title">低电量自动省电</string>
+    <string name="spm_alert_power_prefix">快没电啦!当前电量低于</string>
+    <string name="spm_alert_power_postfix">,省电管理将自动为手机省电,您也可以进一步查看省电信息与设置时间</string>
+    
+    <string name="spm_alert_button_left">前往</string>
+    <string name="spm_alert_button_right">取消</string>
+    
+    <string name="spm_opt_dialog_title_start">启动省电模式</string>
+    <string name="spm_opt_dialog_title_stop">关闭省电模式</string>
+    <string name="spm_opt_dialog_prefix_start">启动后,续航时间提升</string>
+    <string name="spm_opt_dialog_prefix_stop">关闭后,续航时间减少</string>
+    <string name="spm_opt_dialog_below_text">将修改以下功能:</string>
+    
+    <string name="spm_toast_data_alert">亲,启动数据流量会耗电哦!</string>
+    <string name="spm_toast_wlan_alert">亲,启动WLAN会耗电哦!</string>
+    <string name="spm_toast_bluetooth_alert">亲,启动蓝牙会耗电哦!</string>
+    <string name="spm_toast_gps_alert">亲,启动GPS会耗电哦!</string>
+    <string name="spm_toast_touch_alert">亲,启动触感反馈会耗电哦!</string>
+ 
+    <string name="spm_opt_alert_value_on">开</string>
+    <string name="spm_opt_alert_value_off">关</string>
+    <string name="spm_opt_alert_value_auto">自动</string>
+    <string name="spm_opt_alert_value_thr_per">30%</string>
+    <string name="spm_opt_alert_value_one_min">1分钟</string>
+    <string name="spm_opt_alert_value_thr_sec">30秒</string>
+</resources>

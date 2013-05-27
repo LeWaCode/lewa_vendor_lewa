@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ebebeb"
+    >
+    
+    <RelativeLayout android:id="@+id/theme_title_bar"
+        android:background="@drawable/theme_tittle_blue" 
+        android:clickable="true" 
+        android:layout_width="fill_parent" 
+        android:layout_height="52dip" 
+        android:layout_alignParentTop="true">
+        
+        <LinearLayout 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginLeft="10.0dip" 
+            android:layout_alignParentLeft="true">
+            
+            <TextView
+                android:textSize="18.0sp" 
+                android:textColor="@android:color/white" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:text="@string/theme_customize_part"
+                android:layout_marginTop="15dip"
+                android:singleLine="true" />
+   
+        </LinearLayout>
+        
+        
+    </RelativeLayout>
+     
+     <GridView
+        android:id="@+id/theme_grid_customize"
+        android:layout_below="@+id/theme_title_bar"
+        android:fadingEdge="none"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:listSelector="@android:color/transparent"
+        android:cacheColorHint="#00000000"
+        android:padding="1dp"
+        android:numColumns="3"
+        android:horizontalSpacing="1dip"
+        android:verticalSpacing="1dip"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:layout_weight="1.0"/>
+        
+    
+</RelativeLayout>

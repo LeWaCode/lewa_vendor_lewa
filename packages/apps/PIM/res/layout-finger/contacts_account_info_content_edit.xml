@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/account_info_edit_layout"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent" 
+	android:layout_height="match_parent"
+	android:background="@drawable/settings_background">
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_weight="1"
+        android:fillViewport="true"
+    >
+        <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="1px"
+	        android:layout_weight="1"
+	        android:orientation="vertical">
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+	 			<FrameLayout
+				    android:id="@+id/stub_cover"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:padding="10dip">	
+		        <include
+		            android:id="@+id/edit_cover"
+		            layout="@layout/item_photo_editor" />	
+		        </FrameLayout>  
+		        
+		        <EditText android:id="@+id/edit_text_name"
+			      android:layout_width="200dip"
+			      android:layout_height="wrap_content"
+			      android:layout_gravity="center"
+			      android:singleLine="true"
+			      android:layout_margin="5dip"/>   
+			       
+			</LinearLayout>  
+		
+			<include layout="@layout/solid_divider" />
+	    
+	  		<include android:id="@+id/yiliao_remark"
+			    layout="@layout/list_item_text_edit" />
+			<include android:id="@+id/yiliao_phone"
+                layout="@layout/list_item_text_edit" />
+			<include android:id="@+id/yiliao_email"
+			    layout="@layout/list_item_text_edit" />
+        </LinearLayout>
+    </ScrollView>  
+ 
+    <include layout="@layout/solid_divider" />
+	      
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="2dip" >
+        <Button android:id="@+id/btn_done"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+            android:text="@string/save" />
+
+        <Button android:id="@+id/btn_discard"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+            android:text="@string/menu_doNotSave"
+             />
+    </LinearLayout> 
+	
+</LinearLayout>

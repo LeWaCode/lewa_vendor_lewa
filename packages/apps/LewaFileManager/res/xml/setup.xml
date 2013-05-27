@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orderingFromXml="true"
+    android:key="Intercept">
+    <PreferenceCategory android:title="@string/sd_name">      
+        <CheckBoxPreference
+            android:key="key_ifShowHiddenFile" 
+            android:title="@string/ifShowHiddenFile"
+            android:defaultValue="false"
+            />
+        <CheckBoxPreference
+            android:key="key_remember_showhiddenfiles_choice" 
+            android:title="@string/remember_my_choice"
+            android:defaultValue="false"
+            />
+
+        <Preference 
+            android:key="key_oneKeyCleanEmptyFolder" 
+            android:title="@string/oneKeyCleanEmptyFolder"
+            android:summary="@string/oneKeyCleanEmptyFolder_detail"
+            />
+      </PreferenceCategory>
+      <PreferenceCategory android:title="@string/category">      
+        <Preference 
+            android:key="key_filtersize_pic"
+            android:dependency="filtersize_pic"
+            android:title="@string/filtersize_pic_level" 
+            />
+      </PreferenceCategory>
+</PreferenceScreen>  

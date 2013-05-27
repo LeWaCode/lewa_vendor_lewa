@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dimensions for OTA Call Card -->
+    <dimen name="otabase_layout_marginTop">30dip</dimen>
+    <dimen name="otabase_minHeight">270dip</dimen>
+    <dimen name="otaactivate_layout_marginTop">10dip</dimen>
+    <dimen name="otalistenprogress_layout_marginTop">5dip</dimen>
+    <dimen name="otasuccessfail_layout_marginTop">10dip</dimen>
+    
+    <dimen name="call_banner_height">74dp</dimen>
+    <dimen name="call_banner_side_padding">10dp</dimen>
+    <dimen name="call_banner_top_bottom_padding">5dp</dimen>
+    <dimen name="call_banner_name_number_right_padding">10sp</dimen>
+    <dimen name="button_cluster_side_padding">20dp</dimen>
+    
+    <dimen name="in_call_button_height">76dp</dimen>
+    <dimen name="in_call_button_width">56dp</dimen>
+    
+    <dimen name="in_call_end_button_height">74dp</dimen>
+    <dimen name="provider_overlay_top_margin">160dp</dimen>
+    
+    <dimen name="multiwaveview_target_placement_radius">135dip</dimen>
+    <dimen name="multiwaveview_snap_margin">20dip</dimen>
+    <dimen name="multiwaveview_hit_radius">60dip</dimen>
+    <dimen name="keyguard_lockscreen_outerring_diameter">270dp</dimen>
+    
+    <integer name="dialpad_layout_weight_digits">20</integer>
+    <integer name="dialpad_layout_weight_dialpad">65</integer>
+    <integer name="dialpad_layout_weight_additional_buttons">15</integer>
+    
+    <dimen name="dialpad_horizontal_margin">4dp</dimen>
+    <dimen name="dialpad_vertical_margin">0dp</dimen>
+    <dimen name="dialpad_digits_text_size">35sp</dimen>
+    <dimen name="emergency_dialer_digits_height">0px</dimen>
+</resources>

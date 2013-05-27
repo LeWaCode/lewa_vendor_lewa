@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2008 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:face="http://schemas.android.com/apk/res/com.lewa.face">
+
+    <!-- LockScreen WallPaper -->
+    <com.lewa.face.widget.IconPreferenceScreen 
+		android:title="@string/lockscreen_wallpaper"
+		face:icon="@drawable/ls_wallpaper">
+		<intent android:action="android.intent.action.MAIN"
+		    android:targetPackage="com.lewa.face"
+		    android:targetClass="com.lewa.face.LockScreenWallPaperMain" />
+    </com.lewa.face.widget.IconPreferenceScreen> 
+
+	<!-- WallPaper -->
+	<com.lewa.face.widget.IconPreferenceScreen 
+	    android:title="@string/wallpaper"
+	    face:icon="@drawable/wallpaper">
+	    <intent android:action="android.intent.action.MAIN"
+	        android:targetPackage="com.lewa.face"
+	        android:targetClass="com.lewa.face.WallPaperMain" />
+	</com.lewa.face.widget.IconPreferenceScreen>
+
+    <!-- LockScreen -->
+    <com.lewa.face.widget.IconPreferenceScreen 
+		android:title="@string/lockscreen_style"
+		face:icon="@drawable/ls_style">
+		<intent android:action="android.intent.action.MAIN"
+		    android:targetPackage="com.lewa.face"
+		    android:targetClass="com.lewa.face.LockScreenStyleMain" />                
+    </com.lewa.face.widget.IconPreferenceScreen>
+
+    <!-- Icons -->
+    <com.lewa.face.widget.IconPreferenceScreen
+		android:title="@string/icons_style"
+		face:icon="@drawable/icons_style">
+		<intent android:action="android.intent.action.MAIN"
+		    android:targetPackage="com.lewa.face"
+		    android:targetClass="com.lewa.face.IconsMain" />
+    </com.lewa.face.widget.IconPreferenceScreen>    
+
+	<!-- Launcher -->
+	<com.lewa.face.widget.IconPreferenceScreen
+	    android:title="@string/launcher_style"
+        face:icon="@drawable/launcher_style">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.lewa.face"
+            android:targetClass="com.lewa.face.LauncherMain" />
+    </com.lewa.face.widget.IconPreferenceScreen>
+    
+    <!-- Boot -->
+    <com.lewa.face.widget.IconPreferenceScreen
+        android:title="@string/bootanimation"
+        face:icon="@drawable/ic_boot_animation">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.lewa.face"
+            android:targetClass="com.lewa.face.BootMain" />
+    </com.lewa.face.widget.IconPreferenceScreen>
+     
+    <!-- Font -->
+    <com.lewa.face.widget.IconPreferenceScreen
+        face:icon="@drawable/ic_text_style"
+        android:title="@string/font" >
+
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.lewa.face.FontMain"
+            android:targetPackage="com.lewa.face" />
+    </com.lewa.face.widget.IconPreferenceScreen>
+
+ <com.lewa.face.widget.IconPreferenceScreen
+        face:icon="@drawable/ic_notification"
+        android:title="@string/theme_model_systemui" >
+
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.lewa.face.NotifyMain"
+            android:targetPackage="com.lewa.face" />
+    </com.lewa.face.widget.IconPreferenceScreen>
+
+    <com.lewa.face.widget.IconPreferenceScreen
+        face:icon="@drawable/ic_pm"
+        android:title="@string/pim" >
+
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.lewa.face.PimMain"
+            android:targetPackage="com.lewa.face" />
+    </com.lewa.face.widget.IconPreferenceScreen>
+
+    <com.lewa.face.widget.IconPreferenceScreen
+        face:icon="@drawable/ic_calling"
+        android:title="@string/theme_model_phone" >
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.lewa.face.PhoneMain"
+            android:targetPackage="com.lewa.face" />
+    </com.lewa.face.widget.IconPreferenceScreen>
+
+    <com.lewa.face.widget.IconPreferenceScreen
+        face:icon="@drawable/ic_set"
+        android:title="@string/setting" >
+
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.lewa.face.SettingMain"
+            android:targetPackage="com.lewa.face" />
+    </com.lewa.face.widget.IconPreferenceScreen>
+
+</PreferenceScreen>

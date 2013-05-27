@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">聯系人同步</string>       
+    <string name="sync_success">同步聯系人成功！</string>
+    <string name="sync_fail">同步聯系人失敗,請檢查網絡狀態或稍候再試！</string>
+    <string name="sync_title">同步聯系人</string>
+    <string name="syncing">正在同步聯系人，請稍候...</string>
+    <string name="sync_format">"已同步 <xliff:g id="CURRENT_NUMBER">%1$s</xliff:g> 個(共 <xliff:g id="TOTAL_NUMBER">%2$s</xliff:g> 個)"</string>
+    <string name="sync_warning_info">同步聯系人到雲端，繼續？</string>
+    
+    <string name="recovery_success">恢複聯系人成功！</string>
+    <string name="recovery_fail">恢複聯系人失敗，請檢查網絡狀態或稍候再試！</string>
+    <string name="recovering">正在恢複聯系人，請稍候...</string>
+    <string name="recover_title">恢複聯系人</string>
+    <string name="recover_format">"已恢複 <xliff:g id="CURRENT_NUMBER">%1$s</xliff:g> 個(共 <xliff:g id="TOTAL_NUMBER">%2$s</xliff:g> 個)"</string>
+    <string name="recover_warning_info">恢複聯系人會將現在手機上的聯系人刪除，繼續？ </string>    
+    <string name="no_network">無可用網絡，請連接網絡再試.</string>    
+    <string name="no_contacts_oncloud">雲端無聯繫人</string>     
+</resources>

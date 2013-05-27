@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project Licensed under the 
+    Apache License, Version 2.0 (the "License"); you may not use this file except 
+    in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
+    Unless required by applicable law or agreed to in writing, software distributed 
+    under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
+    OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+    the specific language governing permissions and limitations under the License. -->
+
+<view xmlns:android="http://schemas.android.com/apk/res/android"
+    class="com.lewa.PIM.contacts.ui.QuickContactWindow$RootLayout"
+    android:id="@+id/root" 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/quickcontact_shadow_horiz"
+    android:paddingRight="@dimen/quickcontact_shadow_horiz"
+    android:background="@drawable/ic_quickcontact_bg">
+    <!-- android:background="@drawable/quickcontact_drop_shadow" -->
+
+    <FrameLayout android:id="@+id/header" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="10dip"
+        android:visibility="gone">
+
+        <ViewStub android:id="@+id/header_small" 
+            android:inflatedId="@+id/header_small"
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content"
+            android:layout="@layout/quickcontact_header_small" />
+
+        <ViewStub android:id="@+id/header_medium" 
+            android:inflatedId="@+id/header_medium"
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content"
+            android:layout="@layout/quickcontact_header_med" />
+
+        <ViewStub android:id="@+id/header_large" 
+            android:inflatedId="@+id/header_large"
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content"
+            android:layout="@layout/quickcontact_header_large" />
+
+    </FrameLayout>
+
+    <HorizontalScrollView android:id="@+id/scroll"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header" 
+        android:fadingEdgeLength="0dip"
+        android:scrollbars="none">
+
+        <!--
+        <com.lewa.PIM.contacts.ui.SwitcherHorizontalScrollView
+            android:layout_width="wrap_content" 
+            android:layout_height="fill_parent"
+            android:id="@+id/horizontal_scroll_view" 
+            android:scrollbars="none"
+            android:layout_marginBottom="10dip" android:layout_centerVertical="true">
+
+            <LinearLayout android:id="@+id/phone1_layout"
+                android:layout_width="wrap_content" 
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="10dip" >
+
+                <LinearLayout android:id="@+id/switcher_left"
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content">
+                    <ImageView android:id="@+id/call1_btn"
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/icon_dial" />
+                    <ImageView android:id="@+id/message1_btn"
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_sms" />
+                    <ImageView android:id="@+id/card1_dot"
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical" 
+                        android:src="@drawable/one" />
+                </LinearLayout>
+
+                <RelativeLayout android:id="@+id/details"
+                    android:layout_height="wrap_content" 
+                    android:paddingLeft="10dip"
+                    android:layout_gravity="center_vertical" 
+                    android:layout_width="215dip">
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <LinearLayout android:id="@+id/quickcontact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal">
+                    
+                    <ImageView android:id="@+id/card2_dot"
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical" 
+                        android:src="@drawable/two" />
+                        
+                    <ImageView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" 
+                        android:src="@drawable/quickcontact_slider_grip_left" />
+
+                    <ImageView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" 
+                        android:src="@drawable/quickcontact_slider_grip_right" />
+                </LinearLayout>
+                <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginBottom="8dip"
+                android:layout_gravity="bottom"
+                android:background="@drawable/line_separator" />
+                </FrameLayout>
+            </LinearLayout>
+        </com.lewa.PIM.contacts.ui.SwitcherHorizontalScrollView>
+        -->
+        
+        <LinearLayout android:id="@+id/quickcontact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <!--  
+            <ImageView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:src="@drawable/quickcontact_slider_grip_left" />
+
+            <ImageView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:src="@drawable/quickcontact_slider_grip_right" />
+            -->
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <FrameLayout android:id="@+id/footer" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@id/scroll"
+        android:background="@drawable/quickcontact_bottom_frame"
+        android:visibility="gone" />
+
+    <LinearLayout android:id="@+id/footer_disambig"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scroll" 
+        android:orientation="vertical" 
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@drawable/line_separator" />
+
+        <ListView android:id="@android:id/list" 
+            android:layout_width="match_parent"
+            android:layout_height="0dip" 
+            android:layout_weight="1"
+            android:divider="@drawable/ic_list_horizontal_divider"
+            android:cacheColorHint="@null" 
+            android:background="@drawable/settings_background"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_list_horizontal_divider" />
+
+        <CheckBox android:id="@android:id/checkbox"
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="19dip" 
+            android:layout_marginRight="19dip"
+            android:minHeight="60dip" 
+            android:textColor="#f000"
+            android:textStyle="bold" 
+            android:text="@string/quickcontact_remember_choice"
+            android:textAppearance="?android:attr/textAppearanceSmallInverse"
+            android:button="@drawable/quickcontact_disambig_checkbox" />
+
+    </LinearLayout>
+
+    <ImageView android:id="@+id/arrow_up" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:src="@drawable/quickcontact_arrow_up"
+        android:visibility="gone" />
+
+    <ImageView android:id="@+id/arrow_down" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="-1dip"
+        android:layout_below="@id/footer" 
+        android:src="@drawable/quickcontact_arrow_down"
+        android:visibility="gone" />
+
+    <ImageView android:id="@+id/arrow_down_stub"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-1dip" 
+        android:layout_below="@id/footer_disambig"
+        android:visibility="gone" 
+        android:src="@drawable/quickcontact_arrow_down" />
+
+</view>

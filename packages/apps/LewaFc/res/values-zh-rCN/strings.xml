@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, AndroidFcDemoActivity!</string>
+    <string name="app_name">问题反馈</string>
+   
+    <string name="log_layout_feedback_title">问题反馈</string>
+    <string name="fc_window_log_title">错误信息:</string>
+    <string name="fc_window_reback">返回</string>
+    
+    <string name="main_layout_feedback_title">问题反馈</string>
+    <string name="main_layout_system_log">系统日志</string>
+    <string name="main_layout_text_default">又遇到问题了，你的心情是不是糟透了，我来说两句...</string>
+    <string name="main_layout_send">发送</string>
+    <string name="main_layout_len_default">0</string>
+    <string name="main_layout_len_KB">KB</string>
+    
+    <string name="result_layout_feedback_title">问题反馈</string>
+    <string name="result_layout_thanks1">非常感谢您对乐蛙的帮助,</string>
+    <string name="result_layout_thanks2">我们将继续努力！</string>
+    <string name="result_layout_thanks3">期待您共同见证乐蛙的成长。</string>
+    <string name="result_layout_continue_feedback">继续反馈</string>
+    <string name="result_layout_finish">完成</string>
+    
+    <string name="fc_sending_title">请稍候...</string>
+    <string name="fc_sending_message">问题正在发送...</string>
+    <string name="fc_sending_fail_title">发送失败</string>
+   	<string name="fc_sending_fail_button">确定</string>
+   	<string name="fc_sending_fail_message0">您请求的地址已变更！</string>
+   	<string name="fc_sending_fail_message1">您的请求不合法！</string>
+   	<string name="fc_sending_fail_message2">服务器端接收异常！</string>
+   	<string name="fc_sending_fail_message3">发送内容不能为空！</string>
+   	<string name="fc_sending_fail_message4">建立连接失败！</string>
+   	<string name="fc_sending_fail_message5">发送信道正忙，请稍后再发！</string>
+   	
+   	<string name="fc_sending_process_connect">正在建立连接。。。</string>
+   	<string name="fc_sending_process_send_msg">正在发送信息。。。</string>
+   	<string name="fc_sending_process_send_file">正在传输文件。。。</string>
+   	<string name="fc_sending_process_close">服务器正在接收。。。</string>
+   	
+   	<string name="fc_log_result_title">很抱歉！</string>
+   	<string name="fc_log_result_message">程序出现异常！</string>
+   	<string name="fc_log_result_button">确定</string>
+    
+</resources>

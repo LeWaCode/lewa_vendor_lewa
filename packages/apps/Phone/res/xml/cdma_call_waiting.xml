@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--   2012-04-24    |      zhumeiquan   | Create the file for cdma callwaiting -->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	android:title="@string/labelCW">
+    <Preference android:key="button_cdma_cw_on_key"
+    	android:persistent="false" 
+    	android:title="@string/labelActivation" />
+    	
+    <Preference android:key="button_cdma_cw_off_key"
+    	android:persistent="false" 
+    	android:title="@string/labelDeactivation" />
+</PreferenceScreen>

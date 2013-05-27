@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ListView android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:drawSelectorOnTop="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+    />
+
+	<RelativeLayout
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent"
+	    >
+	  
+	    <ImageView android:id="@+id/theme_err_img" 
+	        android:layout_width="fill_parent" 
+	        android:layout_height="fill_parent"
+	        android:src="@drawable/theme_no_default"/>
+	        
+	    <TextView android:id="@+id/theme_err_msg"
+	        android:textSize="14.0sp" 
+	        android:textColor="#ffb1b1b1" 
+	        android:gravity="center"  
+	        android:layout_width="wrap_content" 
+	        android:layout_height="wrap_content" 
+	        android:layout_marginLeft="10.0dip" 
+	        android:layout_marginRight="10.0dip"
+	        android:layout_centerInParent="true"
+	        android:singleLine="false" 
+	        android:text="@string/theme_err_msg_network" 
+	        android:paddingTop="80dip"/>
+	        
+	    <LinearLayout android:id="@+id/theme_linearLayout1" 
+	        android:layout_width="fill_parent" 
+	        android:layout_height="wrap_content" 
+	        android:layout_marginLeft="28.0dip" 
+	        android:layout_marginTop="9.0dip" 
+	        android:layout_marginRight="28.0dip"
+	        android:layout_below="@+id/theme_err_msg" 
+	        android:weightSum="2.0">
+	        
+	        <Button android:id="@+id/theme_network_set_nonetwork"
+	            android:textSize="14.0sp"  
+	            android:layout_width="wrap_content" 
+	            android:layout_height="wrap_content" 
+	            android:text="@string/theme_network_setting" 
+	            android:layout_weight="1.0" />
+	            
+	        <View android:layout_width="16.0dip" 
+	            android:layout_height="0.0dip" />
+	            
+	        <Button android:id="@+id/theme_refresh"
+	            android:textSize="14.0sp"   
+	            android:layout_width="wrap_content" 
+	            android:layout_height="wrap_content" 
+	            android:text="@string/theme_refresh" 
+	            android:layout_weight="1.0" />
+	    </LinearLayout>
+	</RelativeLayout>
+
+</LinearLayout>

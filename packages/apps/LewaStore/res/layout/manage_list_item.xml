@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            style="@style/app_icon_style"
+            android:id="@+id/download_icon"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            >
+        </ImageView>
+
+        <TextView
+            style="@style/textview_big_title_style"
+            android:id="@+id/download_filename"
+            android:layout_height="wrap_content"   
+            android:layout_toRightOf="@id/download_icon"
+            android:layout_alignTop="@id/download_icon"           
+            >
+        </TextView>
+        
+        <TextView
+            style="@style/textview_small_title_style"
+            android:id="@+id/app_version"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/download_filename"
+            android:layout_toRightOf="@id/download_icon"
+            />
+
+        <ProgressBar
+            android:id="@+id/download_progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="150dip"
+            android:layout_height="16dip"
+            android:layout_below="@id/download_filename"
+            android:layout_toRightOf="@+id/download_icon"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="12dip"
+            android:layout_marginTop="8dip"
+            android:visibility="gone" 
+            >
+        </ProgressBar>
+        
+        <Button
+            android:id="@+id/redownload"
+            style="@style/downloadButtonStyle"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_download_bg"
+            android:text="@string/label_redownload"
+            android:textColor="@color/btn_download_text_color" />
+
+        <Button
+            style="@style/updateButtonStyle" 
+            android:id="@+id/app_update"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/download_filename"
+            android:text="@string/label_update" 
+            android:background="@drawable/btn_update_bg"
+            android:textColor="@color/btn_update_text_color"
+            />
+
+        <Button            
+            style="@style/removeButtonStyle"   
+            android:id="@+id/uninstall"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/download_filename"
+            android:text="@string/label_uninstall"
+            android:visibility="gone" 
+            android:background="@drawable/btn_uninstall_bg"
+            android:textColor="@color/btn_uninstall_text_color"
+            />
+         <Button
+            style="@style/cancelButtonStyle" 
+            android:id="@+id/cancel_download"         
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/download_filename"
+            android:text="@string/label_cancel"
+            android:visibility="gone" 
+            android:background="@drawable/btn_cancel_bg"
+            android:textColor="@color/btn_cancel_text_color"            
+            />
+        <!--    <ImageButton
+            android:id="@+id/uninstall"
+            style="@style/buttonStyle"          
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/download_filename"
+            android:text="@string/label_uninstall"
+            android:visibility="gone" 
+            android:background="@drawable/btn_uninstall_bg"
+            />  -->
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#ffd8d8d8" />
+</LinearLayout>

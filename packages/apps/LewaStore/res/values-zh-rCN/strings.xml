@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">应用便利店</string>
+    <string name="banner_title">应用便利店</string>
+    <string name="Browser">应用下载</string>
+    <string name="manager">应用管理</string>
+    <string name="basket">我的购物篮</string>
+    <string name="label_downloading">下载</string>
+    <string name="label_redownload">重下</string>
+    <string name="label_update">更新</string>
+    <string name="label_local_installed">本店应用</string>
+    <string name="label_thirdparty_installed">三方应用</string>
+    <string name="label_btn_installed">已安装</string>
+    <string name="label_oncloud">我的云</string>
+    <string name="label_onmyphone">我的手机</string>
+    <string name="label_data_loading">数据准备中\.\.\.</string>
+    <string name="label_network_error">没有数据,请检查您的网络!</string>
+    <string name="label_cancel">取消</string>
+    <string name="label_uninstall">卸载</string>
+    <string name="label_have_installed">已安装</string>
+    <string name="loadingTextView">数据加载中\.\.\.</string>
+    <string name="label_installAll">全部安装</string>
+    
+    <string name="MessageDialog_set_network">设置网络</string>
+    <string name="MessageDialog_sCaptionClose">关闭</string>
+    <string name="MessageDialog_sCaptionOk">确定</string>
+    <string name="MessageDialog_sCaptionCancel">取消</string>
+    <string name="MessageDialog_no_network">没有网络连接</string>
+    <string name="MessageDialog_no_network_cannot_refresh">无法连接到应用便利店，无法刷新信息</string>
+    <string name="MessageDialog_no_network_cannot_connection">无法连接到应用便利店</string>
+
+    <!-- settings -->
+    <string name="setting_set">设置</string>
+    <string name="setting_open">开启</string>
+    <string name="setting_close">关闭</string>
+    <string name="setting_update_notice">更新提醒</string>
+    <string name="setting_net_set">下载设置</string>
+    <string name="setting_net_set_summary">推荐使用Wifi</string>
+    <string name="setting_open_auto_update">开启更新信息推送</string>
+    <string name="setting_close_auto_update">关闭更新信息推送</string>
+        
+    <string name="version_string">版本: </string>
+    <string name="added_download_task">已添加下载任务</string>
+    <string name="please_insert_sdcard">抱歉，目前您的手机没有插入SD卡</string>
+    <string name="no_sdcard_download_failed">未检测到SD卡，会导致下载失败</string>
+    <string name="download_failed">网络错误，下载失败，请重试</string>
+    <string name="file_size_get_failed">无法获取下载资源，下载失败</string>
+    <string name="downloading_network_not_available">网络错误,下载失败,请取消重试</string>
+    <string name="download_error"> 下载出错了,请重试</string>
+    <string name="donot_know">未知</string>
+    <string name="please_set_wifi">抱歉，wifi连接失败目前无法下载。您可以修改您下载设置，通过其他网络完成下载</string>
+    <string name="please_set_network">无法连接到应用便利店，无法下载应用</string>
+    
+    <string name="notification_name">乐蛙通知</string>
+    <string name="notification_download_sucess">下载成功</string>
+    <string name="notification_install_sucess">安装成功</string>
+    <string name="notification_download_failed">下载失败</string>
+    <string name="notification_install_failed">安装失败</string>
+    <string name="dialog_notice_title">乐蛙提醒</string>
+    <string name="max_downloader_notice">最多同时执行3个下载任务</string>
+    <string name="cannot_connection_server">连接服务器异常，请稍候重试</string>
+    
+    <string name="toast_downloading">正在下载</string>
+    <string name="toast_refreshing">刷新中\.\.\.</string>
+    
+    <string name="storage_exception_title">存储提醒</string>
+    <string name="storage_exception_nosdcard">未找到sd卡，安装失败</string>
+    <string name="storage_exception_lowmemory">系统内存不足</string>
+    <string name="storage_exception_sdcard_lowmemory">sd卡空间不足</string>
+    <string name="storage_exception_no_enough_memory">存储空间不足</string>    
+    <string name="storage_exception_write_disk_error">文件存储异常</string>   
+        
+    <string name="btn_status_downloading">下载中</string>
+    <string name="btn_status_isinstalled">已安装</string>
+    <string name="textview_category_first">热门应用</string>
+    <string name="label_install_from_sdcard">从SD卡安装,请耐心等待</string>
+    <string name="label_install_from_sdcard_failed">安装失败，开始下载安装</string>
+    <string name="label_install_from_sdcard_sucess">应用安装成功</string>
+    <string name="notice_begin_download_app">已添加下载任务：</string>
+    
+        
+    <string name="menu_setting">设置</string>
+    <string name="dialog_ok">确定</string>
+    <string name="check_wifi_status">网络错误，请检查WiFi状态..</string>
+    <string name="have_no_storage">抱歉，目前您的记忆空间不足。请释放一些空间后，尝试再次启动下载</string>
+    <string name="inputStream_error">流异常，下载失败,请取消重试</string>
+    <string name="can_not_get_remote_url">下载资源获取失败,请重试</string>
+    <string name="label_no_author">未知作者</string>
+    <string name="no_data_error">暂无数据</string>
+    
+    <string name="have_open_wifi">使用Wifi</string>
+    <string name="have_open_any">使用任何网络</string>
+    
+    <string name="dialog_title_suggest">下载建议</string>
+    <string name="dialog_suggest_content">建议在wifi下下载应用，可以节省费用</string>
+    <string name="dialog_btn_ignore">忽略</string>
+    
+    <string name="basket_introduce_one">什么是我的购物篮？</string>
+    <string name="basket_introduce_two">不用为每次刷手机时丢失曾使用的应用担心了</string>
+    <string name="basket_introduce_three">任何时候，您都可以从您的云端找回曾使用过的应用,找回全部应用只需一键就能完成</string>
+    <string name="basket_introduce_btn_start">现在就开始体验</string>
+    
+    <string name="catergory_app_store">应用商店</string>
+    <string name="catergory_tool">常用工具</string>
+    <string name="catergory_input">输入浏览</string>
+    <string name="catergory_chat">社交聊天</string>
+    <string name="catergory_video">影音图像</string>
+    <string name="catergory_lift">生活服务</string>
+    <string name="catergory_game">娱乐游戏</string>
+    <string name="catergory_google">谷歌应用</string>
+    
+    <!-- notification -->
+    <string name="notification_name_update_msg">更新提醒</string>
+    <string name="notification_name_update_msg_title">应用便利店</string>
+    <string name="notification_name_update_msg_content">应用有更新</string>
+    <string name="please_install_pond_service">请安装乐蛙账户</string>
+    
+    <string name="google_service_not_installed">为保证您正常使用谷歌服务，请安装 </string>
+    
+    <!-- google app name -->
+    <string name="GoogleCalendar">Google 日历</string>
+    <string name="GoogleServicesFramework">Google 服务框架</string>
+    <string name="GoogleBackupTransport">Google 备份同步</string>
+    <string name="GoogleCalendarSyncAdapter">Google 日历同步</string>
+    <string name="GoogleContactsSyncAdapter">Google 通讯录同步</string>
+    <string name="GoogleMarket">Google 电子市场</string>
+    
+    <!-- spec string -->
+    <string name="category_life_service">生活服务</string>
+    <string name="category_game">娱乐游戏</string>
+</resources>

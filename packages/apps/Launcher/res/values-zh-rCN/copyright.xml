@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="lewa_copyright">
+&lt;br>乐蛙科技有限公司 版权所有 &lt;br>
+Copyright © 2011 LeWa Tek, Ltd.  All Rights Reserved &lt;br>&lt;br>
+
+申明:&lt;br>
+此版本适用于Android平台固件2.1及以上手机，如在其他品牌或型号的手机上使用本软件，对于出现的任何问题，乐蛙科技有限公司不承担责任。本软件的下载、安装完全免费，使用过程中产生的GPRS数据流量费用，由运营商收取。&lt;br>&lt;br>
+
+网址：&lt;a href="http://www.lewaos.com">http://www.lewaos.com &lt;/a> &lt;br>
+Email: &lt;a href="mailto:services@lewatek.com">services@lewatek.com &lt;/a> &lt;br>
+</string>    
+</resources>

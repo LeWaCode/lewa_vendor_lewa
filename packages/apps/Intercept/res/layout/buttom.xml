@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="80"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/infotext"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="80"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_softkey_bar"
+        android:orientation="horizontal"
+        android:padding="10dip" >
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/infotext"
+            android:layout_weight="50"
+            android:text="@string/intercept_btn_confirm" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/confirm"
+            android:layout_weight="50"
+            android:text="@string/intercept_btn_cancel" />
+    </LinearLayout>
+
+</LinearLayout>

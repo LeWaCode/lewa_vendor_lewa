@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+	<RelativeLayout 
+	android:layout_width="fill_parent" 
+	android:layout_height="?android:attr/listPreferredItemHeight"
+	android:paddingTop="4dip"
+	android:paddingBottom="4dip">
+	<FrameLayout android:id="@+id/contact_sticker_photos"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="8dip"
+		>
+		<ImageView android:id="@+id/contact_item_photo"
+			android:layout_width="@dimen/list_item_imageview_width"
+			android:layout_height="@dimen/list_item_imageview_height" 
+			android:layout_margin="4dip" 	
+			android:layout_gravity="center"	
+			android:src="@drawable/ic_contact_picture" 
+			/>
+		<QuickContactBadge android:id="@+id/contact_item_quickcontact"
+			android:layout_width="@dimen/list_item_imageview_width"
+			android:layout_height="@dimen/list_item_imageview_height" 
+			android:layout_margin="4dip"
+			android:visibility="gone"
+			android:src="@drawable/ic_contact_list_picture" 
+			/>
+		<TextView android:id="@+id/contact_item_notification_count"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:background="@drawable/cvsn_count_bg" 
+			android:gravity="center"
+			android:layout_marginTop="4dip"
+			android:layout_gravity="right" />
+	</FrameLayout>
+
+	<TextView android:id="@+id/contact_name" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:layout_marginLeft="8dip"
+		android:ellipsize="marquee" 
+		android:singleLine="true"
+		android:gravity="center_vertical"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_toRightOf="@id/contact_sticker_photos"/>
+	<TextView android:id="@+id/contact_notification_info"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="8dip"
+		android:gravity="center_vertical"
+		android:ellipsize="end"
+		android:singleLine="true" 
+		android:layout_toRightOf="@id/contact_sticker_photos"
+		android:layout_below="@id/contact_name"/>
+	</RelativeLayout>
+
+	<View
+        android:id="@+id/contact_list_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@*android:drawable/divider_horizontal_dark_opaque" />
+
+</LinearLayout>

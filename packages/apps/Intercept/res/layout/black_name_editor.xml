@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+    <LinearLayout
+        android:id="@+id/edit_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip" >
+
+       
+
+        <TextView
+            android:paddingTop="15dip"
+            android:id="@+id/number_baie"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:paddingBottom="10dip" />
+
+
+        <EditText
+            android:id="@+id/name_baie"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="textPersonName"
+            android:hint="@string/modify_note"
+            android:singleLine="true" />
+            
+
+        <TextView
+            android:paddingTop="20dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="4"
+            android:textSize="18sp"
+            android:text="@string/blockmode"
+             />
+
+        <Spinner
+            android:id="@+id/mode_baie"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true"
+            android:textSize="18sp"
+            android:prompt="@string/mode_prompt" />
+    </LinearLayout>
+    </FrameLayout>
+
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" 
+        >
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+            android:text="@string/white_btn_save" 
+            android:background="@android:drawable/item_background_holo_dark_left"
+            android:shadowDx="1.0"
+            android:shadowRadius="1.0"
+            />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+            android:layout_alignLeft="@id/confirm"
+            android:text="@string/white_btn_cancel" 
+            android:background="@android:drawable/item_background_holo_dark_right"
+            android:shadowDx="1.0"
+            android:shadowDy="-1.2"
+            android:shadowRadius="1.0"
+           />
+</LinearLayout>
+
+</RelativeLayout>

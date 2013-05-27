@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<favorites xmlns:launcher="http://schemas.android.com/apk/res/com.lewa.launcher">
+
+    <appwidget
+        launcher:packageName="com.lewa.search"
+        launcher:className="com.lewa.search.widget.SearchWidgetProvider"
+        launcher:screen="1"
+        launcher:x="0"
+        launcher:y="0"
+        launcher:spanX="4"
+        launcher:spanY="1" />
+
+    <favorite
+        launcher:packageName="com.android.contacts"
+        launcher:className="com.android.contacts.DialtactsActivity"
+        launcher:screen="-1"
+        launcher:x="0"
+        launcher:y="-1"
+        launcher:id="dialt"
+        launcher:container="-102" />
+
+    <favorite
+        launcher:packageName="com.android.contacts"
+        launcher:className="com.android.contacts.DialtactsContactsEntryActivity"
+        launcher:screen="-1"
+        launcher:x="1"
+        launcher:y="-1"
+        launcher:id="contacts"
+        launcher:container="-102" />
+
+    <shortcut
+        launcher:packageName="com.lewa.app"
+        launcher:className="com.lewa.app.AppList"
+        launcher:icon="@drawable/drawer_icon"
+        launcher:title="@string/drawer_title"
+        launcher:screen="-1"
+        launcher:x="2"
+        launcher:y="-1"
+        launcher:container="-102" />
+
+    <favorite
+        launcher:packageName="com.dolphin.browser.tuna"
+        launcher:className="mobi.mgeek.TunnyBrowser.BrowserActivity"
+        launcher:screen="-1"
+        launcher:x="3"
+        launcher:y="-1"
+        launcher:id="browser"
+        launcher:container="-102" />    
+
+    <favorite
+        launcher:packageName="com.android.mms"
+        launcher:className="com.android.mms.ui.ConversationList"
+        launcher:screen="-1"
+        launcher:x="4"
+        launcher:y="-1"
+        launcher:id="mms"
+        launcher:container="-102" />
+        
+    <clock
+        launcher:screen="1"
+        launcher:x="1"
+        launcher:y="0" />
+    
+    <favorite
+        launcher:packageName="com.android.camera"
+        launcher:className="com.android.camera.Camera"
+        launcher:screen="1"
+        launcher:x="0"
+        launcher:y="3"
+        launcher:id="camera" />
+        
+    <folder
+    	launcher:title="@string/folder_tool"
+        launcher:screen="1"
+        launcher:x="1"
+        launcher:y="3"
+        launcher:id="-1001"/>  
+        
+    <favorite
+        launcher:packageName="com.android.settings"
+        launcher:className="com.android.settings.Settings"
+        launcher:screen="-1"
+        launcher:id="settings"
+        launcher:container="-1001"/>           
+        
+    <favorite
+        launcher:packageName="com.android.calculator2"
+        launcher:className="com.android.calculator2.Calculator"
+        launcher:screen="-1"
+        launcher:id="calculator"
+        launcher:container="-1001"/> 
+        
+    <favorite
+        launcher:packageName="com.lewa.app.filemanager"
+        launcher:className="com.lewa.app.filemanager.ui.FileActivity"
+        launcher:screen="-1"
+        launcher:id="filemanager"
+        launcher:container="-1001"/> 
+        
+    <favorite
+        launcher:packageName="com.noshufou.android.su"
+        launcher:className="com.noshufou.android.su.Su"
+        launcher:screen="-1"
+        launcher:id="su"
+        launcher:container="-1001"/> 
+        
+     <favorite
+        launcher:packageName="com.android.providers.downloads.ui"
+        launcher:className="com.android.providers.downloads.ui.DownloadList"
+        launcher:screen="-1"
+        launcher:id="downloads"
+        launcher:container="-1001"/>    
+        
+     <favorite
+        launcher:packageName="com.lewa.updater"
+        launcher:className="com.lewa.updater.UpdaterActivity"
+        launcher:screen="-1"
+        launcher:id="updater"
+        launcher:container="-1001"/> 
+        
+     <favorite
+        launcher:packageName="com.lewa.intercept"
+        launcher:className="com.lewa.intercept.MainActivity"
+        launcher:screen="-1"
+        launcher:id="intercept"
+        launcher:container="-1001"/>     
+
+     <favorite
+        launcher:packageName="com.lewa.feedback"
+        launcher:className="com.lewa.feedback.AndroidFeedbackActivity"
+        launcher:screen="-1"
+        launcher:id="feedback"
+        launcher:container="-1001"/>   
+    	
+    <favorite
+        launcher:packageName="com.lewa.launcher"
+        launcher:className="com.lewa.launcher.theme.ThemeMain"
+        launcher:screen="1"
+        launcher:x="2"
+        launcher:y="3" 
+        launcher:id="theme"/>  	    
+    
+    <favorite
+        launcher:packageName="com.android.deskclock"
+        launcher:className="com.android.deskclock.DeskClock"
+        launcher:screen="1"
+        launcher:x="3"
+        launcher:y="3" 
+        launcher:id="clock"/>  
+    <shortcut
+        launcher:icon="@drawable/ic_lewaos_bbs"
+        launcher:title="@string/lewaos_bbs"
+        launcher:uri="http://bbs.lewaos.com/forum.php?mobile=yes#Intent;action=android.intent.action.VIEW;end"
+        launcher:screen="2"
+        launcher:x="0"
+        launcher:y="0" />
+    
+</favorites>

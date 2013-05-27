@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, AndroidAdviceDemoActivity!</string>
+    <string name="app_name">意見反饋</string>
+    
+    <string name="feedback_title">意見反饋</string>
+    <string name="feedback_added">已添加 </string>
+    <string name="feedback_text_default">我來說兩句...</string>
+    <string name="feedback_send">發送</string>
+    <string name="feedback_piclen_default">0</string>
+    <string name="feedback_tag_len">KB</string>
+    
+    <string name="result_layout_feedback_title">意見反饋</string>
+    <string name="result_layout_thanks1">非常感謝您對樂蛙的幫助,</string>
+    <string name="result_layout_thanks2">我們將繼續努力！</string>
+    <string name="result_layout_thanks3">期待您共同見證樂蛙的成長。</string>
+    <string name="result_layout_continue_feedback">繼續反饋</string>
+    <string name="result_layout_finish">完成</string>
+    
+    <string name="feedback_sending_title">請稍後</string>
+    <string name="feedback_sending_message">意見正在發送...</string>
+    <string name="feedback_sending_fail_title">發送失敗</string>
+   	<string name="feedback_sending_fail_button">確定</string>
+   	<string name="feedback_sending_fail_message">您當前的網絡存在異常！</string>
+   	<string name="feedback_sending_fail_message0">您請求的地址已變更！</string>
+   	<string name="feedback_sending_fail_message1">您的請求不合法！</string>
+   	<string name="feedback_sending_fail_message2">服務器端接收異常！</string>
+   	<string name="feedback_sending_fail_message3">反饋內容不能為空！</string>
+   	<string name="feedback_sending_fail_message4">建立連接失敗！</string>
+   	<string name="feedback_sending_fail_message5">發送信道正忙，請稍後再發！</string>
+   	
+   	<string name="feedback_sending_process_connect">正在建立連接。。。</string>
+   	<string name="feedback_sending_process_send_msg">正在發送信息。。。</string>
+   	<string name="feedback_sending_process_send_file">正在傳輸文件。。。</string>
+   	<string name="feedback_sending_process_close">服務器正在接收。。。</string>
+   	
+   	<string name="feedback_result_title">很抱歉！</string>
+   	<string name="feedback_result_message">程序出現異常！</string>
+   	<string name="feedback_result_button">確定</string>
+   	
+   	<string name="feedback_addpic_title">意見反饋圖片</string>
+   	<string name="feedback_addpic_delete">刪除圖片</string>
+   	<string name="feedback_addpic_change">更改圖片</string>
+   	
+   	<string name="feedback_wifi_note">當前沒有通過WIFI連接，您要發送的圖片文件大小已超過300KB，將產生一定的數據流量資費。確定繼續發送？</string>
+
+</resources>

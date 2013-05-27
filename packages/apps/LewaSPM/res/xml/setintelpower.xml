@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/spm_change_mode_by_power_title" >
+   
+        <CheckBoxPreference
+            android:key="enable_power_mode_pref"
+            android:summary="@string/spm_change_mode_by_power_summary"
+            android:title="@string/spm_change_mode_by_power_title" 
+            >
+        </CheckBoxPreference>
+
+		<com.lewa.spm.element.EnergyPreference
+                android:key="low_power_pref"
+                android:title="@string/spm_change_mode_by_power_value_title"
+                android:summary="@string/spm_change_mode_by_power_value_summary"
+                android:dialogTitle="@string/spm_change_mode_by_power_value_title" 
+                />		
+    </PreferenceCategory>
+
+</PreferenceScreen>

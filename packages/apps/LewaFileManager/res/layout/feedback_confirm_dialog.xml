@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+	android:background="#00ffffff" android:layout_width="fill_parent"
+	android:layout_height="56dip" xmlns:android="http://schemas.android.com/apk/res/android">
+	<TextView android:id="@+id/sure" android:background="#ffffffff"
+		android:layout_width="80dip" android:layout_height="60.0dip"
+		android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                />
+</RelativeLayout>

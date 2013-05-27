@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        <ListView
+                android:id="@android:id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@null"
+                android:divider="@null"
+                android:listSelector="@drawable/list_selector_background" />
+
+        <LinearLayout
+                android:id="@android:id/empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+            <ImageView
+                    android:id="@+id/img_empty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_no_any_calllog" />
+            <TextView
+                    android:id="@+id/txt_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/call_logs_empty"
+                    android:textAppearance="?android:attr/textAppearanceMedium" 
+                    style="@style/MainTextViewStyle"/>
+        </LinearLayout>
+    </FrameLayout>
+    
+    <!-- <include layout="@layout/softkey_bar_top_separator"/> -->
+
+    <LinearLayout
+            android:id="@+id/cl_main_softkey_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/softkey_bar_height"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:background="@drawable/bg_softkey_bar">
+        <ImageView android:id="@+id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_search_normal"
+                android:background="@drawable/bg_highlight_s" />
+        <ImageView android:id="@+id/btn_filter_calllog"
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="20.0dip"
+                android:src="@drawable/ic_filter_calllog"
+                android:background="@drawable/bg_highlight_s" />
+        <ImageView android:id="@+id/btn_open_dialpad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="20.0dip"
+                android:src="@drawable/ic_open_dialpad"
+                android:background="@drawable/bg_highlight_s" />
+        <ImageView
+                android:id="@+id/calllog_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="20.0dip"
+                android:src="@drawable/ic_more"
+                android:background="@drawable/bg_highlight_s"
+                android:visibility="gone" />
+    </LinearLayout>
+    
+    <LinearLayout
+            android:id="@+id/cl_category_softkey_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/softkey_bar_height"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_softkey_bar"
+            android:visibility="gone">
+        <ImageView
+                android:id="@+id/btn_categorize_all_calllog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="20.0dip"
+                android:src="@drawable/ic_log_all_normal"
+                android:background="@drawable/bg_highlight_s" />
+        <ImageView
+                android:id="@+id/btn_categorize_out_calllog"
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="20.0dip"
+                android:src="@drawable/ic_log_out_normal"
+                android:background="@drawable/bg_highlight_s" />
+        <ImageView
+                android:id="@+id/btn_categorize_in_calllog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="20.0dip"
+                android:src="@drawable/ic_log_in_normal"
+                android:background="@drawable/bg_highlight_s" />
+        <ImageView
+                android:id="@+id/btn_categorize_miss_calllog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="20.0dip"
+                android:layout_marginRight="20.0dip"
+                android:src="@drawable/ic_log_missed_normal"
+                android:background="@drawable/bg_highlight_s" />
+    </LinearLayout>
+</LinearLayout>

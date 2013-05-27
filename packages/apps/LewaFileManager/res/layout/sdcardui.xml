@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:lewa="http://schemas.android.com/apk/res/com.lewa.app.filemanager"
+    android:id="@+id/relativeLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ebebeb">
+        
+
+    <LinearLayout
+        android:id="@+id/directory_input"
+        android:layout_width="fill_parent"
+        android:layout_height="53dip"
+        android:gravity="center_vertical"
+        android:background="#ebebeb"
+        android:orientation="horizontal"
+         >
+        <Button
+            android:id="@+id/sdcardPathBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="39dip"
+            android:layout_weight="90"
+            android:ellipsize="start"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="8dip"
+            android:layout_marginBottom="7dip"
+            android:layout_marginRight="8dip"
+            android:layout_marginTop="7dip"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:singleLine="true"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="#343434" 
+            android:textSize="18dip"
+            android:background="@drawable/button"/>
+        <RelativeLayout
+            android:id="@+id/searchBoxLayout"
+            android:layout_width="fill_parent"
+            
+            android:visibility="gone"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:paddingRight="8dip"
+            android:paddingLeft="8dip"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_blk_search_contact"
+                >
+            <ImageView
+                android:id="@+id/searchlogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:scaleType="centerInside" 
+                android:background="@drawable/magnifying_glass"
+                android:layout_marginRight="5dip"
+             />
+             <ImageView
+                android:id="@+id/magnifying_glass_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:scaleType="centerInside"
+                android:background="@drawable/magnifying_glass_cancel"
+                android:layout_alignParentRight="true"
+            />
+             <LinearLayout 
+             android:id="@+id/searcheditlayout"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="vertical"
+                 android:layout_toRightOf="@id/searchlogo"
+                 android:layout_toLeftOf="@id/magnifying_glass_cancel"
+             >
+            <EditText
+                android:id="@+id/searchBox"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:layout_marginBottom="0dip"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:inputType="textNoSuggestions"
+                android:imeOptions="flagNoExtractUi"
+                android:freezesText="true"
+                android:background="@null"
+             />
+             <include layout="@layout/cate_h_divider"/>
+             </LinearLayout>
+        </RelativeLayout>
+        
+    </LinearLayout>
+    <include layout="@layout/v_cate_seprator" android:id="@+id/h_line" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/directory_input"/>
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/h_line"
+        android:orientation="vertical"
+        android:weightSum="120" android:background="#ebebeb"
+        >
+        <ListView
+            android:id="@+id/fileListView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="@drawable/listviewselector"
+            android:headerDividersEnabled="true"
+            android:footerDividersEnabled="true"
+            android:dividerHeight="2px"
+
+            android:background="#ebebeb"
+            android:layout_weight="120" 
+            android:fadingEdge="none" 
+            android:layout_alignParentTop="true"
+            android:fastScrollEnabled="true"
+            />
+        <include layout="@layout/no_file_layout" android:layout_weight="120"/>
+<!--            <include android:id="@+id/listview_bottom_line" layout="@layout/v_cate_seprator" />-->
+           
+    <!--bottom -->
+    
+<!--<LinearLayout android:id="@+id/bottomCntr" android:layout_width="fill_parent"
+                android:layout_height="59dip" 
+                            android:layout_weight="0" 
+                            android:visibility="gone">-->
+        <LinearLayout
+            android:id="@+id/layout_paste"
+                android:layout_width="fill_parent"
+                android:layout_height="59dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/lewa_bt_folder_installed_normal"
+                android:weightSum="100" >
+            <LinearLayout
+                    android:id="@+id/toolbar_paste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingTop="8dip"
+                android:paddingBottom="8dip"
+                    >
+
+                <ImageView
+                        android:id="@+id/img_paste"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:src="@drawable/ic_menu_account_paste" />
+
+                <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/paste"
+                        android:textColor="@android:color/black" />
+            </LinearLayout>
+            <include layout="@layout/btn_seprator" />
+            <LinearLayout
+                    android:id="@+id/pastebar_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingTop="8dip"
+                android:paddingBottom="8dip">
+
+                <ImageView
+                        android:id="@+id/pastebar_cancel"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:src="@drawable/lewa_ic_folder_cancel" />
+
+                <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/cancel"
+                        android:textColor="@android:color/black" />
+            </LinearLayout>
+        </LinearLayout>
+        
+
+        
+        <LinearLayout
+            android:id="@+id/layout_privacy"
+                android:layout_width="fill_parent"
+                android:layout_height="59dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+            android:background="@drawable/lewa_bt_folder_installed_normal"
+            android:weightSum="100" >
+            <LinearLayout
+                    android:id="@+id/privacy_move"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    >
+                <ImageView
+                    android:id="@+id/privacy_move_img"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:src="@drawable/ic_menu_account_paste" />
+                <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/paste"
+                        android:textColor="@android:color/black" />
+            </LinearLayout>
+            <include layout="@layout/btn_seprator" />
+            <LinearLayout
+                    android:id="@+id/privacybar_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" 
+                    android:paddingTop="8dip"
+                android:paddingBottom="8dip">
+
+                <ImageView
+                        android:id="@+id/privacybar_cancel"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:src="@drawable/lewa_ic_folder_cancel" />
+
+                <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/cancel"
+                        android:textColor="@android:color/black" />
+            </LinearLayout>
+        </LinearLayout>
+        
+<!--            <ScrollView android:id="@+id/scrollview_on_bottom"
+    android:layout_width="wrap_content"
+                android:layout_height="59dip"
+                android:layout_alignParentBottom="true"
+                >-->
+        <LinearLayout
+                android:id="@+id/bottom_toolbar"
+                android:layout_width="fill_parent"
+                android:layout_height="59dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+
+                android:weightSum="100"
+                android:layout_alignParentBottom="true"
+            android:background="@drawable/lewa_bt_folder_installed_normal"
+android:visibility="gone"
+android:layout_below="@id/fileListView"
+             > 
+            
+            <LinearLayout
+                    android:id="@+id/toolbar_del"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="20"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center"
+                    android:orientation="vertical" 
+                                    android:paddingTop="8dip"
+                android:paddingBottom="8dip">
+
+                <ImageView
+                        android:id="@+id/img_del"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:src="@drawable/lewa_ic_folder_delete" />
+
+                <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/delete"
+                        android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <include layout="@layout/btn_seprator" />
+
+
+            <LinearLayout
+                    android:id="@+id/toolbar_copy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                                    android:paddingTop="8dip"
+                android:paddingBottom="8dip">
+
+                <ImageView
+                        android:id="@+id/img_copy"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:src="@drawable/lewa_ic_folder_copy" />
+
+                <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/copy"
+                        android:textColor="@android:color/black" />
+            </LinearLayout>
+            <include layout="@layout/btn_seprator" />
+            <LinearLayout
+                    android:id="@+id/toolbar_cut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" 
+                                    android:paddingTop="8dip"
+                android:paddingBottom="8dip">
+
+                <ImageView
+                        android:id="@+id/img_cut"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:src="@drawable/lewa_ic_folder_cut" />
+
+                <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        
+                        android:text="@string/cut"
+                        android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <include layout="@layout/btn_seprator" android:id="@+id/toolbar_cancel_v_line"/>
+
+
+            <LinearLayout
+                    android:id="@+id/toolbar_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                                    android:paddingTop="8dip"
+                android:paddingBottom="8dip">
+
+                <ImageView
+                        android:id="@+id/img_cancel"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:src="@drawable/ic_menu_send" />
+
+                <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/share"
+                        android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <include layout="@layout/btn_seprator" />
+
+            <LinearLayout
+                    android:id="@+id/toolbar_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingTop="8dip"
+                android:paddingBottom="8dip">
+
+                <ImageView
+                        android:id="@+id/toolbar_select_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:src="@drawable/lewa_ic_folder_all" />
+
+                <TextView
+                    android:id="@+id/toolbar_select_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/select_all"
+                        android:textColor="@android:color/black" />
+            </LinearLayout>
+     
+                <include layout="@layout/btn_seprator" android:id="@+id/apkpre_v_line"
+            android:visibility="gone"
+                />
+                <LinearLayout
+                    android:id="@+id/operate"
+                    android:layout_width="64dip"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingTop="8dip"
+                    android:paddingBottom="8dip"
+                android:visibility="gone"
+            >
+
+                    <ImageView
+                        android:id="@+id/toolbar_operate_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:src="@drawable/more" />
+
+                    <TextView
+                        android:id="@+id/toolbar_operate_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/operate"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+
+        </LinearLayout>
+<!--            </ScrollView>-->
+           <!--bottom -->     
+<!--          </LinearLayout>-->
+<!--        </LinearLayout>-->
+    
+    <RelativeLayout android:id="@+id/feedback_sure"
+	    android:layout_width="fill_parent"
+	    android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+        <Button android:id="@+id/sure" android:background="@drawable/item_background_holo_dark"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+                android:text="@string/sure"/>
+    </RelativeLayout>
+    </LinearLayout>   
+    <include layout="@layout/cate_divider" android:id="@+id/v_line"  android:layout_alignParentLeft="true"/>
+</RelativeLayout>

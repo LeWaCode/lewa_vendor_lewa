@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Swapper</string>
+    <string name="swap_title">Swap設置</string>
+    <string name="swap_open">swap已經打開</string>
+    <string name="swap_close">swap已經關閉</string>
+    <string name="swap_switch_title">Swap</string>
+    <string name="swap_switch_on_filemode">文件模式：%s</string>
+    <string name="swap_switch_on_partmode">分區模式：%s</string>
+    <string name="swap_switch_off">未開啓</string>
+    <string name="swap_autorun_title">開機自動開啓Swap</string>
+    <string name="swap_autorun_on">swap已開機自動挂載</string>
+    <string name="swap_autorun_off">swap未開機自動挂載</string>
+    <string name="swap_mode_title">Swap模式選擇</string>
+    <string name="swap_mode_summary">選擇的swap模式</string>
+    <string name="swapsize_title">文件模式的大小</string>
+    <string name="swap_current_mode">當前模式：：</string>
+    <string name="swap_autorun">正在開啓swap...</string>
+    <string name="swapsize_summary_0">Swap文件的大小(單位：MB)</string>
+    <string name="system_size_limit">系統分區大小限制，不能打開swap</string>
+    <string name="system_open">swap系統分區已經打開</string>
+    <string name="file_open">swap文件分區已經打開</string>
+    <string name="partition_open">swap分區已經打開</string>
+    <string name="swap_toast0">請選擇swap模式</string>
+    <string name="swap_toast1">請選擇swap文件大小</string>
+    <string name="no_partition">當前無SD卡或SD卡未分區，不能打開Swap,建議選擇其它模式或重啓機器</string>
+    <string name="no_sdcard_open">無SD卡或SD卡正在使用,不能打開Swap,建議選擇其它模式</string>
+    <string name="no_sdcard_close">無SD卡或SD卡正在使用,不能關閉Swap</string>
+    <string name="no_swap">swap關閉失敗</string>
+    <string name="swap_open_failed">swap打開失敗</string>
+    <string name="swap_close_failed">swap關閉失敗</string>
+    <string name="help_menu">幫助</string>
+    <string name="sdcard_title">開啓Swap分區</string>
+    <string name="sdcard_text">開啓會對SD卡磁道有損傷並可能造成系統不穩定,推薦class6及以上SD卡，慎用！</string>
+    <string name="partition_title">SD卡虛擬內存使用提示</string>
+    <string name="partition_text">妳正在選擇在SD卡上使用swap分區開啓虛擬內存。用此方式，會對SD卡有損傷且造成系統不穩定，推薦class6及以上SD卡，請謹慎使用！</string>
+    <string name="desc_text">本應用用于管理虛擬內存，僅適用于樂蛙OS；需要獲取ROOT權限進行虛擬內存的創建和挂載，創建虛擬內存的時間與其大小有關，有可能幾分鍾，請耐心等待。虛擬內存操作完成後，界面會顯示虛擬內存狀態。如果想重新創建，必須首先點擊關閉按鈕，建議重啓手機，再次創建；會對SD卡有損傷且造成系統不穩定，推薦class6及以上SD卡，請謹慎使用！ </string>
+    <string name="help">虛擬內存管理工具使用須知</string>
+    <string name="ok">開啓</string>
+    <string name="cancel">取消</string>
+
+    <string-array name="onoff_filemode">
+        <item> 正在開啓swap(文件模式) </item>
+        <item> 正在關閉swap（文件模式）</item>
+    </string-array>
+    <string-array name="onoff_partmode">
+        <item>正在開啓swap(分區模式)</item>
+        <item>正在關閉swap（分區模式）</item>
+    </string-array>
+    <string-array name="onoff_sysmode">
+        <item>正在開啓swap(系統分區文件模式)</item>
+        <item>正在關閉swap（系統分區文件模式）</item>
+    </string-array>
+    <string-array name="swap_file">
+        <item>創建swap文件</item>
+        <item>更改目錄權限</item>
+        <item>刪除swap文件</item>
+    </string-array>
+    <string-array name="system_file">
+        <item>創建swap文件</item>
+        <item>更改目錄權限</item>
+        <item>刪除swap文件</item>
+    </string-array>
+    <string-array name="onoff_mode">
+        <item>分區模式Swap正在開啓...</item>
+        <item>正在關閉Swap...</item>
+        <item>文件模式Swap正在開啓...</item>
+    </string-array>
+    <string-array name="howswap">
+        <item>文件模式</item>
+        <item>分區模式</item>
+    </string-array>
+    <string-array name="howswap_int">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="swapSize">
+        <item>32MB</item>
+        <item>64MB</item>
+        <item>96MB</item>
+        <item>128MB</item>
+        <item>160MB</item>
+        <item>192MB</item>
+        <item>256MB</item>
+    </string-array>
+    <string-array name="swapSize_int">
+        <item>32</item>
+        <item>64</item>
+        <item>96</item>
+        <item>128</item>
+        <item>160</item>
+        <item>192</item>
+        <item>256</item>
+    </string-array>
+
+</resources>

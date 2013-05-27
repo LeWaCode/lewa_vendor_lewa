@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg_white"
+        >
+                    
+    <include android:id="@+id/title_bar" layout="@layout/two_cols_title_bar" />
+    
+    <com.lewa.os.ui.ViewPagerIndicator
+            android:id="@+id/pager_detail_indicator"
+            android:layout_width="fill_parent"
+            android:gravity="center_vertical"
+            android:layout_height="32dip"
+            />
+    <!--设置导航背景  android:background="@drawable/smsitembg" -->
+        
+    <android.support.lewa.view.LewaPagerView
+            android:id="@+id/pager_detail_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+</LinearLayout>

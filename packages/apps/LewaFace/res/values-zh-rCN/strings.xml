@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">百变主题</string>
+    
+    <string name="theme_local">本地主题</string>
+    <string name="theme_online">在线主题</string>
+    <string name="theme_loading">加载中</string>
+    <string name="theme_err_msg_network">网络错误，请检查网络设置或刷新试试</string>
+    <string name="theme_network_setting">网络设置</string>
+    <string name="theme_refresh">刷新重试</string>
+    <string name="theme_no_theme_messgae">存储卡中没有符合要求的主题包</string>
+    <string name="theme_import">导入<xliff:g id="import_number">%s</xliff:g></string>
+    <string name="theme_ok">确定</string>
+    <string name="theme_cancel">取消</string>
+    <string name="theme_copy_progressbar_title">导入主题中</string>
+    <string name="theme_copy_progressbar_message">正在导入主题包，请稍候。。。</string>
+    <string name="theme_radiobtn_null_title">没主题被选中</string>
+    <string name="theme_radiobtn_null_message">请选选择一个主题</string>
+    <string name="theme_no_select">请选中要导入的主题</string>
+    <string name="theme_customize">自定义主题</string>
+    <string name="theme_import_sd">从SD卡导入</string>
+    <string name="theme_import_app">从其它程序选择</string>
+    <string name="theme_apply">应用</string>
+    <string name="theme_apply_model">应用<xliff:g id="apply_mode_number">%s</xliff:g></string>
+    <string name="theme_share">分享</string>
+    <string name="theme_delete">删除</string>
+    <string name="theme_delete_confirm_msg">将会删除此主题</string>
+    <string name="theme_delete_confirm_title">删除</string>
+    <string name="theme_apply_progressbar_title">应用主题中</string>
+    <string name="theme_apply_progressbar_message">正在应用主题包，请稍候。。。</string>
+    <string name="theme_sd_unmounted_title">存储卡不可访问</string>
+    <string name="theme_sd_unmounted_message">请确认存储卡存在，且手机不在数据传输模式。</string>
+    <string name="theme_apply_progress_title">应用主题中</string>
+    <string name="theme_apply_progress_message">应用主题中，请稍候。。。</string>
+    <string name="theme_import_frome_sd">从SD卡导入</string>
+    <string name="theme_info_text">主题信息</string>
+    <string name="theme_mode_number">该主题共包含<xliff:g id="mode_number">%s</xliff:g>个模块</string>
+
+	<!-- start:sequence sensititive-->
+    <string name="theme_model_lockscreen_wallpaper">锁屏壁纸</string>
+    <string name="theme_model_wallpaper">桌面壁纸</string>
+    <string name="theme_model_lockscreen_style">锁屏样式</string>
+    <string name="theme_model_icon_style">图标样式</string>
+    <string name="theme_model_launcher">桌面样式</string>
+    <string name="theme_model_boots">开机动画</string>
+    <string name="theme_model_fonts">字体</string>
+    <string name="theme_model_framework">系统界面</string>
+    <string name="theme_model_systemui">通知栏</string>
+    <string name="theme_model_settings">系统设置</string>
+    <string name="theme_model_pim">联系人，信息，拨号</string>
+    <string name="theme_model_phone">通话界面</string>
+    <!-- end:sequence sensititive-->
+    
+    <string name="theme_mode_empty_toast">请选择要应用的主题模块</string>
+    <string name="theme_connect_timeout">连接服务器超时,请重试</string>
+    <string name="theme_network_retry">重新连接</string>
+    <string name="theme_download">下载</string>
+    <string name="theme_downloaded">已下载</string>
+    <string name="theme_sd_nospace_title">存储卡空间不足</string>
+    <string name="theme_sd_nospace_msg">存储卡空间不足，请整理后再进行下载</string>
+    <string name="theme_sd_clear">整理</string>
+    <string name="theme_back">返回</string>
+    <string name="theme_network_error_title">网络连接错误</string>
+    <string name="theme_network_error_msg">下载主题需要开启网络，建议开启Wifi后下载</string>
+    <string name="theme_network_set">设置</string>
+    <string name="theme_network_remind_title">网络连接提示</string>
+    <string name="theme_network_remind_msg">您的Wifi尚未开启，建议在Wifi网络下下载</string>
+    <string name="theme_ignore">忽略</string>
+    <string name="theme_customize_part">主题局部自定义</string>
+    
+    <string name="theme_lockscreen_local">本地锁屏</string>
+    <string name="theme_lockscreen_online">在线锁屏</string>
+    <string name="theme_wallpaper_local">本地桌面壁纸</string>
+    <string name="theme_wallpaper_online">在线桌面壁纸</string>
+    <string name="theme_lockscreen_wallpaper_local">本地锁屏壁纸</string>
+    <string name="theme_lockscreen_wallpaper_online">在线锁屏壁纸</string>
+    <string name="theme_icons_local">本地图标</string>
+    <string name="theme_icons_online">在线图标</string>
+    <string name="theme_launcher_local">本地桌面</string>
+    <string name="theme_launcher_online">在线桌面</string>
+    <string name="theme_boot_local">本地开机动画</string>
+    <string name="theme_boot_online">在线开机动画</string>
+    <string name="theme_font_local">本地字体</string>
+    <string name="theme_font_online">在线字体</string>
+    <string name="theme_pim_local">本地联系人，信息，拨号</string>
+    <string name="theme_pim_online">在线联系人，信息，拨号</string>
+    <string name="theme_phone_local">本地通话界面</string>
+    <string name="theme_phone_online">在线通话界面</string>
+    <string name="theme_systemui_local">本地通知栏</string>
+    <string name="theme_systemui_online">在线通知栏</string>        
+    <string name="theme_setting_local">本地设置</string>
+    <string name="theme_setting_online">在线设置</string>
+    
+    <string name="theme_set_success">配置成功</string>
+    <string name="theme_set_fail">配置失败</string>
+    
+    <string name="theme_cancel_download">取消下载</string>
+    <string name="theme_cancel_download_title">取消下载</string>
+    <string name="theme_cancel_download_msg">确定取消下载吗?</string>
+    
+    <string name="select_pictrue_from_apps">选择图片</string>
+    <string name="sdcard_status_changed_title">存储卡当前不可用</string>
+    <string name="sdcard_status_changed_msg">存储卡不存在或处于数据存储模式</string>
+    <string name="download_complete">下载完成</string>
+    <string name="download_fail">下载失败</string>
+    <string name="download_or_unzip_fail">下载失败或者解压失败....</string>
+  
+    <string name="theme_downloading">下载中</string>
+    <string name="theme_duplicate">存在重复主题:</string>
+    <string name="theme_notsupport">不能适配的主题:</string>
+    <string name="old_theme">存在不能使用的旧主题:</string>
+    <string name="delete_default_theme_title">默认主题不能删除</string>
+    <string name="delete_default_theme_msg">默认主题资源不能被删除</string>
+    
+    <string name="progress_format"><xliff:g id="progress">%s</xliff:g></string>
+    
+    <string name="lockscreen_wallpaper">锁屏壁纸</string>
+    <string name="wallpaper">桌面壁纸</string>
+    <string name="lockscreen_style">锁屏样式</string>
+    <string name="icons_style">图标样式</string>
+    <string name="launcher_style">桌面快捷栏</string>
+    <string name="bootanimation">开机动画</string>
+    <string name="font">字体</string>
+    <string name="percent"><xliff:g id="current">%s</xliff:g>%%</string>
+    <string name="download_success">下载完成</string>
+        
+    <string name="setting_wallpaper_title">设置壁纸</string>
+    <string name="setting_wallpaper_msg">正在设置壁纸，请稍候...</string>
+    
+    <string name="setting_lockscreen_wallpaper_title">设置锁屏壁纸</string>
+    <string name="setting_lockscreen_wallpaper_msg">正在设置锁屏壁纸，请稍候...</string>
+    
+    <string name="setting_lockscreen_title">设置锁屏</string>
+    <string name="setting_lockscreen_msg">正在设置锁屏，请稍候...</string>
+    <string name="deleting">删除中……</string>
+    <string name="theme_information">主题信息</string>
+    
+    <string name="lwt_file_not_exists">主题包文件不存在</string>
+    
+    <string name="setting_defalult_theme_title">初始化默认主题</string>
+    <string name="setting_defalult_theme_msg">正在初始化默认主题，请稍候...</string>
+    
+    <string name="setting_fonts_title">设置字体</string>
+    <string name="setting_fonts_msg">正在设置字体，请稍候...</string>
+    
+    <string name="setting_boots_title">设置开机动画</string>
+    <string name="setting_boots_msg">正在设置开机动画，请稍候...</string>
+    
+    <string name="reboot_now">立即重启</string>
+    <string name="reboot_late">稍后重启</string>
+    <string name="rebooting_title">正在重启</string>
+    <string name="rebooting_msg">正在重启手机，请稍候...</string>
+    <string name="reboot_for_fonts_title">应用字体</string>
+    <string name="reboot_for_fonts_msg">该主题包含字体,如果想要立刻看到字体的效果，需要重启手机</string>
+    
+	  <string name="theme_file_demaged">主题文件已损坏</string>
+    <string name="pim">联系人，信息，拨号</string>
+    <string name="phone">电话</string>
+	  
+    <string name="systemui">状态栏</string>
+    <string name="setting">设置</string>
+    <string name="setting_notify_title">设置状态栏</string>
+    <string name="setting_notify_msg">正在设置状态栏...</string>
+    <string name="default_word">默认</string>
+    <string name="setting_pim_title">设置 联系人，信息，拨号</string>
+    <string name="setting_pim_msg">正在设置 联系人，信息，拨号...</string>
+    <string name="setting_phone_title">设置通话界面</string>
+    <string name="setting_phone_msg">正在设置通话界面...</string>
+    <string name="setting_setting_title">设置\"设置\"界面</string>
+    <string name="setting_setting_msg">正在设置\"设置\"界面...</string>
+</resources>

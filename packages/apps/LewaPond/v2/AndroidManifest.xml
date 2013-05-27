@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lewa.pond"
+    android:versionCode="3"
+    android:versionName="1.92" >
+
+    <uses-sdk android:minSdkVersion="10" />
+
+    <permission
+        android:name="com.hudee2.pns.permission.C2D_MESSAGE"
+        android:protectionLevel="normal" />
+
+    <uses-permission android:name="com.hudee2.pns.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.PACKAGE_INSTALL" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCOUNT_MANAGER" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" >
+    </uses-permission>
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".auth.LewaAccountActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".auth.LewaLoginActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="cstore.goto.action" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".auth.LoginActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="cstore.goto.action" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".auth.LewaSignupActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+
+        <service android:name=".auth.LewaAuthService" >
+            <intent-filter>
+                <action android:name="storeStartPondService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.lewa.pond.account.LewaAccountAuthenticatorActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" >
+                </action>
+            </intent-filter>
+        </activity>
+
+        <service android:name=".account.LewaAccountsService" >
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" >
+                </action>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" >
+            </meta-data>
+        </service>
+        
+        <receiver 
+            android:name=".auth.LewaAuthRequestReceiver">
+            <intent-filter>
+                <action android:name="com.lewa.auth.action.queryclientdata" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.lewa.core.base.LewaContentProvider"
+            android:authorities="com.lewa.core.base.lewacontentprovider" />
+
+        <meta-data
+            android:name="api-http"
+            android:value="http://api.lewatek.com/v1" />
+        <meta-data
+            android:name="api-https"
+            android:value="http://api.lewatek.com/v1" />
+        <meta-data
+            android:name="login-url"
+            android:value="http://api.lewatek.com/account/login" />
+        <meta-data
+            android:name="signup-url"
+            android:value="http://api.lewatek.com/account/signup" />
+        <meta-data
+            android:name="definitions"
+            android:value="http://api.lewatek.com/v1/resource.json" />
+        <!--
+        <meta-data android:name="api-http" android:value="http://api.lewa.me/v1" />
+        <meta-data android:name="api-https" android:value="http://api.lewa.me/v1" />
+        <meta-data android:name="login-url" android:value="http://api.lewa.me/account/login" />
+        <meta-data android:name="signup-url" android:value="http://api.lewa.me/account/signup" />
+        <meta-data android:name="definitions" android:value="http://api.lewa.me/v1/resource.json" />
+
+        -->
+        <meta-data
+            android:name="store-front-uri"
+            android:value="/store/front/items/resource.json" />
+        <meta-data
+            android:name="access-token-uri"
+            android:value="/device/access_token/resource.json" />
+        <meta-data
+            android:name="resend-confirmation-email"
+            android:value="/user/email/verification/resource.json" />
+        <meta-data
+            android:name="resend-password"
+            android:value="/user/password/reset/resource.json" />
+        <meta-data
+            android:name="check-password-uri"
+            android:value="/user/password/auth/resource.json" />
+        <meta-data
+            android:name="client-third-party-keys-uri"
+            android:value="/client/thirdparty/key/resource.json" />
+        <meta-data
+            android:name="change-email"
+            android:value="/user/email/resource.json" />
+        <meta-data
+            android:name="change-password"
+            android:value="/user/password/resource.json" />
+        <meta-data
+            android:name="update-account-info"
+            android:value="/user/resource.json" />
+        <!-- fib|exp -->
+        <meta-data
+            android:name="api-counter"
+            android:value="fib" />
+        <meta-data
+            android:name="api-backoff-tick-ms"
+            android:value="1000" />
+        <meta-data
+            android:name="api-backoff-offset-ms"
+            android:value="40000" />
+        <!-- all three in ms -->
+        <meta-data
+            android:name="api-backoff-min-ms"
+            android:value="2000" />
+        <meta-data
+            android:name="api-backoff-max-ms"
+            android:value="30000" />
+        <meta-data
+            android:name="fudge"
+            android:value="J3U6LPkaVWGlSNA0YJ+aDKVPMMe6MAloKl5B+vK0AbltgyTyUIUj9nYI9G8ef1j4YtE29eP85bBkXky46haBiJ3HOJrQSF242aL+7jZ+HlRYOkqz3dUtFB3oC1yirqdCmMtq" />
+    </application>
+
+</manifest>

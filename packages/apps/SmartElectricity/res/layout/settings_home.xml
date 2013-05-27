@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" 
+        android:gravity="center_horizontal"
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent"
+        android:background="@android:drawable/bg_common_background">
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_tittle_blue"
+        android:gravity="center_vertical">
+        <TextView android:id="@+id/spm_title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginLeft="13dip"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+    <com.lewa.os.ui.ViewPagerIndicator
+    		android:id="@+id/indicator"
+    		android:layout_width="fill_parent"
+    		android:layout_height="32dip"
+    		android:gravity="center_vertical"/>
+
+    <android.support.lewa.view.LewaPagerView
+            android:id="@+id/pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+             />
+</LinearLayout>

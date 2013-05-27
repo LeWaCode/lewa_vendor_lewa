@@ -61,6 +61,7 @@ PRODUCT_COPY_FILES += \
     vendor/lewa/prebuilt/common/etc/terminfo/l/linux:system/etc/terminfo/l/linux \
     vendor/lewa/prebuilt/common/etc/terminfo/u/unknown:system/etc/terminfo/u/unknown \
     vendor/lewa/prebuilt/common/etc/profile:system/etc/profile \
+    vendor/lewa/prebuilt/common/etc/init.partner.sh:system/etc/init.partner.sh \
     vendor/lewa/prebuilt/common/etc/init.local.rc:system/etc/init.local.rc \
     vendor/lewa/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/lewa/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
@@ -132,6 +133,7 @@ PRODUCT_COPY_FILES += \
 
 # default IME
 PRODUCT_PACKAGES += LatinIME
+
 
 # Include extra dictionaries for LatinIME
 PRODUCT_PACKAGE_OVERLAYS += vendor/lewa/overlay/dictionaries

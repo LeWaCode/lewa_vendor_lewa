@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  
+  <PreferenceCategory android:title="@string/contacts_show_option_label">
+    <CheckBoxPreference 
+        android:key="display_options_phones_only"
+        android:title="@string/showFilterPhones"
+        android:defaultValue="false" />
+  </PreferenceCategory>
+  
+<!--   <PreferenceCategory android:title="@string/contacts_account_settings_label">
+    <CheckBoxPreference 
+        android:key="match_contacts_number_auto"
+        android:title="@string/match_contacts_number_auto_label"
+        android:defaultValue="false" />
+    <PreferenceScreen
+        android:key="privacy_settings"
+        android:title="@string/privacy_settings_label">  
+            <PreferenceCategory android:title="@string/whether_find_me_label">
+            
+            
+            </PreferenceCategory>
+            
+            <PreferenceCategory android:title="@string/friend_recommend_label">
+	            <CheckBoxPreference 
+			        android:key="auto_recommend_mututal_friends"
+			        android:title="@string/auto_recommend_mututal_friends"
+			        android:defaultValue="true" />
+            </PreferenceCategory>
+        <ListPreference
+	        android:key="whether_find_me_label"
+	        android:title="@string/privacy_settings_label"
+	        android:defaultValue="@string/config_privacy_settings_default_value"
+	        android:entryValues="@array/contacts_privacy_settings_entries_values"
+	        android:entries="@array/contacts_privacy_settings_entries"
+        />  
+    </PreferenceScreen>
+    <Preference
+        android:key="switch_accounts"
+        android:title="@string/switch_accounts_label" />
+    <Preference
+        android:key="change_passwd"
+        android:title="@string/change_passwd_label"/>
+  </PreferenceCategory> -->
+    <PreferenceCategory android:title="@string/menu_import_export">
+	    <Preference
+	        android:key="import_from_sim"
+	        android:title="@string/import_from_sim" />
+	    <Preference
+	        android:key="import_from_sdcard"
+	        android:title="@string/import_from_sdcard"/>
+	    <Preference
+            android:key="export_to_sdcard"
+            android:title="@string/export_to_sdcard" />
+        <Preference
+            android:key="share_visible_contacts"
+            android:title="@string/share_visible_contacts"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/prefs_contact_management_title">
+        <Preference
+            android:key="merge_duplicate_contacts"
+            android:title="@string/menu_merge_duplicated"/>
+        <Preference
+            android:key="bulk_delete_contacts"
+            android:title="@string/menu_del_contacts"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/contacts_account_settings_label">
+        <Preference
+            android:key="account_settings"
+            android:title="@string/menu_accounts"/>
+    </PreferenceCategory>
+</PreferenceScreen>

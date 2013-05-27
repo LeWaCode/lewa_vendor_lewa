@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen 
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:title="@string/music_setting">
+<PreferenceCategory 
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:title="@string/setting_download">
+	
+	<CheckBoxPreference 
+		android:title="@string/setting_downlrc_title"
+		android:defaultValue="true"
+		android:summary="@string/setting_downlrc_summary"			
+		android:key="@string/setting_downlrc_key">
+	</CheckBoxPreference>
+	
+	<CheckBoxPreference 
+		android:title="@string/setting_downimg_title" 
+		android:defaultValue="true" 
+		android:summary="@string/setting_downimg_summary"			
+		android:key="@string/setting_downimg_key">
+	</CheckBoxPreference>
+	
+	
+<!--	<ListPreference 
+		android:title="@string/setting_lewaid_title" 
+		android:key="@string/setting_lewaid_key"
+		android:clickable="false">
+	</ListPreference>
+-->
+</PreferenceCategory>
+<PreferenceCategory
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/setting_basic">    
+    
+    <ListPreference 
+		android:title="@string/setting_bg_title" 
+		android:key="@string/setting_bg_key"
+		android:entries="@array/bg_choise"
+		android:entryValues="@array/bg_choise_value"
+		android:defaultValue="0">
+	</ListPreference>
+	
+	<Preference
+       android:key="music_select_folder"	   	
+       android:title="@string/folder"/>
+	
+	<CheckBoxPreference 
+		android:title="@string/setting_shake_title"
+		android:defaultValue="false"
+		android:summary="@string/setting_shake_summary"			
+		android:key="@string/setting_shake_key">
+	</CheckBoxPreference>
+	
+	<Preference  
+		android:title="@string/shake_degree_title"
+		android:summary="@string/shake_degree_summary"
+		android:key="@string/shake_degree_key">      
+	</Preference>
+	
+	<CheckBoxPreference 
+        android:title="@string/setting_fade_title"
+        android:defaultValue="false"
+        android:summary="@string/setting_fade_summary"         
+        android:key="@string/setting_fade_key">
+    </CheckBoxPreference>
+	
+	<CheckBoxPreference 
+		android:title="@string/setting_backlight_title"
+		android:defaultValue="false"
+		android:summary="@string/setting_backlight_summary"
+		android:key="@string/setting_backlight_key">
+	</CheckBoxPreference>
+	
+</PreferenceCategory>
+<PreferenceCategory
+    android:title="@string/about_title">
+    <Preference
+       android:key="music_about"	   	
+       android:title="@string/about"/>
+</PreferenceCategory>    
+</PreferenceScreen>

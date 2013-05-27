@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content"
+	android:orientation="vertical" 
+	android:background="#ffebebeb">
+
+	<com.lewa.PIM.mms.MsgPopup.MsgViewFlipper android:id="@+id/sms_list"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content">
+	</com.lewa.PIM.mms.MsgPopup.MsgViewFlipper>
+
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:background="@drawable/sms_pop_bg_bottom"
+		android:orientation="vertical" >
+
+		<RelativeLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:layout_marginTop="4dip"			
+			android:gravity="center_vertical">
+				
+			<RelativeLayout android:id="@+id/smscount_panl"   
+				android:layout_width="80dip"
+				android:layout_height="wrap_content" 
+				android:layout_centerInParent="true" >
+				
+				<ImageView
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content"
+					android:layout_alignParentLeft="true"
+					android:layout_centerVertical="true"
+					android:src="@drawable/sms_popup_last" />
+					
+				<TextView android:id="@+id/smscount" 
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true" 
+					android:textColor="#ff515151" />
+					
+				<ImageView
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:src="@drawable/sms_popup_next" />
+					
+			</RelativeLayout>
+			
+			<TextView
+				android:layout_width="wrap_content" 
+				android:layout_alignParentRight="true"
+				android:layout_height="wrap_content"
+				android:textColor="#ff515151" />									
+		</RelativeLayout>
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:gravity="center"
+			android:layout_marginLeft="20dip"
+			android:layout_marginRight="20dip" 
+			android:layout_marginTop="4dip">			
+				
+			<EditText android:id="@+id/reply_area" 
+				android:layout_width="0.0dip"
+				android:layout_height="wrap_content"
+				android:layout_weight="1.0" 
+				android:maxLines="2"				
+				android:hint="@string/hint" />
+			
+			<LinearLayout
+				android:layout_width="wrap_content" 
+				android:layout_height="fill_parent"
+				android:orientation="vertical" 
+				android:layout_marginLeft="8dip" 
+				android:layout_marginBottom="2dip"
+				android:layout_centerVertical="true"
+				android:gravity="center">				
+			    
+			    <TextView android:id="@+id/content_indicator"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:visibility="gone"
+					android:textColor="#ff515151" />
+			    			
+				<ImageView android:id="@+id/reply_btn"
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content"
+					android:background="@drawable/bg_msg_normal_send" />								
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

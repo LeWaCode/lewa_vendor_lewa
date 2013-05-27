@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+	
+	<include 
+		layout="@layout/list_header" />
+	
+	<LinearLayout 
+    	android:layout_width="match_parent"
+        android:layout_height="64dip" 
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingLeft="16dip"
+        android:paddingTop="3dip"
+        android:paddingBottom="3dip">
+        	
+        <LinearLayout 
+	    	android:layout_width="match_parent"
+	        android:layout_height="wrap_content" 
+	        android:orientation="horizontal"
+	        android:paddingRight="12dip">
+        	
+		    <TextView android:id="@+id/line1_title"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:layout_width="248dip"
+		        android:layout_height="wrap_content"
+		        android:ellipsize="end"
+		        android:singleLine="true"/>
+		        
+		    <TextView android:id="@+id/line1_duration" 
+		    	android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:maxLines="1"
+		        android:textAppearance="?android:attr/textAppearanceSmall"	     
+		        android:textColor="#D3D3D3"
+		        android:layout_gravity="center_vertical"/>		    
+		</LinearLayout>
+		
+		<TextView android:id="@+id/line2_info" 
+		        android:textAppearance="?android:attr/textAppearanceSmall"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="4dip"
+		        android:paddingRight="18dip"
+		        android:ellipsize="end"
+		        android:singleLine="true"		        
+		        android:textColor="#D3D3D3"/>
+		         
+    </LinearLayout>
+</LinearLayout>

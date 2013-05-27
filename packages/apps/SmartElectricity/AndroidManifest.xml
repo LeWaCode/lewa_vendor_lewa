@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.lewa.spm"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="8" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> 
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.DEVICE_POWER"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    
+    <application android:icon="@drawable/spm_lewa_icon" android:label="@string/app_name" >
+        <receiver android:name=".service.TimeReceiver">
+            <intent-filter>
+                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                 <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+            </intent-filter>
+            <intent-filter>
+                 <action android:name="android.intent.action.BATTERY_CHANGED"/>
+            </intent-filter>
+            <intent-filter>
+                 <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+            <intent-filter>
+                 <action android:name="android.intent.action.ACTION_TIME_TICK"/>
+            </intent-filter>
+            <intent-filter>
+                 <action android:name="com.lewa.action.BATTERY_ALMOST_FULL"/>
+            </intent-filter>
+             <intent-filter>
+                 <action android:name="com.lewa.spm_action_start_alarm"/>
+            </intent-filter>
+             <intent-filter>
+                 <action android:name="com.lewa.spm_action_end_alarm"/>
+            </intent-filter>
+            <intent-filter>
+                 <action android:name="android.intent.action.PHONE_STATE"/>
+            </intent-filter>
+            <intent-filter>
+            	<action android:name="com.lewa.powermanager.action"/>
+            </intent-filter>
+            <intent-filter>
+            	<action android:name="status_bar_notice_power_msg"/>
+            </intent-filter>
+            <intent-filter>
+            	<action android:name="android.intent.action.SYNC"/>
+            </intent-filter>
+            <intent-filter>
+            	<action android:name="android.intent.action.AIRPLANE_MODE"/>
+            </intent-filter>
+           <intent-filter>
+           		<action android:name="powersaving_action_notify_on" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.WIFI_AP_STATE_CHANGED" />
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="com.android.internal.telephony.NETWORK_MODE_CHANGED" />
+                <action android:name="com.android.internal.telephony.MOBILE_DATA_CHANGED" />
+                <action android:name="com.android.settings.GPS_STATUS_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <activity android:name=".activity.SPMActivity"
+        		  android:screenOrientation="portrait" 
+        		  android:icon="@drawable/spm_lewa_icon"
+                  android:label="@string/app_name"
+                  android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="com.lewa.spm_notification_goto_app" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.AppInfoActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.CurrModeActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.IntelliActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.UserDefinedModeActivity" 
+        		android:screenOrientation="portrait" >
+        	<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.TimeSetting" android:screenOrientation="portrait" >
+        </activity>
+    </application>
+</manifest>

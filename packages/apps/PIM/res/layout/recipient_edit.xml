@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.lewa.PIM.mms.ui.RecipientEdit xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:layout_marginTop="5dip"
+	android:background="@null"	
+	android:gravity="center">
+	
+	<LinearLayout android:id="@+id/recipient_list"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:orientation="horizontal" 
+		android:gravity="center_vertical">
+		
+		<LinearLayout
+			android:layout_width="0.0dip" 
+			android:layout_height="wrap_content"
+			android:layout_weight="1.0" 
+			android:layout_marginLeft="8dip"
+			android:layout_marginRight="2dip"		
+			android:background="@drawable/input_underline">
+					
+			<ScrollView android:id="@+id/recipient_rows_scroller" 			 
+				android:layout_width="0.0dip" 
+				android:layout_height="wrap_content" 
+				android:layout_weight="1.0" 
+				android:fadingEdge="none"
+				android:layout_marginBottom="5dip"
+				android:background="@null">
+				
+				<com.lewa.PIM.mms.ui.RowLayout android:id="@+id/recipient_rows" 
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					android:layout_gravity="top"
+					android:gravity="center_vertical">
+					
+					<EditText android:id="@+id/recipients_editor"  					
+						android:layout_width="wrap_content" 
+						android:layout_height="wrap_content"
+						android:minWidth="40.0dip"
+						android:gravity="center_vertical" 
+						android:layout_gravity="center" 
+						android:background="@null"
+						android:textColor="#ff515151"
+						android:hint="@string/to_hint"
+						android:textSize="16sp"
+						android:singleLine="true"/>
+																		
+				</com.lewa.PIM.mms.ui.RowLayout>					
+			</ScrollView>
+		</LinearLayout>
+		
+		<ImageView android:id="@+id/search_button" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:src="@drawable/ic_search_pressed"
+			android:background="@drawable/bg_conversation_bar"	
+			android:layout_gravity="center"/>		
+	</LinearLayout>
+	
+	<LinearLayout android:id="@+id/recipient_add_contact"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:orientation="horizontal" 
+		android:gravity="center_vertical">
+					
+	    <LinearLayout
+			android:layout_width="0.0dip" 
+			android:layout_height="fill_parent"
+			android:layout_weight="1.0" 
+			android:layout_marginLeft="8dip"
+			android:layout_marginRight="2dip"			
+			android:layout_marginBottom="5dip"
+			android:gravity="bottom"
+			android:background="@drawable/input_underline">
+	    
+			<TextView android:id="@+id/recipient_show"
+				android:layout_width="0dip"
+				android:layout_height="wrap_content" 
+				android:layout_weight="1.0" 
+				android:gravity="bottom" 
+				android:layout_gravity="bottom" 
+				android:layout_marginBottom="2.5dip"
+				android:layout_alignParentLeft="true"
+				android:singleLine="true"
+				android:textColor="#ff515151"
+				android:textSize="16sp"/>	
+		</LinearLayout>
+					
+		<ImageView android:id="@+id/add_contact_search_button" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:src="@drawable/ic_search_pressed"
+			android:background="@drawable/bg_conversation_bar"	
+			android:layout_gravity="center"/>							
+	</LinearLayout>
+	
+	<FrameLayout android:id="@+id/recipient_list_layout"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical">
+		    	
+		<ListView android:id="@+id/suggestion_list"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:listSelector="@drawable/list_selector_background"
+			android:cacheColorHint="@null"
+			android:background="@drawable/settings_background"/>
+	</FrameLayout>
+</com.lewa.PIM.mms.ui.RecipientEdit>

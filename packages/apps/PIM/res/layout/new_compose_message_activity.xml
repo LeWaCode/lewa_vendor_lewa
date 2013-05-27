@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- /* * Copyright (C) 2008 Esmertec AG. * Copyright (C) 2008 The Android 
+	Open Source Project * * Licensed under the Apache License, Version 2.0 (the 
+	"License"); * you may not use this file except in compliance with the License. 
+	* You may obtain a copy of the License at * * http://www.apache.org/licenses/LICENSE-2.0 
+	* * Unless required by applicable law or agreed to in writing, software * 
+	distributed under the License is distributed on an "AS IS" BASIS, * WITHOUT 
+	WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. * See the 
+	License for the specific language governing permissions and * limitations 
+	under the License. */ -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/compose_root"
+	android:layout_width="match_parent" 
+	android:layout_height="match_parent"
+	android:orientation="vertical" 
+	android:background="@drawable/settings_background">
+	
+	<include android:id="@+id/recipient_edit" layout="@layout/recipient_edit" />
+	<include android:id="@+id/recent_contacts" layout="@layout/recent_contacts" />		
+	
+	<LinearLayout android:id="@+id/recipients_subject_linear"
+		android:layout_width="match_parent" 
+		android:layout_height="wrap_content"
+		android:orientation="vertical" 
+		android:background="@drawable/pim_detail_content_background"
+		android:visibility="gone">
+
+		<LinearLayout android:id="@+id/recipients_linear"
+			android:layout_width="fill_parent" 
+			android:paddingLeft="5dip" 
+			android:paddingRight="5dip"
+			android:layout_height="wrap_content"
+			android:visibility="gone"
+			android:background="@drawable/bg_contact_detail_title"
+			android:orientation="horizontal">
+
+			<com.lewa.PIM.mms.ui.RecipientsEditor
+				android:id="@+id/recipients_editor_text" 
+				android:hint="@string/to_hint"
+				android:layout_marginTop="2dip"
+				android:layout_marginBottom="7dip"
+				android:layout_width="0.dip" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1.0" 
+				android:visibility="gone"
+				android:inputType="textFilter" />
+
+			<ImageView android:id="@+id/search_button" 
+				android:background="@drawable/bg_conversation_bar"	
+				android:src="@drawable/ic_search_pressed"
+				android:layout_width="wrap_content" 
+				android:layout_marginTop="2dip"
+				android:layout_marginBottom="7dip"
+				android:layout_height="fill_parent"
+				android:layout_marginLeft="5dip" />
+		</LinearLayout>
+	</LinearLayout>
+
+	<RelativeLayout 
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" >
+
+		<LinearLayout android:id="@+id/bottom_layout"  
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" 
+			android:layout_alignParentBottom="true"
+			android:orientation="vertical">
+
+			<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+				android:id="@+id/mms_attachment_scrollview"
+				android:layout_weight="1.0" 
+				android:layout_width="match_parent"
+				android:layout_height="0dip">
+
+				<view class="com.lewa.PIM.mms.ui.AttachmentEditor" 
+					android:id="@+id/attachment_editor"
+					android:layout_width="match_parent" 
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<ViewStub android:id="@+id/image_attachment_view_portrait_stub"
+						android:layout="@layout/image_attachment_view_portrait"
+						android:layout_width="match_parent" 
+						android:layout_height="wrap_content" />
+
+					<ViewStub android:id="@+id/video_attachment_view_portrait_stub"
+						android:layout="@layout/video_attachment_view_portrait"
+						android:layout_width="match_parent" 
+						android:layout_height="wrap_content" />
+
+					<ViewStub android:id="@+id/audio_attachment_view_portrait_stub"
+						android:layout="@layout/audio_attachment_view_portrait"
+						android:layout_width="match_parent" 
+						android:layout_height="wrap_content" />
+
+					<ViewStub android:id="@+id/slideshow_attachment_view_portrait_stub"
+						android:layout="@layout/slideshow_attachment_view_portrait"
+						android:layout_width="match_parent" 
+						android:layout_height="wrap_content" />
+
+					<ViewStub android:id="@+id/image_attachment_view_landscape_stub"
+						android:layout="@layout/image_attachment_view_landscape"
+						android:layout_width="match_parent" 
+						android:layout_height="wrap_content" />
+
+					<ViewStub android:id="@+id/video_attachment_view_landscape_stub"
+						android:layout="@layout/video_attachment_view_landscape"
+						android:layout_width="match_parent" 
+						android:layout_height="wrap_content" />
+
+					<ViewStub android:id="@+id/audio_attachment_view_landscape_stub"
+						android:layout="@layout/audio_attachment_view_landscape"
+						android:layout_width="match_parent" 
+						android:layout_height="wrap_content" />
+
+					<ViewStub android:id="@+id/slideshow_attachment_view_landscape_stub"
+						android:layout="@layout/slideshow_attachment_view_landscape"
+						android:layout_width="match_parent" 
+						android:layout_height="wrap_content" />
+				</view>
+			</ScrollView>
+			<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+				android:id="@+id/ims_attachment_scrollview"
+				android:layout_weight="1.0" 
+				android:layout_width="match_parent"
+				android:layout_height="0dip"
+				android:visibility="gone">
+
+				<view class="com.lewa.PIM.mms.ui.ImsAttachmentEditor" 
+					android:id="@+id/ims_attachment_editor"
+					android:layout_width="match_parent" 
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<ViewStub android:id="@+id/ims_image_attachment_view_portrait_stub"
+						android:layout="@layout/ims_image_attachment_view_portrait"
+						android:layout_width="match_parent" 
+						android:layout_height="wrap_content" />
+						
+					<ViewStub android:id="@+id/ims_image_attachment_view_landscape_stub"
+						android:layout="@layout/ims_image_attachment_view_landscape"
+						android:layout_width="match_parent" 
+						android:layout_height="wrap_content" />
+						
+					<ViewStub android:id="@+id/ims_audio_attachment_view_portrait_stub"
+						android:layout="@layout/ims_audio_attachment_view_portrait"
+						android:layout_width="match_parent" 
+						android:layout_height="wrap_content" />		
+						
+					<ViewStub android:id="@+id/ims_audio_attachment_view_landscape_stub"
+						android:layout="@layout/ims_audio_attachment_view_landscape"
+						android:layout_width="match_parent" 
+						android:layout_height="wrap_content" />	
+						
+					<ViewStub android:id="@+id/ims_video_attachment_view_portrait_stub"
+						android:layout="@layout/ims_video_attachment_view_portrait"
+						android:layout_width="match_parent" 
+						android:layout_height="wrap_content" />	
+						
+					<ViewStub android:id="@+id/ims_video_attachment_view_landscape_stub"
+						android:layout="@layout/ims_video_attachment_view_landscape"
+						android:layout_width="match_parent" 
+						android:layout_height="wrap_content" />														
+				</view>
+			</ScrollView>
+			<com.lewa.PIM.mms.ui.NumberListView
+				style="?android:attr/listViewWhiteStyle"
+				android:id="@+id/number_list"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:stackFromBottom="true"				
+				android:visibility="gone" />
+				
+			<LinearLayout android:id="@+id/bottom_panel"
+				android:orientation="horizontal" 
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" 
+				android:background="@drawable/compose_bg"
+				android:gravity="center_vertical|center">
+
+				<LinearLayout
+					android:layout_width="wrap_content" 
+					android:layout_height="fill_parent"
+					android:orientation="horizontal" 
+					android:layout_marginTop="2dip"
+					android:gravity="center">
+											
+					<LinearLayout android:id="@+id/voice_button"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 	
+						android:background="@drawable/compose_vioce_selector"
+						android:layout_marginLeft="8dip"
+						android:visibility="gone"					
+						android:layout_centerHorizontal="true"/>
+						
+					<LinearLayout android:id="@+id/add_button"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="8dip"
+						android:src="@drawable/message_icon_add"							
+						android:background="@drawable/compose_icon_add_selector"  
+						android:layout_centerHorizontal="true"/>
+						
+				</LinearLayout>	
+
+				<LinearLayout android:orientation="vertical"
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content"
+					android:layout_weight="1.0"
+					android:paddingTop="4dip"
+					android:gravity="center">
+					
+				   	<LinearLayout android:orientation="vertical"
+				   	    android:id="@+id/compose_voice_button"
+						android:layout_width="fill_parent" 
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:layout_marginLeft="8dip" 
+						android:layout_marginRight="8dip"
+						android:visibility="gone"
+						android:background="@drawable/compose_button_selector"
+						android:gravity="center">
+					
+						<TextView android:id="@+id/compose_voice_button"
+							android:layout_width="fill_parent"
+							android:layout_height="fill_parent"
+							android:text="@string/compose_voice_button"
+							android:textSize="16sp" 
+							android:textColor="#ff666666"	
+							android:gravity="center"						
+							android:background="@null"
+							android:layout_centerVertical="true"/>
+					</LinearLayout>
+										
+				   	<LinearLayout android:orientation="vertical"
+						android:layout_width="fill_parent" 
+						android:layout_height="wrap_content"
+						android:gravity="center">
+								    
+			   			<EditText android:id="@+id/subject" 
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content" 
+							android:layout_marginBottom="-8dip"
+							android:capitalize="sentences"
+							android:autoText="true" 
+							android:singleLine="true" 
+							android:maxLength="40"							
+							android:hint="@string/subject_hint" 
+							android:visibility="gone" />    
+											
+						<EditText android:id="@+id/embedded_text_editor"
+							android:layout_width="fill_parent" 
+							android:layout_height="wrap_content"
+							android:autoText="true" 
+							android:textSize="16sp" 							
+							android:capitalize="sentences"
+							android:hint="@string/mms_nomal_message"
+							android:maxLines="4"
+							android:inputType="textShortMessage|textAutoCorrect|textCapSentences|textMultiLine"
+							android:imeOptions="actionSend|flagNoEnterAction"
+							android:layout_centerVertical="true"
+							android:focusable="false"/>											
+					</LinearLayout>	
+				</LinearLayout>
+
+				<LinearLayout android:id="@+id/button_with_counter"
+					android:layout_width="wrap_content" 
+					android:layout_height="fill_parent"
+					android:orientation="vertical" 
+					android:layout_toRightOf="@+id/embedded_text_editor"
+					android:gravity="center"
+					android:layout_marginTop="4dip"
+					android:layout_marginBottom="3dip"
+					android:layout_marginRight="4dip">
+					
+					<TextView android:id="@+id/text_counter"
+						android:layout_width="match_parent" 
+						android:layout_height="wrap_content"
+						android:textColor="#ff000000"
+						android:textSize="10sp" 
+						android:visibility="gone"
+						android:gravity="center"/>	
+						
+					<LinearLayout android:id="@+id/send_button"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 						
+						android:background="@drawable/bg_msg_normal_send"  
+						android:layout_centerHorizontal="true"/>
+				</LinearLayout>
+				
+			</LinearLayout>
+			
+			<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"  
+			    android:id="@+id/ScrollView" android:layout_width="fill_parent"  
+			    android:layout_height="wrap_content" android:scrollbars="vertical"> 
+				    
+			<LinearLayout android:id="@+id/add_attachment_panel"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:background="@drawable/message_bg" 
+				android:gravity="center_horizontal"
+				android:visibility="gone"
+				android:orientation="vertical">
+				
+				<LinearLayout 
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:background="@null" 
+					android:orientation="horizontal" 
+					android:gravity="center">
+					
+					<LinearLayout android:id="@+id/message_icon_bq"
+						android:layout_width="0dip"
+						android:layout_weight="1"
+						android:layout_height="wrap_content"
+						android:orientation="vertical" 
+						android:background="@drawable/compose_attachment_bg"  
+						android:gravity="center">
+						
+						<ImageView 
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content" 						
+							android:src="@drawable/message_icon_bq"  
+							android:layout_centerHorizontal="true"/>
+							
+						<TextView 
+							android:layout_width="match_parent" 
+							android:layout_height="wrap_content"
+							android:textSize="12sp" 
+							android:textColor="#ff000000"
+							android:text="@string/menu_insert_smiley"
+							android:layout_marginBottom="5dip"
+							android:gravity="center"/>																
+					</LinearLayout>	
+					
+					<LinearLayout android:id="@+id/message_icon_pz"
+						android:layout_width="0dip"
+						android:layout_weight="1"
+						android:layout_height="wrap_content"
+						android:orientation="vertical" 
+						android:background="@drawable/compose_attachment_bg"  
+						android:gravity="center">
+						
+						<ImageView 
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content" 						
+							android:src="@drawable/message_icon_pz"  
+							android:layout_centerHorizontal="true"/>
+							
+						<TextView 
+							android:layout_width="match_parent" 
+							android:layout_height="wrap_content"
+							android:textSize="12sp" 
+							android:textColor="#ff000000"
+							android:text="@string/attach_take_photo"
+							android:layout_marginBottom="5dip"
+							android:gravity="center"/>																
+					</LinearLayout>
+					
+					<LinearLayout android:id="@+id/message_icon_tp"
+						android:layout_width="0dip"
+						android:layout_weight="1"
+						android:layout_height="wrap_content"
+						android:orientation="vertical" 
+						android:background="@drawable/compose_attachment_bg" 
+						android:gravity="center">
+						
+						<ImageView 
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content" 						
+							android:src="@drawable/message_icon_tp" 
+							android:layout_centerHorizontal="true"/>
+							
+						<TextView 
+							android:layout_width="match_parent" 
+							android:layout_height="wrap_content"
+							android:textSize="12sp" 
+							android:textColor="#ff000000"
+							android:text="@string/type_picture"
+							android:layout_marginBottom="5dip"
+							android:gravity="center"/>																
+					</LinearLayout>						
+						
+				</LinearLayout>	
+				
+				<LinearLayout 
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:background="@null" 
+					android:gravity="center"
+					android:orientation="horizontal">
+					
+					<LinearLayout android:id="@+id/message_icon_sp"
+						android:layout_width="0dip"
+						android:layout_weight="1"
+						android:layout_height="wrap_content"
+						android:orientation="vertical" 
+						android:background="@drawable/compose_attachment_bg"
+						android:gravity="center">
+						
+						<ImageView 
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content" 						
+							android:src="@drawable/message_icon_sp"  
+							android:layout_centerHorizontal="true"/>
+							
+						<TextView 
+							android:layout_width="match_parent" 
+							android:layout_height="wrap_content"
+							android:textSize="12sp" 
+							android:textColor="#ff000000"
+							android:text="@string/type_video"
+							android:layout_marginBottom="5dip"
+							android:gravity="center"/>																
+					</LinearLayout>	
+					
+					<LinearLayout android:id="@+id/message_icon_lx"
+						android:layout_width="0dip"
+						android:layout_weight="1"
+						android:layout_height="wrap_content"
+						android:orientation="vertical" 
+						android:background="@drawable/compose_attachment_bg" 
+						android:gravity="center">
+						
+						<ImageView 
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content" 						
+							android:src="@drawable/message_icon_lx" 
+							android:layout_centerHorizontal="true"/>
+							
+						<TextView 
+							android:layout_width="match_parent" 
+							android:layout_height="wrap_content"
+							android:textSize="12sp" 
+							android:textColor="#ff000000"
+							android:text="@string/attach_record_video"
+							android:layout_marginBottom="5dip"
+							android:gravity="center"/>																
+					</LinearLayout>
+					
+					<LinearLayout android:id="@+id/message_icon_hdp"
+						android:layout_width="0dip"
+						android:layout_weight="1"
+						android:layout_height="wrap_content"
+						android:orientation="vertical" 
+						android:background="@drawable/compose_attachment_bg" 
+						android:gravity="center">
+						
+						<ImageView 
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content" 						
+							android:src="@drawable/message_icon_hdp" 
+							android:layout_centerHorizontal="true"/>
+							
+						<TextView 
+							android:layout_width="match_parent" 
+							android:layout_height="wrap_content"
+							android:textSize="12sp" 
+							android:textColor="#ff000000"
+							android:text="@string/attach_slideshow"
+							android:layout_marginBottom="5dip"
+							android:gravity="center"/>																
+					</LinearLayout>							
+				</LinearLayout>	
+				
+				<LinearLayout 
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:background="@null" 
+					android:gravity="center"
+					android:orientation="horizontal">
+					
+					<LinearLayout android:id="@+id/message_icon_yp"
+						android:layout_width="0dip"
+						android:layout_weight="1"
+						android:layout_height="wrap_content"
+						android:orientation="vertical" 
+						android:background="@drawable/compose_attachment_bg" 
+						android:gravity="center">
+						
+						<ImageView 
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content" 						
+							android:src="@drawable/message_icon_yp"  								 
+							android:layout_centerHorizontal="true"/>
+							
+						<TextView 
+							android:layout_width="match_parent" 
+							android:layout_height="wrap_content"
+							android:textSize="12sp" 
+							android:textColor="#ff000000"
+							android:text="@string/attach_sound"
+							android:layout_marginBottom="5dip"
+							android:gravity="center"/>																
+					</LinearLayout>	
+					
+					<LinearLayout android:id="@+id/message_icon_ly"
+						android:layout_width="0dip"
+						android:layout_weight="1"
+						android:layout_height="wrap_content"
+						android:orientation="vertical" 
+						android:background="@drawable/compose_attachment_bg" 
+						android:gravity="center">
+						
+						<ImageView 
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content" 						
+							android:src="@drawable/message_icon_ly" 								
+							android:layout_centerHorizontal="true"/>
+							
+						<TextView 
+							android:layout_width="match_parent" 
+							android:layout_height="wrap_content"
+							android:textSize="12sp" 
+							android:textColor="#ff000000"
+							android:text="@string/attach_record_sound"
+							android:layout_marginBottom="5dip"
+							android:gravity="center"/>																
+					</LinearLayout>
+					
+					<LinearLayout android:id="@+id/message_icon_lxr"
+						android:layout_width="0dip"
+						android:layout_weight="1"
+						android:layout_height="wrap_content"
+						android:orientation="vertical" 
+						android:background="@drawable/compose_attachment_bg"
+						android:gravity="center">
+						
+						<ImageView 
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content" 						
+							android:src="@drawable/message_icon_lxr" 								 
+							android:layout_centerHorizontal="true"/>
+							
+						<TextView 
+							android:layout_width="match_parent" 
+							android:layout_height="wrap_content"
+							android:textSize="12sp" 
+							android:textColor="#ff000000"
+							android:text="@string/shortcutContact"
+							android:layout_marginBottom="5dip"
+							android:gravity="center"/>																
+					</LinearLayout>																			
+				</LinearLayout>									
+			</LinearLayout>
+		    </ScrollView>
+		</LinearLayout>
+		
+		<view class="com.lewa.PIM.mms.ui.MessageListView" 
+			style="?android:attr/listViewWhiteStyle"
+			android:id="@+id/history" 
+			android:layout_width="match_parent"
+			android:layout_height="0dip" 
+			android:layout_weight="1.0"
+			android:listSelector="@drawable/chat_history_selector"
+			android:drawSelectorOnTop="true" 
+			android:transcriptMode="alwaysScroll"
+			android:stackFromBottom="true" 
+			android:visibility="gone"
+			android:fadingEdge="none" 
+			android:layout_alignParentTop="true"
+			android:layout_above="@id/bottom_layout"			
+			android:background="@null"
+			android:cacheColorHint="@android:color/white" />
+					
+	</RelativeLayout>
+</LinearLayout>

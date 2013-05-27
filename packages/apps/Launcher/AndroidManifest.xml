@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.lewa.launcher"
+        android:versionName="H2.01.1"
+        android:versionCode="08332011">
+
+    <permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"
+        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
+        android:protectionLevel="normal"
+        android:label="@string/permlab_install_shortcut"
+        android:description="@string/permdesc_install_shortcut" />
+    <permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"
+        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
+        android:protectionLevel="normal"
+        android:label="@string/permlab_uninstall_shortcut"
+        android:description="@string/permdesc_uninstall_shortcut"/>
+    <permission android:name="com.lewa.launcher.permission.READ_SETTINGS"
+        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
+        android:protectionLevel="normal"
+        android:label="@string/permlab_read_settings"
+        android:description="@string/permdesc_read_settings"/>
+    <permission android:name="com.lewa.launcher.permission.WRITE_SETTINGS"
+        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
+        android:protectionLevel="normal"
+        android:label="@string/permlab_write_settings"
+        android:description="@string/permdesc_write_settings"/>
+	<!-- Begin chenliang -->
+	<permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+	<permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER_ADVANCED" />
+	<!-- End -->
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.READ_LOGS" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.BIND_APPWIDGET" />
+    <uses-permission android:name="com.lewa.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.lewa.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.STATUS_BAR" />
+    <uses-permission android:name="android.permission.PERSISTENT_ACTIVITY" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <!-- Begin [For Lewa Weather Widget, fulianwu, 20110625] -->
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<!-- End -->
+	
+	  <application android:name="LauncherApplication"
+        android:persistent="false"
+        android:allowClearUserData="false"
+        android:label="@string/application_name"
+        android:icon="@drawable/lewahome">
+       
+		<activity android:name="Launcher" 
+            android:launchMode="singleTask"
+            android:clearTaskOnLaunch="true" 
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme"
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="stateUnspecified|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.MONKEY" /> 
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+		<activity android:name="MyLauncherSettings" 
+			android:label="@string/pref_label_settings"/>
+
+ 		
+        <activity android:name="WallpaperChooser"           
+            android:label="@string/pick_wallpaper"
+            android:icon="@drawable/lewahome"
+            android:screenOrientation="portrait"
+            android:finishOnCloseSystemDialogs="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SET_WALLPAPER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+		
+       	<activity android:name="com.lewa.launcher.version.UpdateActivity"/>
+		
+        <!-- Enable system-default search mode for any activity in Home -->
+        <meta-data android:name="android.app.default_searchable"
+            android:value="*" />
+
+		<!--
+			Intent received used to install shortcuts from other applications
+		-->
+		<receiver android:name=".InstallShortcutReceiver"
+            android:permission="com.android.launcher.permission.INSTALL_SHORTCUT">
+            <intent-filter>
+                <action android:name="com.android.launcher.action.INSTALL_SHORTCUT" />
+            </intent-filter>
+        </receiver>
+		
+		<receiver android:name="com.lewa.launcher.ThemeChangedReceiver">
+            <intent-filter>
+                <action android:name="com.lewa.theme.Changed" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+            Intent received used to uninstall shortcuts from other applications
+        -->
+        <receiver android:name=".UninstallShortcutReceiver"
+            android:permission="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+            <intent-filter>
+                <action android:name="com.android.launcher.action.UNINSTALL_SHORTCUT" />
+            </intent-filter>
+        </receiver>
+		<!-- Begin chenliang -->
+		<receiver android:name=".version.DownloadReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+			</intent-filter>
+		</receiver>
+		
+		<receiver android:name=".version.AlarmReceiver" />
+		<!-- End -->
+        <!-- The settings provider contains Home's data, like the workspace favorites -->
+        <provider android:name="LauncherProvider"
+            android:authorities="com.lewa.launcher.settings"
+            android:writePermission="com.lewa.launcher.permission.WRITE_SETTINGS"
+            android:readPermission="com.lewa.launcher.permission.READ_SETTINGS"/>
+           
+	<meta-data android:value="4e675e8c5270156169000017" android:name="UMENG_APPKEY"></meta-data>	
+    </application>
+
+	<uses-sdk android:minSdkVersion="7"></uses-sdk>
+    <supports-screens 
+    	android:largeScreens="true"
+        android:normalScreens="true" 
+        android:smallScreens="true"
+        android:anyDensity="true" />
+        
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+        
+</manifest>

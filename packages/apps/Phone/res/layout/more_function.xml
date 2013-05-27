@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:id="@+id/more_tablayout"
+        android:layout_above="@+id/bottom_togglebutton"
+		android:orientation="vertical"
+    	android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:visibility="gone"
+		android:background="@color/transparent"
+		>
+		 <TextView
+			    android:id="@+id/record_tip"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/recording"
+				android:background="@drawable/toast_frame"
+				android:layout_gravity="center"
+				android:visibility="gone"
+				android:gravity="center"/> 
+				 
+	<LinearLayout
+		android:orientation="horizontal"
+    	android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/bottom_icon_bg"
+		>
+			<LinearLayout
+			    android:id="@+id/contacts_button"
+				style="@style/MoreButtonStyle"
+				>	
+				<ImageView 
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:background="@drawable/more_contact" />	
+				<TextView
+					style="@style/MoreTextStyle"
+					android:text="@string/contactsIconLabel"
+					/>	
+			</LinearLayout>
+			
+			<LinearLayout
+			    android:id="@+id/record_button"
+				style="@style/MoreButtonStyle"
+				>	
+				<ImageView 
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:background="@drawable/more_record" />	
+				<TextView
+				    style="@style/MoreTextStyle"
+					android:text="@string/menu_record"
+					android:id="@+id/record_textview"
+					/>	
+			</LinearLayout>
+			
+				
+			<!-- 保持 -->
+			<LinearLayout
+			    android:id="@+id/hold_button"
+				style="@style/MoreButtonStyle"
+				>	
+				<ImageView  
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:background="@drawable/more_keeping"/>	
+				<TextView
+				    style="@style/MoreTextStyle"
+					android:text="@string/menu_hold"
+					/>	
+			</LinearLayout>
+			
+			<!-- 切换通话 -->
+			<LinearLayout
+			    android:id="@+id/swap_button"
+				style="@style/MoreButtonStyle"
+				android:visibility="gone"
+				>	
+				<ImageView  
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:background="@drawable/button_bottom_switch_hline"/>	
+				<TextView
+				    style="@style/MoreTextStyle"
+					android:text="@string/menu_swapCalls"
+					/>	
+			</LinearLayout>
+			<!-- 添加通话-->
+			<LinearLayout
+			    android:id="@+id/addCall_button"
+				style="@style/MoreButtonStyle"
+				>	
+	        	<ImageView 
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:layout_gravity="center"
+					android:background="@drawable/more_addcall"
+					 />	
+				<TextView
+					style="@style/MoreTextStyle"
+					android:text="@string/menu_addCall"
+					/>	
+			</LinearLayout>
+			
+			<!-- 合并通话 -->
+			<LinearLayout
+			    android:id="@+id/merge_button"
+				style="@style/MoreButtonStyle"
+				android:visibility="gone"
+				>	
+				<ImageView  
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:background="@drawable/button_bottom_merger_hline"/>	
+				<TextView
+				    style="@style/MoreTextStyle"
+					android:text="@string/menu_mergeCalls"
+					/>	
+			</LinearLayout>
+</LinearLayout>
+</LinearLayout>

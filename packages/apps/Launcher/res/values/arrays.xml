@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>   
+    <!-- Begin [pan] add -->
+    <string-array name="folders">
+        <item>New folder</item>
+        <item>Games</item>
+        <item>Tools</item>
+        <item>Social</item>
+    </string-array>
+    
+    <string-array name="desktop_transition_effect_entries">
+        <item>Classical</item>
+        <item>Classical rollback</item>
+        <item>Cube</item>
+        <item>Rotate</item>
+        <item>Stack</item>       		
+    </string-array>
+    
+    <string-array name="desktop_transition_effect">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+       
+    <string-array name="wallpapers" translatable="false">
+        <item>wallpaper</item>
+		<item>wallpaper_1</item>
+		<item>wallpaper_2</item>
+    </string-array> 
+    <string-array name="extra_wallpapers">
+        
+    </string-array>          
+    <!-- End -->
+</resources>

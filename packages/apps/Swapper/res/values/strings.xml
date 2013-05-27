@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Swapper</string>
+    <string name="swap_title">Swapper settings</string>
+    <string name="swap_open">Swap enabled</string>
+    <string name="swap_close">Swap disabled</string>
+    <string name="swap_switch_on_filemode">File mode：%s</string>
+    <string name="swap_switch_on_partmode">Partition mode：%s</string>
+    <string name="swap_switch_off">close</string>
+    <string name="swap_autorun_title">Auto enable swap</string>
+    <string name="swap_autorun_on">Swap will be enabled automatically when your phone starts</string>
+    <string name="swap_autorun_off">Swap will be not enabled automatically</string>
+    <string name="swap_switch_title">Swap</string>
+    <string name="swap_mode_title">Swap space</string>
+    <string name="swap_mode_summary">Choose where swap space can be allocated</string>
+    <string name="swapsize_title">Swap space limit</string>
+    <string name="swap_current_mode">Swap space allocated:</string>
+    <string name="swap_autorun">Enabling swap...</string>
+    <string name="swapsize_summary_0">Swap space limit(unit:MB)</string>
+    
+    <string name="system_size_limit">system size is limited,can not open swap</string>
+    <string name="system_open">system swap had opened</string>
+    <string name="file_open">file swap had opened</string>
+    <string name="partition_open">partition swap had opened</string>
+    <string name="swap_toast0">please choose swap mode</string>
+    <string name="swap_toast1">please choose swap file size</string>
+    <string name="no_partition">partition swap can not be opened</string>
+    <string name="no_sdcard_open">Can not enable swap as there is no sdcard or the sdcard is beeing used</string>
+    <string name="no_sdcard_close">Can not disable swap as there is no sdcard or the sdcard is beeing used</string>
+    <string name="no_swap">Can not disable swap</string>
+    <string name="swap_open_failed">Failed to enable swap</string>
+    <string name="swap_close_failed">Failed to disable swap</string>
+    <string name="help_menu">Help</string>
+    <string name="sdcard_title">Causion</string>
+    <string name="sdcard_text">We are going to allocate swap space in SD card as you requested. Please be noticed that this may cause damage to your SD card and for better performace, we recommend a Class 6 or higher SD card.</string>
+    <string name="partition_title">Causion</string>
+    <string name="partition_text">We are going to allocate swap space in SD card as you requested. Please be noticed that this may cause damage to your SD card and for better performace, we recommend a Class 6 or higher SD card.</string>
+    <string name="desc_text"></string>
+    <string name="help">help</string>
+    <string name="ok">open</string>
+    <string name="cancel">cancel</string>
+
+    <string-array name="onoff_filemode">
+        <item>starting swap(file)</item>
+        <item>closing swap(file)</item>
+    </string-array>
+    <string-array name="onoff_partmode">
+        <item>starting swap(partition)</item>
+        <item>closing swap(partition)</item>
+    </string-array>
+    <string-array name="onoff_sysmode">
+        <item>starting swap(system)</item>
+        <item>closing swap(system)</item>
+    </string-array>
+    <string-array name="swap_file">
+        <item>create swap file</item>
+        <item>changing permission</item>
+        <item>delete swap file</item>
+    </string-array>
+    <string-array name="system_file">
+        <item>create system file</item>
+        <item>changing permission</item>
+        <item>delete system file</item>
+    </string-array>
+    <string-array name="onoff_mode">
+        <item>Swap parting </item>
+        <item>Swap closing </item>
+        <item>Swap file starting</item>
+    </string-array>
+    <string-array name="howswap">
+        <item>Sdcard file mode</item>
+        <item>Sdcard partition</item>
+    </string-array>
+    <string-array name="howswap_int">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="swapSize">
+        <item>32MB</item>
+        <item>64MB</item>
+        <item>96MB</item>
+        <item>128MB</item>
+        <item>160MB</item>
+        <item>192MB</item>
+        <item>256MB</item>
+    </string-array>
+    <string-array name="swapSize_int">
+        <item>32</item>
+        <item>64</item>
+        <item>96</item>
+        <item>128</item>
+        <item>160</item>
+        <item>192</item>
+        <item>256</item>
+    </string-array>
+
+</resources>

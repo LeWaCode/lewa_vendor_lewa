@@ -1,0 +1,37 @@
+
+
+# TODO: Instead of keeping the following two functions we could as well just remove them completely
+# as they are only used in test code
+
+
+
+-keep public class * extends android.app.Activity
+
+
+
+-keep public  class * extends **{
+    public <init>(...);
+	@Override protected *** <methods>;
+	@Override public *** <methods>;
+}
+-keep public class * implements **{
+    public <init>(...);
+    protected *** <methods>;
+    public *** <methods>;
+}
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet);
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+
+-keepclassmembers class * implements java.io.Serializable {
+    static final long serialVersionUID;
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    !static !transient <fields>;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+    public *** get*();
+    public void set*(...);
+}

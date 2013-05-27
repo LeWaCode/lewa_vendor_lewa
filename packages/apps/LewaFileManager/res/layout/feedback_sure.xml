@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/btuuonSeprator"
+	android:background="#00ffffff" android:layout_width="fill_parent"
+	android:layout_height="56dip" xmlns:android="http://schemas.android.com/apk/res/android">
+	<Button android:id="@+id/sure" android:background="#ffffffff"
+		android:layout_width="80dip" android:layout_height="30.0dip"
+		android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/sure"/>
+</RelativeLayout>

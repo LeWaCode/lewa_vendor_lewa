@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, AndroidAdviceDemoActivity!</string>
+    <string name="app_name">意见反馈</string>
+    
+    <string name="feedback_title">意见反馈</string>
+    <string name="feedback_added">已添加 </string>
+    <string name="feedback_text_default">我来说两句...</string>
+    <string name="feedback_send">发送</string>
+    <string name="feedback_piclen_default">0</string>
+    <string name="feedback_tag_len">KB</string>
+    
+    <string name="result_layout_feedback_title">意见反馈</string>
+    <string name="result_layout_thanks1">非常感谢您对乐蛙的帮助,</string>
+    <string name="result_layout_thanks2">我们将继续努力！</string>
+    <string name="result_layout_thanks3">期待您共同见证乐蛙的成长。</string>
+    <string name="result_layout_continue_feedback">继续反馈</string>
+    <string name="result_layout_finish">完成</string>
+    
+    <string name="feedback_sending_title">请稍候</string>
+    <string name="feedback_sending_message">意见正在发送...</string>
+    <string name="feedback_sending_fail_title">发送失败</string>
+   	<string name="feedback_sending_fail_button">确定</string>
+   	<string name="feedback_sending_fail_message">您当前的网络存在异常！</string>
+   	<string name="feedback_sending_fail_message0">您请求的地址已变更！</string>
+   	<string name="feedback_sending_fail_message1">您的请求不合法！</string>
+   	<string name="feedback_sending_fail_message2">服务器端接收异常！</string>
+   	<string name="feedback_sending_fail_message3">反馈说明不能为空！</string>
+   	<string name="feedback_sending_fail_message4">建立连接失败！</string>
+   	<string name="feedback_sending_fail_message5">发送信道正忙，请稍后再发！</string>
+   	
+   	<string name="feedback_sending_process_connect">正在建立连接。。。</string>
+   	<string name="feedback_sending_process_send_msg">正在发送信息。。。</string>
+   	<string name="feedback_sending_process_send_file">正在传输文件。。。</string>
+   	<string name="feedback_sending_process_close">服务器正在接收。。。</string>
+   	
+   	<string name="feedback_result_title">很抱歉！</string>
+   	<string name="feedback_result_message">程序出现异常！</string>
+   	<string name="feedback_result_button">确定</string>
+   	
+   	<string name="feedback_addpic_title">意见反馈图片</string>
+   	<string name="feedback_addpic_delete">删除图片</string>
+   	<string name="feedback_addpic_change">更改图片</string>
+   	
+   	<string name="feedback_wifi_note">当前没有通过WIFI连接，您要发送的图片文件大小已超过300KB，将产生一定的数据流量资费。确定继续发送？</string>
+
+</resources>

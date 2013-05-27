@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orderingFromXml="true"
+    android:key="Intercept">
+    <PreferenceCategory android:title="@string/bedtime">      
+        <CheckBoxPreference
+            android:key="sleep_sp" 
+            android:title="@string/spm_class_title_intelligent"
+            android:summary="@string/bedtime_auto_sp"
+            android:defaultValue="false"
+            />
+        <Preference
+            android:key="set_time" 
+            android:title="@string/intelligent_time_set"
+            android:dependency="sleep_sp"
+            />
+        <Preference 
+            android:key="time_frame_mode"
+            android:summary="@string/intelligent_time_frame_mode_summary"
+            android:title="@string/intelligent_time_frame_mode" 
+            />
+      </PreferenceCategory>
+      <PreferenceCategory>      
+        <Preference
+            android:key="spm_battery_calibration"
+            android:title="@string/spm_battery_calibration" 
+            android:summary="@string/spm_battery_calibration_summary"
+            />
+      </PreferenceCategory>
+</PreferenceScreen>  

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="?android:attr/listPreferredItemHeight"
+	android:background="@drawable/quick_contact_bar" 	
+	android:layout_marginTop="-2dip"
+	android:orientation="horizontal"
+	android:visibility="gone">
+	<TwoLineListItem android:layout_width="160dip"
+		android:layout_height="fill_parent" 
+		android:layout_marginTop="5dip"
+		android:layout_weight="1"
+		android:id="@+id/twoline_view">
+		<TextView android:id="@android:id/text1"
+			android:layout_marginTop="2dip" 
+			android:layout_marginLeft="8dip"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_alignParentTop="true"
+			android:textAppearance="?android:attr/textAppearanceMedium" 
+			android:textColor="@color/itemview_label"
+			android:singleLine="true"/>
+		<TextView android:id="@android:id/text2"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_below="@android:id/text1" android:layout_alignLeft="@android:id/text1"
+			android:includeFontPadding="false"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:textColor="@color/itemview_data" 
+			android:singleLine="true"/>
+	</TwoLineListItem>
+ 	<LinearLayout 
+ 		android:id="@+id/quick_contact_icon_container"
+		android:layout_width="160dip"
+		android:layout_height="52.66dip"
+		android:layout_weight="1"
+		android:layout_marginTop="2dip"
+		android:orientation="horizontal"
+		android:background="@drawable/bt_dial_call_normal">
+		<ImageView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/call_btn"
+			android:layout_marginLeft="5dip" 
+			android:layout_gravity="center_vertical"
+			android:scaleType="center"
+			android:src="@drawable/ic_shortcut_reply_call"
+			android:background="@drawable/bg_highlight_s" />
+		<ImageView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/sms_btn"
+			android:layout_gravity="center_vertical"
+			
+			android:scaleType="center"
+			android:src="@drawable/ic_shortcut_reply_message"
+			android:background="@drawable/bg_highlight_s" />
+		<ImageView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/email_btn"
+			android:layout_gravity="center_vertical"
+			
+			android:scaleType="center"
+			android:src="@drawable/ic_shortcut_reply_email"
+			android:background="@drawable/bg_highlight_s" />
+ 	</LinearLayout>
+</LinearLayout>

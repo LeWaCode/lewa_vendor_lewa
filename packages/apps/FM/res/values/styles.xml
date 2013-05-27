@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="FMStationSeekBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@android:drawable/progress_horizontal</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_horizontal</item>
+        <item name="android:minHeight">20dip</item>
+        <item name="android:maxHeight">20dip</item>
+        <item name="android:thumbOffset">8px</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="favoriteButtonStyle">
+        <item name="android:layout_width">75dip</item>
+        <item name="android:layout_height">40dip</item>
+        <item name="android:layout_marginRight">10dip</item>
+        <item name="android:textSize">20dip</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">#999999</item>
+        <item name="android:shadowColor">#7d7d7d</item>
+        <item name="android:background">@drawable/btn_default_0</item>
+    </style>
+
+    <style name="Theme.Droidus" parent="android:Theme">
+        <item name="android:windowBackground">@drawable/fm_bg_background</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+</resources>

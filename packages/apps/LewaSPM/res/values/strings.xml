@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Power Manager</string>
+    <string name="life_time_text">Life Time：</string>
+    <string name="next_time_text">Next Day：</string>
+    <string name="normal_save_power">Common Mode</string>
+    <string name="intelligent_save_power">Intel Mode</string>
+    <string name="call">Call Time</string>
+    <string name="network">Web Time</string>
+    <string name="music">Audio Time</string>
+    <string name="video">Video Time</string>
+    <string name="stand_by">Standby Time</string>
+    <string name="batt_title">Energy Info</string>
+    <string name="mode_title">Save Setting</string>
+    <string name="btn_on">ON</string>
+    <string name="btn_off">OFF</string>
+    
+    <string name="spm_string_empty"></string>
+    
+    <string name="spm_current_state">Current Mode</string>
+    <string name="spm_normal_mode">Common Mode</string>
+    <string name="spm_alarm_mode">Alarm Mode</string>
+    
+    <string name="spm_network_show">Data</string>
+    <string name="spm_wifi_show">Wifi</string>
+    <string name="spm_bluetooth_show">Bluetooth</string>
+    <string name="spm_screen_timeout_show">ScreenLock</string>
+    <string name="spm_screen_light_show">Brightness</string>
+    <string name="spm_gps_show">GPS</string>
+    <string name="spm_touch_feel_show">FeelBack</string>
+    
+    <string name="spm_second">30S</string>
+    <string name="spm_auto">Auto</string>
+    
+    <string name="spm_change_mode_by_time_title">Save By Time</string>
+    <string name="spm_change_mode_by_time_summary">Auto Save Energy By Time</string>
+    
+    <string name="spm_change_mode_by_time_from_title">Set Start Time</string>
+    <string name="spm_change_mode_by_time_from_summary">23:00</string>
+    
+    <string name="spm_change_mode_by_time_to_title">Set End Time</string>
+    <string name="spm_change_mode_by_time_to_summary">7:00</string>
+        
+    <string name="spm_change_mode_by_power_title">Save By Power</string>
+    <string name="spm_change_mode_by_power_summary">Auto Save Energy By Power</string>
+    
+    <string name="spm_change_mode_by_power_value_title">Set Power Level</string>
+    <string name="spm_change_mode_by_power_value_summary">Energy Level Is</string>
+    <string name="spm_change_mode_by_power_value_append">%</string>
+    
+    <string name="spm_power_optimization">Power Optimize</string>
+    <string name="spm_power_normal_save_mode">Normal Mode</string>
+    <string name="spm_power_super_save_mode">Super Mode</string>
+    <string name="spm_power_normal_save_mode_title">Switch to Normal mode</string>
+    <string name="spm_power_super_save_mode_title">Switch to Super mode</string>        
+        
+    <string name="spm_hour">H</string>
+    <string name="spm_minute">M</string>
+    <string name="spm_seconds">S</string>
+    
+    <string name="spm_next_hour">2</string>
+    <string name="spm_next_minute">15</string>
+    <string name="spm_power_air_def">10%</string>
+    <string name="spm_power_eve_def">20%</string>
+    <string name="spm_power_nor_def">30%</string>
+    
+    <string name="automatic_brightness">Automatic brightness</string>
+    <string name="btn_yes">Yes</string>
+    <string name="btn_cancel">Cancel</string>
+    
+    <string name="spm_energy_prefix">Energy arrive</string>
+    <string name="spm_energy_postfix">% start low power saving mode</string>
+    <string name="spm_disable_nexttime">Not show next time</string>
+    
+    <string name="spm_alert_time_title">Switch Mode By Time</string>
+    <string name="spm_alert_time_prefix">Late at night, every day</string>
+    <string name="spm_alert_time_postfix">Power Management will automatically saving power,you can also check more information or other settings</string>
+    
+    <string name="spm_alert_power_title">Auto Saving By Power</string>
+    <string name="spm_alert_power_prefix">Low power!Current energy is lower by</string>
+    <string name="spm_alert_power_postfix">,Power Management will automatically saving power,you can also check more information or other settings</string>
+    
+    <string name="spm_alert_button_left">Goto</string>
+    <string name="spm_alert_button_right">Cancel</string>    
+    
+    <string name="spm_opt_dialog_title_start">Start Saving Energy Mode</string>
+    <string name="spm_opt_dialog_title_stop">Stop Saving Energy Mode</string>
+    <string name="spm_opt_dialog_prefix_start">After Start,Life time increased</string>
+    <string name="spm_opt_dialog_prefix_stop">After Stop,Lift time reduced</string>
+	<string name="spm_opt_dialog_below_text">Will modify the following settings:</string> 
+    
+    <string name="spm_toast_data_alert">Dear,Start data would cost of energy!</string>
+    <string name="spm_toast_wlan_alert">Dear,Start LAN would cost of energy!</string>
+    <string name="spm_toast_bluetooth_alert">Dear,Start BT would cost of energy!</string>
+    <string name="spm_toast_gps_alert">Dear,Start GPS would cost of energy!</string>
+    <string name="spm_toast_touch_alert">Dear,Start FeelBack would cost of energy!</string>
+    
+        
+    <string name="spm_opt_alert_value_on">ON</string>
+    <string name="spm_opt_alert_value_off">OFF</string>
+    <string name="spm_opt_alert_value_auto">AUTO</string>
+    <string name="spm_opt_alert_value_thr_per">30%</string>
+    <string name="spm_opt_alert_value_one_min">1M</string>
+    <string name="spm_opt_alert_value_thr_sec">30S</string>
+</resources>

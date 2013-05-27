@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packages>
+    <package id="com.android.calendar">
+        <filename>GoogleCalendar.apk</filename>
+        <chinesename>Google 日历</chinesename>
+    </package>
+    <package id="com.google.android.gsf">
+        <filename>GoogleServicesFramework.apk</filename>
+        <chinesename>Google 服务框架</chinesename>
+    </package>
+        <package id="com.google.android.backup">
+        <filename>GoogleBackupTransport.apk</filename>
+        <chinesename>Google 备份同步</chinesename>
+    </package>
+        <package id="com.google.android.syncadapters.calendar">
+        <filename>GoogleCalendarSyncAdapter.apk</filename>
+        <chinesename>Google 日历同步</chinesename>
+    </package>
+        <package id="com.google.android.syncadapters.contacts">
+        <filename>GoogleContactsSyncAdapter.apk</filename>
+        <chinesename>Google 通讯录同步</chinesename>
+    </package>
+    <package id="com.android.vending">
+        <filename>GoogleMarket.apk</filename>
+        <chinesename>Google 电子市场</chinesename>
+    </package>
+    <package id="com.google.android.gm">
+        <filename>Gmail.apk</filename>
+        <chinesename>Gmail</chinesename>
+    </package>
+        <package id="com.google.android.talk">
+        <filename>Gtalk.apk</filename>
+        <chinesename>Google Talk</chinesename>
+    </package>
+    <package id="com.google.android.apps.maps">
+        <filename>GoogleMaps.apk</filename>
+        <chinesename>Google 地图</chinesename>
+    </package>
+    <package id="com.google.android.location">
+        <filename>GoogleLocation.apk</filename>
+        <chinesename>NetworkLocation</chinesename>
+    </package>
+    
+    <package id="com.autonavi.minimap">
+        <filename>AMAP.apk</filename>
+        <chinesename>地图导航</chinesename>
+    </package>
+    <package id="com.socogame.ppc">
+        <filename>PlayPlusClient_Lewa.apk</filename>
+        <chinesename>游戏中心</chinesename>
+    </package>
+    <package id="com.bel.android.dspmanager">
+        <filename>DSPManager.apk</filename>
+        <chinesename>DSP管理器</chinesename>
+    </package>
+</packages>

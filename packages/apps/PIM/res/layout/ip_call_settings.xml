@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/settings_background">
+    <RelativeLayout
+            android:id="@+id/rl_auto_ip_call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dip"
+            android:background="@drawable/bg_highlight_s">
+        <LinearLayout
+                android:id="@+id/ll_auto_ip_call_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/chk_auto_ip_call_value"
+                android:orientation="vertical">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ff262626"
+                    android:text="@string/auto_ip_call_headline"
+                    android:singleLine="true" />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#ff808080"
+                    android:text="@string/auto_ip_call_description" />
+        </LinearLayout>
+        
+        <LewaCheckBox
+                android:id="@+id/chk_auto_ip_call_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="false" />
+    </RelativeLayout>
+    
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_list_horizontal_divider" />
+            
+    <LinearLayout
+            android:id="@+id/ll_my_number_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_highlight_s">
+        <TextView
+                android:id="@+id/txt_my_number_location_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dip"
+                android:layout_marginTop="12dip"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ff262626"
+                android:text="@string/my_number_location_description"
+                android:singleLine="true" />
+        <TextView
+                android:id="@+id/txt_my_number_location_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dip"
+                android:layout_marginBottom="12dip"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#ff808080"
+                android:text="@string/has_not_been_set"
+                android:singleLine="true" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_list_horizontal_divider" />
+    </LinearLayout>
+    
+    <LinearLayout
+            android:id="@+id/ll_ip_prefix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_highlight_s"
+            android:visibility="gone">
+        <TextView
+                android:id="@+id/txt_ip_prefix_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dip"
+                android:layout_marginTop="12dip"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ff262626"
+                android:text="@string/ip_prefix_description"
+                android:singleLine="true" />
+        <TextView
+                android:id="@+id/txt_ip_prefix_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dip"
+                android:layout_marginBottom="12dip"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#ff808080"
+                android:text="@string/has_not_been_set"
+                android:singleLine="true" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_list_horizontal_divider" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/ll_ip_prefix_sim1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_highlight_s"
+            android:visibility="gone">
+        <TextView
+                android:id="@+id/txt_ip_prefix_sim1_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dip"
+                android:layout_marginTop="12dip"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ff262626"
+                android:text="@string/ip_prefix_sim1_description"
+                android:singleLine="true" />
+        <TextView
+                android:id="@+id/txt_ip_prefix_sim1_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dip"
+                android:layout_marginBottom="12dip"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#ff808080"
+                android:text="@string/has_not_been_set"
+                android:singleLine="true" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_list_horizontal_divider" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/ll_ip_prefix_sim2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_highlight_s"
+            android:visibility="gone">
+        <TextView
+                android:id="@+id/txt_ip_prefix_sim2_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dip"
+                android:layout_marginTop="12dip"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ff262626"
+                android:text="@string/ip_prefix_sim2_description"
+                android:singleLine="true" />
+        <TextView
+                android:id="@+id/txt_ip_prefix_sim2_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dip"
+                android:layout_marginBottom="12dip"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#ff808080"
+                android:text="@string/has_not_been_set"
+                android:singleLine="true" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_list_horizontal_divider" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/playlist_create_layout"
+  android:orientation="vertical"
+  android:layout_width="match_parent" 
+  android:layout_height="match_parent"
+  android:background="@drawable/playlist_create_bg">
+
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_weight="1"
+        android:fillViewport="true"
+    >
+     <LinearLayout android:id="@+id/editors"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+            
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <FrameLayout
+                android:id="@+id/stub_cover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip">
+    
+                <include
+                    android:id="@+id/edit_cover"
+                    layout="@layout/item_cover_editor" />
+
+            </FrameLayout>
+                
+            <EditText android:id="@+id/edit_text"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dip"/>
+            
+          </LinearLayout>
+           
+          <Button android:id="@+id/btn_select_songs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+            android:text="@string/playlist_add_songs" 
+			android:background="@android:drawable/item_background_holo_dark"
+            style="@style/MainTextViewStyle.Shadow"/>
+                
+          <ListView
+            android:id="@+id/list" 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        
+        </LinearLayout>
+        
+    </ScrollView>
+            
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button android:id="@+id/btn_done"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+            android:text="@string/save"
+			android:background="@android:drawable/item_background_holo_dark_left"
+            style="@style/MainTextViewStyle.Shadow"/>
+
+        <Button android:id="@+id/btn_discard"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+            android:text="@string/menu_doNotSave"
+			android:background="@android:drawable/item_background_holo_dark_right"
+            style="@style/MainTextViewStyle.Shadow"/>
+
+    </LinearLayout>
+    
+</LinearLayout>

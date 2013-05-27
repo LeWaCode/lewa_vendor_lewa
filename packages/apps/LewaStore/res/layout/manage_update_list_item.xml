@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            style="@style/app_icon_style"
+            android:id="@+id/download_icon"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/icon" >
+        </ImageView>
+
+        <TextView
+             style="@style/textview_big_title_style"
+            android:id="@+id/download_filename"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/download_icon"
+            android:maxLines="1"
+            >
+        </TextView>
+
+        <ProgressBar
+            android:id="@+id/download_progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="50dip"
+            android:layout_height="10px"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/download_filename"
+            android:layout_toRightOf="@+id/download_icon"
+            android:visibility="gone" >
+        </ProgressBar>
+
+        <Button
+            android:id="@+id/btn_update"
+            style="@style/buttonStyle"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/download_filename"
+            android:text="@string/label_update" 
+            android:background="@drawable/btn_update_bg"
+            />
+
+   <!--       <Button
+            android:id="@+id/uninstall"
+            style="@style/buttonStyle"
+            android:layout_width="58dip"
+            android:layout_height="28dip"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/download_filename"
+            android:layout_marginRight="5dip"
+            android:focusable="true"
+            android:text="卸载"
+            android:visibility="gone" 
+            android:background="@drawable/btn_cancel_bg"
+            />
+
+      
+         <TextView
+        android:id="@+id/download_received"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/download_progressBar"
+        android:layout_toRightOf="@id/download_icon" />
+        -->
+
+    </RelativeLayout>
+
+</LinearLayout>

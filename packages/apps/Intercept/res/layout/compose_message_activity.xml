@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/avatar_item"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_tittle_blue"
+        android:orientation="horizontal" >
+
+<!--         <android.widget.QuickContactBadge -->
+<!--             android:id="@+id/avatar" -->
+<!--             android:layout_width="58dip" -->
+<!--             android:layout_height="58dip" -->
+<!--             android:layout_marginBottom="8dip" -->
+<!--             android:layout_marginLeft="5dip" -->
+<!--             android:layout_marginRight="5dip" -->
+<!--             android:layout_marginTop="4dip" -->
+<!--             android:background="@null" /> -->
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="10dip"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffff" />
+            
+        <TextView
+            android:id="@+id/item_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="2dip"
+            android:paddingTop="2dip"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+    <!-- <LinearLayout android:id="@+id/bottom_layout" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignParentBottom="true" -->
+    <!-- android:orientation="vertical"> -->
+
+    <ListView
+        android:id="@+id/history"
+        style="?android:attr/listViewWhiteStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:cacheColorHint="#00000000"
+        android:scrollbars="vertical"
+        />
+<!--         android:drawSelectorOnTop="true" -->
+<!--         android:layout_alignParentTop="true" -->
+<!--         android:layout_above="@id/bottom_layout" -->
+<!--         android:listSelector="@drawable/chat_history_selector" -->
+<!--         android:stackFromBottom="false" -->
+<!--         android:transcriptMode="alwaysScroll" -->
+    <!-- </LinearLayout> -->
+    <!-- android:listSelector="@drawable/chat_history_selector" -->
+    <!-- android:background="@drawable/pim_detail_content_background" -->
+
+</LinearLayout>

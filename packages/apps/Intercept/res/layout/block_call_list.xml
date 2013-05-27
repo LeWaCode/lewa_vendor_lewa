@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@android:drawable/bg_common_background">
+
+    <ListView
+        android:id="@+id/blockcalllist"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:dividerHeight="1.0px"
+        android:fadingEdge="none" />
+    <!-- android:divider="@color/file_list_diver_line_color" -->
+    <!-- <ImageView android:id="@id/android:empty" android:layout_width="fill_parent" -->
+    <!-- android:layout_height="fill_parent" android:text="@string/intercept_blockcalllist_emp" -->
+    <!-- android:gravity="center_vertical|center_horizontal" -->
+    <!-- /> -->
+
+    <LinearLayout
+        android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:id="@android:id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+            <ImageView
+                android:id="@+id/img_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/empty_list" />
+
+            <TextView
+                android:id="@+id/txt_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="30dip"
+                android:paddingRight="30dip"
+                android:text="@string/intercept_blockcalllist_emp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#515151" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_addblock_name"
+            android:background="@android:drawable/item_background_holo_dark"
+            android:shadowColor="#ffffffff"
+            android:shadowDx="1.0"
+            android:shadowDy="-1.2"
+            android:shadowRadius="1.0"/>        
+    </LinearLayout>
+
+</LinearLayout>

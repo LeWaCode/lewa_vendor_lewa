@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--   2012-04-24    |      zhumeiquan   | Create the file for CDMA callforwarding -->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:phone="http://schemas.android.com/apk/res/com.android.phone"
+	android:title="@string/call_forwarding_settings">
+    <com.android.phone.EditPhoneNumberPreference
+		android:key="button_cdma_activation_key"     
+    	android:persistent="false" 
+    	android:singleLine="true" 
+    	android:autoText="false" 
+    	android:title="@string/labelActivation"   	
+    	phone:confirmMode="confirm" />
+     <Preference android:key="button_cdma_deactivation_key"
+    	android:persistent="false" 
+    	android:title="@string/labelDeactivation" />
+</PreferenceScreen>
+

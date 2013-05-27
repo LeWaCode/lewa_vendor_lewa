@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/dialpad_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+    <LinearLayout
+            android:id="@+id/ll_dial_main_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_dial_background">
+        <RelativeLayout
+                android:id="@+id/rl_dial_number_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+            <ImageView
+                    android:id="@+id/btn_dpkb_switch_caller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+            <EditText
+                    android:id="@+id/edt_dpkb_call_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="4dip"
+                    android:gravity="center"
+                    android:paddingLeft="16.0dip"
+                    android:layout_marginRight="16dip"
+                    android:singleLine="true"
+                    android:textSize="28.0sp"
+                    android:textColor="@drawable/text_color_black"
+                    android:inputType="phone"
+                    android:focusable="false"
+                    android:background="@null" />
+            <!--ImageView
+                android:id="@+id/btn_dpkb_backspace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dip"
+                android:layout_marginTop="4dip"
+                android:src="@drawable/ic_backspace_normal"
+                android:background="@drawable/bg_highlight_s" /-->
+        </RelativeLayout>
+        
+        <TableLayout android:id="@+id/dial_num_keys"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0.0dip"
+                android:layout_marginRight="0.0dip"
+                android:layout_marginTop="0dip"
+                android:background="@drawable/bg_dial_num_keys_top">
+            <TableRow 
+            	android:layout_width="match_parent" 
+				android:layout_height="wrap_content"
+				>
+                <ImageView android:id="@+id/key_1"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/bg_dial_num_highlight_s"
+                        android:src="@drawable/dial_num_1_no_vm" />
+                <ImageView android:id="@+id/key_2"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_dial_num_highlight_s"
+                        android:src="@drawable/dial_num_2" />
+                <ImageView android:id="@+id/key_3"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_dial_num_highlight_s"
+                        android:src="@drawable/dial_num_3" />
+                <ImageView android:id="@+id/btn_dpkb_backspace"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_dial_num_highlight_s"
+                        android:src="@drawable/dial_num_delete" />
+            </TableRow>
+            
+            <TableRow 
+            	android:layout_width="match_parent" 
+				android:layout_height="wrap_content"
+            	>
+                <ImageView android:id="@+id/key_4"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_dial_num_highlight_s"
+                        android:src="@drawable/dial_num_4" />
+                <ImageView android:id="@+id/key_5"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_dial_num_highlight_s"
+                        android:src="@drawable/dial_num_5" />
+                <ImageView android:id="@+id/key_6"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_dial_num_highlight_s"
+                        android:src="@drawable/dial_num_6" />
+                <ImageView android:id="@+id/addcontact"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_dial_num_highlight_s"
+                        android:src="@drawable/dial_num_add" />
+            </TableRow>
+            
+            <TableRow 
+            	android:layout_width="match_parent" 
+				android:layout_height="wrap_content"
+				>
+                <ImageView android:id="@+id/key_7"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_dial_num_highlight_s"
+                        android:src="@drawable/dial_num_7" />
+                <ImageView android:id="@+id/key_8"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_dial_num_highlight_s"
+                        android:src="@drawable/dial_num_8" />
+                <ImageView android:id="@+id/key_9"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_dial_num_highlight_s"
+                        android:src="@drawable/dial_num_9" />
+                <ImageView android:id="@+id/joincontact"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_dial_num_highlight_s"
+                        android:src="@drawable/dial_num_ap" />
+            </TableRow>
+            
+            <TableRow 
+            	android:layout_width="match_parent" 
+				android:layout_height="wrap_content"
+				>
+                <ImageView android:id="@+id/key_star"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_dial_num_highlight_s"
+                        android:src="@drawable/dial_num_star" />
+                <ImageView android:id="@+id/key_0"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_dial_num_highlight_s"
+                        android:src="@drawable/dial_num_0" />
+                <ImageView android:id="@+id/key_hash"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_dial_num_highlight_s"
+                        android:src="@drawable/dial_num_pound" />
+                <ImageView android:id="@+id/sendsms"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_dial_num_highlight_s"
+                        android:src="@drawable/dial_num_sms" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+    	android:orientation="vertical"
+    	android:id="@+id/dp_dialpad_bar_top_separator" >
+    	
+	    <ImageView
+	            android:layout_width="match_parent"
+	            android:layout_height="1dip"
+	            android:src="#ffbfbfbf" />
+	    <ImageView
+	            android:layout_width="match_parent"
+	            android:layout_height="1dip"
+	            android:src="#ffffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/dp_dialpad_softkey_bar"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_dial_num_keys_under">
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/btn_dpkb_showhide_keyboard"
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0px"
+                android:layout_marginRight="0.0px"
+                android:background="@drawable/bg_hide_dialpad_s"
+                android:layout_alignParentRight="true" />
+
+        <Button
+                android:id="@+id/btn_dpkb_call"
+                android:layout_width="wrap_content" 
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10.0px"
+                android:layout_marginRight="10.0px"
+                android:layout_marginTop="10.0px"
+                android:layout_marginBottom="10.0px"
+                android:text="@string/dialpad_call"
+                android:textSize="18sp" 
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentLeft="true"
+                android:layout_alignTop="@+id/btn_dpkb_showhide_keyboard"
+                android:layout_alignBottom="@+id/btn_dpkb_showhide_keyboard"      
+                android:layout_toLeftOf="@+id/btn_dpkb_showhide_keyboard"
+                android:background="@drawable/bg_dialpad_call_key_s" />
+      </RelativeLayout>          
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/dp_nodialpad_softkey_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/softkey_bar_height"
+            android:gravity="center_vertical"
+            android:paddingLeft="0dip"
+            android:paddingRight="0dip"
+            android:visibility="gone" 
+            android:background="@drawable/bg_softkey_bar">
+        <ImageView android:id="@+id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_search_normal"
+                android:background="@drawable/bg_highlight_s" />
+        <ImageView android:id="@+id/btn_filter_calllog"
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="0.0dip"
+                android:src="@drawable/ic_filter_calllog"
+                android:background="@drawable/bg_highlight_s" />
+        <ImageView android:id="@+id/btn_dp_open_dialpad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="0.0dip"
+                android:src="@drawable/ic_open_dialpad"
+                android:background="@drawable/bg_highlight_s" />
+        <ImageView
+                android:id="@+id/calllog_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="0.0dip"
+                android:src="@drawable/ic_more"
+                android:background="@drawable/bg_highlight_s"
+                android:visibility="gone" />
+    </LinearLayout>
+    
+    <LinearLayout
+            android:id="@+id/cl_category_softkey_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/softkey_bar_height"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_softkey_bar"
+            android:visibility="gone">
+        <ImageView
+                android:id="@+id/btn_categorize_all_calllog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="0.0dip"
+                android:src="@drawable/ic_log_all_normal"
+                android:background="@drawable/bg_highlight_s" />
+        <ImageView
+                android:id="@+id/btn_categorize_out_calllog"
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="0.0dip"
+                android:src="@drawable/ic_log_out_normal"
+                android:background="@drawable/bg_highlight_s" />
+        <ImageView
+                android:id="@+id/btn_categorize_in_calllog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="0.0dip"
+                android:src="@drawable/ic_log_in_normal"
+                android:background="@drawable/bg_highlight_s" />
+        <ImageView
+                android:id="@+id/btn_categorize_miss_calllog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="0.0dip"
+                android:layout_marginRight="0.0dip"
+                android:src="@drawable/ic_log_missed_normal"
+                android:background="@drawable/bg_highlight_s" />
+    </LinearLayout>
+
+
+</LinearLayout>

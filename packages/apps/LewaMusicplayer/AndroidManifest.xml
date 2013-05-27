@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lewa.player"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="10" />
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application android:icon="@drawable/app_music" android:name=".ExitApplication"
+        android:label="@string/app_name">
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.MediaPlaybackHomeActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustPan"            
+            android:screenOrientation="portrait" >
+            <intent-filter >
+                <action android:name="com.lewa.player.PLAYBACK_VIEWER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <receiver android:name="com.lewa.player.MediaButtonIntentReceiver"
+        		  android:permission="lewa.permission.ACTION_MEDIA_BUTTON">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.CurrentPlaylistActivity"
+            android:theme="@android:style/Theme.NoTitleBar" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.MediaPlaybackActivity"
+            android:theme="@android:style/Theme.Translucent" 
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="content"/>
+                <data android:host="media"/>
+                <data android:mimeType="audio/*"/>
+                <data android:mimeType="application/ogg"/>
+                <data android:mimeType="application/x-ogg"/>
+                <data android:mimeType="application/itunes"/>
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".ui.AudioPreview" android:theme="@style/CustomDialog"
+                android:taskAffinity=""
+                android:excludeFromRecents="true" android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="file"/>
+                <data android:mimeType="audio/*"/>
+                <data android:mimeType="application/ogg"/>
+                <data android:mimeType="application/x-ogg"/>
+                <data android:mimeType="application/itunes"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:mimeType="audio/*"/>
+                <data android:mimeType="application/ogg"/>
+                <data android:mimeType="application/x-ogg"/>
+                <data android:mimeType="application/itunes"/>
+            </intent-filter>
+            <intent-filter
+                android:priority="-1">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="content" />
+                <data android:mimeType="audio/*"/>
+                <data android:mimeType="application/ogg"/>
+                <data android:mimeType="application/x-ogg"/>
+                <data android:mimeType="application/itunes"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.outer.AlbumTrackBrowserActivity"
+            android:theme="@android:style/Theme.NoTitleBar" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+
+            android:name=".ui.LyricActivity"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.outer.MusicMainEntryActivity"
+            android:theme="@android:style/Theme.NoTitleBar" 
+            android:icon="@drawable/app_music" 
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:screenOrientation="portrait">
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MUSIC_PLAYER" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.video.VideoBrowserActivity"
+            android:taskAffinity="android.task.video"
+            android:label="@string/videobrowserlabel"
+            android:icon="@drawable/app_video"
+            android:exported="true"
+            android:theme="@android:style/Theme.Light" >
+            <intent-filter>
+                <action android:name="android.intent.action.PICK" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="vnd.android.cursor.dir/video"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.outer.AlbumBrowserActivity"
+            android:theme="@android:style/Theme.NoTitleBar" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.outer.AllTrackBrowserActivity"
+            android:theme="@android:style/Theme.NoTitleBar" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.outer.ArtistBrowserActivity"
+            android:theme="@android:style/Theme.NoTitleBar" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.outer.GenreBrowserActivity"
+            android:theme="@android:style/Theme.NoTitleBar" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.outer.PlaylistBrowserActivity"
+            android:theme="@android:style/Theme.NoTitleBar" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.outer.PlaylistTrackActivity"
+            android:theme="@android:style/Theme.NoTitleBar" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.artist.ArtistMainEntryActivity"
+            android:theme="@android:style/Theme.NoTitleBar" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.ScanningProgress"
+            android:theme="@android:style/Theme.NoTitleBar" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.outer.PlaylistTrackBrowserActivity"
+            android:theme="@android:style/Theme.NoTitleBar" 
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity 
+        	android:name=".ui.AddPlaylistActivity"
+			android:label="@string/title_playlist_create"
+            android:screenOrientation="portrait">
+			<intent-filter >
+                <action android:name="com.lewa.player.ui.ADD_PLAYLIST" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+		</activity> 
+		
+		<activity 
+			android:name=".ui.AddPlaylistSongsActivity"
+			android:label="@string/title_add_songs"
+            android:screenOrientation="portrait">
+		</activity> 
+		
+		<activity 
+			android:name=".ui.SearchLocalSongsActivity"
+        	android:label="@string/title_search_songs" 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        	
+		<activity android:name=".MusicSetting"
+				  android:label="@string/musicsettings"				  
+            	  android:screenOrientation="portrait">
+		</activity> 
+		<activity
+            android:name=".ui.MusicFolderActivity"
+            android:label="@string/select_folder"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:screenOrientation="portrait"  >
+  		    
+        </activity>
+		<activity
+            android:name=".ui.MusicEQActivity"
+            android:theme="@android:style/Theme.Light"
+            android:label="@string/eq_setting"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.outer.MusicAboutActivity"
+            android:label="@string/about_title"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light" />
+        <activity
+            android:name=".ui.ModifyTrackID3Activity"
+           
+            android:theme="@style/ID3Dialog"
+            android:label="@string/id3_lable"
+            android:screenOrientation="portrait"
+             />
+
+        <!-- Begin, added by zhumeiquan, 20120228 -->
+		<activity android:name=".MusicPicker"
+                android:label="@string/music_picker_title" 
+                android:exported="true" 
+                android:theme="@android:style/Theme.Light">
+            <!-- First way to invoke us: someone asks to get content of
+                 any of the audio types we support. -->
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.OPENABLE" />
+                <data android:mimeType="audio/*"/>
+                <data android:mimeType="application/ogg"/>
+                <data android:mimeType="application/x-ogg"/>
+                <data android:mimeType="application/x-flac"/>
+            </intent-filter>
+            <!-- Second way to invoke us: someone asks to pick an item from
+                 some media Uri. -->
+            <intent-filter>
+                <action android:name="android.intent.action.PICK" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.OPENABLE" />
+                <data android:mimeType="vnd.android.cursor.dir/audio"/>
+            </intent-filter>
+        </activity>
+        <!-- End -->            
+
+        <service android:name=".MediaPlaybackService" >
+            <intent-filter >
+                <action android:name="com.lewa.player.aidl.IMediaPlaybackService" />
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:enabled="true"
+			android:name=".EqService">
+			<intent-filter>
+				<action android:name="com.lewa.player.helper.EqService"/>
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</service>
+		
+		<receiver android:name=".ui.MediaAppWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_info" />
+        </receiver>
+		<meta-data android:name="ga-tracking-key" android:value="UA-23917437-3"></meta-data>
+    </application>
+	<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"></uses-permission>
+</manifest>

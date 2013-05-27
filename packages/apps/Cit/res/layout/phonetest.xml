@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/phonetypetitle" />
+
+    <TextView
+        android:id="@+id/phone_type"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/phonetype"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dataactivitytitle"
+        />
+
+    <TextView
+        android:id="@+id/data_activity"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dataactivity" 
+        android:textStyle="bold|italic"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/datastatetitle" />
+
+    <TextView
+        android:id="@+id/data_state"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/datastate" 
+        android:textStyle="bold|italic"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/networkcountrytitle" />
+
+    <TextView
+        android:id="@+id/network_country"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/networkcountry" 
+        android:textStyle="bold|italic"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/networkoperatorIdtitle" />
+
+    <TextView
+        android:id="@+id/network_operator_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/networkoperatorId" 
+        android:textStyle="bold|italic"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/networknametitle" />
+
+    <TextView
+        android:id="@+id/network_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/networkname" 
+        android:textStyle="bold|italic"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/networktypetitle" />
+
+    <TextView
+        android:id="@+id/network_type"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/networktype" 
+        android:textStyle="bold|italic"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simstatetitle" />
+
+    <TextView
+        android:id="@+id/sim_state"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simstate" 
+        android:textStyle="bold|italic"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simcountrytitle" />
+
+    <TextView
+        android:id="@+id/sim_country"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simcountry" 
+        android:textStyle="bold|italic"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simoperatorcodetitle" />
+
+    <TextView
+        android:id="@+id/sim_operator_code"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simoperatorcode" 
+        android:textStyle="bold|italic"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simserialtitle" />
+
+    <TextView
+        android:id="@+id/sim_operator_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simoperatorname" 
+        android:textStyle="bold|italic"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simserialtitle" />
+
+    <TextView
+        android:id="@+id/sim_serial"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simserial" 
+        android:textStyle="bold|italic"/>
+
+    <TextView
+        android:id="@+id/phone_state"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/phonestate" 
+        android:textStyle="bold|italic"/>
+</LinearLayout>
+</ScrollView>

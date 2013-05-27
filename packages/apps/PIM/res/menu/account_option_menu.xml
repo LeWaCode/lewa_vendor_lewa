@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+	     android:id="@+id/menu_switch_account"
+	     android:icon="@drawable/ic_menu_change_account"
+	     android:title="@string/menu_switch_account" />
+	
+	 <item
+	     android:id="@+id/menu_change_passwd"
+	     android:icon="@drawable/ic_menu_change_passwd"
+	     android:title="@string/menu_change_passwd" /> 
+</menu>

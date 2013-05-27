@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, AndroidFcDemoActivity!</string>
+    <string name="app_name">Feedback</string>
+   
+    <string name="log_layout_feedback_title">Feedback</string>
+    <string name="fc_window_log_title">Error log:</string>
+    <string name="fc_window_reback">Return</string>
+    
+    <string name="main_layout_feedback_title">Feedback</string>
+    <string name="main_layout_system_log">error log</string>
+    <string name="main_layout_text_default">Get problem again?Can\'t stand this,wanna say someting...</string>
+    <string name="main_layout_send">Send</string>
+    <string name="main_layout_len_default">0</string>
+    <string name="main_layout_len_KB">KB</string>
+    
+    <string name="result_layout_feedback_title">Feedback</string>
+    <string name="result_layout_thanks1">Thank you for your support,</string>
+    <string name="result_layout_thanks2">We will keep trying!</string>
+    <string name="result_layout_thanks3">You are witness of the growing of lewa.</string>
+    <string name="result_layout_continue_feedback">Continue</string>
+    <string name="result_layout_finish">Finish</string>
+    
+    <string name="fc_sending_title">Waiting...</string>
+    <string name="fc_sending_message">Error is sending...</string>
+    <string name="fc_sending_fail_title">Sending failed!</string>
+   	<string name="fc_sending_fail_button">Ok</string>
+   	<string name="fc_sending_fail_message">Network error!</string>
+   	<string name="fc_sending_fail_message0">URL error!</string>
+   	<string name="fc_sending_fail_message1">Unproper request!</string>
+   	<string name="fc_sending_fail_message2">Server error!</string>
+   	<string name="fc_sending_fail_message3">Sending empty message is not allowed!</string>
+   	<string name="fc_sending_fail_message4">Fail to connect server!</string>
+   	<string name="fc_sending_fail_message5">Server is busy,please send it later!</string>
+   	
+   	<string name="fc_sending_process_connect">Connect to server...</string>
+   	<string name="fc_sending_process_send_msg">Sending message...</string>
+   	<string name="fc_sending_process_send_file">Sending files...</string>
+   	<string name="fc_sending_process_close">Receiving data...</string>
+   	
+   	<string name="fc_log_result_title">Sorry!</string>
+   	<string name="fc_log_result_message">Programe error!</string>
+   	<string name="fc_log_result_button">Ok</string>
+    
+</resources>

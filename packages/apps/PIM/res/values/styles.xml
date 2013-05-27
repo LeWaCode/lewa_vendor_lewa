@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DialtactsTheme" parent="@android:Theme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="ContactsSearchTheme" parent="@android:Theme.Translucent.NoTitleBar">
+        <item name="android:windowAnimationStyle">@style/ContactsSearchAnimation</item>
+    </style>
+
+    <style name="MinusButton">
+        <item name="android:background">@drawable/btn_circle</item>
+        <item name="android:src">@drawable/ic_btn_round_minus</item>
+        <item name="android:contentDescription">@string/description_minus_button</item>
+    </style>
+
+    <style name="PlusButton">
+        <item name="android:background">@drawable/btn_circle</item>
+        <item name="android:src">@drawable/ic_btn_round_plus</item>
+        <item name="android:contentDescription">@string/description_plus_button</item>
+    </style>
+
+    <style name="MoreButton">
+        <item name="android:background">@drawable/btn_circle</item>
+        <item name="android:src">@drawable/ic_btn_round_more</item>
+    </style>
+
+    <style name="LessButton">
+        <item name="android:background">@drawable/btn_circle</item>
+        <item name="android:src">@drawable/ic_btn_round_less</item>
+    </style>
+
+    <style name="TallTitleBarTheme" parent="android:Theme.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="BackgroundOnly">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowNoDisplay">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="FullyTranslucent" parent="android:Theme.Translucent.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="FullyTranslucent.QuickContact">
+        <!-- This is a hack because we want to be able to animate away the
+             QuickContact window, and we close its containing activity at the
+             same time.  So put in a dummy animation so this guy sticks around
+             while the fast track window is animating. -->
+        <item name="android:windowAnimationStyle">@style/DummyAnimation</item>
+    </style>
+
+    <style name="QuickContact">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- TODO: create our own animation style in framework -->
+        <!--
+        <item name="android:windowAnimationStyle">@*android:style/Animation.ZoomButtons</item>
+        -->
+    </style>
+
+    <style name="QuickContactAboveAnimation">
+        <item name="android:windowEnterAnimation">@anim/quickcontact_above_enter</item>
+        <item name="android:windowExitAnimation">@anim/quickcontact_above_exit</item>
+    </style>
+
+    <style name="QuickContactBelowAnimation">
+        <item name="android:windowEnterAnimation">@anim/quickcontact_below_enter</item>
+        <item name="android:windowExitAnimation">@anim/quickcontact_below_exit</item>
+    </style>
+
+    <style name="ContactsSearchAnimation">
+        <item name="android:windowEnterAnimation">@anim/search_bar_enter</item>
+        <item name="android:windowExitAnimation">@anim/search_bar_exit</item>
+    </style>
+
+    <style name="DummyAnimation">
+        <item name="android:windowExitAnimation">@anim/dummy_animation</item>
+    </style>
+    <style name="TextAppearance">
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:textColorHighlight">#FFFF9200</item>
+        <item name="android:textColorHint">?android:textColorHint</item>
+        <item name="android:textColorLink">#5C5CFF</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextAppearance.SearchResult">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">?android:textColorPrimaryInverse</item>
+        <item name="android:textColorHint">?android:textColorHintInverse</item>
+    </style>
+  
+    <style name="TextAppearance.SearchResult.Title">
+        <item name="android:textSize">16sp</item>
+    </style>
+  
+    <style name="TextAppearance.SearchResult.Subtitle">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">?android:textColorSecondaryInverse</item>
+    </style>
+    
+    <style name="MainTextViewStyle">
+        <item name="android:textColor">@color/main_text_color</item>
+    </style>
+    
+    <style name="MainTextViewStyle.Shadow">
+    	<item name="android:shadowColor">#ffffffff</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.2</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    
+     <style name="Title_shadow_style">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:shadowColor">#ff18496d</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">-1.2</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+</resources>

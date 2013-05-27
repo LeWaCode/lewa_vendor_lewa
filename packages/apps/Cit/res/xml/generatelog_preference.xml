@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/logcat">
+    <Preference
+        android:key="to_sdcard"
+        android:title="@string/out_to_sdcard"
+        android:summary="@string/sum_out_to_sdcard">
+    </Preference>
+    <Preference
+        android:key="to_data"
+        android:title="@string/out_to_data"
+        android:summary="@string/sum_out_to_data">
+    </Preference>
+</PreferenceScreen>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : cleanitem.xml
+    Created on : 2012年6月8日, 上午10:13
+    Author     : chenliang
+    Description:
+        Purpose of the document follows.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:minHeight="42.0dip"
+    android:orientation="vertical" 
+    android:id="@+id/cleanItemLayout"
+    android:paddingLeft="15dip"
+    android:paddingTop="5dip"
+    >
+    <TextView android:layout_width="fill_parent" android:id="@+id/cleanname"
+            android:layout_height="wrap_content" 
+            android:textSize="18dip"
+            android:ellipsize="start"
+            android:singleLine="true"
+            android:textColor="@color/file_list_first_line_name_color"/>
+    <TextView android:layout_width="fill_parent" android:id="@+id/cleanpath"
+            android:layout_height="wrap_content" 
+            android:textColor="@color/file_list_second_line_color" 
+            android:singleLine="true"
+            android:ellipsize="start"
+            android:textSize="13dip"/>
+</LinearLayout>

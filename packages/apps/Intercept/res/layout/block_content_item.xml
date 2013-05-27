@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingLeft="10.0dip"
+        android:orientation="vertical" >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+                <TextView
+                    android:id="@+id/titleName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:singleLine="true"
+                    android:textColor="#ff3b3b3b" />
+                <TextView
+                    android:id="@+id/blockCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:paddingLeft="5dip"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#808080" />
+         </LinearLayout>
+         
+            <RelativeLayout 
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="10.0dip"
+                >
+
+                <TextView
+                     android:id="@+id/summaryDate"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentRight="true"
+                     android:textAppearance="?android:attr/textAppearanceSmall"
+                     android:paddingLeft="5dip"
+                     android:textColor="#808080" />
+                     
+                <TextView
+                     android:id="@+id/summaryCause"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_toLeftOf="@+id/summaryDate" 
+                     android:textColor="#FFed1c24"/>
+                     
+                <TextView
+                     android:id="@+id/summaryName"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentLeft="true"
+                     android:layout_toLeftOf="@+id/summaryCause"
+                     android:singleLine="true"
+                     android:textAppearance="?android:attr/textAppearanceSmall"
+                     android:ellipsize="end"
+                     android:textColor="#808080" />
+                     
+           </RelativeLayout>
+            
+    </LinearLayout>
+
+</RelativeLayout>

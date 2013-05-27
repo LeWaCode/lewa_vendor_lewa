@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_ip_call_settings" android:title="@string/ip_call_settings" android:icon="@drawable/ic_menu_ip" />
+    <item android:id="@+id/menu_calllog_settings" android:title="@string/calllog_settings" android:icon="@drawable/ic_menu_calllog_settings" />
+    <item android:id="@+id/menu_delete_log" android:title="@string/clear_call_log" android:icon="@drawable/ic_menu_delete" />
+</menu>

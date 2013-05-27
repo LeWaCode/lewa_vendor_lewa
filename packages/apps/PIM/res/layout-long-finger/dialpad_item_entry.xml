@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:focusable="false"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:paddingLeft="4dip"
+    >
+    
+    <android.widget.QuickContactBadge android:id="@+id/img_dpi_thumnail"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"            
+        style="@*android:style/Widget.QuickContactBadge.WindowLarge"
+
+    />
+    
+    <LinearLayout
+        android:id="@+id/dpi_type_time_container"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+        
+        <ImageView
+            android:id="@+id/img_dpi_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity = "right"
+            android:layout_marginRight="5.0dip"/>
+        
+        <TextView
+            android:id="@+id/txt_dpi_time"
+            android:textSize="14.0sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2.0dip"
+            android:layout_marginRight="2.0dip" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/dpi_type_time_container"
+        android:layout_toRightOf="@+id/img_dpi_thumnail"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true">
+        
+        <TextView
+            android:id="@+id/txt_dpi_displayname"
+    	    android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2.0dip"
+            android:layout_marginBottom="7dip"
+	    android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:singleLine="true"/>
+            
+        <TextView
+            android:id="@+id/txt_dpi_displaynumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2.0dip"
+            android:layout_marginBottom="2dip"
+       	    android:ellipsize="marquee"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:singleLine="true"/>
+    </LinearLayout>
+</RelativeLayout>

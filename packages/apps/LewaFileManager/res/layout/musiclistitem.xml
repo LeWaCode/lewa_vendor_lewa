@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:minHeight="66.0dip"
+    android:orientation="horizontal" 
+    >
+    <RelativeLayout android:id="@id/image"
+        android:layout_width="36dip"
+        android:layout_height="36dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15.0dip"
+        android:layout_centerVertical="true"
+    >
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/fileIcon"
+            android:layout_gravity="center"
+        />
+    </RelativeLayout>
+    <CheckBox
+        android:id="@id/handleCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="right"
+        android:focusable="false" />
+    <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:layout_toLeftOf="@id/handleCheckbox"
+        android:layout_toRightOf="@id/image" 
+        android:orientation="vertical"
+        android:layout_marginTop="9.0dip"
+        android:layout_marginLeft="11.0dip"
+        >
+        <LinearLayout android:id="@id/upperlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        >
+            <TextView
+            android:id="@id/fileNameSubFileNum"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="middle"
+            android:textSize="19dip"
+            android:textColor="@color/file_list_first_line_name_color" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upperlayout"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/file_list_second_line_color"
+            android:ellipsize="end"
+            android:textSize="14dip" 
+        />
+<!--            android:maxWidth="105dip"
+    <TextView
+        android:id="@+id/genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_marginLeft="22dip"
+        android:visibility="gone"
+        android:ellipsize="start"
+        android:textColor="@color/file_list_second_line_color"
+        android:textSize="14dip" />--> 
+            <TextView
+                    android:id="@+id/album"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="3dip"
+                    android:ellipsize="end"
+                    android:visibility="gone"
+                    android:singleLine="true"
+                    android:textColor="@color/file_list_second_line_color"
+                    android:textSize="13dip" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

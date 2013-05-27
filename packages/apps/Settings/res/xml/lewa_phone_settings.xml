@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2008 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <!-- Date & Time Settings -->
+	<com.android.settings.IconPreferenceScreen 
+	    android:title="@string/date_and_time_settings_title"
+	    settings:icon="@drawable/ic_settings_datetime">
+	    <intent android:action="android.intent.action.MAIN"
+	        android:targetPackage="com.android.settings"
+	        android:targetClass="com.android.settings.DateTimeSettings" />
+	</com.android.settings.IconPreferenceScreen>
+	
+	<!-- Language Settings -->
+	<com.android.settings.IconPreferenceScreen 
+	    android:title="@string/language_settings"
+	    settings:icon="@drawable/ic_settings_language">
+	    <intent android:action="android.intent.action.MAIN"
+	        android:targetPackage="com.android.settings"
+	        android:targetClass="com.android.settings.LanguageSettings" />
+	</com.android.settings.IconPreferenceScreen>
+	
+	<!-- Voice input & output Settings-->
+	<!--
+	<com.android.settings.IconPreferenceScreen 
+	    android:title="@string/voice_input_output_settings"
+	    settings:icon="@drawable/ic_settings_voice">
+	    <intent android:action="android.intent.action.MAIN"
+	        android:targetPackage="com.android.settings"
+	        android:targetClass="com.android.settings.VoiceInputOutputSettings" />
+	</com.android.settings.IconPreferenceScreen>	
+	-->
+    <PreferenceCategory>
+    <!-- Performance settings-->	
+    <com.android.settings.IconPreferenceScreen 
+	    android:title="@string/performance_settings_title"
+	    settings:icon="@drawable/ic_settings_performance">
+	    <intent android:action="android.intent.action.MAIN"
+	        android:targetPackage="com.android.settings"
+	        android:targetClass="com.android.settings.LewaPerformanceSettings" />
+	</com.android.settings.IconPreferenceScreen>
+	
+    <!-- Keypad settings -->
+	<com.android.settings.IconPreferenceScreen 
+	    android:title="@string/keypad_settings_title"
+	    settings:icon="@drawable/ic_settings_keypad">
+	    <intent android:action="android.intent.action.MAIN"
+	        android:targetPackage="com.android.settings"
+	        android:targetClass="com.android.settings.LewaKeypadSettings" />
+	</com.android.settings.IconPreferenceScreen>
+	
+	<!-- Storage settings-->
+	<com.android.settings.IconPreferenceScreen 
+	    android:title="@string/storage_settings"
+	    settings:icon="@drawable/ic_settings_storage">
+	    <intent android:action="android.intent.action.MAIN"
+	        android:targetPackage="com.android.settings"
+	        android:targetClass="com.android.settings.deviceinfo.Memory" />
+	</com.android.settings.IconPreferenceScreen>
+
+	<!-- Accessibility feedback settings-->
+	<com.android.settings.IconPreferenceScreen 
+	    android:title="@string/accessibility_settings"
+	    settings:icon="@drawable/ic_settings_accessibility">
+	    <intent android:action="android.intent.action.MAIN"
+	        android:targetPackage="com.android.settings"
+	        android:targetClass="com.android.settings.AccessibilitySettings" />
+	</com.android.settings.IconPreferenceScreen>
+    </PreferenceCategory>
+
+    <PreferenceCategory>	
+	<!-- PowerSaving settings -->
+	<!--
+    <com.android.settings.IconPreferenceScreen  
+        settings:icon="@drawable/ic_settings_powersaving"
+        android:title="@string/power_saving_title">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.lewa.spm"
+            android:targetClass="com.lewa.spm.SPMActivity" />
+    </com.android.settings.IconPreferenceScreen>	
+	-->
+
+	<!-- Data monitor settings -->    
+    <com.android.settings.IconPreferenceScreen
+        settings:icon="@drawable/ic_settings_datamonitor"
+        android:title="@string/data_monitor_title">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.systemui"
+            android:targetClass="com.android.systemui.statusbar.DatamonitorMainActivity" />
+    </com.android.settings.IconPreferenceScreen>
+
+    <!-- Phone & SMS block settings -->
+    <com.android.settings.IconPreferenceScreen
+        android:key="block_settings_key"
+        settings:icon="@drawable/ic_settings_blocks"
+        android:title="@string/block_settings_title">
+    </com.android.settings.IconPreferenceScreen>  
+    </PreferenceCategory>	
+
+    <PreferenceCategory>
+    <!-- Version update -->    
+	<com.android.settings.IconPreferenceScreen 
+	    android:title="@string/version_update_title"
+	    settings:icon="@drawable/ic_settings_version">
+	    <intent android:action="android.intent.action.MAIN"
+	        android:targetPackage="com.lewa.updater"
+	        android:targetClass="com.lewa.updater.UpdaterActivity" />
+	</com.android.settings.IconPreferenceScreen>
+
+    <!-- Feedback -->
+        <!--<com.android.settings.IconPreferenceScreen  -->
+        <!-- 	    android:title="@string/feedback_settings_title" -->
+        <!-- 	    settings:icon="@drawable/ic_settings_feedback"> -->
+        <!-- 	    <intent android:action="android.intent.action.MAIN" -->
+        <!-- 	        android:targetPackage="com.lewa.feedback" -->
+        <!-- 	        android:targetClass="com.lewa.feedback.AndroidFeedbackActivity" /> -->
+        <!--</com.android.settings.IconPreferenceScreen>	 -->
+
+	<!-- About Device settings-->
+	<com.android.settings.IconPreferenceScreen 
+	    android:title="@string/about_settings"
+	    settings:icon="@drawable/ic_settings_about">
+	    <intent android:action="android.intent.action.MAIN"
+	        android:targetPackage="com.android.settings"
+	        android:targetClass="com.android.settings.DeviceInfoSettings" />
+	</com.android.settings.IconPreferenceScreen>    
+
+	<!-- Restore settings -->
+	<com.android.settings.IconPreferenceScreen
+        android:title="@string/master_clear_title"
+        settings:icon="@drawable/ic_settings_reset">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.settings"
+            android:targetClass="com.android.settings.MasterClear" />
+    </com.android.settings.IconPreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

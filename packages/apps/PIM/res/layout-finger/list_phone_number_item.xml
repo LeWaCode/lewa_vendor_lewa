@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <com.lewa.PIM.contacts.ui.ContactHorDriver
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="?android:attr/listPreferredItemHeight">
+        <com.lewa.PIM.contacts.ui.SwitcherHorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="79"
+                android:id="@+id/horizontal_scroll_view"
+                android:scrollbars="none"
+                android:layout_centerVertical="true" 
+                android:orientation="horizontal"
+                android:paddingLeft="5dip"
+                android:paddingTop="3dip"
+                android:paddingBottom="3dip"
+                android:visibility="gone"
+                >
+
+            <LinearLayout android:id="@+id/phone1_layout" 
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                >
+                <LinearLayout android:id="@+id/switcher_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFC000">
+                    <ImageView android:id="@+id/call1_btn"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/icon_dial" />
+                    <ImageView android:id="@+id/message1_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_sms"/>
+                    <ImageView android:id="@+id/card1_dot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/one"/>                
+                </LinearLayout>
+
+                <!--
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                    <RelativeLayout android:id="@+id/details"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dip" >
+                        <TextView android:id="@+id/phoneNo" 
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/card1_dot"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/itemview_label"/>
+                        <ImageView android:id="@+id/primary_icon" 
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dip"
+                                android:layout_toRightOf="@id/phoneNo"
+                                android:layout_marginLeft="10dip"
+                                android:src="@drawable/primary"/>
+                         <TextView android:id="@+id/phoneModel"  
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/phoneNo"
+                                android:layout_toRightOf="@id/card1_dot"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="#ff007aff" />
+                         <TextView android:id="@+id/belongs"  
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/phoneNo"
+                                android:layout_marginLeft="8dip"
+                                android:layout_toRightOf="@id/phoneModel"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="#ff007aff"/>
+                    </RelativeLayout>
+                
+                    <LinearLayout android:id="@+id/switcher_right" 
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_toRightOf="@id/details">
+                        <ImageView android:id="@+id/card2_dot"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/two"
+                                android:visibility="gone"/>
+                        <View
+                                android:layout_width="1dip"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dip"
+                                android:layout_marginRight="4dip"
+                                android:layout_marginTop="8dip"
+                                android:layout_marginBottom="8dip"
+                                android:background="@drawable/line_separator" />
+                        <ImageView android:id="@+id/call2_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:scaleType="center"
+                                android:src="@drawable/ic_shortcut_reply_call"
+                                android:background="@drawable/bg_highlight_s" />
+                        <View
+                                android:layout_width="1dip"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dip"
+                                android:layout_marginRight="4dip"
+                                android:layout_marginTop="8dip"
+                                android:layout_marginBottom="8dip"
+                                android:background="@drawable/line_separator" />
+                        <ImageView android:id="@+id/message2_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:scaleType="center"
+                                android:src="@drawable/ic_shortcut_reply_message"
+                                android:background="@drawable/bg_highlight_s" />
+                    </LinearLayout>
+                </RelativeLayout>
+                -->
+            </LinearLayout>
+        </com.lewa.PIM.contacts.ui.SwitcherHorizontalScrollView>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            <RelativeLayout android:id="@+id/details"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/switcher_right"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dip">
+                
+                 <ImageView android:id="@+id/contact_yl_number_state"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:background="@drawable/icon_contact_header_offline" 						
+						android:layout_marginTop="8dip"
+						android:gravity="center"
+						android:layout_gravity="center"/>
+                 	
+                <TextView android:id="@+id/phoneNo" 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/list_item_gap_between_yl_image_right"
+                        android:layout_toRightOf="@id/contact_yl_number_state"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/itemview_label"/>
+                
+                <ImageView android:id="@+id/primary_icon" 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dip"
+                        android:layout_toRightOf="@id/phoneNo"
+                        android:layout_marginLeft="10dip"
+                        android:src="@drawable/primary"/>
+                
+                 <TextView android:id="@+id/phoneModel"  
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/list_item_gap_between_yl_image_right"
+                        android:layout_below="@id/phoneNo"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#ff007aff" />
+                 
+                 <TextView android:id="@+id/belongs"  
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/phoneNo"
+                        android:layout_marginLeft="@dimen/list_item_gap_between_yl_image_right"
+                        android:layout_toRightOf="@id/phoneModel"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/belongs_text"
+                        android:maxLines="2"/>
+            </RelativeLayout>
+        
+            <LinearLayout android:id="@+id/switcher_right" 
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="8dip">
+                <ImageView android:id="@+id/card2_dot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/two"
+                        android:visibility="gone"/>
+                <!-- <View
+                        android:layout_width="1dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dip"
+                        android:layout_marginRight="4dip"
+                        android:layout_marginTop="16dip"
+                        android:layout_marginBottom="16dip"
+                        android:background="@drawable/line_separator" /> -->
+                <ImageView android:id="@+id/call2_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_shortcut_reply_call"
+                        android:background="@drawable/bg_highlight_s" />
+                <View
+                        android:layout_width="2dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dip"
+                        android:layout_marginRight="8dip"
+                        android:layout_marginTop="16dip"
+                        android:layout_marginBottom="16dip"
+                        android:background="@drawable/ic_phoneline_separator" />
+                <ImageView android:id="@+id/message2_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_shortcut_reply_message"
+                        android:background="@drawable/bg_highlight_s" />
+            </LinearLayout>
+        </RelativeLayout>
+    </com.lewa.PIM.contacts.ui.ContactHorDriver>
+
+    <!-- <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-2dip"
+            android:orientation="vertical">
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#ffd8d8d8" />
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#ffffffff" />
+    </LinearLayout> -->
+</LinearLayout>

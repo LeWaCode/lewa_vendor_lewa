@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/spm_change_mode_by_time_title" >
+
+        <CheckBoxPreference
+            android:key="enable_time_mode_pref"
+            android:summary="@string/spm_change_mode_by_time_summary"
+            android:title="@string/spm_change_mode_by_time_title" 
+            >
+        </CheckBoxPreference>
+
+        <Preference
+            android:key="start_time_pref"            
+            android:title="@string/spm_change_mode_by_time_from_title" 
+            android:summary="@string/spm_change_mode_by_time_from_summary"
+            />
+
+        <Preference
+            android:key="stop_time_pref"            
+            android:title="@string/spm_change_mode_by_time_to_title" 
+            android:summary="@string/spm_change_mode_by_time_to_summary"
+            />
+        
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

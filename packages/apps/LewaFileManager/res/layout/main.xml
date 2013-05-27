@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" 
+        android:gravity="center_horizontal"
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent"
+        android:background="@android:color/white"
+        >
+    <RelativeLayout
+            android:id="@+id/titlebar"
+            android:layout_width="fill_parent"
+            android:layout_height="47dip"
+            android:background="@android:drawable/title_bar" 
+            >
+        <TextView android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dip"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:text="@string/desktop_name"
+            android:layout_marginLeft="11dip"
+            android:textColor="@color/default_text_color"
+            >
+        </TextView>
+        <ImageView
+            android:id="@+id/searchBtn"
+            android:layout_marginRight="15dip"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/search"
+            />
+            <include layout="@layout/v_seprator" android:layout_width="wrap_content" android:id="@+id/searchBtnLeftLine"
+            android:layout_height="fill_parent" android:layout_marginTop="10dip" android:layout_marginBottom="10dip" android:layout_toLeftOf="@id/searchBtn" android:layout_marginRight="10dip"/>
+        
+    </RelativeLayout>
+    <com.lewa.os.ui.ViewPagerIndicator 
+            android:id="@+id/indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="30dip"
+            android:gravity="center_vertical"
+            android:background="@drawable/lewa_title_bar"
+            />
+
+    <android.support.lewa.view.LewaPagerView
+            android:id="@+id/pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            />
+</LinearLayout>

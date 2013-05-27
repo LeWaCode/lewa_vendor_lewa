@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+   
+   <!-- 
+    <TextView
+        android:id="@+id/applistCategory"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textview_category_first"
+        android:textColor="@drawable/group_text_color"
+        android:textSize="18sp"
+        android:layout_marginLeft="16dip"
+        />
+	-->
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#D9D9D9" >
+    </View>
+    
+	<RelativeLayout 
+	        android:id="@+id/loadingLayout"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"	        
+	        android:layout_gravity="center"
+	        android:layout_marginTop="5dip">
+	        
+	        <ProgressBar 
+	            android:id="@+id/loadingProgressBar"    
+	            style="?android:attr/progressBarStyleSmall" 
+	            android:layout_width="wrap_content"   
+	            android:layout_height="wrap_content"
+	            android:paddingTop="3dip"
+	            android:paddingRight="5dip"
+	            android:layout_alignParentLeft="true"
+	        /> 
+	        <TextView 
+	            android:id="@+id/loadingTextView"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textAppearance="?android:attr/textAppearanceMedium"
+	            android:textColor="#515151"
+	            android:layout_toRightOf="@id/loadingProgressBar"
+	            android:text="@string/loadingTextView"
+	           />
+	</RelativeLayout>
+
+    <ListView
+        android:id="@+id/appListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@null"
+        android:fastScrollEnabled="true"
+        android:listSelector="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent" 
+        android:visibility="gone"
+        >
+    </ListView>
+</LinearLayout>

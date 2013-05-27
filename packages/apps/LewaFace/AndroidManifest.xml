@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.lewa.face"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="10" />
+
+    <uses-permission android:name="android.permission.REBOOT"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> 
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+	<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <application android:icon="@drawable/icon" android:label="@string/app_name"
+        android:name="com.lewa.face.app.ThemeApplication">
+        
+        <activity android:name="com.lewa.face.PkgMain"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar">   
+                  
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.lewa.face.local.ThemePkg"/>
+        <activity android:name="com.lewa.face.online.ThemePkg" />
+                  
+        
+        <activity android:name="com.lewa.face.LockScreenStyleMain"
+                  android:screenOrientation="portrait"   
+                  android:theme="@android:style/Theme.Light.NoTitleBar">
+            <intent-filter>
+                <action android:name="com.lewa.face.LockscreenStyle" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.lewa.face.local.LockScreenStyle"/>
+        <activity android:name="com.lewa.face.online.LockScreenStyle"/>
+        <activity
+            android:name="com.lewa.face.NotifyMain"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+            <intent-filter >
+                <action android:name="com.lewa.face.Notify" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.lewa.face.local.Notify" />
+        <!-- <activity android:name="com.lewa.face.online.LockScreenStyle"/> -->
+        <activity
+            android:name="com.lewa.face.PimMain"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+            <intent-filter >
+                <action android:name="com.lewa.face.pim" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.lewa.face.local.Pim" />
+        <!-- <activity android:name="com.lewa.face.online.Pim"/> -->
+        <activity
+            android:name="com.lewa.face.PhoneMain"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+            <intent-filter >
+                <action android:name="com.lewa.face.phone" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.lewa.face.local.Phone" />
+        <!-- <activity android:name="com.lewa.face.online.Pim"/> -->
+        <activity
+            android:name="com.lewa.face.SettingMain"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+            <intent-filter >
+                <action android:name="com.lewa.face.setting" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.lewa.face.local.Setting" />
+        <!-- <activity android:name="com.lewa.face.online.Pim"/> -->
+        <activity android:name="com.lewa.face.LockScreenWallPaperMain"
+                  android:screenOrientation="portrait"   
+                  android:theme="@android:style/Theme.Light.NoTitleBar">
+            <intent-filter>
+                <action android:name="com.lewa.face.LockscreenWallPaper" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.lewa.face.local.LockScreenWallPaper"/>
+        <activity android:name="com.lewa.face.online.LockScreenWallPaper"/>
+                  
+        <activity android:name="com.lewa.face.WallPaperMain" 
+                  android:screenOrientation="portrait"  
+                  android:theme="@android:style/Theme.Light.NoTitleBar">
+            <intent-filter>
+                <action android:name="com.lewa.face.WallPaper" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.lewa.face.local.WallPaper"/>
+        <activity android:name="com.lewa.face.online.WallPaper"/>
+        
+        <activity android:name="com.lewa.face.IconsMain"
+                  android:screenOrientation="portrait"   
+                  android:theme="@android:style/Theme.Light.NoTitleBar">
+            <intent-filter>
+                <action android:name="com.lewa.face.IconStyle" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.lewa.face.local.IconsStyle"/>
+        <activity android:name="com.lewa.face.online.IconsStyle"/>
+        
+        <activity android:name="com.lewa.face.LauncherMain"
+                  android:screenOrientation="portrait"   
+                  android:theme="@android:style/Theme.Light.NoTitleBar">
+            <intent-filter>
+                <action android:name="com.lewa.face.LauncherStyle" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.lewa.face.local.LauncherStyle"/>
+        <activity android:name="com.lewa.face.online.LauncherStyle"/>
+        
+        <activity android:name="com.lewa.face.BootMain"
+                  android:screenOrientation="portrait"   
+                  android:theme="@android:style/Theme.Light.NoTitleBar">
+            <intent-filter>
+                <action android:name="com.lewa.face.BootAnimation" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.lewa.face.local.BootAnimation"/>
+        <activity android:name="com.lewa.face.online.BootAnimation"/>
+        
+        <activity android:name="com.lewa.face.FontMain"
+                  android:screenOrientation="portrait"   
+                  android:theme="@android:style/Theme.Light.NoTitleBar">
+            <intent-filter>
+                <action android:name="com.lewa.face.Font" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.lewa.face.local.Font"/>
+        <activity android:name="com.lewa.face.online.Font"/>          
+        
+        <activity android:name="com.lewa.face.preview.slide.local.ThemePkg"
+            android:screenOrientation="portrait">
+            
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            
+            <intent-filter>
+                <action android:name="com.lewa.lwt.action" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.lewa.face.preview.slide.local.WallPaper"
+            android:screenOrientation="portrait" >
+            <intent-filter >
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.lewa.face.preview.slide.local.Notify"
+            android:screenOrientation="portrait" >
+            <intent-filter >
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.lewa.face.preview.slide.local.Pim"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.lewa.face.preview.slide.local.Phone"
+            android:screenOrientation="portrait" >
+            <intent-filter >
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.lewa.face.preview.slide.local.Setting"
+            android:screenOrientation="portrait" >
+            <intent-filter >
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.lewa.face.preview.slide.local.LockScreenWallPaper"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.lewa.face.preview.slide.local.LockScreenStyle"
+            android:screenOrientation="portrait">       
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.lewa.face.preview.slide.local.IconsStyle"
+            android:screenOrientation="portrait">       
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.lewa.face.preview.slide.local.LauncherStyle"
+            android:screenOrientation="portrait">       
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.lewa.face.preview.slide.local.BootAnimation"
+            android:screenOrientation="portrait">       
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.lewa.face.preview.slide.local.Font"
+            android:screenOrientation="portrait">       
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.lewa.face.preview.slide.online.ThemePkg"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.lewa.face.preview.slide.online.WallPaper"
+            android:screenOrientation="portrait">       
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.lewa.face.preview.slide.online.LockScreenWallPaper"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.lewa.face.preview.slide.online.LockScreenStyle"
+            android:screenOrientation="portrait">       
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.lewa.face.preview.slide.online.IconsStyle"
+            android:screenOrientation="portrait">       
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.lewa.face.preview.slide.online.LauncherStyle"
+            android:screenOrientation="portrait">       
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.lewa.face.preview.slide.online.Font"
+            android:screenOrientation="portrait">       
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.lewa.face.preview.slide.online.BootAnimation"
+            android:screenOrientation="portrait">       
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+                
+        <activity android:name="com.lewa.face.ThemeCustomizePreference"
+            android:label="@string/theme_customize"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.lewa.face.model.ThemeModelCheckBoxPreference"
+            android:label="@string/theme_information"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.lewa.face.filemanager.ThemeFileManager"
+            android:label="@string/theme_import_frome_sd"
+            android:configChanges="keyboardHidden|orientation|navigation"
+            android:screenOrientation="portrait" 
+        />
+        
+        <receiver android:name="com.lewa.face.util.ShutDownReceive">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+            </intent-filter>
+        </receiver> 
+
+    </application>
+</manifest>

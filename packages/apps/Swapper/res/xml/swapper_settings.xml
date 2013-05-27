@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	android:title="@string/swap_title" 
+	android:orderingFromXml="true" 
+	android:key="Swapper">
+
+    <CheckBoxPreference android:title="@string/swap_switch_title"
+		android:summaryOff="@string/swap_switch_off"
+		android:key="switch" 
+		android:defaultValue="false"
+		android:disableDependentsState="true"
+		>
+	</CheckBoxPreference>
+
+	<CheckBoxPreference android:title="@string/swap_autorun_title"
+		android:key="autorun" 
+		android:defaultValue="false"
+		android:persistent="true"
+		>
+	</CheckBoxPreference>
+
+	<ListPreference android:title="@string/swap_mode_title"
+		android:dialogTitle="@string/swap_mode_title" 
+		android:summary="@string/swap_mode_summary"
+		android:entryValues="@array/howswap_int" 
+		android:entries="@array/howswap"
+		android:key="howswap" 
+		android:defaultValue="1"
+		android:dependency="switch"
+		>
+	</ListPreference>
+
+	<ListPreference android:title="@string/swapsize_title"
+		android:dialogTitle="@string/swapsize_title" 
+		android:summary="@string/swapsize_summary_0"
+		android:entryValues="@array/swapSize_int" 
+		android:entries="@array/swapSize"
+		android:key="swapSize" 
+		android:defaultValue="32"
+		android:dependency="switch"
+		>
+	</ListPreference>
+
+</PreferenceScreen>  

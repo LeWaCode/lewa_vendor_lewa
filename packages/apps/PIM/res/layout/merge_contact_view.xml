@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:orientation="vertical">
+    <ScrollView android:id="@+id/scroll_merge"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_weight="1.0">
+		<LinearLayout android:id="@+id/lin_merge"
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+			android:paddingBottom="11dip" />
+	</ScrollView>
+	<LinearLayout android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:gravity="center"
+		android:orientation="horizontal" 
+		android:layout_alignParentBottom="true">
+        <Button android:id="@+id/pre_btn" 
+            android:layout_width="0dip" 
+            android:layout_height="wrap_content" 
+            android:layout_weight="1"
+            android:background="@android:drawable/item_background_holo_dark_left"
+            android:shadowColor="#ffffffff"
+            android:shadowDx="1.0"
+            android:shadowDy="-1.2"
+            android:shadowRadius="1.0"
+            android:text="@string/previous" />
+		<Button android:id="@+id/merge_btn" 
+            android:layout_width="0dip" 
+            android:layout_height="wrap_content" 
+            android:background="@android:drawable/item_background_holo_dark_middle"
+            android:shadowColor="#ffffffff"
+            android:shadowDx="1.0"
+            android:shadowDy="-1.2"
+            android:shadowRadius="1.0"
+            android:layout_weight="1"
+			android:text="@string/merge" />
+        <Button android:id="@+id/next_btn" 
+            android:layout_width="0dip" 
+            android:layout_height="wrap_content" 
+            android:layout_weight="1"
+            android:background="@android:drawable/item_background_holo_dark_right"
+            android:shadowColor="#ffffffff"
+            android:shadowDx="1.0"
+            android:shadowDy="-1.2"
+            android:shadowRadius="1.0"
+            android:text="@string/next" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv1"
+        style="@style/basketIntroduceStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/basket_introduce_one"
+        android:layout_marginTop="48dip"    
+    />
+
+    <TextView
+        android:id="@+id/tv2"
+        style="@style/basketIntroduceStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/basket_introduce_two" 
+        android:layout_marginTop="20dip"  
+        />
+
+    <TextView
+        android:id="@+id/tv3"
+        style="@style/basketIntroduceStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/basket_introduce_three" 
+        android:layout_marginTop="20dip" 
+        />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="216dip"
+        android:layout_height="48dip"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btn_gotopond_bg"    
+        android:text="@string/basket_introduce_btn_start" 
+        android:layout_marginTop="35dip" 
+        android:textColor="@drawable/btn_download_textcolor"
+        android:textSize="20sp"
+        />
+
+</LinearLayout>

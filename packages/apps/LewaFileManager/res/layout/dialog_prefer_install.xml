@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView 
+        android:paddingLeft="10dip"
+        android:clickable="true"
+        android:id="@+id/prefer_memory"
+        android:layout_height="65dip"
+        android:layout_width="fill_parent"
+        android:text="@string/prefer_memory"
+        android:gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <include layout="@layout/cate_h_divider" />
+    <TextView 
+        android:paddingLeft="10dip"
+        android:clickable="true"
+        android:id="@+id/prefer_sdcard"
+        android:layout_height="65dip"
+        android:layout_width="fill_parent"
+        android:text="@string/prefer_sdcard"
+        android:gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <include layout="@layout/cate_h_divider" />
+    <TextView 
+        android:paddingLeft="10dip"
+        android:clickable="true"
+        android:id="@+id/prefer_system"
+        android:layout_height="65dip"
+        android:layout_width="fill_parent"
+        android:text="@string/prefer_system"
+        android:gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+<!--    <include layout="@layout/cate_h_divider" />-->
+    
+<!--    <LinearLayout
+    android:text="@string/donot_show_it_again" 
+    android:layout_width="fill_parent" 
+    android:layout_height="48dip" 
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:gravity="center_vertical">
+        <CheckBox 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginLeft="5dip"
+            android:id="@+id/nothint"
+        />
+        <TextView
+    android:text="@string/donot_show_it_again" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>-->
+</LinearLayout>

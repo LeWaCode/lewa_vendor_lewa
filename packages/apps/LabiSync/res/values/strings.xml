@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">ContactSync</string>
+    <string name="sync_success">Synchronize Success!</string>
+    <string name="sync_fail">Synchronize failed, please try it later!</string>
+    <string name="sync_title">Synchronize contacts</string>
+    <string name="syncing">Synchronizing, please wait...</string>
+    <string name="sync_format">"Synchronized <xliff:g id="CURRENT_NUMBER">%1$s</xliff:g> contacts (total <xliff:g id="TOTAL_NUMBER">%2$s</xliff:g> contacts)"</string>
+    <string name="sync_warning_info">Synchronize your contacts. Continue?</string>
+    
+    
+    <string name="recovery_success">Recover success!</string>
+    <string name="recovery_fail">Recover failed, please try it later!</string>
+    <string name="recovering">Recovering,please wait...</string>
+    <string name="recover_title">Recover contacts</string>
+    <string name="recover_format">"Recovered <xliff:g id="CURRENT_NUMBER">%1$s</xliff:g> contacts (total <xliff:g id="TOTAL_NUMBER">%2$s</xliff:g> contacts)"</string>
+    <string name="recover_warning_info">Recovering your contacts will remove your current contacts on your phone. Continue? </string>
+    <string name="no_network">No available network, please try it later.</string>
+    <string name="no_contacts_oncloud">No contacts.</string>          
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/icon" />
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/app_logo"
+            android:maxLines="1"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/app_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_name"
+            android:layout_toRightOf="@id/app_logo"
+           />
+
+        <!--
+             <ProgressBar
+            android:id="@+id/app_progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="20dip"
+            android:layout_height="5dip"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/app_name"
+            android:layout_toRightOf="@id/app_logo"
+            android:max="100" >
+        </ProgressBar>
+        -->
+
+        <TextView
+            android:id="@+id/app_download_times"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_author"
+            android:layout_toRightOf="@id/app_logo"
+            />
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:onClick="startDownload"
+            android:layout_marginTop="10dip"
+            android:layout_marginRight="10dip"
+            android:text="@string/label_downloading" />
+
+        <!--
+         <TextView 
+            android:id="@+id/tv_resouce_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"            
+           />
+         <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="暂停"
+            android:id="@+id/btn_pause"
+            android:onClick="pauseDownload"/>
+        -->
+    </RelativeLayout>
+
+</LinearLayout>

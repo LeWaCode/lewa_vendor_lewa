@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">联系人同步</string>       
+    <string name="sync_success">同步联系人成功！</string>
+    <string name="sync_fail">同步联系人失败,请检查网络状态或稍候再试！</string>
+    <string name="sync_title">同步联系人</string>
+    <string name="syncing">正在同步联系人，请稍候...</string>
+    <string name="sync_format">"已同步 <xliff:g id="CURRENT_NUMBER">%1$s</xliff:g> 个(共 <xliff:g id="TOTAL_NUMBER">%2$s</xliff:g> 个)"</string>
+    <string name="sync_warning_info">同步联系人到云端，继续？</string>
+    
+    <string name="recovery_success">恢复联系人成功！</string>
+    <string name="recovery_fail">恢复联系人失败，请检查网络状态或稍候再试！</string>
+    <string name="recovering">正在恢复联系人，请稍候...</string>
+    <string name="recover_title">恢复联系人</string>
+    <string name="recover_format">"已恢复 <xliff:g id="CURRENT_NUMBER">%1$s</xliff:g> 个(共 <xliff:g id="TOTAL_NUMBER">%2$s</xliff:g> 个)"</string>
+    <string name="recover_warning_info">恢复联系人会将现在手机上的联系人删除，继续？ </string>    
+    <string name="no_network">无可用网络，请连接网络再试.</string>  
+    <string name="no_contacts_oncloud">云端无联系人</string>      
+</resources>

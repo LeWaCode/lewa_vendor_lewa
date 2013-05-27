@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="generateLog">输出 Log</string>
+    <string name="toast_log_generated">日志文件已经输出到 %s ,请发送给开发人员以解决问题</string>
+    <string name="to_sdcard">/sdcard/logcat.log</string>
+    <string name="to_data">/data/logcat.log</string>
+    <string name="make_sure">确定将文件输出到 %s ?</string>
+    <string name="alert">提示</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="logcat">Log 输出</string>
+    <string name="config_view">配置信息</string>
+    <string name="cit">工程模式</string>
+    <string name="sdcard_inexist">SD 卡不存在，请插入 SD 卡</string>
+    <string name="sdcard_is_full">存储卡空间不足</string>
+    <string name="out_to_sdcard">输出到 SD 卡</string>
+    <string name="sum_out_to_sdcard">输出日志文件 Log 到 %s</string>
+    <string name="out_to_data">输出到 DATA 目录</string>
+    <string name="sum_out_to_data">输出日志文件 Log 到 %s</string>
+    <string name="out_to_spec_localtion">将 Log 输出到指定位置</string>
+    <string name="config_info_view">配置信息</string>
+    <string name="sum_config_info_view">系统相关配置信息</string>
+    <string name="out_rec_log">recovery 日志输出</string>
+    <string name="sum_out_rec_log">将 rec_log 输出到指定位置</string>
+    <string name="development_tools">开发工具</string>
+    <string name="sum_dev_tools">开发测试工具</string>
+    <string name="spare_parts">附加部分</string>
+    <string name="sum_spare_parts">附加测试程序</string>
+    <string name="about_app">关于应用</string>
+    <string name="sum_about_app">应用信息简介</string>
+    <string name="version">版本</string>
+    <string name="date">日期</string>
+    <string name="menu_upload_exceptions">Upload Exceptions</string>
+    <string name="menu_clear_exceptions">Clear Exceptions</string>
+    <string name="phonetest_title">电话状态</string>
+    <string name="phonetest_summary">显示电话和SIM卡状态</string>
+</resources>

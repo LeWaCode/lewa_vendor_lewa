@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lewa.labi" >
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_CONTACTS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+
+    <application
+        android:name="com.gozap.labi.sdk.ui.LaBiForLewaApp"
+        android:debuggable="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".SyncActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent" />
+        <activity
+            android:name=".RecoveryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent" />
+
+        <receiver android:name="com.gozap.labi.sdk.ui.LaBiBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name="com.gozap.labi.sdk.transaction.authentication.LeWaClientReceiver">
+            <intent-filter>
+                <action android:name="com.lewa.auth.event" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.gozap.labi.sdk.transaction.authentication.LaBiForLewaService">
+            <intent-filter>
+                <action android:name="com.gozap.android.labi.intent.SYNC" />
+                <action android:name="com.gozap.android.labi.intent.RESTORE" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

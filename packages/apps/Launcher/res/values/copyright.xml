@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="lewa_copyright">
+&lt;br>Copyright © 2011 LeWa Tek, Ltd.  All Rights Reserved &lt;br>&lt;br>
+
+&lt;b>Copyright Notice:&lt;/b>&lt;br>
+LeWa Tek copyrights this specification. No part of this specification may be reproduced in any form or means, without the prior written consent of LeWa Tek.&lt;br>&lt;br>
+
+&lt;b>Disclaimer of Warranties:&lt;/b>&lt;br>
+LeWa Home is for Android 2.1 plus. Your use of the LeWa Home is at your sole risk. It’s free to download and install. GPRS traffic charges will incur when using it.&lt;br>&lt;br>
+
+Website: &lt;a href="http://www.lewaos.com">http://www.lewaos.com &lt;/a> &lt;br>
+Email: &lt;a href="mailto:services@lewatek.com">services@lewatek.com &lt;/a> &lt;br>
+</string>    
+</resources>

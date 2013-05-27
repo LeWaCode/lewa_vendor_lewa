@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:gravity="center"
+    android:orientation="vertical">
+    
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" 
+	    android:orientation="horizontal"
+	    android:gravity="center"
+	    android:layout_marginLeft="15dip"
+		android:layout_marginRight="15dip">
+	    
+	    <TextView
+	    	android:text="@string/shake_degree_gentle"
+	    	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textAppearance="?android:attr/textAppearanceSmall"
+        	android:textColor="#787878" 
+        	android:paddingRight="15dip"/>
+        	
+        <TextView
+	    	android:text="@string/shake_degree_easy"
+	    	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textAppearance="?android:attr/textAppearanceSmall"
+        	android:textColor="#787878" 
+        	android:paddingLeft="15dip"
+        	android:paddingRight="15dip"/>
+        	
+        <TextView
+	    	android:text="@string/shake_degree_common"
+	    	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textAppearance="?android:attr/textAppearanceSmall"
+        	android:textColor="#787878" 
+        	android:paddingLeft="15dip"
+        	android:paddingRight="15dip"/>
+        
+        <TextView
+	    	android:text="@string/shake_degree_excited"
+	    	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textAppearance="?android:attr/textAppearanceSmall"
+        	android:textColor="#787878" 
+        	android:paddingLeft="15dip"
+        	android:paddingRight="15dip"/>
+        	
+        <TextView
+	    	android:text="@string/shake_degree_force"
+	    	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textAppearance="?android:attr/textAppearanceSmall"
+        	android:textColor="#787878" 
+        	android:paddingLeft="15dip"/>
+        	
+   </LinearLayout>     	
+        
+   <SeekBar 
+	    android:id="@+id/shake_seekbar"
+		android:layout_width="286dip" 
+		android:layout_height="wrap_content" 
+		android:layout_marginTop="15dip" />
+        
+</LinearLayout>

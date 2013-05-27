@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Theme</string>
+    
+    <string name="theme_local">Local</string>
+    <string name="theme_online">Online</string>
+    <string name="theme_loading">Loading...</string>
+    <string name="theme_err_msg_network">Internet error, please check network settings or refresh the page .</string>
+    <string name="theme_network_setting">Network settings</string>
+    <string name="theme_refresh">Refresh Retry</string>
+    <string name="theme_no_theme_messgae">No themes in SD card</string>
+    <string name="theme_import">Import<xliff:g id="import_number">%s</xliff:g></string>
+    <string name="theme_ok">OK</string>
+    <string name="theme_cancel">Cancel</string>
+    <string name="theme_copy_progressbar_title">Importing Theme</string>
+    <string name="theme_copy_progressbar_message">Importing theme,please wait....</string>
+    <string name="theme_radiobtn_null_title">No theme selected</string>
+    <string name="theme_radiobtn_null_message">Please select one theme</string>
+    <string name="theme_no_select">Please select themes</string>
+    <string name="theme_customize">Customize</string>
+    <string name="theme_import_sd">From SD</string>
+    <string name="theme_import_app">Others</string>
+    <string name="theme_apply">Apply</string>
+    <string name="theme_apply_model">Apply<xliff:g id="apply_mode_number">%s</xliff:g></string>
+    <string name="theme_share">Share</string>
+    <string name="theme_delete">Delete</string>
+    <string name="theme_delete_confirm_msg">Are you sure to delete these resources?</string>
+    <string name="theme_delete_confirm_title">Delete Resource</string>
+    <string name="theme_apply_progressbar_title">Apply Theme</string>
+    <string name="theme_apply_progressbar_message">Applying theme,please wait....</string>
+    <string name="theme_sd_unmounted_title">Memory card is not accessible</string>
+    <string name="theme_sd_unmounted_message">Make sure that the card exists, and the phone is not in data transfer mode.</string>
+    <string name="theme_apply_progress_title">Apply theme</string>
+    <string name="theme_apply_progress_message">Applying theme,please wait...</string>
+    <string name="theme_import_frome_sd">From SD</string>
+    <string name="theme_info_text">Theme Information</string>
+    <string name="theme_mode_number">Total <xliff:g id="mode_number">%s</xliff:g> models</string>
+
+    <string name="theme_model_lockscreen_wallpaper">LockScreen WallPaper</string>
+    <string name="theme_model_wallpaper">WallPaper</string>
+    <string name="theme_model_lockscreen_style">LockScreen Style</string>
+    <string name="theme_model_icon_style">Icon Style</string>
+    <string name="theme_model_launcher">Launcher Style</string>
+    <string name="theme_model_boots">BootAnimation</string>
+    <string name="theme_model_fonts">Fonts</string>
+    <string name="theme_model_framework">FrameWork</string>
+    <string name="theme_model_systemui">StatusBar</string>
+    <string name="theme_model_settings">Settings</string>
+    <string name="theme_model_pim">PIM</string>
+    <string name="theme_model_phone">call</string>
+    <string name="theme_mode_empty_toast">Please choose some models</string>
+    <string name="theme_connect_timeout">Connect timeout,try again</string>
+    <string name="theme_network_retry">Connect Retry</string>
+    <string name="theme_download">Download</string>
+    <string name="theme_downloaded">Downloaded</string>
+    <string name="theme_sd_nospace_title">sdcard no space</string>
+    <string name="theme_sd_nospace_msg">Sorry!There is no space in sdcard!</string>
+    <string name="theme_sd_clear">ClearUp</string>
+    <string name="theme_back">Back</string>
+    <string name="theme_network_error_title">Network connect error</string>
+    <string name="theme_network_error_msg">Download the theme need network support,please open Wifi</string>
+    <string name="theme_network_set">Set</string>
+    <string name="theme_network_remind_title">Network suggestion</string>
+    <string name="theme_network_remind_msg">Your wifi don\'t open,suggest open it</string>
+    <string name="theme_ignore">Ignore</string>
+    <string name="theme_customize_part">Customize part of Theme</string>
+    
+    <string name="theme_lockscreen_local">Local</string>
+    <string name="theme_lockscreen_online">Online</string>
+    <string name="theme_wallpaper_local">Local</string>
+    <string name="theme_wallpaper_online">Online</string>
+    <string name="theme_lockscreen_wallpaper_local">Local</string>
+    <string name="theme_lockscreen_wallpaper_online">Online</string>
+    <string name="theme_icons_local">Local</string>
+    <string name="theme_icons_online">Online</string>
+    <string name="theme_launcher_local">Local</string>
+    <string name="theme_launcher_online">Online</string>
+    <string name="theme_boot_local">Local</string>
+    <string name="theme_boot_online">Online</string>
+    <string name="theme_font_local">Local</string>
+    <string name="theme_font_online">Online</string>
+    <string name="theme_pim_local">Local</string>
+    <string name="theme_pim_online">Online</string>
+    <string name="theme_phone_local">Local</string>
+    <string name="theme_phone_online">Online</string>
+    <string name="theme_systemui_local">Local</string>
+    <string name="theme_systemui_online">Online</string>
+    <string name="theme_system_local">Local</string>
+    <string name="theme_system_online">Online</string>
+    <string name="theme_setting_local">Local</string>
+    <string name="theme_setting_online">Online</string>
+    <string name="theme_set_success">Set Success</string>
+    <string name="theme_set_fail">Sorry! Fail</string>
+    
+    <string name="theme_cancel_download">Cancel Download</string>
+    <string name="theme_cancel_download_title">Cancel Download</string>
+    <string name="theme_cancel_download_msg">Are you sure cancel download?</string>
+    
+    <string name="select_pictrue_from_apps">Select Pictrue</string>
+    
+    <string name="sdcard_status_changed_title">Memory card is not accessible</string>
+    <string name="sdcard_status_changed_msg">Make sure that the card exists, and the phone is not in data transfer mode.</string>
+    <string name="download_complete">Download Complete</string>
+    <string name="download_fail">Download Fail</string>
+    <string name="download_or_unzip_fail">Download or Unzip Fail</string>
+    
+    <string name="theme_downloading">Downloading</string>
+    <string name="theme_duplicate">Duplicate themes:</string>
+    <string name="theme_notsupport">Not Support themes:</string>
+    <string name="old_theme">Here are some old themes:</string>
+    <string name="delete_default_theme_title">Can not delete default theme</string>
+    <string name="delete_default_theme_msg">Default theme can not delete</string>
+    
+    <string name="progress_format"><xliff:g id="progress">%s</xliff:g></string>
+    
+    <string name="lockscreen_wallpaper">LockScreen WallPaper</string>
+    <string name="wallpaper">WallPaper</string>
+    <string name="lockscreen_style">LockScreen</string>
+    <string name="icons_style">Icons</string>
+    <string name="launcher_style">Launcher</string>
+    <string name="bootanimation">Boot Animation</string>
+    <string name="font">Font</string>
+    <string name="percent"><xliff:g id="current">%s</xliff:g>%%</string>
+    <string name="download_success">download success</string>
+    
+    <string name="setting_wallpaper_title">Set WallPaper</string>
+    <string name="setting_wallpaper_msg">Setting WallPaper...</string>
+    
+    <string name="setting_lockscreen_wallpaper_title">Set LockScreen WallPaper</string>
+    <string name="setting_lockscreen_wallpaper_msg">Setting LockScreen WallPaper...</string>
+    
+    <string name="setting_lockscreen_title">Set LockScreen</string>
+    <string name="setting_lockscreen_msg">Setting LockScreen...</string>
+    <string name="deleting">deleting</string>
+    <string name="theme_information">Theme Information</string>
+    
+    <string name="lwt_file_not_exists">Theme file not exists</string>
+    
+    <string name="setting_defalult_theme_title">Initialize Default Theme</string>
+    <string name="setting_defalult_theme_msg">Initializing Default Theme...</string>
+    
+    <string name="setting_fonts_title">Set Font</string>
+    <string name="setting_fonts_msg">Setting Font...</string>
+    
+    <string name="setting_boots_title">Set BootAnimation</string>
+    <string name="setting_boots_msg">Setting BootAnimation...</string>
+    <string name="setting_notify_title">Set Notification</string>
+    <string name="setting_notify_msg">Setting Notification...</string>
+    <string name="setting_pim_title">Set PIM</string>
+    <string name="setting_pim_msg">Setting PIM...</string>
+    <string name="setting_phone_title">Set phone</string>
+    <string name="setting_phone_msg">Setting phone...</string>
+    <string name="setting_setting_title">Set setting</string>
+    <string name="setting_setting_msg">Setting setting module...</string>
+    <string name="reboot_now">Reboot</string>
+    <string name="reboot_late">No</string>
+    
+    <string name="rebooting_title">Reboot</string>
+    <string name="rebooting_msg">Rebooting</string>
+    <string name="reboot_for_fonts_title">Apply Fonts</string>
+    <string name="reboot_for_fonts_msg">The theme contains font.If you want display all font appropriate, please reboot your phone.</string>
+    
+    <string name="theme_file_demaged">The theme file Damaged</string>
+    <string name="pim">Contacts</string>
+    <string name="phone">Phone</string>
+    
+    <string name="systemui">StatusBar</string>
+    <string name="setting">Setting</string>
+    <string name="default_word">Default</string>
+</resources>

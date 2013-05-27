@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (C) 2008 Esmertec AG.
+ * Copyright (C) 2008 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:orientation="vertical"
+        android:background="@drawable/settings_background">
+    <FrameLayout
+            android:layout_width="match_parent" 
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        <ListView android:id="@android:id/list" 
+                style="?android:attr/listViewWhiteStyle"
+                android:layout_width="match_parent" 
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:scrollbarStyle="insideOverlay" 
+                android:background="@null"
+                android:divider="@null"
+                android:listSelector="@drawable/list_selector_background"
+                android:cacheColorHint="@android:color/white"
+                android:fadingEdgeLength="16dip" />
+
+        <LinearLayout
+                android:id="@+id/empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:orientation="vertical">
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_no_any_message" />
+
+            <TextView
+                    android:id="@+id/txt_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/recentMms_empty"
+                    android:gravity="center"
+                    android:textColor="@color/main_text_color"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!--include layout="@layout/softkey_bar_top_separator"/-->
+
+    <!--
+	<RelativeLayout android:id="@+id/cl_main_softkey_bar"
+		android:layout_width="match_parent" 
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical" 
+		android:layout_gravity="bottom"
+		android:background="@drawable/bg_softkey_bar">
+		
+		<ImageView android:id="@+id/btn_search"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="20.0dip" 
+			android:layout_alignParentLeft="true"
+			android:layout_centerHorizontal="true" 
+            android:background="@drawable/bg_conversation_bar" 			
+			android:src="@drawable/ic_search_normal"
+			/>
+			
+		<ImageView android:id="@+id/btn_new_message"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true" 
+			android:src="@drawable/ic_new_msg_normal"
+            android:background="@drawable/bg_conversation_bar" 			
+			android:layout_centerVertical="true"/>
+			
+		<ImageView android:id="@+id/btn_open_dialpad"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginRight="20.0dip" 
+			android:layout_centerHorizontal="true" 
+			android:layout_alignParentRight="true"
+            android:background="@drawable/bg_conversation_bar"			
+			android:src="@drawable/ic_open_dialpad" 
+			/>
+	</RelativeLayout>
+    -->
+
+    <LinearLayout
+            android:id="@+id/cl_main_softkey_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/softkey_bar_height"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_softkey_bar"
+            android:paddingLeft="0dip"
+            android:paddingRight="0dip">
+        <ImageView android:id="@+id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_search_normal"
+                android:background="@drawable/bg_highlight_s" />
+        <ImageView android:id="@+id/btn_new_message"
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="0.0dip"
+                android:src="@drawable/ic_new_msg_normal"
+                android:background="@drawable/bg_highlight_s" />
+        <ImageView android:id="@+id/btn_open_dialpad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="0.0dip"
+                android:src="@drawable/ic_open_dialpad"
+                android:background="@drawable/bg_highlight_s" />
+        <ImageView
+                android:id="@+id/message_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="0.0dip"
+                android:src="@drawable/ic_more"
+                android:background="@drawable/bg_highlight_s"
+                android:visibility="gone" />
+    </LinearLayout>
+    
+	<RelativeLayout android:id="@+id/cl_mark_softkey_bar"
+		android:layout_width="match_parent" 
+        android:visibility="gone"
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical" 
+		android:layout_gravity="bottom"
+		android:background="@drawable/bg_softkey_bar">
+		
+		<ImageView android:id="@+id/btn_mark_all"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="20.0dip" 
+			android:layout_alignParentLeft="true"
+			android:layout_centerHorizontal="true" 
+            android:background="@drawable/bg_conversation_bar" 			
+			android:src="@drawable/menu_icon_mark_all"
+			/>
+			
+		<ImageView android:id="@+id/btn_unmark_all"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true" 
+			android:src="@drawable/menu_icon_unmark_all"
+            android:background="@drawable/bg_conversation_bar" />
+			
+		<ImageView android:id="@+id/btn_delete_mark"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginRight="20.0dip" 
+			android:layout_centerHorizontal="true" 
+			android:layout_alignParentRight="true"
+            android:background="@drawable/bg_conversation_bar"			
+			android:src="@drawable/menu_icon_del" 
+			/>
+	</RelativeLayout>
+</LinearLayout>

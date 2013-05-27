@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2008 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <!-- Sound Settings -->
+    <com.android.settings.IconPreferenceScreen 
+		android:title="@string/sound_settings_category_title"
+		settings:icon="@drawable/ic_settings_sound">
+		<intent android:action="android.intent.action.MAIN"
+		    android:targetPackage="com.android.settings"
+		    android:targetClass="com.android.settings.SoundSettings" />
+    </com.android.settings.IconPreferenceScreen> 
+
+	<!-- Display settings-->
+	<com.android.settings.IconPreferenceScreen 
+	    android:title="@string/display_settings_title"
+	    settings:icon="@drawable/ic_settings_display">
+	    <intent android:action="android.intent.action.MAIN"
+	        android:targetPackage="com.android.settings"
+	        android:targetClass="com.android.settings.DisplaySettings" />
+	</com.android.settings.IconPreferenceScreen>
+
+    <!-- Home Launcher Settings -->
+    <com.android.settings.IconPreferenceScreen 
+		android:title="@string/home_settings_title"
+		settings:icon="@drawable/ic_settings_home">
+		<intent android:action="android.intent.action.MAIN"
+		    android:targetPackage="com.lewa.launcher"
+		    android:targetClass="com.lewa.launcher.MyLauncherSettings" />                
+    </com.android.settings.IconPreferenceScreen>
+
+    <!-- Themes Settings -->
+    <com.android.settings.IconPreferenceScreen
+		android:title="@string/themes_settings_title"
+		settings:icon="@drawable/ic_settings_theme">
+		<intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.lewa.face"
+                android:targetClass="com.lewa.face.PkgMain" />
+    </com.android.settings.IconPreferenceScreen>    
+
+	<!-- Wallpaper settings -->
+	<com.android.settings.IconPreferenceScreen
+        settings:icon="@drawable/ic_settings_wallpaper"
+        android:title="@string/themes_wallpaper_title">
+        <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.settings"
+                android:targetClass="com.android.settings.LewaWallpaperSettings" />
+    </com.android.settings.IconPreferenceScreen>
+	
+	<!--added by zhuyaopeng 2012/05/29-->
+	<!-- Statusbar switch settings -->
+	<com.android.settings.IconPreferenceScreen
+        settings:icon="@drawable/statusbar_switch_settings"
+        android:title="@string/statusbar_switch_title">
+        <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.settings"
+                android:targetClass="com.android.settings.SwitchWidgetOpenSettings" />
+    </com.android.settings.IconPreferenceScreen>
+	<!--end added by zhuyaopeng 2012/05/29-->
+
+	<!-- Profiles settings -->
+	<!--
+	<com.android.settings.IconPreferenceScreen 
+	    android:title="@string/profile_settings_title"
+	    settings:icon="@drawable/ic_settings_profile">
+	    <intent android:action="android.intent.action.MAIN"
+	        android:targetPackage="com.android.settings"
+	        android:targetClass="com.android.settings.ProfileList" />
+    </com.android.settings.IconPreferenceScreen>
+    -->
+    <!-- End -->  
+    
+	<!-- Data Sync. The settings activity will ensure this is resolved to an
+		activity on the system image, otherwise it will remove this
+		preference. -->
+    <PreferenceCategory>
+
+	<com.android.settings.IconPreferenceScreen 
+		android:title="@string/sync_settings"
+		settings:icon="@drawable/ic_settings_accounts">
+		<intent android:action="android.settings.SYNC_SETTINGS" />
+	</com.android.settings.IconPreferenceScreen>
+	
+    <!-- Security & Location settings-->
+    <com.android.settings.IconPreferenceScreen 
+        android:title="@string/security_settings_title"
+        settings:icon="@drawable/ic_settings_security">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.settings"
+            android:targetClass="com.android.settings.SecuritySettings" />
+    </com.android.settings.IconPreferenceScreen>
+    <!-- Begin, deleted by zhumeiquan, change req, 20111119  -->    
+    <!-- Privacy settings-->
+    <!-- 
+	<com.android.settings.IconPreferenceScreen 
+	    android:title="@string/privacy_settings"
+	    settings:icon="@drawable/ic_settings_privacy">
+	    <intent android:action="android.intent.action.MAIN"
+	        android:targetPackage="com.android.settings"
+	        android:targetClass="com.android.settings.PrivacySettings" />
+    </com.android.settings.IconPreferenceScreen>
+    -->
+    </PreferenceCategory>
+</PreferenceScreen>

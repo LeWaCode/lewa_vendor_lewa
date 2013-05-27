@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style
+      name="Theme.style_back" parent="android:Theme">
+        <item name="android:windowNoTitle">false</item>
+         <item name="android:windowBackground">@drawable/activity_background</item>
+           <item name="android:colorBackgroundCacheHint">@null</item>
+            <!--
+            <item name="android:windowIsTranslucent">true</item>
+            -->
+            <!-- Note that we use the base animation style here (that is no
+                 animations) because we really have no idea how this kind of
+                 activity will be used. -->
+            <!--<item name="android:windowAnimationStyle">@android:style/Animation</item>-->
+    </style>
+
+    <style name="MyTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+    <style name="PimActivityTitleBar">
+        <item name="android:windowTitleSize">48dip</item>
+        <item name="android:windowTitleStyle">@style/PimWindowTitle</item>
+        <item name="android:windowTitleBackgroundStyle">@style/PimWindowTitleBackground</item>
+    </style>
+    
+    <style name="PimWindowTitleBackground">   
+        <item name="android:background">@drawable/bg_tittle_blue</item>
+    </style>
+    
+    <style name="PimWindowTitle">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">16dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">20dip</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:shadowColor">#ff18496d</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">-1.2</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+     <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal" 
+        android:background="@drawable/title">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_margin="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/log_layout_feedback_title"
+                android:textColor="#ffffff"
+                android:layout_gravity="center_vertical"
+				android:textSize="21sp"/>
+     	</LinearLayout>
+   	</LinearLayout>
+   	
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="325dp" 
+        android:orientation="vertical">
+        
+        <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/fc_window_log_title"
+        android:textSize="16sp" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="10dp"
+        android:fadingEdge="vertical"
+        android:scrollbars="vertical" >
+
+        <TextView
+            android:id="@+id/log_detail"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:textSize="12sp" />
+    </ScrollView>
+    
+    </LinearLayout>
+
+	 <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    
+	<Button
+        android:id="@+id/reback"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:textColor="#FFFFFF"
+        android:background="@color/button_style"
+        android:text="@string/fc_window_reback" />
+	
+	</LinearLayout>
+
+</LinearLayout>

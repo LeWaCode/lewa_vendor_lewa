@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<CheckBoxPreference
+		android:key="restoreDesktopPrefences"
+		android:title="@string/pref_title_restore_desktop" />
+		
+	<ListPreference
+        android:key="pref_key_effects"
+        android:title="@string/pref_desktop_effect"
+        android:defaultValue="@string/config_desktop_effect"
+        android:entryValues="@array/desktop_transition_effect"
+        android:entries="@array/desktop_transition_effect_entries"
+        />	
+    <CheckBoxPreference android:title="@string/pref_title_scroll_speed"
+		android:defaultValue="@bool/config_scroll_speed"
+		android:summary="@string/pref_summary_scroll_speed"
+		android:key="scroll_speed" />     
+    <CheckBoxPreference android:title="@string/pref_title_screen_loop"
+		android:defaultValue="@bool/config_screen_loop"
+		android:summary="@string/pref_summary_screen_loop"
+		android:key="screen_loop" />    
+	<CheckBoxPreference android:title="@string/pref_title_scrolling_vibrtor"
+		android:defaultValue="@bool/config_screen_vibrtor"
+		android:summary="@string/pref_summary_scrolling_vibrtor"
+		android:key="vibrtorback" /> 	
+	<CheckBoxPreference android:title="@string/pref_title_wallpaper_scrolling"
+		android:defaultValue="@bool/config_wallpaper_scroll"
+		android:summary="@string/pref_summary_wallpaper_scrolling"
+		android:key="wallpaper_scrolling" />	
+		
+	<CheckBoxPreference android:title="@string/pref_title_auto_arrange"
+		android:defaultValue="@bool/config_auto_arrange"
+		android:summary="@string/pref_summary_auto_arrange"
+		android:key="auto_arrange" />
+		
+	<CheckBoxPreference android:title="@string/pref_title_action_updown"
+		android:defaultValue="@bool/config_action_updown"
+		android:summary="@string/pref_summary_action_updown"
+		android:key="action_updown" />
+		
+	<CheckBoxPreference android:title="@string/pref_icon_shadow"
+		android:defaultValue="@bool/config_icon_shadow"
+		android:summary="@string/pref_summary_icon_shadow"
+		android:key="icon_shadow" />
+		
+	<CheckBoxPreference android:title="@string/pref_title_activity_format"
+		android:defaultValue="@bool/config_activity_format"
+		android:summary="@string/pref_summary_activity_format"
+		android:key="activity_format" />		
+
+
+	<PreferenceScreen
+	    android:key="xmlPreferences"
+		android:title="@string/pref_title_import_export">
+
+		<PreferenceCategory android:title="@string/pref_title_db">
+	    	<Preference
+	    	    android:title="@string/pref_title_db_export"
+	    	    android:summary="@string/pref_summary_db_export"
+	    		android:key="db_export" />
+    		<Preference
+	    	    android:title="@string/pref_title_db_import"
+	    	    android:summary="@string/pref_summary_db_import"
+	    		android:key="db_import" />
+        </PreferenceCategory>
+	</PreferenceScreen>	
+</PreferenceScreen>

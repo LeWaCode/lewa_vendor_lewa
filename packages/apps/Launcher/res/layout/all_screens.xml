@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lewa.launcher.CardLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+	<LinearLayout
+		android:layout_width="fill_parent"
+	   	android:layout_height="fill_parent" 
+	   	android:layout_gravity="center"
+	   	android:gravity="center"
+   	 	>
+	    <LinearLayout
+	    	android:id="@+id/preview_bg" 
+	    	android:layout_width="fill_parent"
+	   	 	android:layout_height="fill_parent"   
+		 	android:layout_gravity="center"
+		   	android:gravity="center"
+	   	 	android:background="@drawable/lw_theme1_editpanel_editpanel_tumbview_normal"
+	   	 	>
+	    	<ImageView
+	    		android:id="@+id/preview" 
+	    		android:layout_width="wrap_content"
+	   	 		android:layout_height="wrap_content" 
+	   	 	    android:padding="8dip" 
+	   	 	    android:layout_marginTop="-8dip" 
+	   	 	    android:scaleType="fitCenter"
+	   	 	/> 	 	 	
+   		</LinearLayout>
+   	</LinearLayout>
+   	
+   	<ImageView
+    		android:id="@+id/delete_screen" 
+    		android:layout_width="26.6dip"
+   	 		android:layout_height="26.6dip"
+   	 		android:layout_marginRight="3dip"
+   	 		android:layout_marginTop="5dip"
+   	 		android:layout_gravity="top|right" 
+   	 		android:background="@drawable/lewa_screen_delete"
+   	 	    android:clickable="true"/>
+ 
+	<ImageView 
+		android:id="@+id/pin" 
+		android:layout_width="35dip"
+		android:layout_height="31dip"  
+		android:background="@drawable/lw_theme1_editpanel_editpanel_pin"
+		android:clickable="true" 
+		android:layout_gravity="bottom|center_horizontal"/>
+
+</com.lewa.launcher.CardLayout>

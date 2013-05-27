@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ececec"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="30"
+        android:orientation="vertical"
+        android:weightSum="102" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="52"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <LinearLayout
+                android:id="@+id/audioLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="33"
+                android:background="@drawable/listviewselector"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center" >
+
+                <include
+                    android:id="@+id/audio"
+                    layout="@layout/category_main_list_2_0" />
+            </LinearLayout>
+            <include layout="@layout/cate_divider" />
+
+            <LinearLayout
+                android:id="@+id/imagelayout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="33"
+                android:background="@drawable/listviewselector"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center" >
+
+                <include
+                    android:id="@+id/image"
+                    layout="@layout/category_main_list_2_0" />
+            </LinearLayout>
+            <include layout="@layout/cate_divider" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="33"
+                android:background="@drawable/listviewselector"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center" >
+
+                <include
+                    android:id="@+id/video"
+                    layout="@layout/category_main_list_2_0" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- <LinearLayout android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_weight="99"> -->
+
+        <include layout="@layout/cate_h_divider" />
+        <!-- </LinearLayout> -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="52"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="33"
+                android:gravity="center" >
+
+                <include
+                    android:id="@+id/doc"
+                    layout="@layout/category_main_list_2_0" />
+            </LinearLayout>
+
+            <include layout="@layout/cate_divider" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="33"
+                android:gravity="center" >
+
+                <include
+                    android:id="@+id/apk"
+                    layout="@layout/category_main_list_2_0" />
+            </LinearLayout>
+
+            <include layout="@layout/cate_divider" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="33"
+                android:gravity="center" >
+
+                <include
+                    android:id="@+id/theme"
+                    layout="@layout/category_main_list_2_0" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <include layout="@layout/cate_h_divider" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="72" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:paddingTop="-15dip"
+            android:weightSum="100" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/sdlayouttext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginRight="20dip"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="125dip"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/sdcard_name_cnst"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#535353"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/sdcard_capability"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dip"
+                            android:textColor="#535353"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/sdcard_avai_cnst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:textColor="#535353"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/sdcard_avai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:textColor="#535353"
+                        android:textSize="13sp" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
+
+                        <ProgressBar
+                            android:id="@+id/scanProgress"
+                            android:layout_width="18dip"
+                            android:layout_height="18dip"
+                            android:layout_alignParentRight="true"
+                            android:indeterminate="true"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sdlayouttext"
+                    android:layout_marginBottom="3dip"
+                    android:layout_marginLeft="10dip"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <RelativeLayout
+                        android:id="@+id/sdcard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_weight="95"
+                        android:background="#d8d8da"
+                        android:gravity="center_vertical" >
+
+                        <View
+                            android:id="@+id/music_progress"
+                            android:layout_width="30dip"
+                            android:layout_height="fill_parent"
+                            android:background="#76d223" />
+
+                        <View
+                            android:id="@+id/picture_progress"
+                            android:layout_width="5dip"
+                            android:layout_height="fill_parent"
+                            android:layout_toRightOf="@id/music_progress"
+                            android:background="#47dae3" />
+
+                        <View
+                            android:id="@+id/video_progress"
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:layout_toRightOf="@id/picture_progress"
+                            android:background="#f39418" />
+
+                        <View
+                            android:id="@+id/doc_progress"
+                            android:layout_width="50dip"
+                            android:layout_height="fill_parent"
+                            android:layout_toRightOf="@id/video_progress"
+                            android:background="#39aaff" />
+
+                        <View
+                            android:id="@+id/apk_progress"
+                            android:layout_width="18dip"
+                            android:layout_height="fill_parent"
+                            android:layout_toRightOf="@id/doc_progress"
+                            android:background="#b796f6" />
+
+                        <View
+                            android:id="@+id/theme_progress"
+                            android:layout_width="45dip"
+                            android:layout_height="fill_parent"
+                            android:layout_toRightOf="@id/apk_progress"
+                            android:background="#f8e00c" />
+
+                        <View
+                            android:id="@+id/other_progress"
+                            android:layout_width="25dip"
+                            android:layout_height="fill_parent"
+                            android:layout_toRightOf="@id/theme_progress"
+                            android:background="#8d9edb" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/zhezhao" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/memlayouttext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dip"
+                    android:layout_marginLeft="22dip"
+                    android:layout_marginRight="20dip"
+                    android:layout_marginTop="10dip"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="125dip"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/memory_name_cnst"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#535353"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/memory_capability"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dip"
+                            android:textColor="#535353"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/memory_avai_cnst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:textColor="#535353"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/memory_avai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:textColor="#535353"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/memlayouttext"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <RelativeLayout
+                        android:id="@+id/memory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dip"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_weight="95"
+                        android:background="#d8d8da" >
+
+                        <View
+                            android:id="@+id/used"
+                            android:layout_width="150dip"
+                            android:layout_height="fill_parent"
+                            android:background="#bababa" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@drawable/zhezhao" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

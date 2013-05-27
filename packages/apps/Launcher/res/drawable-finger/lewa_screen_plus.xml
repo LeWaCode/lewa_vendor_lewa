@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen_plus"
+    android:cacheColorHint="@android:color/transparent">
+    <!-- Enabled views -->
+    <item android:state_pressed="true" android:state_enabled="true"
+        android:drawable="@drawable/lw_theme1_editpanel_editpanel_tumbview_plus_pressed" />
+    <item android:state_focused="true"  android:state_enabled="true"  
+        android:drawable="@drawable/lw_theme1_editpanel_editpanel_tumbview_plus_pressed" />    
+    <item android:state_enabled="true"
+        android:drawable="@drawable/lw_theme1_editpanel_editpanel_tumbview_plus" />
+</selector>

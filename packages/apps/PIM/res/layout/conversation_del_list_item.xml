@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (C) 2008 Esmertec AG.
+ * Copyright (C) 2008 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<com.lewa.PIM.mms.ui.ConversationDelListItem
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+        
+	<RelativeLayout android:id="@+id/mms_info"
+		android:layout_width="280dip"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="0dip">
+		
+		<FrameLayout android:id="@+id/contact_sticker_photos"
+	        android:layout_toRightOf="@id/contacts_list_choice"
+	 		android:layout_width="wrap_content"
+			android:layout_height="wrap_content"			
+			android:layout_marginRight="@dimen/list_item_gap_between_image_and_text" >
+			
+		    <android.widget.QuickContactBadge
+		        android:id="@+id/avatar"
+		        android:visibility="gone"
+		        android:layout_centerVertical="true"
+				android:layout_width="@dimen/list_item_imageview_width"
+				android:layout_height="@dimen/list_item_imageview_height"
+		        android:background="@null" />	        
+				
+	        <ImageView android:id="@+id/contact_item_yl_image"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:background="@drawable/pim_imessage_flag" 
+				android:visibility="gone"
+				android:layout_gravity="bottom|right"/>					      	        
+		</FrameLayout>
+		
+	    <ImageView
+	        android:id="@+id/presence"
+	        android:visibility="gone"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="5dip"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:paddingBottom="20dip"
+	         />
+	
+		<LinearLayout
+		    android:orientation="horizontal"
+		    android:layout_alignTop="@id/contact_sticker_photos"
+		    android:layout_width="wrap_content"
+	        android:layout_toLeftOf="@id/presence"
+	        android:layout_toRightOf="@id/contact_sticker_photos"
+		    android:layout_height="wrap_content" >
+	                      
+		    <TextView android:id="@+id/from"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:singleLine="true"
+		        android:layout_marginRight="2dip"
+		        android:layout_alignParentTop="true"
+	        	android:layout_alignWithParentIfMissing="true"
+	        	android:maxWidth="150dip"
+		        android:ellipsize="end" 
+		        android:textColor="@color/main_text_color" />
+		        
+		    <TextView android:id="@+id/fromcount"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textAppearance="?android:attr/textAppearanceSmall"
+		        android:layout_alignParentBottom="true"
+		        android:layout_marginBottom="2dip"
+		        android:visibility="gone"
+		        android:layout_alignBottom="@id/from"
+		        android:singleLine="true" />
+		</LinearLayout>
+		
+	    <TextView android:id="@+id/date" 
+	        android:layout_marginLeft="5dip"
+	        android:layout_marginRight="8dip"
+	        android:paddingBottom="10dip"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:textAppearance="?android:attr/textAppearanceSmall"
+	        android:singleLine="true"
+	        android:layout_alignParentBottom="true"
+	        android:textColor="#ff80C0E8"
+	        android:layout_alignParentRight="true"/>
+	        
+	    <TextView android:id="@+id/subject"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textAppearance="?android:attr/textAppearanceSmall"
+	        android:singleLine="true"
+	        android:paddingBottom="10dip"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignWithParentIfMissing="true"	        
+	        android:layout_toLeftOf="@id/date"
+	        android:ellipsize="end" 
+	        android:textColor="@color/log_number" />	        
+	
+	    <ImageView android:id="@+id/error"
+	        android:layout_marginRight="3dip"
+	        android:paddingBottom="12dip"
+	        android:visibility="invisible"
+	        android:layout_toRightOf="@id/contact_sticker_photos"
+	        android:layout_alignBottom="@id/date"
+	        android:layout_alignParentBottom="true"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:src="@drawable/ic_list_alert_sms_failed" />
+	
+	    <ImageView android:id="@+id/attachment"
+	        android:layout_marginRight="3dip"
+	        android:paddingBottom="12dip"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:visibility="gone"
+	        android:layout_alignParentBottom="true"
+	        android:layout_toRightOf="@id/error"
+	        android:layout_alignBottom="@id/date"
+	        android:src="@drawable/ic_attachment_universal_small" />
+
+    </RelativeLayout>
+        		    
+	<CheckBox android:id="@+id/contacts_list_choice"
+		android:layout_marginRight="5dip"
+		android:layout_centerVertical="true"
+		android:focusable="false" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content" 
+		android:gravity="right" 
+		android:layout_alignParentRight="true" />
+		
+    <ImageView
+        android:id="@+id/img_log_separator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/ic_list_horizontal_divider" />
+</com.lewa.PIM.mms.ui.ConversationDelListItem>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.lewa.launcher.BottomBar
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+	android:layout_height="fill_parent" 
+	android:paddingLeft="7dip" 
+	android:paddingRight="7dip" 
+	android:orientation="horizontal"
+	>
+	<com.lewa.launcher.CounterImageView
+		android:layout_gravity="center"
+		android:layout_width="0dip"
+    	android:layout_height="fill_parent"	
+    	android:visibility="gone"
+    	android:clickable="true" 
+		android:layout_weight="1"/>
+    <com.lewa.launcher.CounterImageView
+      	android:layout_gravity="center"
+		android:layout_width="0dip"
+      	android:layout_height="fill_parent"	
+      	android:visibility="gone"
+      	android:clickable="true"
+      	android:layout_weight="1"/>
+    <com.lewa.launcher.CounterImageView
+      	android:layout_gravity="center"
+		android:layout_width="0dip"
+      	android:layout_height="fill_parent"	
+      	android:visibility="gone"
+      	android:clickable="true"
+      	android:layout_weight="1"/>
+    <com.lewa.launcher.CounterImageView
+      	android:layout_gravity="center"
+		android:layout_width="0dip"
+      	android:layout_height="fill_parent"	
+      	android:visibility="gone"
+      	android:clickable="true"
+      	android:layout_weight="1"/>			
+</com.lewa.launcher.BottomBar>	

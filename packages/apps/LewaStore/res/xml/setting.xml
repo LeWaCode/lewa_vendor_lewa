@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <CheckBoxPreference
+        android:defaultValue="flase"
+        android:key="updateNotice"
+        android:summaryOff="@string/setting_close"
+        android:summaryOn="@string/setting_open"
+        android:title="@string/setting_update_notice" 
+		
+		/>
+
+    <ListPreference
+        android:defaultValue="0"
+        android:dialogTitle="@string/setting_net_set"
+        android:entries="@array/options"
+        android:entryValues="@array/potions_value"
+        android:key="netsetting"
+        android:summary="@string/setting_net_set_summary"
+        android:title="@string/setting_net_set"
+		
+		/>
+
+</PreferenceScreen>

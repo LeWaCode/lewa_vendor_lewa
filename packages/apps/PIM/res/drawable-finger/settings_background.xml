@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- for commit to server -->
+<bitmap android:src="@android:drawable/bg_common_background" android:dither="true" android:tileMode="repeat"
+  xmlns:android="http://schemas.android.com/apk/res/android" />
+<!-- for local debug 
+	<bitmap android:src="@drawable/test" android:dither="true" android:tileMode="repeat"
+  xmlns:android="http://schemas.android.com/apk/res/android" />-->

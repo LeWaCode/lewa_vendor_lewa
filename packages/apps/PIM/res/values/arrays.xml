@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ * Copyright (C) 2008 Esmertec AG.
+ * Copyright (C) 2008 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ -->
+<resources>
+    <!-- NOTE: if you change anything about this array, you must make the corresponding change
+         to the array DEFAULT_SMILEY_RES_IDS in MessageListItem.java and to default_smiley_names
+         below. -->
+    <string-array name="default_smiley_texts">
+      <item>:-)</item>   <!-- 0: Happy -->
+      <item>:-(</item>   <!-- 1: Sad -->
+      <item>;-)</item>   <!-- 2: Winking -->
+      <item>:-P</item>   <!-- 3: Tongue sticking out -->
+      <item>=-O</item>   <!-- 4: Surprised -->
+      <item>:-*</item>   <!-- 5: Kissing -->
+      <item>:O</item>    <!-- 6: Yelling -->
+      <item>B-)</item>   <!-- 7: Cool -->
+      <item>:-$</item>   <!-- 8: Money mouth -->
+      <item>:-!</item>   <!-- 9: Foot in mouth -->
+      <item>:-[</item>   <!-- 10: Embarrassed -->
+      <item>O:-)</item>  <!-- 11: Angel -->
+      <item>:-\\</item>  <!-- 12: Undecided -->
+      <item>:\'(</item>  <!-- 13: Crying -->
+      <item>:-X</item>   <!-- 14: Lips are sealed -->
+      <item>:-D</item>   <!-- 15: Laughing -->
+      <item>o_O</item>   <!-- 16: Confused -->
+    </string-array>
+
+    <!-- NOTE: if you change anything about this array, you must make the corresponding change
+         to the array DEFAULT_SMILEY_RES_IDS in MessageListItem.java and to default_smiley_texts
+         above. -->
+    <string-array name="default_smiley_names">
+        <item>Happy</item>                   <!-- 0: :-) -->
+        <item>Sad</item>                     <!-- 1: :-( -->
+        <item>Winking</item>                 <!-- 2: ;-) -->
+        <item>Tongue sticking out</item>     <!-- 3: :-P -->
+        <item>Surprised</item>               <!-- 4: =-O -->
+        <item>Kissing</item>                 <!-- 5: :-* -->
+        <item>Yelling</item>                 <!-- 6: :O -->
+        <item>Cool</item>                    <!-- 7: B-) -->
+        <item>Money mouth</item>             <!-- 8: :-$ -->
+        <item>Foot in mouth</item>           <!-- 9: :-! -->
+        <item>Embarrassed</item>             <!-- 10: :-[ -->
+        <item>Angel</item>                   <!-- 11: O:-) -->
+        <item>Undecided</item>               <!-- 12: :-\\ -->
+        <item>Crying</item>                  <!-- 13: :\'( -->
+        <item>Lips are sealed</item>         <!-- 14: :-X -->
+        <item>Laughing</item>                <!-- 15: :-D -->
+        <item>Confused</item>                <!-- 16: o_O -->
+    </string-array>
+    <string-array name="pref_mms_user_agent_entries">
+        <item>Default Android</item>
+        <item>Nokia N95</item>
+        <item>iPhone (3.0)</item>
+        <item>BlackBerry 8800</item>
+        <item>Sony Ericsson W800i</item>
+        <item>SoftBank X01T</item>
+        <item>@string/pref_mms_custom_option</item>
+    </string-array>
+    <string-array name="pref_mms_user_agent_values" translatable="false">
+        <item>default</item>
+        <item>NokiaN95/11.0.026; Series60/3.1 Profile/MIDP-2.0 Configuration/CLDC-1.1</item>
+        <item>iPhoneOS/3.0 (7A341)</item>
+        <item>BlackBerry8800/4.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100</item>
+        <item>SonyEricssonW800i/R1L</item>
+        <item>SoftBank/1.0/X01T/SCJ001</item>
+        <item>custom</item>
+    </string-array>
+    <string-array name="pref_mms_message_font_size_entries">
+        <item>10</item>
+        <item>12</item>
+        <item>14</item>
+        <item>16</item>
+        <item>18 (Default)</item>
+        <item>20</item>
+  </string-array>
+
+    <string-array translatable="false" name="pref_mms_message_font_size_values">
+        <item>10</item>
+        <item>12</item>
+        <item>14</item>
+        <item>16</item>
+        <item>18</item>
+        <item>20</item>
+  </string-array>
+
+    <string-array name="pref_mms_notification_vibrate_pattern_entries">
+      <item>Normal</item>
+      <item>Medium Vibrate</item>
+      <item>Long Vibrate</item>
+      <item>Multiple Short</item>
+      <item>Multiple Long</item>
+      <item>@string/pref_mms_custom_option</item>
+   </string-array>
+    <string-array name="pref_mms_notification_vibrate_pattern_values" translatable="false">
+      <item></item>
+      <item>0,1200</item>
+      <item>0,2500</item>
+      <item>0,300,100,300,100,300,100,300,100,300</item>
+      <item>0,800,200,800,200,800</item>
+      <item>custom</item>
+   </string-array>
+
+   <string-array name="pref_templates_gestures_sensitivity_entries">
+      <item>1 (broadest)</item>
+      <item>2</item>
+      <item>3</item>
+      <item>4</item>
+      <item>5</item>
+      <item>6</item>
+      <item>7</item>
+      <item>8</item>
+      <item>9</item>
+      <item>10</item>
+      <item>11</item>
+      <item>12 (strictest)</item>
+    </string-array>
+
+    <string-array name="pref_templates_gestures_sensitivity_values" translatable="false">
+      <item>1</item>
+      <item>2</item>
+      <item>3</item>
+      <item>4</item>
+      <item>5</item>
+      <item>6</item>
+      <item>7</item>
+      <item>8</item>
+      <item>9</item>
+      <item>10</item>
+      <item>11</item>
+      <item>12</item>
+    </string-array>
+
+    <string-array name="entries_vm_button">
+        <item>Add to Contacts</item>
+        <item>SMS/MMS</item>
+        <item>Voicemail</item>
+    </string-array>
+    
+    <string-array name="entryvalues_numbers" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+        
+    <string-array name="vm_handlers" translatable="false">
+	    <item>Google Voice/com.google.android.apps.googlevoice/.SplashActivity</item>
+	    <item>HulloMail UK Visual Voicemail/com.hullomail.android.messaging/.HulloMail</item>
+	    <item>HulloMail US Visual Voicemail/com.hullomail.android.messaging.us/.HulloMail</item>
+	    <item>PhoneFusion Visual Voicemail/com.phonefusion.voicemailplus.android/.VoicemailPlus</item>
+        <item>T-Mobile Visual Voicemail/com.oz.mobile.android.voicemail.application/.application</item>
+        <item>YouMail Visual Voicemail/com.loadedbanana.android.youmail/.activity.MessageList</item>        
+    </string-array>
+    
+    <string-array name="view_contact_pic_sizes">
+        <item>Small (Default)</item>
+        <item>Medium</item>
+        <item>Large</item>
+        <item>Extra Large</item>
+    </string-array>
+    
+    <string-array name="view_contact_pic_sizes_values" translatable="false">
+        <item>78</item>
+        <item>100</item>
+        <item>116</item>
+        <item>128</item>
+    </string-array>
+
+    <string-array name="view_data_font_sizes">
+        <item>Small (Default)</item>
+        <item>Medium</item>
+        <item>Large</item>
+        <item>Extra Large</item>
+    </string-array>
+    
+    <string-array name="view_data_font_sizes_values" translatable="false">
+        <item>14</item>
+        <item>18</item>
+        <item>22</item>
+        <item>26</item>
+    </string-array>
+
+    <string-array name="view_default_phone_tabs" translatable="false">
+        <item>@string/default_phone_tab_last_used</item>
+        <item>@string/default_phone_tab_last_viewed</item>
+        <item>@string/default_phone_tab_phone</item>
+        <item>@string/default_phone_tab_call_log</item>
+        <item>@string/default_phone_tab_contacts</item>
+        <item>@string/default_phone_tab_favorites</item>
+    </string-array>
+
+
+	<string-array name="quickreply_sms">  
+    	<item>Received!</item>  
+    	<item>Thank you!</item>  
+    	<item>Not welcome!</item> 
+    	<item>Be busying...Contact later...</item>  
+    	<item>Immediately to reach.</item>  
+    	<item>Rest time...You know!</item> 
+    	<item>What are you doing?</item>  
+    	<item>Hello, this is.</item>  
+    	<item>Contact by telephone.</item> 
+    	<item>Good job!</item>  
+    	<item>Well!</item>  
+    	<item>Congratulations!</item>   
+  	</string-array>  
+
+    <string-array name="ip_call_location_provinces">  
+        <item>Beijing</item>
+        <item>Shanghai</item>
+        <item>Tianjin</item>
+        <item>Chongqing</item>
+        <item>Anhui</item>
+        <item>Fujian</item>
+        <item>Gansu</item>
+        <item>Guangdong</item>
+        <item>Guangxi</item>
+        <item>Guizhou</item>
+        <item>Hainan</item>
+        <item>Hebei</item>
+        <item>Henan</item>
+        <item>Heilongjiang</item>
+        <item>Hubei</item>
+        <item>Hunan</item>
+        <item>Jilin</item>
+        <item>Jiangxu</item>
+        <item>Jiangxi</item>
+        <item>Liaoning</item>
+        <item>Neimenggu</item>
+        <item>Ningxia</item>
+        <item>Qinghai</item>
+        <item>Shandong</item>
+        <item>Shan1xi</item>
+        <item>Shan3xi</item>
+        <item>Sichuan</item>
+        <item>Xizang</item>
+        <item>Xinjiang</item>
+        <item>Yunnan</item>
+        <item>Zhejiang</item>
+    </string-array>
+
+    <string-array name="ip_call_location_anhui_cities">
+        <item>Hefei</item>
+        <item>Anqing</item>
+        <item>Bengbu</item>
+        <item>Chaohu</item>
+        <item>Chizhou</item>
+        <item>Chuzhou</item>
+        <item>Fuyang/Haozhou</item>
+        <item>Huaibei</item>
+        <item>Huainan</item>
+        <item>Huangshan</item>
+        <item>Luan</item>
+        <item>Maanshan</item>
+        <item>Suzhou</item>
+        <item>Tongling</item>
+        <item>Wuhu</item>
+        <item>Xuancheng</item>
+    </string-array>
+
+    <string-array name="ip_call_location_fujian_cities">
+        <item>Fuzhou</item>
+        <item>Longyan</item>
+        <item>Nanping</item>
+        <item>Ningde</item>
+        <item>Putian</item>
+        <item>Quanzhou</item>
+        <item>Sanming</item>
+        <item>Xiamen</item>
+        <item>Zhangzhou</item>
+    </string-array>
+
+    <string-array name="ip_call_location_gansu_cities">
+        <item>Lanzhou</item>
+        <item>Baiyin</item>
+        <item>Dingxi</item>
+        <item>Gannan</item>
+        <item>Jiayuguan/Jiuquan</item>
+        <item>Jinchan/Wuwei</item>
+        <item>Linxia</item>
+        <item>Longnan</item>
+        <item>Pingliang</item>
+        <item>Qingyang</item>
+        <item>Tianshui</item>
+        <item>Zhangye</item>
+    </string-array>
+
+    <string-array name="ip_call_location_guangdong_cities">
+        <item>Guangzhou</item>
+        <item>Chaozhou</item>
+        <item>Dongguan</item>
+        <item>Foshan</item>
+        <item>Heyuan</item>
+        <item>Huizhou</item>
+        <item>Jiangmen</item>
+        <item>Jieyang</item>
+        <item>Maoming</item>
+        <item>Meizhou</item>
+        <item>Qingyuan</item>
+        <item>Shantou</item>
+        <item>Shanwei</item>
+        <item>Shaoguan</item>
+        <item>Shenzhen</item>
+    </string-array>
+
+    <string-array name="ip_call_location_guangxi_cities">
+        <item>Nanning</item>
+        <item> </item>
+    </string-array>
+
+    <string-array name="ip_call_location_guizhou_cities">
+        <item> </item>
+    </string-array>
+
+    <string-array name="ip_call_location_hainan_cities">
+        <item> </item>
+    </string-array>
+
+    <string-array name="ip_call_location_hebei_cities">
+        <item> </item>
+    </string-array>
+
+    <string-array name="ip_call_location_henan_cities">
+        <item> </item>
+    </string-array>
+
+    <string-array name="ip_call_location_heilongjiang_cities">
+        <item> </item>
+    </string-array>
+
+    <string-array name="ip_call_location_hubei_cities">
+        <item>WuHan</item>
+    </string-array>
+
+    <string-array name="ip_call_location_hunan_cities">
+        <item>ChangSha</item>
+    </string-array>
+
+    <string-array name="ip_call_location_jilin_cities">
+        <item>ChangChun</item>
+    </string-array>
+
+    <string-array name="ip_call_location_jiangsu_cities">
+        <item>NanJing</item>
+    </string-array>
+
+    <string-array name="ip_call_location_jiangxi_cities">
+        <item>NanChang</item>
+    </string-array>
+
+    <string-array name="ip_call_location_liaoning_cities">
+        <item>ShenYang</item>
+    </string-array>
+
+    <string-array name="ip_call_location_neimenggu_cities">
+        <item>HuHeHaoTe</item>
+    </string-array>
+
+    <string-array name="ip_call_location_ningxia_cities">
+        <item>YinChuan</item>
+    </string-array>
+
+    <string-array name="ip_call_location_qinghai_cities">
+        <item>XiNing</item>
+    </string-array>
+
+    <string-array name="ip_call_location_shandong_cities">
+        <item>JiNan</item>
+    </string-array>
+
+    <string-array name="ip_call_location_shan1xi_cities">
+        <item>TaiYuan</item>
+    </string-array>
+
+    <string-array name="ip_call_location_shan3xi_cities">
+        <item>XiAn</item>
+    </string-array>
+
+    <string-array name="ip_call_location_sichuan_cities">
+        <item>ChengDu</item>
+    </string-array>
+
+    <string-array name="ip_call_location_xizang_cities">
+        <item>LaSa</item>
+    </string-array>
+
+    <string-array name="ip_call_location_xinjiang_cities">
+        <item>WuLuMuQi</item>
+    </string-array>
+
+    <string-array name="ip_call_location_yunnan_cities">
+        <item>KungMing</item>
+    </string-array>
+
+    <string-array name="ip_call_location_zhejiang_cities">
+        <item>HangZhou</item>
+    </string-array>
+    <string-array name="contacts_privacy_settings_entries">
+                <item>Through the Yiliao number to find me</item>
+                <item>Can not be found</item>
+    </string-array>
+    
+    <string-array name="contacts_privacy_settings_entries_values">
+             <item>0</item>
+             <item>1</item>
+    </string-array>
+    <!-- add by zenghuaying for bug 7955 @2012.6.30 -->
+    <string-array name="ims_ip_call_setting_items">
+          <item>make long distance call</item>
+          <item>make all number call</item>
+    </string-array>
+</resources>

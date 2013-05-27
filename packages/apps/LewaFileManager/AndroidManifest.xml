@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.lewa.app.filemanager" android:versionCode="1"
+	android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="7" />
+    <uses-permission android:name="KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CLEAR_APP_USER_DATA" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <application android:icon="@drawable/com_android_folder" android:label="@string/app_name"
+    android:theme="@android:style/Theme.Light">
+        <activity android:name=".ui.FileActivity" android:label="@string/app_name"
+			android:configChanges="orientation"
+                        android:launchMode="singleTop"
+                        android:theme="@android:style/Theme.Light.NoTitleBar"
+                        android:screenOrientation="portrait"
+                        >
+            <intent-filter> 
+                <action android:name="android.intent.action.MAIN" /> 
+                <category android:name="android.intent.category.LAUNCHER" /> 
+            </intent-filter> 
+            <intent-filter> 
+                <action android:name="com.lewa.filemgr.path_start" /> 
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter> 
+            <intent-filter> 
+                <action android:name="com.lewa.filemgr.count_start" /> 
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter> 
+                <action android:name="com.lewa.filemgr.file_start" /> 
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.CountActivity" android:label="@string/app_name"
+			android:configChanges="orientation" android:screenOrientation="portrait"
+                        >
+        </activity>         
+        <activity android:name=".ui.InnerCallActivity" android:label="@string/app_name"
+			android:configChanges="orientation" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.PathActivity" android:label="@string/app_name"
+			android:configChanges="orientation" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.PrivacyActivity" android:label="@string/app_name"
+			android:configChanges="orientation" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.SearchActivity" android:theme="@android:style/Theme.Light.NoTitleBar"
+			android:configChanges="orientation" android:screenOrientation="portrait">
+        </activity>
+        <service android:enabled="true" android:name="com.lewa.filemanager.ds.database.service.FileScanService"/>
+        <provider android:name="com.lewa.filemanager.ds.database.provider.OtherFileProvider"
+                   android:authorities="com.lewa.app.filemanager" />
+        <receiver android:name="com.lewa.filemanager.util.HomeKeyPress">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.MONKEY" /> 
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

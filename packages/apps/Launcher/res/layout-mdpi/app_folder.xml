@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.lewa.launcher.AppFolder
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:paddingTop="20dip"
+    android:paddingLeft="8dip"
+    android:paddingRight="8dip"
+    android:background="#80000000"
+    android:orientation="vertical">           
+    
+    <RelativeLayout 
+        android:id="@+id/cacheChild"
+        android:background="@drawable/folder_background" 
+        android:layout_width="fill_parent"
+        android:layout_height="320dip" >       
+       
+    <TextView 
+        android:textSize="18sp" 
+        android:id="@+id/folder_title"
+        android:background="@null"
+        android:layout_gravity="center_vertical"        
+        android:textColor="@color/bright_text_bright_focused"
+        android:layout_width="232dip"
+        android:layout_height="48dip"
+        android:paddingLeft="16dip"
+        android:paddingTop="14dip"
+        android:singleLine="true" />
+       
+    <EditText 
+        android:textSize="18sp" 
+        android:id="@+id/folder_title_editor"
+        android:background="@drawable/folder_background"
+        android:visibility="gone"
+        android:layout_gravity="center_vertical"   
+        android:textColor="@color/bright_text_bright_focused"
+        android:layout_width="228dip"
+        android:layout_height="48dip" 
+        android:layout_marginTop="6dip"
+        android:layout_marginLeft="8dip"
+        android:singleLine="true"
+        android:selectAllOnFocus="true" 
+        android:focusable="true" />
+       
+   <ImageView android:id="@+id/folder_edit_image"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dip"
+        android:layout_marginTop="13dip"
+        android:src="@drawable/lewa_appfolderedit"
+        android:layout_toRightOf="@+id/folder_title" />
+       
+    <ImageView android:id="@+id/folder_save"
+        android:visibility="gone" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dip"
+        android:layout_marginTop="13dip"
+        android:src="@drawable/lewa_appfoldersave" 
+        android:layout_toRightOf="@+id/folder_title"/> 
+        
+    <GridView
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:id="@+id/folder_content"
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent" 
+        android:paddingTop="6dip"
+        android:listSelector="@drawable/grid_selector"
+        android:drawSelectorOnTop="false" 
+        android:verticalSpacing="8dip"   
+        android:numColumns="4" 
+        android:layout_below="@+id/folder_title" />      
+    
+    </RelativeLayout>
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+       android:id="@+id/folder_close"  
+       android:layout_alignParentBottom="true" 
+       android:layout_width="fill_parent" 
+       android:visibility="gone"
+       android:layout_height="80dip" />
+       
+  	<FrameLayout  
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_alignParentBottom="true" 
+        android:paddingLeft="2dip"
+        android:paddingRight="2dip">
+                
+	    	<com.lewa.launcher.AllInfoZone 
+		    android:id="@+id/appsinfoview"		    
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:background="@drawable/appinfo_list_bg" 
+		    android:visibility="invisible" >  
+       
+			    <com.lewa.launcher.AppInfoList	    
+			        android:id="@+id/appinfolist" 
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:spacing="-7dip"  
+			        android:layout_marginLeft="-220dip" 
+			        android:layout_marginRight="-10dip"/>
+		</com.lewa.launcher.AllInfoZone>
+	</FrameLayout>
+</com.lewa.launcher.AppFolder>

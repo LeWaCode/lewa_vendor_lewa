@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginBottom="4dip"
+        >
+        
+        <ImageView
+            android:id="@+id/app_logo"
+            style="@style/app_icon_style"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:padding="2dip"
+            android:scaleType="fitCenter" 
+         />
+
+        <TextView
+            android:id="@+id/app_name"
+            style="@style/textview_big_title_style"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/app_logo"
+            android:layout_toRightOf="@id/app_logo" />
+
+        <TextView
+            android:id="@+id/app_version"
+            style="@style/textview_small_title_style_backup"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_name"
+            android:layout_toRightOf="@id/app_logo" 
+            />
+
+        <!--
+             <ProgressBar
+            android:id="@+id/app_progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="20dip"
+            android:layout_height="5dip"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/app_name"
+            android:layout_toRightOf="@id/app_logo"
+            android:max="100" >
+        </ProgressBar>
+        
+
+        <TextView
+            android:id="@+id/app_download_times"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_version"
+            android:layout_toRightOf="@id/app_logo"
+            android:text="30000 次下载" />
+        -->
+
+        <Button
+            android:id="@+id/btn_start"
+            style="@style/downloadButtonStyle"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:background="@drawable/btn_download_bg"
+            android:onClick="startDownload"
+            android:text="@string/label_downloading"
+            android:textColor="@color/btn_download_text_color" />
+
+        <Button
+            android:id="@+id/app_list_isDownloading"
+            style="@style/downloadingButtonStyle"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:text="@string/btn_status_downloading"
+            android:textColor="@color/btn_downloading_text_color"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/app_list_isinstall"
+            style="@style/installedButtonStyle"
+            android:layout_alignParentRight="true"
+            android:text="@string/label_have_installed"
+            android:textColor="@color/btn_installed_text_color"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/app_list_isupdate"
+            style="@style/updateButtonStyle"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:background="@drawable/btn_update_bg"
+            android:onClick="startUpdate"
+            android:text="@string/label_update"
+            android:textColor="@color/btn_update_text_color"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#ffd8d8d8" />
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="Intercept"
+    android:orderingFromXml="true" >
+    <PreferenceCategory >
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="isIntercept"
+        android:summary="@string/intercept_mode_summary"
+        android:title="@string/intercept_mode_title" />
+
+    <Preference
+        android:dependency="isIntercept"
+        android:key="blockMode"
+        android:summary="@string/intercept_blackname"
+        android:title="@string/intercept_rule" >
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.lewa.intercept.BlockRulesActivity"
+            android:targetPackage="com.lewa.intercept" />
+    </Preference>
+    <Preference
+        android:dependency="isIntercept"
+        android:key="timeSetting"
+        android:summary="@string/intercept_time_allday"
+        android:title="@string/intercept_time" >
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.lewa.intercept.BlockTimeActivity"
+            android:targetPackage="com.lewa.intercept" />
+    </Preference>
+
+    <CheckBoxPreference
+        android:dependency="isIntercept"
+        android:key="oneringIntercept"
+        android:title="@string/intercept_interruptPhone"
+        android:summary="@string/intercept_interruptPhone_summary"
+        android:defaultValue="true" />
+        
+     <CheckBoxPreference
+        android:dependency="isIntercept"
+        android:defaultValue="true"
+        android:key="isInterceptNotify"
+        android:title="@string/intercept_notification" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+    <!-- <CheckBoxPreference -->
+    <!-- android:key="isIntercept" android:title="@string/intercept_mode" -->
+    <!-- android:persistent="false" android:disableDependentsState="true" /> -->
+    <Preference
+        android:key="update"
+        android:title="@string/update_title"/>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/linear_albumpage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"    
+    android:orientation="vertical" > 
+    
+    <LinearLayout 		
+		android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_weight="100"
+	    android:orientation="vertical">
+	    
+	    <LinearLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="30dip"
+		    android:gravity="center"
+		    android:background="@drawable/activity_title_bar">
+		    
+		    <TextView 
+		    	android:id="@+id/album_name"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="15sp"
+				android:textColor="#FFFFFF"/>
+		</LinearLayout>
+	    <ListView 
+		    android:id="@+id/albumtracklist"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:fastScrollEnabled="true">
+		</ListView>
+		
+	</LinearLayout>
+	
+	<com.lewa.player.ui.NowPlayingController
+        android:layout_height="54dip"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/albums_title">
+    </com.lewa.player.ui.NowPlayingController>
+</LinearLayout>

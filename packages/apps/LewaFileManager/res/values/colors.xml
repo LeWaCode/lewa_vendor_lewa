@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pagebg_color">#ebebeb</color>
+    <color name="home_2_0_color">#ececec</color>
+    <color name="default_text_color">#ff333333</color>
+    <color name="file_list_first_line_name_color">#ff333333</color>
+    <color name="file_list_first_line_num_color">#ff888888</color>
+    <color name="file_list_second_line_color">#ff888888</color>
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:paddingLeft="10dip"
+  android:paddingRight="10dip">
+  <LinearLayout 
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <TextView 
+      android:id="@+id/text_item_header"
+      android:layout_width="@dimen/list_item_header_text_width"
+      android:layout_height="@dimen/list_item_header_text_height"
+      android:gravity="center"
+      android:text="@string/yiliao_account_myself"
+      android:textSize="@dimen/list_item_contact_headertextview_size"/>
+  </LinearLayout>
+  <RelativeLayout 
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <FrameLayout 
+      android:id="@+id/layout_avatar"
+      android:layout_width="wrap_content" 
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_centerVertical="true">
+      <ImageView 
+        android:id="@+id/image_account_avatar"
+        android:layout_width="@dimen/list_item_imageview_width"
+        android:layout_height="@dimen/list_item_imageview_height"
+        android:src="@drawable/ic_contact_list_picture"/>
+      <ImageView 
+        android:id="@+id/image_account_status"
+        android:layout_width="@dimen/list_item_status_image_width"
+        android:layout_height="@dimen/list_item_status_image_height"        
+        android:scaleType="fitXY"
+        android:layout_gravity="left"
+        android:layout_marginLeft="56dip"
+        android:src="@drawable/conect_icon_offline_people"/>
+    </FrameLayout>
+    
+    <TextView 
+      android:id="@+id/text_account_name"
+      android:layout_width="180dip"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="5dip"
+      android:layout_toRightOf="@id/layout_avatar"
+      android:layout_centerVertical="true"/>
+
+    <ImageView 
+      android:id = "@+id/image_account_status"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:layout_alignParentRight="true" 
+      android:src="@drawable/conect_icon_online"/>
+<!--       <Button 
+	      android:id = "@+id/btn_account_status"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_centerVertical="true"
+	      android:layout_alignParentRight="true"
+	      android:text="online" /> -->
+	      
+  </RelativeLayout>
+</LinearLayout>

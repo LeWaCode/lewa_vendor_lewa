@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="translucent_search_background">#cc000000</color>
+    <color name="dialog_bg">#11000000</color>
+    <color name="id3_title_color">#ff303030</color>
+    <color name="id3_bg">#ebebeb</color>
+    <color name="main_text_color">#ff3b3b3b</color>
+    <drawable name="search_listview_bg">#ff303030</drawable>
+    <drawable name="playlist_create_bg">#ebebeb</drawable>
+    <drawable name="activity_background">#ffebebeb</drawable>
+    
+</resources>

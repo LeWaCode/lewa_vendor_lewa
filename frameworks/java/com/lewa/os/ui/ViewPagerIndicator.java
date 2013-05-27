@@ -1,0 +1,468 @@
+package com.lewa.os.ui;
+
+import android.content.Context;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.support.lewa.view.LewaPagerView.OnPageChangeListener;
+import android.util.AttributeSet;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.Canvas;
+import android.text.TextUtils;
+import com.android.internal.R;
+
+
+public class ViewPagerIndicator extends RelativeLayout implements OnPageChangeListener {
+	
+	private static final int PADDING = 5;
+	
+	TextView mPrevious;
+	TextView mCurrent;
+	TextView mNext;
+	int mCurItem;
+	
+    private GradientDrawable mFadingEdgeLeft;
+    private GradientDrawable mFadingEdgeRight;
+	LinearLayout mPreviousGroup;
+	LinearLayout mNextGroup;
+	
+	int mArrowPadding;
+	int mSize;
+	
+	ImageView mCurrentIndicator;
+	ImageView mPrevArrow;
+	ImageView mNextArrow;
+	
+	int[] mFocusedTextColor;
+	int[] mUnfocusedTextColor;
+	
+	OnClickListener mOnClickHandler;
+	OnPagerSlidingListener pagerTrigger;
+
+	public int ifMusicPlayer = 0;
+	
+    public interface OnPagerSlidingListener {
+
+        void onChangePagerTrigger(int curPage);
+
+    }
+	
+	public interface PageInfoProvider{
+		String getTitle(int pos);
+	}
+	
+	public interface OnClickListener{
+		void onNextClicked(View v);
+		void onPreviousClicked(View v);
+		void onCurrentClicked(View v);
+	}
+	
+	public void setOnClickListener(OnClickListener handler){
+		this.mOnClickHandler = handler;
+		mPreviousGroup.setOnClickListener(new OnPreviousClickedListener());
+		mCurrent.setOnClickListener(new OnCurrentClickedListener());
+		mNextGroup.setOnClickListener(new OnNextClickedListener());
+	}
+
+	public void setIfMusicPlayer() {
+		ifMusicPlayer = 1;
+	}
+	
+	public int getCurrentPosition(){
+		return mCurItem;
+	}
+	
+	PageInfoProvider mPageInfoProvider;
+	public void setPageInfoProvider(PageInfoProvider pageInfoProvider){
+		this.mPageInfoProvider = pageInfoProvider;
+	}
+	
+	public void setFocusedTextColor(int[] col){
+		System.arraycopy(col, 0, mFocusedTextColor, 0, 3);
+		updateColor(0);
+	}
+	
+	public void setUnfocusedTextColor(int[] col){
+		System.arraycopy(col, 0, mUnfocusedTextColor, 0, 3);
+		//mNext.setTextColor(Color.argb(255, col[0], col[1], col[2]));
+		mNext.setTextColor(Color.BLACK);
+		mPrevious.setTextColor(Color.BLACK);
+		//mPrevious.setTextColor(Color.argb(255, col[0], col[1], col[2]));
+		
+		updateColor(0);
+	}
+	
+
+	public void init(int startPos, int size, PageInfoProvider pageInfoProvider, int dpi, int ifLandscape){
+		setPageInfoProvider(pageInfoProvider);
+
+		this.mSize = size;
+		setText(startPos - 1);
+		mCurItem = startPos;
+		
+		if(ifMusicPlayer == 1) {
+			 mPrevious.setShadowLayer(0, 0, 0, 0xff000000);
+             mCurrent.setShadowLayer(0, 0, 0, 0xff000000);
+             mNext.setShadowLayer(0, 0, 0, 0xff000000);
+			 mNext.setTextColor(0xffb5b5b5);
+				mPrevious.setTextColor(0xffb5b5b5);
+		}else {
+		this.setBackgroundResource(R.drawable.lewa_title_bar);
+
+
+		int[] fadingEdgeGradient = new int[] { this.getResources().getColor(android.R.color.viewPager_color0),
+               this.getResources().getColor(android.R.color.viewPager_color1)};
+		mFadingEdgeLeft = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT,
+                fadingEdgeGradient);
+             mFadingEdgeRight = new GradientDrawable(GradientDrawable.Orientation.RIGHT_LEFT,
+                fadingEdgeGradient);
+
+		int width = 0;
+		int deep = 0;
+		int deepheight = 0;
+		if(dpi > 160) {
+			if(ifLandscape > 0) {
+				width = 800;
+				deep = 20;
+				deepheight = 45;
+			}else {
+				width = 480;
+				deep = 20;
+				deepheight = 45;
+			}
+
+		}
+		else {
+			if(ifLandscape > 0) {
+				width = 480;
+				deep = 13;
+				deepheight = 28;
+			}else {
+				width = 320;
+				deep = 13;
+				deepheight = 28;
+			}
+
+		}
+
+		        // Set up the fading edges
+        mFadingEdgeLeft.setBounds(0, 0, deep, deepheight);
+        mFadingEdgeRight.setBounds(width-deep, 0,
+                width, deepheight);
+		
+		}
+		       
+	}
+
+
+
+	@Override
+    protected void dispatchDraw(Canvas canvas) {
+		super.dispatchDraw(canvas);
+        if(mPrevious != null) {
+            String strPrevious = mPrevious.getText().toString();
+            if (!TextUtils.isEmpty(strPrevious)) {
+				if(mFadingEdgeLeft != null) {
+                    mFadingEdgeLeft.draw(canvas);
+				}
+
+            }
+        }
+        
+        if(mNext != null) {
+            String strNext = mNext.getText().toString();
+            if (!TextUtils.isEmpty(strNext)) {
+				if(mFadingEdgeRight != null) {
+                    mFadingEdgeRight.draw(canvas);
+				}
+            }
+        }
+ 
+        //if (mShowTopShadow) mShadow.draw(canvas);
+        //if (mShowBottomBar) mBottomBar.draw(canvas);
+        //if (mShowTab) mTabDrawable.draw(canvas);
+    }
+	
+	public ViewPagerIndicator(Context context, AttributeSet attrs) {
+		super(context, attrs);
+        this.setGravity(Gravity.CENTER_VERTICAL);
+		addContent();
+	}
+	
+	public ViewPagerIndicator(Context context, AttributeSet attrs, int defStyle){
+		super(context, attrs, defStyle);
+		addContent();
+	}
+	
+	public ViewPagerIndicator(Context context) {
+		super(context);
+		addContent();
+	}
+
+	public void setArrows(Drawable prev, Drawable next){
+		this.mPrevArrow = new ImageView(getContext());
+		this.mPrevArrow.setImageDrawable(prev);
+		
+		this.mNextArrow = new ImageView(getContext());
+		this.mNextArrow.setImageDrawable(next);
+		
+		LinearLayout.LayoutParams arrowLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+		arrowLayoutParams.gravity = Gravity.CENTER;
+		
+		mPreviousGroup.removeAllViews();
+		mPreviousGroup.addView(mPrevArrow, arrowLayoutParams);
+		mPreviousGroup.addView(mPrevious, arrowLayoutParams);
+		
+		mPrevious.setPadding(PADDING, 0, 0, 0);
+		mNext.setPadding(0, 0, PADDING, 0);
+		
+		mArrowPadding = PADDING + prev.getIntrinsicWidth();
+		
+		mNextGroup.addView(mNextArrow, arrowLayoutParams);
+		updateArrows(mCurItem);
+	}
+	
+
+	private void addContent(){
+		mFocusedTextColor = new int[]{0, 0, 0};
+		mUnfocusedTextColor = new int[]{190, 190, 190};
+		
+		// Text views
+		mPrevious = new TextView(getContext());
+		mCurrent = new TextView(getContext());
+		mNext = new TextView(getContext());
+
+              int titleShadowColor = getResources().getColor(R.color.page_indicator_title_shadowcolor);
+              int unfocusTextColor = getResources().getColor(R.color.page_indicator_title_unfocus_textcolor);
+              int unfocusShadowColor = getResources().getColor(R.color.page_indicator_title_unfocus_shadowcolor);
+             mPrevious.setShadowLayer(1.0f, 1.0f, 1.2f, unfocusShadowColor);
+             mCurrent.setShadowLayer(1.0f, 1.0f, 1.2f, titleShadowColor);
+             mNext.setShadowLayer(1.0f, 1.0f, 1.2f, unfocusShadowColor);
+		RelativeLayout.LayoutParams previousParams = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+		previousParams.addRule(RelativeLayout.ALIGN_LEFT);
+		
+		RelativeLayout.LayoutParams currentParams = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+		currentParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
+		
+		RelativeLayout.LayoutParams nextParams = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+		nextParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+		
+		// Groups holding text and arrows
+		mPreviousGroup = new LinearLayout(getContext());
+		mPreviousGroup.setOrientation(LinearLayout.HORIZONTAL);
+		mNextGroup = new LinearLayout(getContext());
+		mNextGroup.setOrientation(LinearLayout.HORIZONTAL);
+		
+		mPreviousGroup.addView(mPrevious, new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+		mNextGroup.addView(mNext, new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+		
+		addView(mPreviousGroup, previousParams);
+		addView(mCurrent, currentParams);
+		addView(mNextGroup, nextParams);
+		
+		mPrevious.setSingleLine();
+		mCurrent.setSingleLine();
+		mNext.setSingleLine();
+		
+		mPrevious.setText("previous");
+		mCurrent.setText("current");
+		mNext.setText("next");
+
+        mPrevious.setTextSize(15);
+        mCurrent.setTextSize(15);
+        mNext.setTextSize(15);
+		
+		mPrevious.setClickable(false);
+		mNext.setClickable(false);
+		mCurrent.setClickable(true);
+		mPreviousGroup.setClickable(true);
+		mNextGroup.setClickable(true);
+		
+		// Set colors
+		//mNext.setTextColor(Color.argb(255, mUnfocusedTextColor[0], mUnfocusedTextColor[1], mUnfocusedTextColor[2]));
+		//mPrevious.setTextColor(Color.argb(255, mUnfocusedTextColor[0], mUnfocusedTextColor[1], mUnfocusedTextColor[2]));
+		updateColor(0);
+		mNext.setTextColor(unfocusTextColor);
+		mPrevious.setTextColor(unfocusTextColor);
+	}
+
+	@Override
+	public void onPageScrollStateChanged(int state) {
+		if(state == 2) {
+            mCurrent.setText("");
+		}
+	}
+
+	@Override
+	public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+		positionOffsetPixels = adjustOffset(positionOffsetPixels);
+		
+		updatePositions(positionOffsetPixels);
+		
+		updateColor(positionOffsetPixels);
+		updateArrows(position);
+		
+		position = updatePosition(position, positionOffsetPixels);
+		
+		setText(position - 1);
+		
+		
+	}
+	
+	void updatePositions(int positionOffsetPixels){
+		int textWidth = mCurrent.getWidth() - mCurrent.getPaddingLeft() - mCurrent.getPaddingRight();
+		int maxOffset = this.getWidth() / 2 - textWidth / 2 - mArrowPadding;
+		if(positionOffsetPixels > 0){
+			maxOffset -= this.getPaddingLeft();
+			int offset = Math.min(positionOffsetPixels, maxOffset - 1);
+			mCurrent.setPadding(0, 0, 2 * offset, 0);
+			
+			// Move previous text out of the way. Slightly buggy.
+			
+			int overlapLeft = mPreviousGroup.getRight() - mCurrent.getLeft() + mArrowPadding;
+			mPreviousGroup.setPadding(-Math.max(0, overlapLeft), 0, Math.max(0, overlapLeft), 0);
+			mNextGroup.setPadding(0, 0, 0, 0);
+			
+		}else{
+			maxOffset -= this.getPaddingRight();
+			int offset = Math.max(positionOffsetPixels, -maxOffset);
+			mCurrent.setPadding(-2 * offset, 0, 0, 0);
+			
+			// Move next text out of the way. Slightly buggy.
+			
+			int overlapRight = mCurrent.getRight() - mNextGroup.getLeft() + mArrowPadding;
+			mNextGroup.setPadding(Math.max(0, overlapRight), 0, -Math.max(0, overlapRight), 0);
+			mPreviousGroup.setPadding(0, 0, 0, 0);
+		}
+	}
+	
+	
+	void updateArrows(int position){
+		if(mPrevArrow != null){
+			mPrevArrow.setVisibility(position == 0 ? View.INVISIBLE : View.VISIBLE);
+			mNextArrow.setVisibility(position == mSize - 1 ? View.INVISIBLE : View.VISIBLE);
+		}
+	}
+	
+	/**
+	 * Adjust position to be the view that is showing the most.
+	 * 
+	 * @param givenPosition
+	 * @param offset
+	 * @return
+	 */
+	int updatePosition(int givenPosition, int offset){
+		int pos;
+		if(offset < 0){
+			pos = givenPosition + 1;
+		}else{
+			pos = givenPosition;
+		}
+		return pos; 
+	}
+	
+	/**
+	 * Fade "currently showing" color depending on it's position
+	 * 
+	 * @param offset
+	 */
+	void updateColor(int offset){
+		offset = Math.abs(offset);
+		// Initial condition: offset is always 0, this.getWidth is also 0! 0/0 = NaN
+		int width = this.getWidth();
+		float fraction = width == 0 ? 0 : offset / ((float)width / 4.0f);
+		fraction = Math.min(1, fraction);
+		int r = (int)(mUnfocusedTextColor[0] * fraction + mFocusedTextColor[0] * (1 - fraction));
+		int g = (int)(mUnfocusedTextColor[1] * fraction + mFocusedTextColor[1] * (1 - fraction));
+		int b = (int)(mUnfocusedTextColor[2] * fraction + mFocusedTextColor[2] * (1 - fraction));
+		//mCurrent.setTextColor(Color.argb(255, r, g, b));
+		if(ifMusicPlayer == 1) {
+			mCurrent.setTextColor(Color.WHITE);
+		}else {
+		        int titleTextwColor = getResources().getColor(R.color.page_indicator_title_textcolor);
+			mCurrent.setTextColor(titleTextwColor);
+		}
+		
+	}
+	
+	/**
+	 * Update text depending on it's position
+	 * 
+	 * @param prevPos
+	 */
+
+	void setText(int prevPos){
+
+		if(prevPos < 0){
+			mPrevious.setText("");
+		}else{
+			mPrevious.setText(mPageInfoProvider.getTitle(prevPos));
+		}
+		mCurrent.setText(mPageInfoProvider.getTitle(prevPos + 1));
+		if(prevPos + 2 == this.mSize){
+			mNext.setText("");
+		}else{
+			mNext.setText(mPageInfoProvider.getTitle(prevPos + 2));
+		}
+
+	}
+	
+	// Original:
+	// 244, 245, 0, 1, 2
+	// New:
+	// -2, -1, 0, 1, 2
+	int adjustOffset(int positionOffsetPixels){
+		// Move offset half width
+		positionOffsetPixels += this.getWidth() / 2;
+		// Clamp to width
+		positionOffsetPixels %= this.getWidth();
+		// Center around zero
+		positionOffsetPixels -= this.getWidth() / 2;
+		return positionOffsetPixels;
+	}
+	
+    public void setOnTriggerListener(OnPagerSlidingListener listener) {
+    	pagerTrigger = listener;
+    }
+	
+	@Override
+	public void onPageSelected(int position) {
+		// Reset padding when the page is finally selected (May not be necessary)
+		mCurrent.setPadding(0, 0, 0, 0);
+		mCurItem = position;
+		if(pagerTrigger != null)
+		pagerTrigger.onChangePagerTrigger(position);
+	}
+	
+	class OnPreviousClickedListener implements android.view.View.OnClickListener{
+		@Override
+		public void onClick(View v) {
+			if(mOnClickHandler != null){
+				mOnClickHandler.onPreviousClicked(ViewPagerIndicator.this);
+			}
+		}
+	}
+	class OnCurrentClickedListener implements android.view.View.OnClickListener{
+		@Override
+		public void onClick(View v) {
+			if(mOnClickHandler != null){
+				mOnClickHandler.onCurrentClicked(ViewPagerIndicator.this);
+			}
+		}
+	}
+	class OnNextClickedListener implements android.view.View.OnClickListener{
+		@Override
+		public void onClick(View v) {
+			if(mOnClickHandler != null){
+				mOnClickHandler.onNextClicked(ViewPagerIndicator.this);
+			}
+		}
+	}
+}

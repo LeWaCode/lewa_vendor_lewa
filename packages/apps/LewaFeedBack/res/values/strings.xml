@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, AndroidAdviceDemoActivity!</string>
+    <string name="app_name">Feedback</string>
+    
+    <string name="feedback_title">Feedback</string>
+    <string name="feedback_added">added </string>
+    <string name="feedback_text_default">I wanna say something...</string>
+    <string name="feedback_send">Send</string>
+    <string name="feedback_piclen_default">0</string>
+    <string name="feedback_tag_len">KB</string>
+    
+    <string name="result_layout_feedback_title">Feedback</string>
+    <string name="result_layout_thanks1">Thank you for your support,</string>
+    <string name="result_layout_thanks2">we will keep trying!</string>
+    <string name="result_layout_thanks3">You are witness of the growing of lewa.</string>
+    <string name="result_layout_continue_feedback">Continue</string>
+    <string name="result_layout_finish">Finish</string>
+    
+    <string name="feedback_sending_title">Waiting...</string>
+    <string name="feedback_sending_message">Your advice is sending...</string>
+    <string name="feedback_sending_fail_title">Sending failed!</string>
+   	<string name="feedback_sending_fail_button">Ok</string>
+   	<string name="feedback_sending_fail_message">Network error!</string>
+   	<string name="feedback_sending_fail_message0">URL error!</string>
+   	<string name="feedback_sending_fail_message1">Unproper request!</string>
+   	<string name="feedback_sending_fail_message2">Server error!</string>
+   	<string name="feedback_sending_fail_message3">Sending empty message content is not allowed!</string>
+   	<string name="feedback_sending_fail_message4">Fail to connect server!</string>
+   	<string name="feedback_sending_fail_message5">Server is busy,please send it later!</string>
+   	
+   	<string name="feedback_sending_process_connect">Connect to server...</string>
+   	<string name="feedback_sending_process_send_msg">Sending message...</string>
+   	<string name="feedback_sending_process_send_file">Sending files...</string>
+   	<string name="feedback_sending_process_close">Receiving data...</string>
+   	
+   	<string name="feedback_result_title">Sorry！</string>
+   	<string name="feedback_result_message">Programe error!</string>
+   	<string name="feedback_result_button">Ok</string>
+   	
+   	<string name="feedback_addpic_title">Picture in Feedback</string>
+   	<string name="feedback_addpic_delete">Delete</string>
+   	<string name="feedback_addpic_change">Change</string>
+   	
+   	<string name="feedback_wifi_note">There\'s no wifi connection,and you are sending a file over 300kb,which will cost you much data flow.Are you sure about that?</string>
+
+</resources>

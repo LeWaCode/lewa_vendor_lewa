@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            style="@style/basket_app_icon_style"
+            android:id="@+id/download_icon"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            >
+        </ImageView>
+
+        <TextView
+            style="@style/textview_big_title_style"
+            android:id="@+id/download_filename"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/download_icon"
+            android:layout_alignTop="@id/download_icon"
+            >
+        </TextView>
+        
+        <TextView
+            style="@style/textview_small_title_style"
+            android:id="@+id/app_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/download_filename"
+            android:layout_toRightOf="@id/download_icon"
+            />
+
+       <!--  <ProgressBar
+            android:id="@+id/download_progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="150dip"
+            android:layout_height="5dip"
+            android:layout_below="@id/app_version"
+            android:layout_toRightOf="@+id/download_icon"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="12dip"
+            android:visibility="gone" >
+        </ProgressBar> -->
+    
+        <Button
+            android:id="@+id/basket_download"
+            style="@style/buttonStyle"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/download_filename"
+            android:text="@string/label_downloading" 
+            android:background="@drawable/btn_download_bg"
+            android:textColor="@color/btn_download_text_color"
+            />
+
+        <Button
+            android:id="@+id/basket_isinstall"
+            style="@style/buttonPressedStyle"          
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/download_filename"
+            android:text="@string/label_have_installed"
+            android:background="@drawable/btn_have_installed_bg"
+            android:visibility="gone"
+            android:textColor="@color/btn_downloading_text_color"
+            />
+       <Button
+            android:id="@+id/basket_downloading"
+            style="@style/buttonPressedStyle"          
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/download_filename"
+            android:text="@string/btn_status_downloading"
+            android:background="@drawable/btn_have_installed_bg"
+            android:visibility="gone"
+            android:textColor="@color/btn_downloading_text_color"           
+            />
+
+        <!-- 
+         <TextView
+        android:id="@+id/download_received"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/download_progressBar"
+        android:layout_toRightOf="@id/download_icon" />
+
+        -->
+
+    </RelativeLayout>
+
+</LinearLayout>
